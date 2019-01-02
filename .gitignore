@@ -1,0 +1,6 @@
+Syllabus.log
+*/*.log
+*/*.out
+*/*.bcf
+*/*.aux
+*/*.run.xml
