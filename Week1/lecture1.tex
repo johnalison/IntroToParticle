@@ -1,0 +1,285 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+\begin{document}
+
+\textbf{\Huge Lecture 1}
+
+\section{What this course is really about:}
+The course title is: ``Introduction to Particle Physics''.
+Technically correct, but misses the general philosophy. 
+We are interested in how the world works. 
+Turns out, one major lesson, probably the most imporant interesting scientific fact (which BTW didnt have to be this way.) things get easier/simpler at smaller scales. 
+At these small scales things that naively seem to be totally unrelated are seen as aspects of the same thing. 
+
+Can all be explained by the interaction of particles. 
+This is why ``particles'' is in the title of the class, we are forced to talk about interactions of particles when we look at nature at a scale where the laws of physics are thier simplest. 
+
+\section{Warnings:}
+This is a cutting edge field. 
+\begin{itemize}
+\item[-] Material presented only recently settled down. 
+\item[-] Many theorms or equations/assumptions I wont be able to prove to you. 
+\item[-] Most require advanced math, many lack formal proof.  (downside of studying a cutting edge feild)
+\item[-] Things can change rapidly. 
+\item[-] Scope is incredibly broad. 
+\end{itemize}
+
+Thie field is extremely far-reaching. 
+It is a mathematically dense and abstract topic. 
+I will do my best to ignore the details and focus on underlying concepts.
+
+Textbooks for undergraduates on particle physics are often organized historically, which can add to confusion. 
+
+All of the machinery, formalism, insight, and tools that you have gained as a physics student is essential for studying particle physics.
+
+
+\section{20th Century revolutions:}
+Special Relativity (SR) and Quantum Mechanics (QM).
+Radical departures from what came before them.
+
+QM much more radical. 
+SR took one guy (Einstein) few years to figure out. 
+QM took an entire generation $\sim$15-20 years to straighten out. 
+
+SR told us how to think clearly about ideas we were already using: space and time. 
+QM threw everything out and invented a whole new framework/language with which physics had to be understood.
+Much more abstract: Hilbert spaces/state vectors/Hermitian operators/ ect.
+
+Major gains in explanitory power and unification.
+
+Concepts thought different, faces of same thing:
+
+\textbf{Relativity:}
+\begin{itemize}
+\item[-] Space and time
+\item[-] Energy and Mass (also momentum)
+\item[-] Electricity and Magnetism (also light)
+\item[-] (Gravity shown to be result of warping of space time)
+\end{itemize}
+
+\textbf{Quantum Mechanics:}
+\begin{itemize}
+\item[-] Waves and Particles
+\item[-] Chemistry and Physics
+\end{itemize}
+
+\section{Mission Barely Possible: QM + SR}
+First 25 years of the 20th century were about the two revolutions (QM and SR).
+85 years since then, were all about putting these together.
+
+Combining Relativity and Quantum Mechanics naively seems impossible. 
+SR and QM use different basic languages. 
+
+\textbf{QM:} Time has special (fundamental) role. Specify \ketY\ at one time, prescription for how to evolve to later times.
+
+\textbf{Relativity:} Time is not special! (can mix space and time by moving)
+
+Turns out (just barely) possible using something called: \textbf{``Quantum Field Theory'' }
+Basic framework for how the world works.
+Dramatically restricts what a theory can possibly look like
+Quantum field theory is the framework in which the fundamental forces of Nature are formulated.
+
+\textbf{Consequences of Union}
+
+Anti-particles must exist:
+\begin{itemize}
+\item[-] Shocking / Unexpected
+\item[-] Doubled everything in universe 
+\item[-] Makes the vacuum interesting
+\end{itemize}
+
+Key role of Spin:
+\begin{itemize}
+\item[-] Relation between spin and particle type
+\item[-] Dramatically limits types of particles can have
+\end{itemize}
+
+Major constraints on types of interactions allowed:
+\begin{itemize}
+\item[-] Only certain interaction will ever be important
+\item[-] Always be a finite number of parameters that matter
+\end{itemize}
+
+\section{Anti-Particles}
+\textbf{Causality}
+
+What happens next can only depend of what happened before
+(Does not depend on something that hasn't happened yet !)
+If someone dies from a gun shot, the gun must be shot first.
+Causality basic prerequisite to science !
+
+\underline{Causality in Relativity}
+
+Cant send signals faster than maximum speed.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{./CausalityTimelike.pdf}
+\end{figure}
+
+All moving observers agree that A happens before B. => Can say safely say: ``A causes B''.
+
+
+However, If you could go faster than c, things go wrong...
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{./CausalitySpacelike.pdf}
+\end{figure}
+
+Depending on how you move, disagree about what comes first. Causality is violated. Bullet hits B before A pulls trigger.
+
+\clearpage
+\underline{Causality in Relativistic QM}
+
+w/QM always some non-zero probability of getting out of the light cone.
+Cant know both $\Delta$ P and $\Delta$ X to arbirary precision because of the uncertianty principle.
+Problem, if send electron from A to B looks like current is going backwards in time from A to B
+Way out, if interpret this as B sending something to A
+But B has to send something with opposite charge. (know A lost charge).
+
+For the theory to have a prayer of being both quantum mechanical and relativisit there must exist particles that are identical to the electron (say) except with opposite charge.
+Anti-particles !
+Can play the same game for anyother type of particle => every particle must have an anti-particle partner.
+
+\section{Vacuum}
+Anti-mater in turn has major an impact on nothing, i.e. the vacuum.
+
+What does it take to study empty space (“the vacuum”) ?
+Nothing special...until try to check small regions
+
+\textbf{Before QM:}
+Build tiny robots. (Get tiny robots to build tinier robots, who build tiny robots etc. etc. etc.)
+
+\textbf{With QM:}
+At small distances, uncertainty principle kicks in.
+Need large $\Delta p$ (or equivalently large $\Delta E$)
+Smaller and smaller distances, need higher and higher energies.
+
+Empty Space Interesting becomes interesting.
+
+When eventually get to small enough distances to need $\Delta E \sim$  2$m_e c^2$
+Nothing prevents creation of particle - anti-particle pair.
+Everything is conserved (energy/charge/momentum) so there is some non-zero probability for this to happen.
+
+Completely changes our picture of the vacuum.
+Simple act of looking creates something.
+No sense in which the vacuum is empty!
+
+Often here accelerator as worlds most powerful microscopes:
+What it is looking at is the vacuum.
+
+\section{Other Implications Combining SR \& QM}
+
+\underline{Spin}
+
+\textbf{QM:}
+Could accommodate spin. 
+Any 1/2 integer value allowed.
+
+\textbf{ QM + SR:}
+Forced to talk spin (Something special w/massless particles).
+Integer spin = Bosons / Half-integer = Fermions.
+Can only have spin = : 0 | 1/2 | 1 | 3/2 | 2.
+
+\underline{Interactions}
+
+\textbf{QM:} Any conceivable interaction possible
+\textbf{QM + SR:} Charge is conserved. 
+Interactions are Local (no more action at a distance).
+Only finite number of specific interactions allowed :
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\textwidth]{./AllowedInteractions.pdf}
+\end{figure}
+
+In this course we will outline this basic framework for any possible theory.
+And then talk about the particular version that we actually observe.
+
+
+\section{Our world}
+
+Stuff in the world made of atoms:
+
+\underline{Matter:}
+Electrons: Negatively charged. 
+Responsible for volume of atom.
+Thought to be fundamental.
+
+Nucleus: Positively charged.
+Responsible for the mass of an atom.
+Made of, protons and neutrons, which are made of quarks .
+Quarks also thought to be fundamental.
+
+Matter particles (electrons/quarks) are fermions.
+Large collections of them behave like classical particles.
+
+\underline{Forces}
+
+\textbf{Gravity:}
+Known since antiquity. 
+Inverse square law.
+Always attractive. 
+Irrelevant for atomic/sub-atomic interactions.
+
+\textbf{Electromagnetism:}
+Known since antiquity.
+Also inverse square law
+Can be Attractive or repulsive.
+Holds electrons within atoms.
+
+\textbf{Strong:}
+Discovered early 1900s.
+Only relevant at short distances.
+No simple relationship (a la inverse square).
+Responsible for holding together the nucleus.
+
+\textbf{Weak:}
+Discovered just before turn of 20th century.
+Looks nothing like others.
+Responsible for radioactive decay. 
+Heats the sun/earth.
+
+Our world both Relativistic and Quantum Mechanical => described in terms of a Quantum Field Theory (QFT).
+The particular version of QFT that was found to describe our universe developed in the 1960-70s.
+Called the ``Standard Model''.
+
+All forces as important.
+At large scales they Look very different from one another.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{./Forces.pdf}
+\end{figure}
+
+Now is the first time that we see that all forces described in same basic way.
+That the forces look very different to us... is a long distance illusion!
+
+This is the reason we build colliders! Unity at small scales.
+
+\section{Standard Model}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{./SM.pdf}
+\end{figure}
+
+Niavely you might only expect one generation, we see three. 
+There is no good understanding for why we see three. 
+Pretty sure that there are not more (will discuss how we know this later in the course).
+
+The Standard Model took on modern form in 60s - 70s.
+Makes very precise predictions, shown to be highly accurate.
+Consistent theory of electromagnetic, weak and strong forces ...
+... provided massless Matter and Force Carriers
+
+Serious problem as matter and W, Z known to be massive !
+We will come back to this problem later in the semister.
+
+
+\end{document}
+
+
