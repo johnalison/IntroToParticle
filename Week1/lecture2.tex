@@ -5,8 +5,12 @@
 \def\ketY{\ensuremath{\ket {\Psi}}}
 \def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
 \def\mp{\ensuremath{m_{\textrm{proton}}}}
+\def\rp{\ensuremath{r_{\textrm{proton}}}}
 \def\me{\ensuremath{m_{\textrm{electron}}}}
 \def\aG{\ensuremath{\alpha_G}}
+\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
 
 \begin{document}
 
@@ -105,28 +109,85 @@ My weight: 100kg $\sim$ 10$^{29}$ GeV \textit{(I am made of $10^{29}$ protons)}
 
 Will work through some quick examples.
 
-\underline{\textbf{Atoms:}}
+\underline{\textbf{Atoms:}}\\
+$E\sim - \frac{Z\alpha}{r} + \frac{p^2}{m_e}$\\
+$p\times r \sim 1 \Rightarrow$ $E\sim - \frac{Z\alpha}{r} + \frac{1}{m_e r^2}$ solving... $\rAtom \sim \frac{1}{Z\alpha m_e}$
+
+Nucleus is protons + neutrons pacted in 3D volume. 
+$\rNucl \sim Z^{1/3}\rp \sim \frac{Z^{1/3}}{\mp}$ 
+
+Relative scale: 
+$\frac{\rNucl}{\rAtom} \sim \frac{\alpha \me}{Z^{2/3}\mp} \sim 10^{-5}$  (Justifies claim that most of volume due to electron)
+
+Back to the electron...
+$p_e \sim \frac{1}{\rAtom} \sim \me (Z\alpha)  \Rightarrow  v_{\textrm{electron}} \sim (Z\alpha)$\\
+Interesting physics content: 
+v cannot be bigger than one ($\equiv$ c).  (when $\sim$1 electron relativistic, can get unstable to pair produciton, eg: excite electrons-positions from vacuum.)\\
+$\Rightarrow$ there cannot be more than $\sim \frac{1}{\alpha}$ stable elements!
+
+Also note $v_{\textrm{electron}} \sim (Z\alpha) << 1$ for low Z.
+This is why:
+\begin{itemize}
+\item[-] we could do QM first with out relativity!
+\item[-] electricity tends to be stronger than magnetism in everyday applications/conditions.
+\end{itemize}
 
 
+$E_{\textrm{atom}} \sim \frac{Z\alpha}{\rAtom} \sim Z^2\alpha^2\me$
+(For hydrogen = $10^{-4} \times$ 0.5 MeV $\sim$ 50 eV  / Actually 13.6 eV)
+
+For atoms,  electron mass is king... dominates.
 
 \underline{\textbf{Solids:}}
+
+(To within our $\sim$) Solids just atoms stacked next to each other
+
+Mass Density: Mass/Volume
+$\rho_{\textrm{solid}} \sim \frac{Z\mp}{\rAtom^3}$
+
+Pressure of Solid: Force/Area or Energy/Volume
+
+$P_{\textrm{solid}} \sim \frac{Z^2\alpha^2\me}{\rAtom^3} \sim Z^5\alpha^5\me^4$
+
+
+(Ratio of two gqive the speed of sound)\\
+$v_{\textrm{sound}}\sim \sqrt{\frac{P_{\textrm{solid}}} {\rho_{\textrm{solid}}}} \sim \sqrt{\alpha} {\mp \rAtom}$
+\begin{tabular}{l}
+Predict $\sim$25,000 m/s \\
+Beryllium 12,890 m/s     \\
+Diamond 12,000 m/s       \\
+Steel 6000 m/s           \\
+\end{tabular}
 
 
 \underline{\textbf{Planets:}}
 
+Solids where gravitational pressure balanced by solid pressure
+
+$E_{\textrm{Gravity}} \sim \frac{\GN M_{\textrm{Planet}}^2}{R_{\textrm{Planet}}}$
+
+$P_{\textrm{Gravity}} \sim \frac{E_{\textrm{Gravity}}}{V_{\textrm{Planet}}} \sim \frac{\GN M_{\textrm{Planet}}^2}{R_{\textrm{Planet}}^4}$
+
+$M_{\textrm{Planet}} \sim \rho_{\textrm{solid}} \times R_{\textrm{Planet}}^3 \sim \frac{Z\mp R_{\textrm{Planet}}^3}{\rAtom^3}$
+
+$P_{\textrm{Gravity}} \sim \frac{\GN Z^2 \mp^2 R_{\textrm{Planet}}^2}{\rAtom^6} $
+
+Have a planet when $P_{\textrm{Gravity}} \sim P_{\textrm{Solid}}$  or $\frac{\GN Z^2 \mp^2 R_{\textrm{Planet}}^2}{\rAtom^6} \sim \frac{Z\alpha}{\rAtom^4}$
+
+$\Rightarrow R_{\textrm{Planet}} \sim \sqrt{\frac{1}{\GN \mp^2 Z^3 \alpha \me^2}}  \sim \sqrt{\frac{\alpha}{\aG}} \times \rAtom $
+
+Planets/atoms relative size direct result or realtive EM vs Gravity strength.
+
+This is why things are big, despite being governed by microscopic laws.
+
+\begin{tabular}{lcc}
+  & $R_{\textrm{Earth}}$ & $M_{\textrm{Earth}}$  \\
+\hline
+Prediction:  & $10^7$ m & $10^{25}$ kg\\
+Actual:      & $6.4 \times 10^6$ m & $5.9 \times 10^{24}$ kg\\
+\end{tabular}
+
 \underline{\textbf{Life etc.:}}
-
-Homework:
-What is your major/minor ? 
-When do you plan on graduating?
-What do you want to do after graduation ? (eg: grad school ? if so, what subject ?)
-What do you most want to get out of this course ? 
-
-Calculate the local strength of gravity $g_{\textrm{local}}$ in terms of $\alpha$,\aG,\mp and \me.
-What is your estimated value in mks units ?
-
-Estimate an limit on the size of life.
-Assume life is a solid. 
 
  
 
