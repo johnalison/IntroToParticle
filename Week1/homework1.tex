@@ -11,26 +11,103 @@
 \def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
 \def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
 
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
 \begin{document}
-
-\textbf{\Huge Homework 1}
-
-1) (2-points)
-What is your major/minor ? \\
-When do you plan on graduating?\\
-What do you want to do after graduation ? (eg: grad school ? if so, what subject ? if not, what industry?)\\
-What do you most want to get out of this course ? 
-
-2) (5-points) Calculate the local strength of gravity $g_{\textrm{local}}$ in terms of $\alpha$,\aG,\mp\ and \me.
-
-What is your estimated value in mks units ?
-
-3) Estimate the size of life forms on earth in terms of $\alpha$,\aG,\mp\ and \me.
-Assume life is a solid. 
+\thispagestyle{fancy}
 
 
-4) Estimate the Speed of sound in a neutron star. 
-   Assume a neutron star is a solid made of neutrons. 
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2019\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Homework Set \#1}}
+\large
+
+{\textbf{ Due Date:} Before class Friday January 25th  }
+\end{center}
+
+{\large
+\textbf{1) You} \hfill \textit{(2 points)}
+\begin{itemize}
+\item[(a)]What is your major/minor ? 
+\item[(b)]When do you plan on graduating?
+\item[(c)]What do you want to do after graduation ? (eg: grad school ? if so, what subject ? if not, what industry?)
+\item[(d)]What do you most want to get out of this course ? 
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{2) Solid State Physics} \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)] Assume a solid is composed of closely packed atoms. What is the spacing between atoms?  Express your result in terms of  $\alpha$, \aG, \mp, and \me.
+\item[(b)] If you wanted to study the crystal structure of a solid material with $Z\sim10$ using light, what wavelength of photons would you need ?
+Express your result in terms of  $\alpha$, \aG, \mp, and \me.
+\item[(c)] Where in the spectrum of EM radiation do these photons lie?
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{3) Strength of Gravity on Earth} \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)]Calculate the local strength of gravity $g_{\textrm{local}}$ in terms of $\alpha$, \aG, \mp, and \me.
+\item[(b)]What is your estimated value in mks units ?
+\item[(c)]How does this compare with the well-known value of 9.8 m/s$^2$ ?
+\end{itemize}
+%Estimate the size of life forms on earth in terms of $\alpha$, \aG, \mp, and \me.
+%Assume life is a solid. 
+
+\vspace*{0.25in}
+
+\textbf{4) Neutron Stars } \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)]Estimate the radius, mass, and speed of sound for neutron stars in terms of $\alpha$, \aG, \mp, and \me.
+(Assume: A neutron star is a solid made of neutrons and $\mp \sim m_{\textrm{neutron}}$)
+\item[(b)]What are you estimated values in mks units ?
+\item[(c)]Compare your estimates to actual values for Neutron Stars quoted online.
+\item[(d)]Look up $m_{\textrm{neutron}}$. How does this compare with the assumption of $\mp \sim m_{\textrm{neutron}}$?
+\end{itemize}
+
+\newpage
+
+\textbf{5) 2D Rotations } \hfill \textit{(3 points)}
+\begin{itemize}
+\item[(a)]Show that $R(\Theta) = e^{I\Theta} = cos(\Theta)+ I sin(\Theta)$
+where, $I =  \begin{bmatrix}
+    0 & 1  \\
+    -1 & 0
+  \end{bmatrix} $
+\end{itemize}
+}
+
+\vspace*{0.25in}
+
+\textbf{6) 3D Rotations } \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)]Work out the ``algebra'' of the generators of 3D rotations $J_i$. \\
+Where $
+J_3 =  \begin{bmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{bmatrix}, 
+\hfill
+ J_2 =  \begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix} 
+\hfill
+ J_1 =  \begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix} 
+$\\
+(These generators different from the T's derived in class by a factor of $i$)\\
+Working out the algebra means calculating the commutation relations $[J_i,J_j]$.
+\item[(b)]Let M be a traceless $2\times2$ hermitian matrix and U be a $2\times2$  hermitian matrix with determinant = 1.  
+Show that $M' = U^{\dagger}MU$ is also traceless and hermitian and that is has the same determinant as M.
+\end{itemize}
+
 
 
 \end{document}
