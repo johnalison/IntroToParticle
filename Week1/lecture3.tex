@@ -1,0 +1,203 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+\def\mp{\ensuremath{m_{\textrm{proton}}}}
+\def\rp{\ensuremath{r_{\textrm{proton}}}}
+\def\me{\ensuremath{m_{\textrm{electron}}}}
+\def\aG{\ensuremath{\alpha_G}}
+\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
+
+\def\ABCDMatrix{\ensuremath{\begin{pmatrix} A &  B  \\ C  & D \end{pmatrix}}}
+\def\xyprime{\ensuremath{\begin{pmatrix} x' \\ y' \end{pmatrix}}}
+\def\xyprimeT{\ensuremath{\begin{pmatrix} x' &  y' \end{pmatrix}}}
+\def\xy{\ensuremath{\begin{pmatrix} x \\ y \end{pmatrix}}}
+\def\xyT{\ensuremath{\begin{pmatrix} x & y \end{pmatrix}}}
+
+\def\IMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ -1  & 0 \end{pmatrix}}}
+
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 3}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+
+\section*{Special Relativity}
+
+Talking about relativity means talking about Lorentz invariance.
+
+If there is a point in space time: \\
+%xrightarrow[\text{world}]
+\begin{center}
+$(t,x) \xrightarrow[\text{observer}]{\text{another moving}} (t', x')$
+\end{center}
+
+Invariant notion of distance:
+ 
+\begin{equation*}
+t^2 - x^2 = t'^2 - x'^2
+\end{equation*}
+
+(This should all be familar to you.)
+
+We will recap this in an adult way...
+
+\section*{\underline{Start with Rotations}}
+
+Have an invariant notion of length of $\vec{p}$
+
+\begin{eqnarray*}
+x^2 + y^2 = x'^2 + y'^2  \hspace{1in} & x' = x\ cos(\theta) - y\ sin(\theta) \\
+                          &  x' = y\ cos(\theta) + x\ sin(\theta)
+\end{eqnarray*}
+
+Look at this another way ... 
+
+\begin{equation*}
+\xyprime = \ABCDMatrix \xy  
+\end{equation*}
+We are after the set of all of matrices such that  $x^2 + y^2 = x'^2 + y'^2$
+
+Start with the infitesimal case
+\begin{equation*}
+\ABCDMatrix = \begin{pmatrix} 1 &  0  \\ 0 & 1 \end{pmatrix} + \epsilon \begin{pmatrix} a & b  \\ c & d \end{pmatrix}
+\end{equation*}
+
+We require:
+$\xyprimeT \xyprime = \xyT \xy $ 
+
+Multiplying through:
+\begin{eqnarray*}
+x' = x + \epsilon a x + \epsilon b y \\
+y' = y + \epsilon  c x + \epsilon d y
+\end{eqnarray*}
+
+
+Keeping terms linear in $\epsilon$.
+
+\begin{eqnarray*}
+\textstyle
+x'^2 + y'^2 = x^2 + y^2  + 2\epsilon\underbrace{(ax^2 + bxy + cxy + dy^2)}_{ =0 \hspace*{0.2in} \forall x \& y}
+\end{eqnarray*}
+
+so 
+
+\begin{eqnarray*}
+\textstyle
+ax^2 + bxy + cxy + dy^2 = 0
+\end{eqnarray*}
+
+\begin{eqnarray*}
+\textstyle
+\Rightarrow a = d = 0  \hspace*{0.2in} \&   \hspace*{0.2in}  \underbrace{b=-c}_{\text{Can rescale $\epsilon$ such that b=1}}
+\end{eqnarray*}
+
+So 
+
+\begin{eqnarray*}
+\xyprime = \left[ \mathlarger{\mathlarger{\mathbbm{1}}} + \epsilon   \IMatrix \right]\xy
+\end{eqnarray*}
+
+\section*{\underline{More Sophisticated Way:}}
+
+$x_i$ where $i = 1,2$    $x_1 = x$ and $x_2 = y$
+
+The rotation can now be written as:\\
+\begin{equation*}
+x'_i = R_{i1}x_1 + R_{i2}x_2 = \sum\limits_{j=1}^2 R_{ij} x_j \equiv R_{ij}x_j
+\end{equation*}
+In the last expression, the sum is implied by the repeated indices (known as Einstein notation).
+
+\begin{equation*}
+x'_i = R_{ij}x_j
+\end{equation*}
+
+$x'_i x'_i = x_i x_i$ is what it takes for $R$ to be a rotation. 
+Need to find the special $R$s such that this is satisfied.
+
+The identity matrix is written as $\delta_{ij}$, where $\delta_{ij} = 1$ if $i=j$, 0 otherwise.
+
+If no rotation at all: $R_{ij} = \delta_{ij}$,  of an infinitesimal rotation:  
+\begin{equation*}
+R_{ij} = \delta_{ij} + \epsilon w_{ij}
+\end{equation*}
+
+\begin{equation*}
+x'_{i} = x_i + \epsilon w_{ij} x_j
+\end{equation*}
+
+
+\begin{equation*}
+x'_{i}x'_{i} = x_i x_{i} + 2 \epsilon \underbrace{w_{ij} x_j x_i}_{ =0 \hspace*{0.05in} \forall x }  + \mathcal{O}(\epsilon^2)
+\end{equation*}
+
+$\Rightarrow w_{ij}$ has to be anti-symmetric $w_{ij} = - w_{ji}$.
+
+\noindent\rule{\textwidth}{1pt}
+
+Back to previous example, find \underline{finite} rotations (without any mention of geometry etc.)
+
+Take the infinitesimal rotation and do it n-times.
+
+Define $\theta = N\epsilon$
+
+\begin{eqnarray*}
+\xyprime = \left[ \mathlarger{\mathlarger{\mathbbm{1}}} + \epsilon   \IMatrix \right]\xy \equiv \left[ \mathlarger{\mathlarger{\mathbbm{1}}} + \epsilon   \textrm{I} \right]\xy
+\end{eqnarray*}
+
+So the finite rotation ($R(\theta)$) given by,
+\begin{eqnarray*}
+R(\theta) = (1 + \epsilon I)(1 + \epsilon I) \dots (1 + \epsilon I) \dots = (1+\epsilon I)^N = \left(1+\frac{\theta}{N}I\right)^N
+\end{eqnarray*}
+
+Now let $N\rightarrow \infty$,  $R(\theta) = e^{I\theta}$.
+
+Built up finite rotation from the infinitesimal rotations.
+ 
+$x'(\theta) = R(\theta)x = e^{I\theta}$
+
+The meaning of $e^X$ when $X$ is a matrix is simply the expansion.
+\begin{eqnarray*}
+e^X = 1 + X + \frac{X^2}{2!} + \frac{X^3}{3!} + \dots
+\end{eqnarray*}
+
+
+$I^2 =  \IMatrix\IMatrix = {\begin{pmatrix} -1 &  0  \\ 0  & -1 \end{pmatrix}} = \mathlarger{\mathlarger{\mathbbm{-1}}} ! $
+We have just discovered i following our nose.
+
+$R(\theta) = cos(\theta) + Isin(\theta) = {\begin{pmatrix} cos(\theta) &  sin(\theta)  \\ -sin(\theta)  & cos(\theta) \end{pmatrix}}$
+
+\textbf{\underline{Strategy:}} First understand the action of the symmetry infinitesimally, then the big symmetry action is obtained by iterating the infinitesimal.
+Always $e^X$ where $X$ is the generator. 
+This is a great strategy for any kind of symmetry.
+
+Will now do 3D rotations... Something new happends.
+
+\section*{3D Rotations}
+
+3-parameters associated with a 3D rotation.
+
+Already saw, any rotation is of the form 
+
+}
+\end{document}
+
+
