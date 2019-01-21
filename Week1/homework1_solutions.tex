@@ -1,0 +1,140 @@
+\input{latexSetup}
+\usepackage{braket}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+\def\mp{\ensuremath{m_{\textrm{proton}}}}
+\def\rp{\ensuremath{r_{\textrm{proton}}}}
+\def\me{\ensuremath{m_{\textrm{electron}}}}
+\def\aG{\ensuremath{\alpha_G}}
+\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
+
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2019\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Homework Set \#1}}
+\large
+
+{\textbf{ Solutions}   }
+\end{center}
+
+{\large
+\textbf{2) Solid State Physics} \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)] {
+We worked out in class $\rAtom \sim \frac{1}{Z\alpha m_e}$. (using $E\sim - \frac{Z\alpha}{r} + \frac{p^2}{m_e}$ and $p\times r \sim 1$)
+So a solid has a spacing of \rAtom.
+}
+\item[(b)] {
+To probe distances of order \rAtom\ need to photons with Energy $\sim \frac{1}{\rAtom} \sim Z \alpha \me$.
+Assuming $Z\sim 10$, \\Energy $\sim 10 \cdot 10^{-2} \cdot 10^{-3}\ \GeV \sim 10^{-4} \GeV \sim 10^2\ \textrm{keV}$
+}
+\item[(c)] $10^2\ \textrm{keV}$ photons are x-rays.
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{3) Strength of Gravity on Earth} \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)]{
+From class, $R_{\textrm{Planet}} \sim  \sqrt{\frac{\alpha}{\aG}} \times \rAtom$,   $\rho_{\textrm{solid}} \sim \frac{Z\mp}{\rAtom^3}$, and $M_{\textrm{Planet}} \sim \rho_{\textrm{Solid}} \times R_{\textrm{Planet}}^3$
+
+\begin{equation*}
+g_{\textrm{local}} \sim G_N \frac{M_{\textrm{Planet}}}{R_{Planet}^2} \sim \frac{G_N Z \mp R_{\textrm{Planet}}}{\rAtom^3}\sim \sqrt{\alpha_G \alpha} \frac{Z}{\mp \rAtom^2}
+\end{equation*}
+}
+\item[(b)]{
+\begin{align*}
+g_{\textrm{local}}  \sim & (\alpha_G \alpha)^{1/2} \cdot Z \cdot \rAtom^{-2} \cdot \mp^{-1}\\
+                    \sim & (10^{-39}10^{-2})^{1/2} \cdot 10 \cdot 10^{-8}\ \GeV^{-2} \cdot \GeV\\
+                    \sim & 10^{-27.5} \GeV
+\end{align*}
+
+Need to convert \GeV\ to $\frac{m}{s^2}$ which has units of [distance]$\times$[time]$^{-2}$.
+c has units of [distance]$\times$[time]$^{-1}$, h has units of [energy]$\times$[time].
+So, can convert from [energy] to [distance]$\times$[time]$^{-2}$ by multiplying by c/h.
+c = $10^8$ m/s, h = $10^{-15}$ eV$\cdot$s = $10^{-24}$ \GeV $\cdot$ s. 
+So, $c/h = 10^8 \cdot 10^{24} = 10^{32} \frac{m}{\GeV s^2}$  
+\begin{align*}
+g_{\textrm{local}}  \sim & 10^{-27.5} \GeV  \times (1)\\
+  \sim & 10^{-27.5} \GeV  \times \frac{c}{h} \\
+  \sim & 10^{-27.5} \GeV  \times 10^{32}  \frac{m}{\GeV s^2} \\
+  \sim & 10^{4} \frac{m}{s^2}
+\end{align*}
+
+
+}
+\item[(c)]{
+Not so close to $10 \frac{m}{s^2}$, If we has used $\rAtom \sim10^{-10} m$ instead of $10^{-12}$ which accounts for the screening of multple electrons in the atom. 
+Would have calculated factor of $10^{-4}$ smaller or $g_\textrm{local}$ ~ 1, which is pretty close.
+}
+
+\end{itemize}
+%Estimate the size of life forms on earth in terms of $\alpha$, \aG, \mp, and \me.
+%Assume life is a solid. 
+
+\vspace*{0.25in}
+
+\textbf{4) Neutron Stars } \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)]Estimate the radius, mass, and speed of sound for neutron stars in terms of $\alpha$, \aG, \mp, and \me.
+(Assume: A neutron star is a solid made of neutrons and $\mp \sim m_{\textrm{neutron}}$)
+\item[(b)]What are you estimated values in mks units ?
+\item[(c)]Compare your estimates to actual values for Neutron Stars quoted online.
+\item[(d)]Look up $m_{\textrm{neutron}}$. How does this compare with the assumption of $\mp \sim m_{\textrm{neutron}}$?
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{5) 2D Rotations } \hfill \textit{(3 points)}
+\begin{itemize}
+\item[(a)]Show that $R(\Theta) = e^{I\Theta} = cos(\Theta)+ I sin(\Theta)$
+where, $I =  \begin{bmatrix}
+    0 & 1  \\
+    -1 & 0
+  \end{bmatrix} $
+
+\item[(b)]Show that 2D rotations commute.  (ie: $R(\Theta_{1})R(\Theta_{2}) = R(\Theta_{2})R(\Theta_{1})$)
+\end{itemize}
+}
+
+\vspace*{0.25in}
+
+\textbf{6) 3D Rotations } \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)]Work out the ``algebra'' of the generators of 3D rotations $J_i$. \\
+Where $
+J_3 =  \begin{bmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{bmatrix}, 
+\hfill
+ J_2 =  \begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix} 
+\hfill
+ J_1 =  \begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix} 
+$\\
+(These generators different from the T's derived in class by a factor of $i$)\\
+Working out the algebra means calculating the commutation relations $[J_i,J_j]$.
+\item[(b)]Let M be a traceless $2\times2$ hermitian matrix and U be a $2\times2$  hermitian matrix with determinant = 1.  
+Show that $M' = U^{\dagger}MU$ is also traceless and hermitian and that is has the same determinant as M.
+\end{itemize}
+
+
+
+\end{document}
