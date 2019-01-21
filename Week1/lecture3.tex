@@ -21,7 +21,9 @@
 \def\xyT{\ensuremath{\begin{pmatrix} x & y \end{pmatrix}}}
 
 \def\IMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ -1  & 0 \end{pmatrix}}}
-
+\def\JThree{\ensuremath{\begin{pmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{pmatrix}}} 
+\def\JTwo{\ensuremath{\begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix}}}
+\def\JOne{\ensuremath{\begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix}}}
 
 \usepackage{fancyhdr}
 
@@ -56,9 +58,9 @@ Invariant notion of distance:
 t^2 - x^2 = t'^2 - x'^2
 \end{equation*}
 
-(This should all be familar to you.)
+(This should all be familiar to you.)
 
-We will recap this in an adult way...
+We will re-cap this in an adult way...
 
 \section*{\underline{Start with Rotations}}
 
@@ -76,7 +78,7 @@ Look at this another way ...
 \end{equation*}
 We are after the set of all of matrices such that  $x^2 + y^2 = x'^2 + y'^2$
 
-Start with the infitesimal case
+Start with the infinitesimal case
 \begin{equation*}
 \ABCDMatrix = \begin{pmatrix} 1 &  0  \\ 0 & 1 \end{pmatrix} + \epsilon \begin{pmatrix} a & b  \\ c & d \end{pmatrix}
 \end{equation*}
@@ -107,7 +109,7 @@ ax^2 + bxy + cxy + dy^2 = 0
 
 \begin{eqnarray*}
 \textstyle
-\Rightarrow a = d = 0  \hspace*{0.2in} \&   \hspace*{0.2in}  \underbrace{b=-c}_{\text{Can rescale $\epsilon$ such that b=1}}
+\Rightarrow a = d = 0  \hspace*{0.2in} \&   \hspace*{0.2in}  \underbrace{b=-c}_{\text{Can re-scale $\epsilon$ such that b=1}}
 \end{eqnarray*}
 
 So 
@@ -183,19 +185,103 @@ e^X = 1 + X + \frac{X^2}{2!} + \frac{X^3}{3!} + \dots
 $I^2 =  \IMatrix\IMatrix = {\begin{pmatrix} -1 &  0  \\ 0  & -1 \end{pmatrix}} = \mathlarger{\mathlarger{\mathbbm{-1}}} ! $
 We have just discovered i following our nose.
 
-$R(\theta) = cos(\theta) + Isin(\theta) = {\begin{pmatrix} cos(\theta) &  sin(\theta)  \\ -sin(\theta)  & cos(\theta) \end{pmatrix}}$
+$R(\theta) = cos(\theta) + Isin(\theta) = {\begin{pmatrix} cos(\theta) &  sin(\theta)  \\ -sin(\theta)  & cos(\theta) \end{pmatrix}}$  (You will show in homework...)
 
 \textbf{\underline{Strategy:}} First understand the action of the symmetry infinitesimally, then the big symmetry action is obtained by iterating the infinitesimal.
 Always $e^X$ where $X$ is the generator. 
 This is a great strategy for any kind of symmetry.
 
-Will now do 3D rotations... Something new happends.
+Will now do 3D rotations... Something new happens.
 
 \section*{3D Rotations}
 
 3-parameters associated with a 3D rotation.
 
 Already saw, any rotation is of the form 
+
+\begin{equation*}
+x'_{i} = x_i + \epsilon w_{ij} x_j  \hspace{0.5in} \textrm{with } \hspace{0.5in} w_{ij} =- w_{ji}
+\end{equation*}
+
+
+Most general $3\time3$ anti-symmetric matrix: ${\begin{pmatrix} 0 & a & b  \\ -a & 0 & c \\ -b & -c & 0 \end{pmatrix}}$,  Now have 3 generators corresponding to the rotations in 3D.
+
+\begin{equation*}
+\epsilon w_{ij} = \epsilon_{12}\underbrace{{\begin{pmatrix} 0 & 1 & 0  \\ -1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}}}_{\text{generator we just saw}} + 
+                  \epsilon_{13}{\begin{pmatrix} 0 & 0 & 1  \\ 0 & 0 & 0 \\ -1 & 0 & 0 \end{pmatrix}} +
+                  \epsilon_{23}{\begin{pmatrix} 0 & 0 & 0  \\ 0 & 0 & -1 \\ 0 & -1 & 0 \end{pmatrix}}
+\end{equation*}
+
+How to get the finite version ? 
+Easy, just exponentiate. 
+
+Something new happens in 3D:
+\begin{itemize}
+\item[-]2D rotations commute        
+\item[-]3D rotations do not
+\end{itemize}
+
+Define $J_3 = \JThree$, $J_2 = \JTwo$, and $J_1 = \JOne$
+
+Rotations form a group.
+Any three rotations give something that is also a rotation: 
+\begin{equation*}
+e^{i\theta_3 J_3}e^{i\theta_2 J_2}e^{i\theta_1 J_1} = e^{\phi_3 J_3 + \phi_2 J_2 + \phi_1 J_1}
+\end{equation*}
+
+This can only be possible if
+\begin{equation*}
+[J_1, J_2] = i J_3  \textrm{+ cyclic}
+\end{equation*}
+
+
+Can step back and think about this more abstractly. 
+The matrices  we found form a group, but this group exists abstractly independent of these $3\times3$ matrices.
+Fully determined by the commutation relations.
+(Just like vectors and components)
+
+In general, many matrices that satisfy the algebra (the commutation relations). 
+These give different representations.
+
+\underline{Deep:} rotations can act on more than just 3D vectors.
+
+\begin{equation*}
+\begin{bmatrix} \left(J_i\right) &  0  \\ 0  & \left(J_j\right) \end{bmatrix}
+\end{equation*}
+this is officially a representation.  
+Its called a ``Reducible'' Representation.
+
+\underline{More Generally} 
+\begin{equation*}
+[J_a, J_b] = i f_{abc} J_c \hspace{0.3in} \textrm{where $J_a$, $ a = 1, 2,$ ... dim. of the group}
+\end{equation*}
+Lie found all the possible symmetries when J is hermitian (there are not many).
+
+\section*{One final example with rotations}
+Lets look at traceless $2\times2$ hermitian matrices. 
+Any $2\times2$, traceless, hermitian matrix can be written as: 
+\begin{equation*}
+M = \begin{pmatrix} z &  x+iy  \\ x-iy  & -z \end{pmatrix} \equiv \vec{\sigma} \cdot \vec{x}
+\end{equation*}
+where $\vec{\sigma} = (\sigma_x, \sigma_y, \sigma_z)$ and $\sigma_i$ are the Pauli matrices.
+
+Note that $\textrm{det}(M) = - \vec{x}\cdot\vec{x} = - |\vec{x}|$.
+
+Consider $M'=U^{\dagger}MU$, where U is unitary.
+Any unitary matrix can be written as a phase $e^{i\theta}$ times a $2\times2$ hermitian matrix with det = 1.  (``Special Unitary Matrix'')
+Because the phase cancels in $M'$ we will only consider U as unitary and det = 1. 
+$U \in SU(2)$
+
+If M is hermitian and traceless, then M' is still hermitian and traceless.
+\begin{equation*}
+M' = \sigma \cdot \vec{x'}_u
+\end{equation*}
+$\vec{x'}_{u} $ depends on U.  det(M') = det(M) $\Rightarrow \vec{x'}_u^2 = {\vec{x}}^2 $%= \vec{x}^2 $ length of \x
+direct correspondence between $2\times2$ hermitian matrices \& rotations.
+
+This is a 2D action of rotations.
+
+Not easy to generalize all of this to the Lorentz group...
 
 }
 \end{document}
