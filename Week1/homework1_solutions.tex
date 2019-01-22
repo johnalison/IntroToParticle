@@ -96,43 +96,131 @@ Would have calculated factor of $10^{-4}$ smaller or $g_\textrm{local}$ ~ 1, whi
 
 \textbf{4) Neutron Stars } \hfill \textit{(5 points)}
 \begin{itemize}
-\item[(a)]Estimate the radius, mass, and speed of sound for neutron stars in terms of $\alpha$, \aG, \mp, and \me.
-(Assume: A neutron star is a solid made of neutrons and $\mp \sim m_{\textrm{neutron}}$)
-\item[(b)]What are you estimated values in mks units ?
-\item[(c)]Compare your estimates to actual values for Neutron Stars quoted online.
-\item[(d)]Look up $m_{\textrm{neutron}}$. How does this compare with the assumption of $\mp \sim m_{\textrm{neutron}}$?
+\item[(a)]{
+Neutron star will be stable when $P_{Neutron} \sim P_{Grav}$.
+$P_{Neutron} \sim \frac{E_{Neutron}}{R_{Neutron}^3} \sim \mp^4$
+\begin{equation*}
+P_\textrm{Grav} \sim \frac{G_N \frac{M_{NS}^2}{R_{NS}}}{R_{NS}^3} \sim \frac{G_N M_{NS}^2}{R_{NS}^4}
+\end{equation*}
+
+\begin{equation*}
+M_\textrm{NS} \sim \rho_{Neutron}\times R_{NS}^3
+\end{equation*}
+
+\begin{equation*}
+\rho_{Neutron} \sim \mp^4
+\end{equation*}
+
+
+\begin{equation*}
+P_\textrm{Grav} \sim P_{Neutron} \Rightarrow  G_N \mp^8 R_{NS}^2 \sim \mp^4
+\end{equation*}
+
+\begin{equation*}
+R_{NS} \sim \sqrt{\frac{1}{\aG}} \frac{1}{\mp} \sim \sqrt{\frac{1}{\aG}} \rp
+\end{equation*}
+
+\begin{equation*}
+\Rightarrow M_{NS} \sim \left(\frac{1}{\aG}\right)^{3/2} \mp 
+\end{equation*}
+
+Speed of sound $v_{NS} \sim \sqrt{\frac{P_{NS}}{\rho_{NS}}} \sim 1$
+
+}
+
+
+\item[(b)]{
+$R_{NS} \sim 10^{19} 10^{-15} \text{m} \sim 10^4 \text{m} \sim 10\ \text{km} $  \\
+$M_{NS} \sim 10^{58} 10^{-27} \text{kg} \sim 10^{31} \text{kg} \sim 10\ M_\odot $  \\
+$v_{NS} \sim c$
+}
+\item[(c)]{
+``Neutron stars have a radius of the order of 10 kilometres and a mass lower than a 2.16 solar masses.'' -wikipedia
+}
+
+\item[(d)]{
+$\mp = 938.27$ MeV\\
+$m_{\text{neutron}} = 939.56$ MeV $ \sim 1.001 \mp $
+
+}
 \end{itemize}
 
 \vspace*{0.25in}
 
+\newpage
+
 \textbf{5) 2D Rotations } \hfill \textit{(3 points)}
 \begin{itemize}
-\item[(a)]Show that $R(\Theta) = e^{I\Theta} = cos(\Theta)+ I sin(\Theta)$
-where, $I =  \begin{bmatrix}
-    0 & 1  \\
-    -1 & 0
-  \end{bmatrix} $
+\item[(a)]{
 
-\item[(b)]Show that 2D rotations commute.  (ie: $R(\Theta_{1})R(\Theta_{2}) = R(\Theta_{2})R(\Theta_{1})$)
-\end{itemize}
+\begin{equation*}
+e^{I\theta} = 1 + I\theta + \frac{I^2\theta^2}{2!} + \frac{I^3\theta^3}{3!} + \frac{I^4\theta^4}{4!} + \dots
+\end{equation*}
+
+$I^2 = \begin{bmatrix} -1 & 0  \\ 0 & -1 \end{bmatrix} $
+
+Show that $R(\Theta) = e^{I\Theta} = cos(\Theta)+ I sin(\Theta)$
+
+
+\begin{equation*}
+e^{I\theta} = I\left(\theta + \frac{I^2\theta^3}{3!} + \frac{I^4\theta^5}{5!} + \dots \right) + \left(1 + \frac{I^2\theta^2}{2!} + \frac{I^4\theta^4}{4!}  + \dots \right)
+\end{equation*}
+
+\begin{equation*}
+e^{I\theta} = I\left(\theta - \frac{\theta^3}{3!} + \frac{\theta^5}{5!} + \dots \right) + \left(1 - \frac{\theta^2}{2!} + \frac{\theta^4}{4!}  + \dots \right) \\
+= I sin(\theta) + cos(\theta)
+\end{equation*}
+
+  
 }
+\item[(b)]{
+
+\begin{equation*}
+\begin{pmatrix}  cos(\theta_1) & sin(\theta_1) \\ -sin(\theta_1) & cos(\theta_1) \end{pmatrix} 
+\begin{pmatrix}  cos(\theta_2) & sin(\theta_2) \\ -sin(\theta_2) & cos(\theta_2) \end{pmatrix}  = \\
+\end{equation*}
+
+\begin{equation*}
+\begin{pmatrix}  
+cos(\theta_1)cos(\theta_2) - sin(\theta_1)sin(\theta_2) & cos(\theta_1)sin(\theta_2) + sin(\theta_1)cos(\theta_2) \\ 
+-sin(\theta_1)cos(\theta_2) - cos(\theta_1)sin(\theta_2) & -sin(\theta_1)sin(\theta_2) + cos(\theta_1)cos(\theta_2) 
+\end{pmatrix}  = 
+\end{equation*}
+
+\begin{equation*}
+\begin{pmatrix}  
+cos(\theta_1 + \theta_2)  & sin(\theta_1 + \theta_2) \\ 
+-sin(\theta_1 + \theta_2) & cos(\theta_1 + \theta_2)
+\end{pmatrix}  
+\end{equation*}
+which is clearly symmetric $\theta_1 \leftrightarrow \theta_2$
+
+}
+\end{itemize}
 
 \vspace*{0.25in}
 
 \textbf{6) 3D Rotations } \hfill \textit{(5 points)}
 \begin{itemize}
-\item[(a)]Work out the ``algebra'' of the generators of 3D rotations $J_i$. \\
-Where $
-J_3 =  \begin{bmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{bmatrix}, 
-\hfill
- J_2 =  \begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix} 
-\hfill
- J_1 =  \begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix} 
-$\\
-(These generators different from the T's derived in class by a factor of $i$)\\
-Working out the algebra means calculating the commutation relations $[J_i,J_j]$.
-\item[(b)]Let M be a traceless $2\times2$ hermitian matrix and U be a $2\times2$  hermitian matrix with determinant = 1.  
-Show that $M' = U^{\dagger}MU$ is also traceless and hermitian and that is has the same determinant as M.
+\item[(a)]{
+
+\begin{equation*}
+J_1 J_2 - J_2 J_1 = \begin{bmatrix}    0 & 0 & 0  \\ 1 & 0  & 0 \\ 0 & 0 & 0 \end{bmatrix} - \begin{bmatrix}    0 & 1 & 0  \\ 0 & 0  & 0 \\ 0 & 0 & 0 \end{bmatrix}  = \begin{bmatrix}    0 & -1 & 0  \\ 1 & 0  & 0 \\ 0 & 0 & 0 \end{bmatrix} = -i J_3
+\end{equation*}
+etc.
+
+}
+\item[(b)]{
+%Show that $M' = $ is also traceless and hermitian and that is has the same determinant as M.
+
+$tr(M') = tr(U^{\dagger}MU) = tr(UU^{\dagger}M) = tr(M)$\\
+
+$(M')^\dagger = (U^{\dagger}MU)^\dagger = (U M^{\dagger} U^{\dagger}) = (U^\dagger M U) = M'$\\
+
+
+$det(M') = det(U^{\dagger})det(M)det(U) = 1 \times det(M) \times 1$
+}
+
 \end{itemize}
 
 
