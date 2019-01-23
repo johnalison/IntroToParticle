@@ -47,7 +47,7 @@
 
 \section*{Special Relativity}
 
-\underline{\textbf{Recap from Last Time}}
+\underline{\textbf{Re-cap from Last Time}}
 
 Talking about relativity means talking about Lorentz invariance.
 
@@ -81,21 +81,23 @@ Four criteria for group:
 \begin{itemize}
 \item[-] Have Identity element:  (no rotation or by 360)
 \item[-] Every element of the group has an inverse (for us, rotate by $360-\theta$)
-\item[-] The group is closed:  for any elements thier product is also in the group.
+\item[-] The group is closed:  for any elements their product is also in the group.
 \item[-] The multiplication is associative.
 \end{itemize}
 
 If commute: $a\cdot b= b\cdot a$ say that the group is ``Abelian''.
+If they do not commute say that the group is ``non-Abelian''.
+We have already seen examples of both of these, both types are also critical for the structure of the SM.
 
-Last lecture studied 3D rotations and thier group ``SO(2)'' refers to matriecies studied  (S = Special (det =1) / O = Orthogonal (preseves length) / 2 = 2x2)\\
+Last lecture studied 2D rotations and their group ``SO(2)'' refers to matrices studied  (S = Special (det =1) / O = Orthogonal (preserves length) / 2 = 2x2)\\
 
 $\begin{pmatrix} \cos(\theta) &  \sin(\theta)  \\ -\sin(\theta)  & \cos(\theta) \end{pmatrix}$\\
 
-We also looked at 3D rotations, theier group was ``SO(3)'', what do you think this stands for ???\\
+We also looked at 3D rotations, their group was ``SO(3)'', what do you think this stands for ???\\
 We saw at the end of the lecture that  $SO(3) \simeq SU(2)$   
-SU(2) = (Special / Unitary / 2x2 matricies.
+SU(2) = (Special / Unitary / 2x2 matrices.
 
-\textit{(You will show in for homework that this is equavilant to another group U(1).)}
+\textit{(You will show in for homework that this is equivalent to another group U(1).)}
 
 
 \noindent\rule{\textwidth}{1pt}
@@ -126,7 +128,7 @@ Now we after all the transformations that leave  $x_\mu x^\mu$ (Lorentz transfor
 x'^\mu = \underbrace{\Lambda^\mu_\nu}_{\mbox{4x4 matrix}} x^\nu 
 \ee
 
-\underline{Same thing as before} Start with the infintesimal transofmations.
+\underline{Same thing as before} Start with the infinitesimal transformations.
 
 \be
 \Lmn  = \dmn + \epsilon \wmn
@@ -147,7 +149,7 @@ Require $x'^\mu x'_\mu = x^\mu x_\mu$ or
 
 So, $\underbrace{\etamn \omega^\mu_\rho}_{\equiv \omega_{\mu\rho} } x^\nu  x^\rho = 0$ 
 
-After all 4x4 anti-symmetric matricies  $\omega_{\mu\rho} = -\omega_{\rho\mu}$
+After all 4x4 anti-symmetric matrices  $\omega_{\mu\rho} = -\omega_{\rho\mu}$
 
 Lets just be damn explicit
 
@@ -157,8 +159,8 @@ Lets just be damn explicit
 
 However, the think that enters the transformation is $\omega^\mu_\nu$.\\
 
-Now raising a 0-compentent is free,  $\omega_{0i} = \omega^0_i$\\
-raising a i-compentent costs a -1,  $\omega_{i0} = -\omega^i_0$\\
+Now raising a 0-component is free,  $\omega_{0i} = \omega^0_i$\\
+raising a i-component costs a -1,  $\omega_{i0} = -\omega^i_0$\\
 But also know $\omega_{0i} = -\omega_{i0}$
 $\Rightarrow {\omega^0}_i = + {\omega^i}_0$
 
@@ -172,7 +174,7 @@ Generators of the Lorentz Group. We have 6 ``generators'' abcABC.
 
 3-rotations (guess which)  / 3-boosts
 
-Crucial sign differnece between boosts/rotations
+Crucial sign difference between boosts/rotations
 
 
 ${\omega^1}_2 = \begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}  \rightarrow e^{\theta \IMatrix} = \cos\theta + \IMatrix \sin\theta$\\
@@ -182,164 +184,39 @@ ${\omega^0}_1 = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 
 $\IBoostMatrix^2 = 1$ whereas $\IMatrix^2 = -1$
 
 \be
-\begin{pmatrix} x'^0 \\ x'^1\end{pmatrix} =
+\begin{pmatrix} x'^0 \\ x'^1\end{pmatrix} = \begin{pmatrix} \cosh\eta & \sinh\eta \\ \sinh\eta & \cosh\eta  \end{pmatrix} = \begin{pmatrix} x^0 \\ x^1\end{pmatrix}
 \ee
 
 Can (but I wont) work out the Lie Algrabra....Homework.
 
+Group is called SO$^+$(1,3)
 
-%%%%%%%%
-%
-%$x'_i x'_i = x_i x_i$ is what it takes for $R$ to be a rotation. 
-%Need to find the special $R$s such that this is satisfied.
-%
-%The identity matrix is written as $\delta_{ij}$, where $\delta_{ij} = 1$ if $i=j$, 0 otherwise.
-%
-%If no rotation at all: $R_{ij} = \delta_{ij}$,  of an infinitesimal rotation:  
-%\begin{equation*}
-%R_{ij} = \delta_{ij} + \epsilon w_{ij}
-%\end{equation*}
-%
-%\begin{equation*}
-%x'_{i} = x_i + \epsilon w_{ij} x_j
-%\end{equation*}
-%
-%
-%\begin{equation*}
-%x'_{i}x'_{i} = x_i x_{i} + 2 \epsilon \underbrace{w_{ij} x_j x_i}_{ =0 \hspace*{0.05in} \forall x }  + \mathcal{O}(\epsilon^2)
-%\end{equation*}
-%
-%$\Rightarrow w_{ij}$ has to be anti-symmetric $w_{ij} = - w_{ji}$.
-%
-%\noindent\rule{\textwidth}{1pt}
-%
-%Back to previous example, find \underline{finite} rotations (without any mention of geometry etc.)
-%
-%Take the infinitesimal rotation and do it n-times.
-%
-%Define $\theta = N\epsilon$
-%
-%\begin{eqnarray*}
-%\xyprime = \left[ \mathlarger{\mathlarger{\mathbbm{1}}} + \epsilon   \IMatrix \right]\xy \equiv \left[ \mathlarger{\mathlarger{\mathbbm{1}}} + \epsilon   \textrm{I} \right]\xy
-%\end{eqnarray*}
-%
-%So the finite rotation ($R(\theta)$) given by,
-%\begin{eqnarray*}
-%R(\theta) = (1 + \epsilon I)(1 + \epsilon I) \dots (1 + \epsilon I) \dots = (1+\epsilon I)^N = \left(1+\frac{\theta}{N}I\right)^N
-%\end{eqnarray*}
-%
-%Now let $N\rightarrow \infty$,  $R(\theta) = e^{I\theta}$.
-%
-%Built up finite rotation from the infinitesimal rotations.
-% 
-%$x'(\theta) = R(\theta)x = e^{I\theta}$
-%
-%The meaning of $e^X$ when $X$ is a matrix is simply the expansion.
-%\begin{eqnarray*}
-%e^X = 1 + X + \frac{X^2}{2!} + \frac{X^3}{3!} + \dots
-%\end{eqnarray*}
-%
-%
-%$I^2 =  \IMatrix\IMatrix = {\begin{pmatrix} -1 &  0  \\ 0  & -1 \end{pmatrix}} = \mathlarger{\mathlarger{\mathbbm{-1}}} ! $
-%We have just discovered i following our nose.
-%
-%
-%
-%\textbf{\underline{Strategy:}} First understand the action of the symmetry infinitesimally, then the big symmetry action is obtained by iterating the infinitesimal.
-%Always $e^X$ where $X$ is the generator. 
-%This is a great strategy for any kind of symmetry.
-%
-%Will now do 3D rotations... Something new happens.
-%
-%\section*{3D Rotations}
-%
-%3-parameters associated with a 3D rotation.
-%
-%Already saw, any rotation is of the form 
-%
-%\begin{equation*}
-%x'_{i} = x_i + \epsilon w_{ij} x_j  \hspace{0.5in} \textrm{with } \hspace{0.5in} w_{ij} =- w_{ji}
-%\end{equation*}
-%
-%
-%Most general $3\time3$ anti-symmetric matrix: ${\begin{pmatrix} 0 & a & b  \\ -a & 0 & c \\ -b & -c & 0 \end{pmatrix}}$,  Now have 3 generators corresponding to the rotations in 3D.
-%
-%\begin{equation*}
-%\epsilon w_{ij} = \epsilon_{12}\underbrace{{\begin{pmatrix} 0 & 1 & 0  \\ -1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}}}_{\text{generator we just saw}} + 
-%                  \epsilon_{13}{\begin{pmatrix} 0 & 0 & 1  \\ 0 & 0 & 0 \\ -1 & 0 & 0 \end{pmatrix}} +
-%                  \epsilon_{23}{\begin{pmatrix} 0 & 0 & 0  \\ 0 & 0 & -1 \\ 0 & -1 & 0 \end{pmatrix}}
-%\end{equation*}
-%
-%How to get the finite version ? 
-%Easy, just exponentiate. 
-%
-%Something new happens in 3D:
-%\begin{itemize}
-%\item[-]2D rotations commute        
-%\item[-]3D rotations do not
-%\end{itemize}
-%
-%Define $J_3 = \JThree$, $J_2 = \JTwo$, and $J_1 = \JOne$
-%
-%Rotations form a group.
-%Any three rotations give something that is also a rotation: 
-%\begin{equation*}
-%e^{i\theta_3 J_3}e^{i\theta_2 J_2}e^{i\theta_1 J_1} = e^{\phi_3 J_3 + \phi_2 J_2 + \phi_1 J_1}
-%\end{equation*}
-%
-%This can only be possible if
-%\begin{equation*}
-%[J_1, J_2] = i J_3  \textrm{+ cyclic}
-%\end{equation*}
-%
-%
-%Can step back and think about this more abstractly. 
-%The matrices  we found form a group, but this group exists abstractly independent of these $3\times3$ matrices.
-%Fully determined by the commutation relations.
-%(Just like vectors and components)
-%
-%In general, many matrices that satisfy the algebra (the commutation relations). 
-%These give different representations.
-%
-%\underline{Deep:} rotations can act on more than just 3D vectors.
-%
-%\begin{equation*}
-%\begin{bmatrix} \left(J_i\right) &  0  \\ 0  & \left(J_j\right) \end{bmatrix}
-%\end{equation*}
-%this is officially a representation.  
-%Its called a ``Reducible'' Representation.
-%
-%\underline{More Generally} 
-%\begin{equation*}
-%[J_a, J_b] = i f_{abc} J_c \hspace{0.3in} \textrm{where $J_a$, $ a = 1, 2,$ ... dim. of the group}
-%\end{equation*}
-%Lie found all the possible symmetries when J is hermitian (there are not many).
-%
-%\section*{One final example with rotations}
-%Lets look at traceless $2\times2$ hermitian matrices. 
-%Any $2\times2$, traceless, hermitian matrix can be written as: 
-%\begin{equation*}
-%M = \begin{pmatrix} z &  x+iy  \\ x-iy  & -z \end{pmatrix} \equiv \vec{\sigma} \cdot \vec{x}
-%\end{equation*}
-%where $\vec{\sigma} = (\sigma_x, \sigma_y, \sigma_z)$ and $\sigma_i$ are the Pauli matrices.
-%
-%Note that $\textrm{det}(M) = - \vec{x}\cdot\vec{x} = - |\vec{x}|$.
-%
-%Consider $M'=U^{\dagger}MU$, where U is unitary.
-%Any unitary matrix can be written as a phase $e^{i\theta}$ times a $2\times2$ hermitian matrix with det = 1.  (``Special Unitary Matrix'')
-%Because the phase cancels in $M'$ we will only consider U as unitary and det = 1. 
-%$U \in SU(2)$
-%
-%If M is hermitian and traceless, then M' is still hermitian and traceless.
-%\begin{equation*}
-%M' = \sigma \cdot \vec{x'}_u
-%\end{equation*}
-%$\vec{x'}_{u} $ depends on U.  det(M') = det(M) $\Rightarrow \vec{x'}_u^2 = {\vec{x}}^2 $%= \vec{x}^2 $ length of \x
-%direct correspondence between $2\times2$ hermitian matrices \& rotations.
-%
-%This is a 2D action of rotations.
-%
-%Not easy to generalize all of this to the Lorentz group...
+\noindent\rule{\textwidth}{1pt}
+
+Lets look at general $2\times2$ hermitian matrices, (not restricted to traceless as before).
+Any $2\times2$, hermitian matrix can be written as: 
+\begin{equation*}
+M = \begin{pmatrix} x^0 + x^3 &  x^1+ix^2  \\ x^1-ix^2  & x^0-x^3 \end{pmatrix} \equiv \sigma_\mu x^\mu
+\end{equation*}
+where $\sigma_\mu = (1,\sigma_i)$ and $\sigma_i$ are the Pauli matrices.
+
+Note that $\textrm{det}(M) = x^\mu x_\mu$
+
+Consider the action,
+\be
+M' = L^\dagger M L
+\ee
+of L -any 2x2 complex matrix w/det(L) = 1.
+This set of matrices is called SL(2,c) = Special / Linear/ 2x2 / Complex.
+
+M' is still Hermitian $\Rightarrow M' = \sigma_\mu x_{(L)}^\mu$
+
+And crucially, det(M) = det(M') $\Rightarrow {x_{(L)}}_\mu x_{(L)}^\mu = x_\mu x^\mu$
+
+So the L's give (``furnish'') a representation of the Lorentz group.
+
+We see here
+SO$^+$(1,3) $\simeq$ SL(2,c)
 
 }
 \end{document}
