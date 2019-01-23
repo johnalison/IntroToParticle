@@ -1,0 +1,347 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+
+
+\def\ABCDMatrix{\ensuremath{\begin{pmatrix} A &  B  \\ C  & D \end{pmatrix}}}
+\def\xyprime{\ensuremath{\begin{pmatrix} x' \\ y' \end{pmatrix}}}
+\def\xyprimeT{\ensuremath{\begin{pmatrix} x' &  y' \end{pmatrix}}}
+\def\xy{\ensuremath{\begin{pmatrix} x \\ y \end{pmatrix}}}
+\def\xyT{\ensuremath{\begin{pmatrix} x & y \end{pmatrix}}}
+
+\def\IMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ -1  & 0 \end{pmatrix}}}
+\def\IBoostMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ 1  & 0 \end{pmatrix}}}
+\def\JThree{\ensuremath{\begin{pmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{pmatrix}}} 
+\def\JTwo{\ensuremath{\begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix}}}
+\def\JOne{\ensuremath{\begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix}}}
+\def\etamn{\ensuremath{\eta_{\mu\nu}}}
+\def\Lmn{\ensuremath{\Lambda^\mu_\nu}}
+\def\dmn{\ensuremath{\delta^\mu_\nu}}
+\def\wmn{\ensuremath{\omega^\mu_\nu}}
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+
+%\def\xMu{\ensuremath{x^\mu}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 4}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+
+\section*{Special Relativity}
+
+\underline{\textbf{Recap from Last Time}}
+
+Talking about relativity means talking about Lorentz invariance.
+
+If there is a point in space time: \\
+%xrightarrow[\text{world}]
+\begin{center}
+$(t,x) \xrightarrow[\text{observer}]{\text{another moving}} (t', x')$
+\end{center}
+
+Invariant notion of distance:
+ 
+\be
+t^2 - x^2 = t'^2 - x'^2
+\ee
+
+\underline{\textbf{Started with Rotations}}
+Where we have an invariant notion of length of $\vec{p}$
+\be
+x^2 + y^2 = x'^2 + y'^2
+\ee
+
+Started in 2D, looking at the infinitesimal rotation
+This lead to what is called ``generator'' \\
+
+\IMatrix\\
+
+\underline{Form a group:}
+A group is a set of actions (in our case rotations) that multiply (or compose) with operation denoted by $\cdot$.
+
+Four criteria for group:
+\begin{itemize}
+\item[-] Have Identity element:  (no rotation or by 360)
+\item[-] Every element of the group has an inverse (for us, rotate by $360-\theta$)
+\item[-] The group is closed:  for any elements thier product is also in the group.
+\item[-] The multiplication is associative.
+\end{itemize}
+
+If commute: $a\cdot b= b\cdot a$ say that the group is ``Abelian''.
+
+Last lecture studied 3D rotations and thier group ``SO(2)'' refers to matriecies studied  (S = Special (det =1) / O = Orthogonal (preseves length) / 2 = 2x2)\\
+
+$\begin{pmatrix} \cos(\theta) &  \sin(\theta)  \\ -\sin(\theta)  & \cos(\theta) \end{pmatrix}$\\
+
+We also looked at 3D rotations, theier group was ``SO(3)'', what do you think this stands for ???\\
+We saw at the end of the lecture that  $SO(3) \simeq SU(2)$   
+SU(2) = (Special / Unitary / 2x2 matricies.
+
+\textit{(You will show in for homework that this is equavilant to another group U(1).)}
+
+
+\noindent\rule{\textwidth}{1pt}
+
+\textbf{All the machinery in place to look at Lorentz Transformations...}
+
+Well almost all the machinery...  Remember invariant need to preserve is $t^2 - |\vec{x}|^2$
+
+Lets deal with this minus sign...
+
+4-vectors:  $x^\mu = (t,\vec{x})$  
+
+Encode the minus sign in matrix:
+
+\be
+\eta_{\mu\nu} = \left\{ \begin{array}{rl} 1 & \mbox{$\mu = \nu=0$}  \\ -1 & \mbox{$\mu=\nu=1,2,3\ (i)$}  \\ 0 & \mbox{otherwise} \end{array} \right.
+\ee
+
+Can now write: $x_\mu = \etamn x^\nu = (t,-\vec{x})$  
+
+And finally: $x_\mu x^\mu = t^2 - |\vec{x}|^2$
+
+(Comment on $\eta^{\mu\nu} = \eta_{\mu\nu}$ and $\eta^\mu_\nu = \dmn$)
+
+Now we after all the transformations that leave  $x_\mu x^\mu$ (Lorentz transformations)
+
+\be
+x'^\mu = \underbrace{\Lambda^\mu_\nu}_{\mbox{4x4 matrix}} x^\nu 
+\ee
+
+\underline{Same thing as before} Start with the infintesimal transofmations.
+
+\be
+\Lmn  = \dmn + \epsilon \wmn
+\ee
+
+
+\be
+x'^\mu  = x^\mu + \epsilon \wmn x^\nu
+\ee
+
+Require $x'^\mu x'_\mu = x^\mu x_\mu$ or 
+
+\begin{align*}
+\etamn x'^\mu x'^\nu = \etamn x^\mu x^\nu \\
+= \etamn x^\mu x^\nu + 2 \epsilon \etamn x^\nu \omega^\mu_\rho x^\rho
+\end{align*}
+
+
+So, $\underbrace{\etamn \omega^\mu_\rho}_{\equiv \omega_{\mu\rho} } x^\nu  x^\rho = 0$ 
+
+After all 4x4 anti-symmetric matricies  $\omega_{\mu\rho} = -\omega_{\rho\mu}$
+
+Lets just be damn explicit
+
+\be
+\omega_{\mu\nu} = \begin{bmatrix} 0 & a & b & c \\ -a & 0 & A & B \\ -b & -A & 0 & C \\ -c & -B & -C & 0 \end{bmatrix}
+\ee
+
+However, the think that enters the transformation is $\omega^\mu_\nu$.\\
+
+Now raising a 0-compentent is free,  $\omega_{0i} = \omega^0_i$\\
+raising a i-compentent costs a -1,  $\omega_{i0} = -\omega^i_0$\\
+But also know $\omega_{0i} = -\omega_{i0}$
+$\Rightarrow {\omega^0}_i = + {\omega^i}_0$
+
+Same argument shows: ${\omega^i}_j = - {\omega^j}_i$
+
+\be
+\omega^\mu_\nu = \begin{bmatrix} 0 & a & b & c \\ a & 0 & A & B \\ b & -A & 0 & C \\ c & -B & -C & 0 \end{bmatrix}
+\ee
+
+Generators of the Lorentz Group. We have 6 ``generators'' abcABC.
+
+3-rotations (guess which)  / 3-boosts
+
+Crucial sign differnece between boosts/rotations
+
+
+${\omega^1}_2 = \begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}  \rightarrow e^{\theta \IMatrix} = \cos\theta + \IMatrix \sin\theta$\\
+
+${\omega^0}_1 = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix}  \rightarrow e^{\eta \IBoostMatrix} = \cosh\eta + \IBoostMatrix \sinh\eta$
+
+$\IBoostMatrix^2 = 1$ whereas $\IMatrix^2 = -1$
+
+\be
+\begin{pmatrix} x'^0 \\ x'^1\end{pmatrix} =
+\ee
+
+Can (but I wont) work out the Lie Algrabra....Homework.
+
+
+%%%%%%%%
+%
+%$x'_i x'_i = x_i x_i$ is what it takes for $R$ to be a rotation. 
+%Need to find the special $R$s such that this is satisfied.
+%
+%The identity matrix is written as $\delta_{ij}$, where $\delta_{ij} = 1$ if $i=j$, 0 otherwise.
+%
+%If no rotation at all: $R_{ij} = \delta_{ij}$,  of an infinitesimal rotation:  
+%\begin{equation*}
+%R_{ij} = \delta_{ij} + \epsilon w_{ij}
+%\end{equation*}
+%
+%\begin{equation*}
+%x'_{i} = x_i + \epsilon w_{ij} x_j
+%\end{equation*}
+%
+%
+%\begin{equation*}
+%x'_{i}x'_{i} = x_i x_{i} + 2 \epsilon \underbrace{w_{ij} x_j x_i}_{ =0 \hspace*{0.05in} \forall x }  + \mathcal{O}(\epsilon^2)
+%\end{equation*}
+%
+%$\Rightarrow w_{ij}$ has to be anti-symmetric $w_{ij} = - w_{ji}$.
+%
+%\noindent\rule{\textwidth}{1pt}
+%
+%Back to previous example, find \underline{finite} rotations (without any mention of geometry etc.)
+%
+%Take the infinitesimal rotation and do it n-times.
+%
+%Define $\theta = N\epsilon$
+%
+%\begin{eqnarray*}
+%\xyprime = \left[ \mathlarger{\mathlarger{\mathbbm{1}}} + \epsilon   \IMatrix \right]\xy \equiv \left[ \mathlarger{\mathlarger{\mathbbm{1}}} + \epsilon   \textrm{I} \right]\xy
+%\end{eqnarray*}
+%
+%So the finite rotation ($R(\theta)$) given by,
+%\begin{eqnarray*}
+%R(\theta) = (1 + \epsilon I)(1 + \epsilon I) \dots (1 + \epsilon I) \dots = (1+\epsilon I)^N = \left(1+\frac{\theta}{N}I\right)^N
+%\end{eqnarray*}
+%
+%Now let $N\rightarrow \infty$,  $R(\theta) = e^{I\theta}$.
+%
+%Built up finite rotation from the infinitesimal rotations.
+% 
+%$x'(\theta) = R(\theta)x = e^{I\theta}$
+%
+%The meaning of $e^X$ when $X$ is a matrix is simply the expansion.
+%\begin{eqnarray*}
+%e^X = 1 + X + \frac{X^2}{2!} + \frac{X^3}{3!} + \dots
+%\end{eqnarray*}
+%
+%
+%$I^2 =  \IMatrix\IMatrix = {\begin{pmatrix} -1 &  0  \\ 0  & -1 \end{pmatrix}} = \mathlarger{\mathlarger{\mathbbm{-1}}} ! $
+%We have just discovered i following our nose.
+%
+%
+%
+%\textbf{\underline{Strategy:}} First understand the action of the symmetry infinitesimally, then the big symmetry action is obtained by iterating the infinitesimal.
+%Always $e^X$ where $X$ is the generator. 
+%This is a great strategy for any kind of symmetry.
+%
+%Will now do 3D rotations... Something new happens.
+%
+%\section*{3D Rotations}
+%
+%3-parameters associated with a 3D rotation.
+%
+%Already saw, any rotation is of the form 
+%
+%\begin{equation*}
+%x'_{i} = x_i + \epsilon w_{ij} x_j  \hspace{0.5in} \textrm{with } \hspace{0.5in} w_{ij} =- w_{ji}
+%\end{equation*}
+%
+%
+%Most general $3\time3$ anti-symmetric matrix: ${\begin{pmatrix} 0 & a & b  \\ -a & 0 & c \\ -b & -c & 0 \end{pmatrix}}$,  Now have 3 generators corresponding to the rotations in 3D.
+%
+%\begin{equation*}
+%\epsilon w_{ij} = \epsilon_{12}\underbrace{{\begin{pmatrix} 0 & 1 & 0  \\ -1 & 0 & 0 \\ 0 & 0 & 0 \end{pmatrix}}}_{\text{generator we just saw}} + 
+%                  \epsilon_{13}{\begin{pmatrix} 0 & 0 & 1  \\ 0 & 0 & 0 \\ -1 & 0 & 0 \end{pmatrix}} +
+%                  \epsilon_{23}{\begin{pmatrix} 0 & 0 & 0  \\ 0 & 0 & -1 \\ 0 & -1 & 0 \end{pmatrix}}
+%\end{equation*}
+%
+%How to get the finite version ? 
+%Easy, just exponentiate. 
+%
+%Something new happens in 3D:
+%\begin{itemize}
+%\item[-]2D rotations commute        
+%\item[-]3D rotations do not
+%\end{itemize}
+%
+%Define $J_3 = \JThree$, $J_2 = \JTwo$, and $J_1 = \JOne$
+%
+%Rotations form a group.
+%Any three rotations give something that is also a rotation: 
+%\begin{equation*}
+%e^{i\theta_3 J_3}e^{i\theta_2 J_2}e^{i\theta_1 J_1} = e^{\phi_3 J_3 + \phi_2 J_2 + \phi_1 J_1}
+%\end{equation*}
+%
+%This can only be possible if
+%\begin{equation*}
+%[J_1, J_2] = i J_3  \textrm{+ cyclic}
+%\end{equation*}
+%
+%
+%Can step back and think about this more abstractly. 
+%The matrices  we found form a group, but this group exists abstractly independent of these $3\times3$ matrices.
+%Fully determined by the commutation relations.
+%(Just like vectors and components)
+%
+%In general, many matrices that satisfy the algebra (the commutation relations). 
+%These give different representations.
+%
+%\underline{Deep:} rotations can act on more than just 3D vectors.
+%
+%\begin{equation*}
+%\begin{bmatrix} \left(J_i\right) &  0  \\ 0  & \left(J_j\right) \end{bmatrix}
+%\end{equation*}
+%this is officially a representation.  
+%Its called a ``Reducible'' Representation.
+%
+%\underline{More Generally} 
+%\begin{equation*}
+%[J_a, J_b] = i f_{abc} J_c \hspace{0.3in} \textrm{where $J_a$, $ a = 1, 2,$ ... dim. of the group}
+%\end{equation*}
+%Lie found all the possible symmetries when J is hermitian (there are not many).
+%
+%\section*{One final example with rotations}
+%Lets look at traceless $2\times2$ hermitian matrices. 
+%Any $2\times2$, traceless, hermitian matrix can be written as: 
+%\begin{equation*}
+%M = \begin{pmatrix} z &  x+iy  \\ x-iy  & -z \end{pmatrix} \equiv \vec{\sigma} \cdot \vec{x}
+%\end{equation*}
+%where $\vec{\sigma} = (\sigma_x, \sigma_y, \sigma_z)$ and $\sigma_i$ are the Pauli matrices.
+%
+%Note that $\textrm{det}(M) = - \vec{x}\cdot\vec{x} = - |\vec{x}|$.
+%
+%Consider $M'=U^{\dagger}MU$, where U is unitary.
+%Any unitary matrix can be written as a phase $e^{i\theta}$ times a $2\times2$ hermitian matrix with det = 1.  (``Special Unitary Matrix'')
+%Because the phase cancels in $M'$ we will only consider U as unitary and det = 1. 
+%$U \in SU(2)$
+%
+%If M is hermitian and traceless, then M' is still hermitian and traceless.
+%\begin{equation*}
+%M' = \sigma \cdot \vec{x'}_u
+%\end{equation*}
+%$\vec{x'}_{u} $ depends on U.  det(M') = det(M) $\Rightarrow \vec{x'}_u^2 = {\vec{x}}^2 $%= \vec{x}^2 $ length of \x
+%direct correspondence between $2\times2$ hermitian matrices \& rotations.
+%
+%This is a 2D action of rotations.
+%
+%Not easy to generalize all of this to the Lorentz group...
+
+}
+\end{document}
+
+
