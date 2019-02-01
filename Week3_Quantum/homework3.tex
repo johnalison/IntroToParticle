@@ -1,0 +1,106 @@
+\input{latexSetup}
+\usepackage{braket}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+\def\mp{\ensuremath{m_{\textrm{proton}}}}
+\def\rp{\ensuremath{r_{\textrm{proton}}}}
+\def\me{\ensuremath{m_{\textrm{electron}}}}
+\def\aG{\ensuremath{\alpha_G}}
+\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
+
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2019\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Homework Set \#3}}
+\large
+
+{\textbf{ Due Date:} Before class Friday February 8th  } 
+\end{center}
+
+{\large
+\textbf{1) Work out the commutation relation among the $\vec{X}$ and $\vec{P}$ operators: \\ ie: $[\vec{X},\vec{X}]$,  $[\vec{P},\vec{P}]$, and $[\vec{X},\vec{P}]$ } \hfill \textit{(5 points)}
+\begin{itemize}
+\item[] {
+Hint: for $[\vec{X},\vec{P}]$ work out how the commutator $[\vec{X},T(\vec{a})]$ acts on position eigenstate for generic translation. Then apply the result to the infinitesimal case.
+}
+\end{itemize}
+
+
+
+
+\vspace*{0.25in}
+
+{\large
+\textbf{2) Harmonic Oscillator } \hfill \textit{(10 points)}
+
+The 1D Harmonic oscillator has Hamiltonian:
+\be
+H = \frac{P^2}{2m} + \frac{1}{2}mw^2X^2
+\ee
+where P and X are position and momentum operators
+
+\begin{itemize}
+\item[a]{ Define ``raising'' and ``lowering'' operators as 
+\be
+a= \sqrt{\frac{mw}{2}}\left(X + i \frac{P}{mw}\right) \hspace{0.5in} a^\dagger = \sqrt{\frac{mw}{2}}\left(X - i \frac{P}{mw}\right)
+\ee
+What are the position and momentum operators in terms of the raising and lowering operators?
+}
+\item[b]{ 
+Find $[a,a^\dagger]$
+}
+\item[c]{ 
+What is the Hamiltonian in terms of $a$ and $a^\dagger$?
+}
+\item[d]{ 
+Define the ``Number'' operator $N$ as $a^\dagger a$.  What is the Hamiltonian in terms of the number operator?
+}
+\item[e]{ 
+Work out the commutation relations: $[N,a^\dagger]$ and $[N,a]$.
+}
+\item[f]{ 
+Show that the eigenvalues of N (n) are real and satisfy $n \geq 0$.
+(Hint: consider $\bra n N \ket n = \bra n a^\dagger a \ket n $, where $\ket n $ are eigenkets of N  )
+}
+\item[g]{ 
+Show that $a \ket n$  is an eigenstate of N, with eigenvalue (n-1). This implies $a \ket{n} \propto \ket{n-1}$ and justifies calling $a$ the lower operator.
+}
+\item[h]{ 
+Show that $a^\dagger \ket n$  is an eigenstate of N, with eigenvalue (n+1). This implies $a^\dagger \ket{n} \propto \ket{n+1}$ and justifies calling $a^\dagger$ the raising operator.
+}
+\item[i]{ 
+Find $c_n$ such that $\ket{n+1} = c_n a\dagger \ket{n}$ is normalized.
+}
+\item[j]{ 
+Since $n \geq 0$, there must be a state $\ket{0}$ which satisfies $a \ket{0} = 0$ and n must be an integer.
+What is the general state $\ket{n}$ in terms of $\ket{0}$ and $a^\dagger$ ?
+What is the energy associated to this state ?
+}
+
+\end{itemize}
+}
+
+\end{document}
