@@ -1,0 +1,198 @@
+\input{latexSetup}
+\usepackage{braket}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+\def\mp{\ensuremath{m_{\textrm{proton}}}}
+\def\rp{\ensuremath{r_{\textrm{proton}}}}
+\def\me{\ensuremath{m_{\textrm{electron}}}}
+\def\aG{\ensuremath{\alpha_G}}
+\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
+
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2019\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Homework Set \#2}}
+\large
+
+{\textbf{ Solutions}   }
+\end{center}
+
+{\large
+\textbf{1) Show that SO(2) $\simeq$ U(1) } \hfill \textit{(2 points)}
+\begin{itemize}
+\item[(a)] {
+\be
+zz^* = (x+iy)(x-iy) = x^2 + y^2
+\ee
+Given a vector in the complex plain specified by (x,y), $zz^*$ gives the length of the vector.
+}
+\item[(b)] {
+\begin{align*}
+M(\theta_1): z\rightarrow e^{i\theta_1}z\ \textrm{(+ complex conjugate)}\\
+M(\theta_2): z\rightarrow e^{i\theta_2}z\ \textrm{(+ complex conjugate)}\\
+M(\theta_1)M(\theta_2): z\rightarrow e^{i\theta_1}e^{i\theta_2}z = e^{i(\theta_1+\theta_2)}z = M(\theta_1 + \theta_2)
+\end{align*}
+}
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{2) Work out the algebra of the generators of the Lorentz group} \hfill \textit{(5 points)}
+Assuming: 
+
+\be
+J_1 = \begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & -1 & 0 \end{pmatrix} \hspace{0.5in}
+J_2 = \begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0 \end{pmatrix} \hspace{0.5in}
+J_3 = \begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{pmatrix} 
+\ee
+
+
+\begin{itemize}
+\item[]{
+\begin{align*}
+[T_i,T_i] = 0 \\
+[T_1,T_2] = J_3\\
+[T_1,T_3] = J_2\\
+[T_2,T_3] = J_1\\
+\textrm{OR}\\
+[T_i,T_j] = \epsilon_{ijk} J_k 
+\end{align*}
+
+
+\begin{align*}
+[T_1,J_1] = 0  \\
+[T_1,J_2] = T_3 \\
+[T_1,J_3] = T_2 \\
+\\
+[T_2,J_1] = T_3\\
+[T_2,J_2] = 0 \\
+[T_2,J_3] = -T_1 \\
+\\
+[T_3,J_1] = -T_2 \\
+[T_3,J_2] = -T_1 \\
+[T_3,J_3] = 0 \\
+\end{align*}
+
+\begin{align*}
+[J_i,J_j] = \epsilon_{ijk} J_k 
+\end{align*}
+
+
+}
+
+\end{itemize}
+%Estimate the size of life forms on earth in terms of $\alpha$, \aG, \mp, and \me.
+%Assume life is a solid. 
+
+\vspace*{0.25in}
+
+
+\textbf{3) Connection to $\beta$s and  $\gamma$s} \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)]{
+
+\begin{equation*}
+e^{I\eta} = 1 + I\eta + \frac{I^2\eta^2}{2!} + \frac{I^3\eta^3}{3!} + \frac{I^4\eta^4}{4!} + \dots
+\end{equation*}
+
+$I_B^2 = \begin{bmatrix} 1 & 0  \\ 0 & 1 \end{bmatrix} $
+
+Show that $B(\eta) = e^{I_B\eta} = \cosh(\eta)+ I_B \sinh(\eta)$
+
+
+\begin{equation*}
+e^{I\eta} = I\left(\eta + \frac{I^2\eta^3}{3!} + \frac{I^4\eta^5}{5!} + \dots \right) + \left(1 + \frac{I^2\eta^2}{2!} + \frac{I^4\eta^4}{4!}  + \dots \right)
+\end{equation*}
+
+\begin{equation*}
+e^{I\eta} = I\left(\eta + \frac{\eta^3}{3!} + \frac{\eta^5}{5!} + \dots \right) + \left(1 + \frac{\eta^2}{2!} + \frac{\eta^4}{4!}  + \dots \right) \\
+= I \sinh(\eta) + \cosh(\eta)
+\end{equation*}
+
+}
+
+
+\item[(b)]{
+}
+
+\end{itemize}
+
+\vspace*{0.25in}
+
+
+\textbf{4) Z Boson decays}\hfill \textit{(5 points)}}
+\begin{itemize}
+\item[(a)]{
+Same derivation as we did for the $\pi\rightarrow \gamma\gamma$ decay in class gives
+\be
+p_{e_1} = (m_Z/2,0,0,m_Z/2) \hspace{1in} p_{\gamma_2} = (m_Z/2,0,0,-m_Z/2)
+\ee
+}
+\item[(b)]{
+Including the mass term gives...
+
+\be
+p_{e_1} = (E_1,0,0,P_1) \hspace{1in} p_{\gamma_2} = (E_2,0,0,-P_2)
+\ee
+Momentum conservation implies $P_1 = -P_1 \equiv P$\\
+Eneergy conservation implies $M_Z = E_1 + E2$ \\
+So,
+
+\be
+p_{e_1} = (E,0,0,P) \hspace{1in} p_{\gamma_2} = (m_Z-E,0,0,-P)
+\ee
+Imposing ${P_1^e}^2 = m_e$ gives: $E = \sqrt{m_e^2 + P^2}$\\
+Imposing ${P_2^e}^2 = m_e$ gives: $P^2 = (m_Z-E)^2 - m_e^2$\\
+Combining implies, 
+\be
+E = \frac{m_Z}{2} \hspace{0.5in} \textrm{ and } \hspace{0.5in}P = \frac{m_Z}{2}\sqrt{1-4\frac{m_e^2}{m_Z^2}}
+\ee
+
+So no correction to the electron Energies.\\
+The the electron momentum is $P \simeq \frac{m_Z}{2}\left(1-\frac{2m_e^2}{m_Z^2}\right)$, which gives a correction of order  $\left(\frac{m_e}{m_Z}\right)^2 \sim \left(\frac{10^{-3}\ \textrm{GeV}}{100\ \textrm{GeV}}\right)^2 \sim 10^{-10}$
+\item[(b)]{
+Including the mass term for the b-quark gives...\\
+No correction to the energies. \\
+The b-quark momentum has a correction of order  $\left(\frac{m_b}{m_Z}\right)^2 \sim \left(\frac{10\ \textrm{GeV}}{100\ \textrm{GeV}}\right)^2 \sim 10^{-2}$ about 1\%.
+}
+
+
+}
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{5)  GZK cutoff energy} \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)]{
+}
+\item[(b)]{
+}
+
+\end{itemize}
+
+
+
+\end{document}
