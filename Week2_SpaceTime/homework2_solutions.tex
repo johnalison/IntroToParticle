@@ -77,13 +77,13 @@ J_3 = \begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 
 [T_1,T_3] = J_2\\
 [T_2,T_3] = J_1\\
 \textrm{OR}\\
-[T_i,T_j] = \epsilon_{ijk} J_k 
+[T_i,T_j] = \epsilon_{ijk} J_k  \hspace{0.5in} J_2 \rightarrow -J_2
 \end{align*}
 
 
 \begin{align*}
 [T_1,J_1] = 0  \\
-[T_1,J_2] = T_3 \\
+[T_1,J_2] = -T_3 \\
 [T_1,J_3] = T_2 \\
 \\
 [T_2,J_1] = T_3\\
@@ -91,8 +91,10 @@ J_3 = \begin{pmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & -1 & 0 & 0 \\ 0 & 0 
 [T_2,J_3] = -T_1 \\
 \\
 [T_3,J_1] = -T_2 \\
-[T_3,J_2] = -T_1 \\
+[T_3,J_2] = T_1 \\
 [T_3,J_3] = 0 \\
+\textrm{OR}\\
+[T_i,J_j] = -\epsilon_{ijk} T_k  \hspace{0.5in} J_2 \rightarrow -J_2
 \end{align*}
 
 \begin{align*}
@@ -133,9 +135,27 @@ e^{I\eta} = I\left(\eta + \frac{\eta^3}{3!} + \frac{\eta^5}{5!} + \dots \right) 
 
 }
 
-
 \item[(b)]{
+The orgin of the primed frame is at $x'=0$ in the prime frame and at $x=vt$ in the unprimed frame (assuming the origins cooincided at t=0)
+
+\be
+x = t'\sinh(\eta) \textrm{ and } t = t'\cosh(\eta)
+\ee
+
+\be
+v=\frac{x}{t} = \tanh(\eta)  \textrm{ and } \cosh^{-2} = 1 - \tanh^2 
+\ee
+
+\be
+\Rightarrow \cosh(\eta) = \frac{1}{\sqrt{1-v^2}} \equiv \gamma 
+\ee
+
+\be
+\sinh(\eta) = \frac{v}{\sqrt{1-v^2}} = \beta\gamma 
+\ee
+
 }
+
 
 \end{itemize}
 
