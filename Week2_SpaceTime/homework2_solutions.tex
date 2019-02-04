@@ -136,7 +136,7 @@ e^{I\eta} = I\left(\eta + \frac{\eta^3}{3!} + \frac{\eta^5}{5!} + \dots \right) 
 }
 
 \item[(b)]{
-The orgin of the primed frame is at $x'=0$ in the prime frame and at $x=vt$ in the unprimed frame (assuming the origins cooincided at t=0)
+The origin of the primed frame is at $x'=0$ in the prime frame and at $x=vt$ in the unprimed frame (assuming the origins coincided at t=0)
 
 \be
 x = t'\sinh(\eta) \textrm{ and } t = t'\cosh(\eta)
@@ -177,7 +177,7 @@ Including the mass term gives...
 p_{e_1} = (E_1,0,0,P_1) \hspace{1in} p_{\gamma_2} = (E_2,0,0,-P_2)
 \ee
 Momentum conservation implies $P_1 = -P_1 \equiv P$\\
-Eneergy conservation implies $M_Z = E_1 + E2$ \\
+Energy conservation implies $M_Z = E_1 + E2$ \\
 So,
 
 \be
@@ -207,8 +207,53 @@ The b-quark momentum has a correction of order  $\left(\frac{m_b}{m_Z}\right)^2 
 \textbf{5)  GZK cutoff energy} \hfill \textit{(5 points)}
 \begin{itemize}
 \item[(a)]{
+$(P+\gamma) \rightarrow (p + \pi_0)$
+
+The final momentum in the center of mass frame is:
+\be
+P_{F}^\mu = (m_p + m_\pi, 0, 0, 0 )
+\ee
+
+\be
+P_{F}^2 = (m_p + m_\pi)^2 = m_p^2 + 2 m_p  m_\pi + m_\pi^2
+\ee
+
+The initial four vector is given by the sum of the proton and CMB photon four vectors.
+\be
+P_{I} = (P_p^\mu + P_\gamma^\mu)
+\ee
+
+\be
+P_{I}^2 = \underbrace{P_p^2}_{= m_p^2} + 2 P_p \cdot P_\gamma + \underbrace{P_\gamma^2}_{= 0}
+\ee
+To evaluate $P_p \cdot P_\gamma$, can use reference frame where the photon and proton are colliding head on.
+
+(Assume for the moment that we can neglect the proton mass compared to it momentum ...
+\be
+P_{p} = (p_p, 0 , 0, p_p)  \hspace{0.4in} P_{\gamma} = (E_{CMB}, 0 , 0, -E_{CMB})
+\ee
+Where $E_{CMB} = 3 \cdot 10^{-13} $GeV.
+
+\be
+P_p\cdot P_\gamma = 2 p_p E_{CMB} 
+\ee
+
+Imposing $P_I^2 = P_F^2$, allows us to solve for $p_p$.
+
+\be
+m_p^2 + 4 p_p E_{CMB}  = m_p^2 + 2 m_p  m_\pi + m_\pi^2
+\ee
+
+or
+
+\be
+p_p = \frac{ 2 m_p  m_\pi + m_\pi^2}{4 E_{CMB}} = \frac{2\cdot1\cdot0.14 + 0.14^2}{10\cdot10^{-13}} \textrm{GeV} \sim 3\times 10^{11} \textrm{GeV} \sim 10^{20} \textrm{eV}
+\ee
+
+
 }
 \item[(b)]{
+$\sim$ 30 J
 }
 
 \end{itemize}
