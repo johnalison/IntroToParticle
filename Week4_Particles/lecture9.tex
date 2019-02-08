@@ -1,0 +1,125 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+
+
+\def\ABCDMatrix{\ensuremath{\begin{pmatrix} A &  B  \\ C  & D \end{pmatrix}}}
+\def\xyprime{\ensuremath{\begin{pmatrix} x' \\ y' \end{pmatrix}}}
+\def\xyprimeT{\ensuremath{\begin{pmatrix} x' &  y' \end{pmatrix}}}
+\def\xy{\ensuremath{\begin{pmatrix} x \\ y \end{pmatrix}}}
+\def\xyT{\ensuremath{\begin{pmatrix} x & y \end{pmatrix}}}
+
+\def\IMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ -1  & 0 \end{pmatrix}}}
+\def\IBoostMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ 1  & 0 \end{pmatrix}}}
+\def\JThree{\ensuremath{\begin{pmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{pmatrix}}} 
+\def\JTwo{\ensuremath{\begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix}}}
+\def\JOne{\ensuremath{\begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix}}}
+\def\etamn{\ensuremath{\eta_{\mu\nu}}}
+\def\Lmn{\ensuremath{\Lambda^\mu_\nu}}
+\def\dmn{\ensuremath{\delta^\mu_\nu}}
+\def\wmn{\ensuremath{\omega^\mu_\nu}}
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+
+\def\adagger{\ensuremath{a_{p\sigma}^\dagger}}
+
+%\def\xMu{\ensuremath{x^\mu}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 9}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+\textbf{\underline{Particles Interactions}} 
+
+``Quantum Field Theory in a week''
+
+{\Large \underline{\textbf{Summary From Last Time}}}
+
+\begin{tabular}{l}
+\underline{Massive:}\\
+\\
+\hspace{0.5in}$\ket{P, \sigma}$ and $U[\Lambda] \ket{P, \sigma} = \sum_{\sigma'} R_{\sigma,\sigma'} \ket{\Lambda P, \sigma'}$, where the R is a rotation matrix.\\
+\\
+\underline{Massless:}\\
+\\
+\hspace{0.5in}$\ket{P, h}$ and $U[\Lambda] \ket{P, h} = e^{ih\Theta(W)}\ket{\Lambda P, h}$, where the coefficient is just a phase.\\
+\end{tabular}\\
+
+\noindent\rule{\textwidth}{1pt}
+Now talk about all these particles states in a more convient way.  
+
+For every given momenta we have stacks of Hilbert space
+\begin{itemize}
+\item[-] infinitely many possibliities for Bosons $0\rightarrow N$
+\item[-] fixed number (depending on the spin) for fermions
+\end{itemize}
+
+\vspace{0.5in}
+Ultimately interested in the interactions between partilces. 
+\begin{itemize}
+\item[-] Defined by some Hamiltonian        
+\item[-] Could specify the Hamiltonian by describing how it acts on all states in the Hilbert space
+\item[-] Instead \underline{for our convience} introduce creation and anhilation operators
+These keep track of teh states in a simple way...
+\end{itemize}
+
+First define the vacuum state: $\ket{0}$.
+Then define single particle states as:
+
+\be
+\underbrace{\ket{P \sigma}}_{\textrm{These are primary}} \equiv \adagger \ket{0}
+\ee
+This \underline{defines} \adagger.
+
+
+
+\be
+\ket{P_1 \sigma_1, P_2, \sigma_2 } = a_{p_1\sigma_1}^\dagger a_{p_2\sigma_2}^\dagger \ket{0}
+\ee
+
+etc. etc. etc.
+
+
+Similarly,  can define anhilation operators
+
+
+\begin{align*}
+a_{P,\sigma} \ket{0} = 0\\
+a_{P,\sigma} \ket{P,\sigma} = \ket{0}
+\end{align*}
+a - removes states. 
+
+
+Can encode boson/fermion statistics in $a$ and $a^\dagger$.
+
+\begin{center}
+\begin{tabular}{c|c}
+Bosons & Fermions \\
+$[a_{P_1,\sigma_1}^\dagger, a_{P_2,\sigma_2}^\dagger] = 0 $  &  $\{a_{P_1,\sigma_1}^\dagger, a_{P_2,\sigma_2}^\dagger\} = 0 $\\  
+$[a_{P_1,\sigma_1}, a_{P_2,\sigma_2}] = 0  $  &  $\{a_{P_1,\sigma_1}, a_{P_2,\sigma_2}\} = 0  $\\  
+\end{tabular}
+\end{center}
+
+
+
+}
+\end{document}
+
+

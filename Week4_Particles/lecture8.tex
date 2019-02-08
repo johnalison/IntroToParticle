@@ -75,7 +75,7 @@ $\psi(p_1,p_2) = + \psi(p_2,p_1)$ (for fermions)
 \end{minipage}}
 
 Fields are also a secondary notion.
-They are a convient way of talking about the interactions of particles.
+They are a convienent way of talking about the interactions of particles.
 
 What particles are:
 single particle states are irreducible representations of the Poincare group. 
@@ -102,7 +102,7 @@ What are the possible labels?
 The answer is going to end up being
 \begin{itemize}
 \item[-)] \underline{Massive:} Same thing we are used to $\vec{P_\mu}$ and spin
-\item[-)] \underline{Massless:} Always $\vec{P_\mu}$, but now labeled by helecity, not spin
+\item[-)] \underline{Massless:} Always $\vec{P_\mu}$, but now labeled by helicity, not spin
 \end{itemize}
 
 Different number of DoF than massive particles.  
@@ -124,6 +124,7 @@ U(T(a^\mu)) \ket{P^\mu, \sigma} = e^{iP_\mu a^\mu}\ket{P^\mu, \sigma}
 
 Now have to talk about how Lorentz transformations act. 
 where things get interesting...
+
 
 \noindent\rule{\textwidth}{1pt}
 
@@ -219,7 +220,7 @@ Rotations: Leave k invariant.
 $\sigma$ indices have to furnish representations of rotation group. 
 Massive particles are labeled by spin. 
 Part of their label. 
-Dont need to think of deeper origin. 
+Don't need to think of deeper origin. 
 Particles are just the representations. 
 
 Now lets do the more interesting massless case. 
@@ -230,20 +231,89 @@ One obvious, if the particle is moving along the z-direction and we rotate aroun
 
 There are two others,  there should be three...3 for the massive case, this number cannot change discontinuously. 
 
-Lets find the generators 
+Lets find the generators,
 
 \be
 W^\mu_\nu  = \dmn + \epsilon \wmn
 \ee
 
-want w.k = k $\Rightarrow$ w.k = 0.
+want $W\cdot k = k \Rightarrow \omega \cdot k = 0 $.
 
+Most general form of $\omega$ we found before,
 
 \be
 \omega_{\mu\nu} = \begin{bmatrix} 0 & a & b & c \\ -a & 0 & A & B \\ -b & -A & 0 & C \\ -c & -B & -C & 0 \end{bmatrix}
 \ee
 
+we are interested in the special one that annihilate $k = (1,1,0,0)$.
+Now,
+\be
+\omega^\mu_\nu k^\nu = \begin{pmatrix} a \\ a \\ b-A \\ c-B\end{pmatrix} = 0
+\ee
 
+Which implies 
+\be
+\omega_{\mu\nu} = \begin{bmatrix} 0 & 0 & A & B \\ 0 & 0 & A & B \\ A & -A & 0 & C \\ B & -B & -C & 0 \end{bmatrix}
+\ee
+is the most general $\omega$ for massless particles.
+
+Once again there are 3 generators. 
+\begin{itemize}
+\item[-] C is rotations about the 1 direction
+\item[-] A Boost in y followed by rotation to bring k back.  
+\item[-] same for B
+\end{itemize}
+
+Define:
+
+
+\be
+J_{23} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & -1 & 0 \end{bmatrix} \hspace{0.5in} 
+T_{2}  = \begin{bmatrix} 0 & 0 & 1 & 0 \\ 0 & 0 & 1 & 0 \\ 1 & -1 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix} \hspace{0.5in} 
+T_{3}  = \begin{bmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 1 & -1 & 0 & 0 \end{bmatrix}
+\ee
+
+Exercise, work out the commutation relations between these guys. 
+
+What you'll find: 
+
+\be
+[T_2,T_3] = 0 \hspace{0.5in} [T_2,J_{23}] = T_3 \hspace{0.5in} [T_3,J_{23}] = -T_2 \hspace{0.5in} 
+\ee
+This is exactly what you expect for translations + rotations in a plane. This group has a name,  $E(2)$.
+
+How does this group act on particles ?
+Need to come up with representations.  $T_2$ and $T_3$ commute so we could label the states by their eigenvalues $\ket{t_2,t_3}$.
+
+Small problem, if $\ket{t_2,t_3}$ is a state and I act on it with J:
+
+\be
+e^{i\Theta J_23} \ket{t_2,t_3} = \ket{t_2',t_3'} 
+\ee
+I get another state, for each value of $\Theta$ I chosen.
+
+In other words, if one state in this rep has non-zero $t_2'$ or $t_3'$, then there are a continuous infinity of other states!
+We dont see a continuous infinite number of massless particles. 
+
+We we must simply declare that we are interested in states with $t_1, t_2 = 0$
+
+So, no what do I label these states by?
+Only thing left is eigenvalue $J_{23}$.
+
+Massless particles only labeled by the spin in the direction of motion. 
+This is referred to as helicity. 
+
+{\Large \underline{\textbf{Summary}}}
+
+\begin{tabular}{l}
+\underline{Massive:}\\
+\\
+\hspace{0.5in}$\ket{P, \sigma}$ and $U[\Lambda] \ket{P, \sigma} = \sum_{\sigma'} R_{\sigma,\sigma'} \ket{\Lambda P, \sigma'}$, where the R is a rotation matrix.\\
+\\
+\underline{Massless:}\\
+\\
+\hspace{0.5in}$\ket{P, h}$ and $U[\Lambda] \ket{P, h} = e^{ih\Theta(W)}\ket{\Lambda P, h}$, where the coefficient is just a phase.\\
+\end{tabular}
 
 }
 \end{document}
