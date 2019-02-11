@@ -1,0 +1,210 @@
+\input{latexSetup}
+\usepackage{braket}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+\def\mp{\ensuremath{m_{\textrm{proton}}}}
+\def\rp{\ensuremath{r_{\textrm{proton}}}}
+\def\me{\ensuremath{m_{\textrm{electron}}}}
+\def\aG{\ensuremath{\alpha_G}}
+\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
+
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2019\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Homework Set \#3}}
+\large
+
+{\textbf{ Solutions} }
+\end{center}
+
+{\large
+\textbf{1) Work out the commutation relation among the $\vec{X}$ and $\vec{P}$ operators: \\ ie: $[\vec{X},\vec{X}]$,  $[\vec{P},\vec{P}]$, and $[\vec{X},\vec{P}]$ } \hfill \textit{(5 points)}
+\begin{itemize}
+\item[] {
+On one hand,
+\be
+\vec{X}T(\vec{a}) \ket{\vec{x}} = (\vec{x} + \vec{a}) \ket{\vec{x} + \vec{a}}
+\ee
+
+on the other,
+\be
+T(\vec{a})\vec{X} \ket{\vec{x}} = \vec{x}  \ket{\vec{x} + \vec{a}}
+\ee
+
+So
+
+\be
+[\vec{X},T(\vec{a})] = \vec{a} T(\vec{a})
+\ee
+
+Consider the infinitesimal translation ($\vec{a} \rightarrow \vec{\epsilon}$).  Then,
+
+\begin{eqnarray*}
+[\vec{X},1- i \vec{\epsilon} \cdot \vec{P}] = \vec{\epsilon} \cdot (1- i \vec{\epsilon} \cdot \vec{P})
+\end{eqnarray*}
+Keeping terms to first order in $\epsilon$. 
+
+\begin{eqnarray*}
+[X_i,1- i \epsilon_j P_j] = \epsilon_i\\
+-i \epsilon_j [X_i,P_j] = \epsilon_i\\
+\end{eqnarray*}
+or
+\begin{eqnarray*}
+[X_i,P_j] = i \delta_{ij}\\
+\end{eqnarray*}
+
+
+}
+\end{itemize}
+
+
+
+
+\vspace*{0.25in}
+
+{\large
+\textbf{2) Harmonic Oscillator } \hfill \textit{(10 points)}
+
+The 1D Harmonic oscillator has Hamiltonian:
+\be
+H = \frac{P^2}{2m} + \frac{1}{2}mw^2X^2
+\ee
+where P and X are position and momentum operators
+
+\begin{itemize}
+\item[a]{ Define ``raising'' and ``lowering'' operators as 
+\be
+a= \sqrt{\frac{mw}{2}}\left(X + i \frac{P}{mw}\right) \hspace{0.5in} a^\dagger = \sqrt{\frac{mw}{2}}\left(X - i \frac{P}{mw}\right)
+\ee
+What are the position and momentum operators in terms of the raising and lowering operators?
+
+\textit{Solution:}
+\be
+x =  \frac{x_0}{\sqrt{2}}(a + a^\dagger) \hspace{0.5in}  p =  \frac{-i}{x_0 \sqrt{2}}(a - a^\dagger)
+\ee 
+where $x_0 = \sqrt{\frac{1}{mw}}$.
+
+}
+\item[b]{ 
+
+\begin{eqnarray*}
+[a,a^\dagger] =& \frac{mw}{2} [ x + \frac{i p}{mw }, x -  \frac{ip}{mw}]\\
+              =& \frac{mw}{2}\frac{-i}{mw} [ x , p] + \frac{mw}{2}\frac{i}{mw} [p,x]\\
+              =& \frac{1}{2}(-i [ x , p] + i [p,x]) = 1
+\end{eqnarray*}
+
+}
+\item[c]{ 
+What is the Hamiltonian in terms of $a$ and $a^\dagger$?
+
+\be
+H = \omega(a^\dagger a + \frac{1}{2})
+\ee
+}
+\item[d]{ 
+Define the ``Number'' operator $N$ as $a^\dagger a$.  What is the Hamiltonian in terms of the number operator?
+
+\be
+H = \omega(N + \frac{1}{2})
+\ee
+
+
+}
+\item[e]{ 
+Work out the commutation relations: $[N,a^\dagger]$ and $[N,a]$.
+
+\be
+[N,a^\dagger] = a^\dagger  \hspace{0.5in} [N,a] = -a
+\ee
+
+}
+\item[f]{ 
+Show that the eigenvalues of N (n) are real and satisfy $n \geq 0$.
+
+\be
+n = \bra{n}N\ket{n} = \bra{n}a^\dagger a \ket{n} = \bra{an}\underbrace{\ket{an}}_{\ket{n'}} = \braket{n'|n'} \geq 0
+\ee
+
+
+}
+\item[g]{ 
+Show that $a \ket n$  is an eigenstate of N, with eigenvalue (n-1). This implies $a \ket{n} \propto \ket{n-1}$ and justifies calling $a$ the lower operator.
+
+\be
+\ket{n'} = a\ket{n} 
+\ee
+
+\be
+N\ket{n'} = Na\ket{n} = (aN + [N,a])\ket{n} = (aN - a)\ket{n} = (an -a)\ket{n} = (n-1)\ket{n'}
+\ee
+
+
+}
+\item[h]{ 
+Show that $a^\dagger \ket n$  is an eigenstate of N, with eigenvalue (n+1). This implies $a^\dagger \ket{n} \propto \ket{n+1}$ and justifies calling $a^\dagger$ the raising operator.
+
+
+\be
+\ket{n'} = a^\dagger\ket{n} 
+\ee
+\be
+N\ket{n'} = (a^\dagger N + [N,a^\dagger])\ket{n} = (n+1)\ket{n'}
+\ee
+
+}
+\item[i]{ 
+Find $c_n$ such that $\ket{n+1} = c_n a\dagger \ket{n}$ is normalized.
+
+\be
+\ket{n+1} = c_n a^\dagger \ket{n}
+\ee
+
+\be
+1 = \braket{n+1|n+1} = |c_n|^2 \bra{n} a a^\dagger \ket{n} = |c_n|^2 (n+1)
+\ee
+
+\be
+c_n = \frac{1}{\sqrt{n+1}}
+\ee
+
+}
+\item[j]{ 
+Since $n \geq 0$, there must be a state $\ket{0}$ which satisfies $a \ket{0} = 0$ and n must be an integer.
+What is the general state $\ket{n}$ in terms of $\ket{0}$ and $a^\dagger$ ?
+What is the energy associated to this state ?
+
+
+\be
+\ket{n} = \frac{1}{\sqrt{n!}}(a^\dagger)^n\ket{0}
+\ee
+
+The energy associated to $\ket{n}$ is $\omega(n+1/2)$.
+}
+
+\end{itemize}
+}
+
+\end{document}
