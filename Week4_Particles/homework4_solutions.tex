@@ -41,19 +41,67 @@
 {\huge \textbf{Homework Set \#4}}
 \large
 
-{\textbf{ Due Date:} Before class Friday February 15th  } 
+{\textbf{ Solutions  }} 
 \end{center}
 
 {\large
 \textbf{1) Find the generators of the ``Little Group'' for Massive particles \hfill \textit{(5 points)}}
 
+The little group equation is:
+\be
+W\cdot k = k \Rightarrow \omega \cdot k = 0
+\ee
+
+where
+\be
+\omega_{\mu\nu} = \begin{bmatrix} 0 & a & b & c \\ -a & 0 & A & B \\ -b & -A & 0 & C \\ -c & -B & -C & 0 \end{bmatrix}
+\ee
+
+
+For a massive particle we can take k to be k = (m,0,0,0).
+
+So $\omega \cdot k = (0,-ma,-mb,-mc) $. So the little group generators for massive particles are 
+\be
+\omega_{\mu\nu} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & A & B \\ 0 & -A & 0 & C \\ 0 & -B & -C & 0 \end{bmatrix}
+\ee
+which are the rotation matricies.
 
 \vspace*{0.25in}
 
 \textbf{2) Heisenberg Equation of Motion \hfill \textit{(5 points)}}
 \begin{itemize}
-\item[a)] { Show that $\frac{dA(t)_H}{dt} = -i [A(t)_H, H]$.  Where $A(t)_H$ is an operator in the Heisenberg representation and H is the Hamiltonian. This equation is referred to as the Heisenberg equation of motion.}
-\item[b)] { Show that $\phi_H(x,t) = e^{-iE_pt} \phi_S(x) $ satisfies the Heisenberg equation of motion. Where $\phi_S(x)= \int \cancel{dp} e^{i\vec{p}\cdot\vec{x}} a^\dagger $ is the operator in the Schrodinger representation and $H = \int d^3p E_p a^\dagger a$ }
+\item[a)] { 
+
+\begin{eqnarray*}
+\frac{dA(t)_H}{dt} =& \frac{d}{dt}\left( e^{iHt} A_s e^{-iHt}\right)\\
+=& iH \left(e^{iHt} A_s e^{-iHt}\right) - i \left(e^{iHt} A_s H e^{-iHt}\right)\\
+=& -i \left(  \underbrace{e^{iHt} A_s e^{-iHt}}_{A_H(t)}  H - H \underbrace{e^{iHt} A_s H e^{-iHt}}_{A_H(t)}\right)\\
+=& -i \left[ A_H(t), H \right]
+\end{eqnarray*}
+}
+
+
+\item[b)] { 
+$\phi_H(x,t) = e^{-iE_pt} \phi_S(x) $
+\be
+\frac{d\phi_H(x,t)}{dt} = -i E_p \phi_H(x,t)
+\ee
+and
+\begin{eqnarray*}
+[\phi_H(x,t), H] &= [\int \cancel{dp} e^{ip\cdot x} a^\dagger, \int dp' E_{p'} a^\dagger a] \\
+& = \int \cancel{dp} e^{ip\cdot x} \int dp' E_{p'} [a^\dagger, a^\dagger a] \\
+& = \int \cancel{dp} e^{ip\cdot x} \int dp' E_{p'} a^\dagger [a^\dagger, a] \\
+& = \int \cancel{dp} e^{ip\cdot x} \int dp' E_{p'} a^\dagger \delta^3(\vec{p}-\vec{p'}) \\
+& = \int \cancel{dp} e^{ip\cdot x}  E_{p} a^\dagger \\
+& = E_p \int \cancel{dp} e^{ip\cdot x} a^\dagger = E_p \phi_H(x,t) \\
+\end{eqnarray*}
+So
+
+\be
+\frac{d\phi_H(x,t)}{dt} = -i \left[\phi_H(x,t),H \right]
+\ee
+}
+
 \end{itemize}
 
 \vspace*{0.25in}
