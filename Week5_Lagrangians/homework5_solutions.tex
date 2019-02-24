@@ -1,0 +1,468 @@
+\input{latexSetup}
+\usepackage{braket}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+\def\mp{\ensuremath{m_{\textrm{proton}}}}
+\def\rp{\ensuremath{r_{\textrm{proton}}}}
+\def\me{\ensuremath{m_{\textrm{electron}}}}
+\def\aG{\ensuremath{\alpha_G}}
+\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
+
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+
+\def\bigL{\ensuremath{\mathscr{L}}}
+
+\usepackage{fancyhdr}
+\usepackage{cancel}
+\usepackage{ mathrsfs }
+
+
+
+
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2019\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Homework Set \#5}}
+\large
+
+{\textbf{ Due Date:} Before class Friday February 22nd  } 
+\end{center}
+
+{\large
+\textbf{1) Clifford Algebra \hfill \textit{(5 points)} }
+
+In writing the Dirac equation, we chose a particular representation of the $\gamma$ matrices that satisfied $\{\gamma_\mu,\gamma_\nu\} = 2\eta_{\mu\nu}$, which is called the Clifford algebra. 
+The choice we used in class is called the Weyl basis. In this problem, we will study the Clifford algebra and the Weyl basis.
+\begin{itemize}
+\item[a)]
+Will calculate:
+
+\be
+\gamma_\mu \gamma_\nu + \gamma_\nu \gamma_\mu 
+\ee
+Three cases to consider:
+
+Case 1) $\mu = \nu = 0$
+\be
+\gamma_0 \gamma_0   = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}  \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}  = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} 
+\ee
+So, 
+\be
+\gamma_0 \gamma_0  + \gamma_0 \gamma_0 = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} 
+\ee
+
+Case 2) $\mu = 0, \nu = i$  (and reversed)
+
+\be
+\gamma_0 \gamma_i   = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}  \begin{pmatrix} 0 & \sigma_i \\ -\sigma_i & 0 \end{pmatrix}  = \begin{pmatrix} -\sigma_i & 0 \\ 0 & \sigma_i \end{pmatrix} 
+\ee
+\be
+\gamma_i \gamma_0   = \begin{pmatrix} 0 & \sigma_i \\ -\sigma_i & 0 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}   = \begin{pmatrix} \sigma_i & 0 \\ 0 & -\sigma_i \end{pmatrix} 
+\ee
+
+So,
+\be
+\gamma_0 \gamma_i  + \gamma_i \gamma_0 = \gamma_i \gamma_0  + \gamma_0 \gamma_i = 0
+\ee
+
+Case 3) $\mu = i, \nu = j$ 
+
+\be
+\gamma_i \gamma_j   = \begin{pmatrix} 0 & \sigma_i \\ -\sigma_i & 0 \end{pmatrix} \begin{pmatrix} 0 & \sigma_j \\ -\sigma_j & 0 \end{pmatrix}  = \begin{pmatrix} -\sigma_i \sigma_j & 0 \\ 0 & -\sigma_i \sigma_j \end{pmatrix} =  \begin{pmatrix} -\delta_{ij} & 0 \\ 0 & -\delta_{ij} \end{pmatrix}
+\ee
+So,
+\be
+\gamma_i \gamma_j  + \gamma_j \gamma_i = -2\delta_{ij}
+\ee
+
+
+
+\item[b)]
+
+\begin{equation*}
+\gamma_\mu = S\gamma_\mu^{\mathrm{Weyl}}S^\dagger, 
+\end{equation*}
+Multiply both sides on left by S.
+
+\be
+\gamma_\mu S = S \gamma_\mu^W
+\ee
+
+Let $S = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, where a, b, c and d are 2x2 matricies.
+
+Consider $\mu =0$
+
+\be
+\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \begin{pmatrix} a & b \\ c & d \end{pmatrix} = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+\ee
+or
+\be
+\begin{pmatrix} a & b \\ -c & -d \end{pmatrix}  = \begin{pmatrix} b & a \\ d & c \end{pmatrix} 
+\ee
+so, $a=b, c=-d$
+
+
+Now require $SS^\dagger = 1$
+
+\be
+\begin{pmatrix} a & a \\ c & -c \end{pmatrix} \begin{pmatrix} a^\dagger & c^\dagger \\ a^\dagger & -c^\dagger \end{pmatrix} = \begin{pmatrix} 2 a a^\dagger & ac^\dagger - ac^\dagger \\ ca^\dagger - ca^\dagger & 2cc^\dagger \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} 
+\ee
+
+So a and c are hermitian. The only 2x2 matricies that are hermitian are $I$ or $\sigma_k$, so $\sqrt{2}a = \pm I$  or $\pm \sigma_a$ and same for c.
+
+
+Now Consider $\mu = i$
+\be
+\begin{pmatrix} 0 & \sigma_i \\ -\sigma_i & 0 \end{pmatrix} \begin{pmatrix} a & a \\ c & -c \end{pmatrix} = \begin{pmatrix} a & a \\ c & -c \end{pmatrix} \begin{pmatrix} 0 & \sigma_i \\ -\sigma_i & 0 \end{pmatrix}
+\ee
+
+\be
+\begin{pmatrix} \sigma_i c & - \sigma_i c \\ -\sigma_i a & -\sigma_i a \end{pmatrix} = \begin{pmatrix} -a \sigma_i & a \sigma_i \\ c \sigma_i & c \sigma_i \end{pmatrix}
+\ee
+
+Assume both a and c are pauli matricies,
+then, $\sigma_i \sigma_c + \sigma_a \sigma_i = \delta_{ic} + \delta_{ai}  = 0$, which cannot hold when $i = a$ or $c$. 
+So a and c cannot both be pauli matrices. 
+
+Assume one (a) is a pauli matrices and c is $I$
+then,  $\sigma_i  + \sigma_a \sigma_i = \sigma_i+ \delta_{ai}  = 0$, which also cannot is impossible. 
+
+So both A and C are $\pm I$ and above implies that $a = -c$
+
+So $S = \frac{1}{\sqrt{2}}\begin{pmatrix} I & I \\ -I & I \end{pmatrix}$
+and $S^\dagger = \frac{1}{\sqrt{2}}\begin{pmatrix} I & -I \\ I & I \end{pmatrix}$
+
+
+\item[c)]
+ Applying the similarity transformation to the Dirac equation, gives 
+\begin{equation*}
+(i S \gamma_\mu S^\dagger \partial^{\mu} - m)\psi = S(i\gamma \cdot \partial - m)S^\dagger\psi = 0.
+\end{equation*}
+
+\begin{equation*}
+S(i\gamma \cdot \partial - m)S^\dagger\psi = 0 \Rightarrow (i\gamma \cdot \partial - m)S^\dagger\psi = 0
+\end{equation*}
+
+Where here $\psi$ is the solution in the new basis, and $S^\dagger \psi$ is the solution in the old basis.
+
+
+We know from class that $S^\dagger \psi = \psi_+ = \begin{pmatrix} C \\ C \end{pmatrix} e ^{-imt}$ or $\psi_- \begin{pmatrix} C \\ -C \end{pmatrix} e^{imt}$
+
+So $\psi = S\psi_+ = \sqrt{2} \begin{pmatrix}  C \\ 0 \end{pmatrix} e ^{-imt}$ or $S\psi_- = -\sqrt{2} \begin{pmatrix} 0 \\  C \end{pmatrix} e ^{imt}$ which is either 
+
+
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{2) Show that  $\mathscr{L}_{EM} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} - J^{\mu}A_{\mu}$ is gauge invariant \hfill \textit{(5 points)}}
+
+Gauge invariance imples that the $\mathscr{L}_{EM}$ is unchanged under $A_\mu \rightarrow A_\mu + \partial_\mu \lambda$
+
+
+Look at,
+\be
+F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu
+\ee
+Under a gauge transformation
+\begin{eqnarray*}
+\partial_\mu A_\nu - \partial_\nu A_\mu \rightarrow& \partial_\mu (A_\nu + \partial_\nu \lambda) - \partial_\nu (A_\mu + \partial_\mu \lambda)\\
+                                        =& \partial_\mu A_\nu - \partial_\nu A_\mu  + (\partial_\mu \partial_\nu \lambda - \partial_\nu \partial_\mu \lambda)\\
+                                        =& \partial_\mu A_\nu - \partial_\nu A_\mu  
+\end{eqnarray*}
+because the partial derivatives commute.
+
+So the $F_\mu\nu$ term is gauge invariant, which means that the first term in $\mathscr{L}_{EM}$ is also gauge invariant.
+
+The second term transforms as:
+\begin{eqnarray*}
+J^\mu A_\mu \rightarrow& J^\mu(A_\mu + \partial_\mu \lambda) = J^\mu A_\mu + J^\mu  \partial_\mu \lambda
+\end{eqnarray*}
+
+Because $\mathscr{L}$ lives in an integral over all space, we can integrate by parts to move the derivative form $\lambda$ to $J^\mu$
+
+\begin{eqnarray*}
+J^\mu A_\mu \rightarrow& J^\mu(A_\mu + \partial_\mu \lambda) = J^\mu A_\mu - (\partial_\mu J^\mu)\lambda
+\end{eqnarray*}
+
+Conservation of charge implies that $\partial_\mu J^\mu = 0$, which means that $J^\mu A_\mu$ is also gauge invariant.
+
+
+\vspace*{0.25in}
+
+
+%\begin{itemize}
+%\item[] { }
+%\end{itemize}
+
+
+\textbf{3) Maxwell’s Equations.\hfill \textit{(5 points)}}
+\begin{itemize}
+\item[a)]In class,  I mentioned  that Gauss’s law follows from taking the 0 component of the equations of motion of the electromagnetic Lagrangian $\partial_\mu F^{\mu\nu} = J^\nu$. 
+
+$J^\mu = (\rho, \vec{J})$
+
+Lets look at $\nu = 0$,
+\begin{align}
+\partial_\mu F^{\mu0} = J^0 \\
+\partial_0 \underbrace{F^{00}}_{0} 0 - \partial_i (-E_i) = \rho \\
+\partial_i E_i = \rho \\
+\vec{\triangledown} \cdot \vec{E} = \rho \\
+\end{align}
+
+
+
+
+\item[b)]Show that the three other of Maxwell’s equations follow from the equations of motion and the Bianchi identity ($\partial_\mu F_{\nu\rho} +\partial_\rho F_{\mu\nu} +\partial_\nu F_{\rho\mu} =0$). 
+Lets look at $\nu = i$
+\begin{align}
+\partial_\mu F^{\mu i} = J^i \\
+\partial_0 F^{0i} - \partial_j F^{ji} = J^i \\
+\partial_t (-E_i) - \partial_j F^{ji} = J^i \\
+\end{align}
+
+Now,
+\be
+\partial_j F^{ji} = - \vec{\triangledown} \times \vec{B}
+\ee
+
+So, 
+\begin{align}
+\vec{\triangledown} \times \vec{B} = \frac{\partial \vec{E}}{\partial t}  + \vec{J}
+\end{align}
+
+
+now taking $\mu = 0, \nu = i$ and $\rho = j$ in the bianchi identity imples:
+\begin{align*}
+\partial_0 F_{ij} + \partial_j F_{0i} + \partial_j F_{j0} = 0\\
+\partial_t \vec{B} + \vec{\triangledown} \times E = 0
+\end{align*}
+
+choosing i = j =k gives 
+\be
+\vec{\triangledown} \cdot B = 0
+\ee
+
+
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{4) Lagrangians.\hfill \textit{(5 points)}}
+\begin{itemize}
+\item[a)]
+
+\be
+S = \int d^4x \bigL
+\ee
+
+\begin{align*}
+\delta S = \int d^4x \left[ \frac{\partial \bigL}{\partial \phi} {\delta \phi} + \frac{\partial \bigL}{\partial (\partial_\mu \phi)} {\delta \partial_\mu \phi}  \right]\\
+= \int d^4x \left[ \frac{\partial \bigL}{\partial \phi} {\delta \phi} + \frac{\partial \bigL}{\partial (\partial_\mu \phi)} {\partial_\mu \delta \phi}  \right]\\
+\end{align*}
+
+Now integrating the second term by parts gives,
+
+\begin{align*}
+\delta S = \int d^4x \left[ \frac{\partial \bigL}{\partial \phi} {\delta \phi} - \partial_\mu \left(\frac{\partial \bigL}{\partial (\partial_\mu \phi)} \right) \delta \phi  \right]\\
+= \int d^4x \left[ \frac{\partial \bigL}{\partial \phi}  - \partial_\mu \left(\frac{\partial \bigL}{\partial (\partial_\mu \phi)} \right)   \right] {\delta \phi}\\
+\end{align*}
+
+The change in the action can be 0 only if 
+\be
+\frac{\partial \mathscr{L}}{\partial \phi} - \partial_\mu \frac{\partial \mathscr{L}}{\partial(\partial_\mu \phi)} = 0.
+\ee
+
+\item[b)]{
+  With the Lagrangian: $\mathscr{L}= \frac{1}{2}(\partial_\mu \phi)(\partial^{\mu}\phi) - \frac{1}{2}m^2\phi^2$
+
+\be
+\frac{\partial \bigL}{\partial \phi} = - m^2 \phi\   \mathrm{ and }\  \frac{\partial \bigL}{\partial (\partial_\rho \phi)} = \partial^\rho \phi
+\ee
+}
+
+Euler-Lagrange  then implies,
+
+\begin{align*}
+- m^2 \phi - \partial^2 \phi = 0 \\
+(\partial^2 + m^2)\phi = 0
+\end{align*}
+Which is the Klien Gordon equation
+
+\item[c)]{What is the Noether's current associated to the continuous symmetry $\phi \rightarrow e^{-i\alpha} \phi$ of the Lagrangian $\mathscr{L}= \frac{1}{2}(\partial_\mu \phi)(\partial^{\mu}\phi^*) - \frac{1}{2}m^2\phi\phi^*$
+
+The Noether's current is 
+
+\be
+J^\mu = \sum_n \frac{\partial\bigL}{\partial (\partial_\mu \phi_n)} \frac{\delta \phi_n}{\delta \alpha}
+\ee
+
+For us this is
+
+\be
+J^\mu = \frac{\partial\bigL}{\partial (\partial_\mu \phi_n)} \frac{\delta \phi_n}{\delta \alpha} +  \frac{\partial\bigL}{\partial (\partial_\mu \phi^*_n)} \frac{\delta \phi^*_n}{\delta \alpha}  
+\ee
+
+Now
+\be
+\frac{\partial\bigL}{\partial (\partial_\mu \phi_n)} = \frac{1}{2} \partial^\mu \phi^*
+\ee
+and
+\be
+\frac{\delta \phi_n}{\delta \alpha} = -i \phi
+\ee
+
+Similarly,
+
+
+\be
+\frac{\partial\bigL}{\partial (\partial_\mu \phi^*_n)} = \frac{1}{2} \partial^\mu \phi
+\ee
+and
+\be
+\frac{\delta \phi^*_n}{\delta \alpha} = +i \phi
+\ee
+
+So, 
+\be
+J^\mu = \frac{-i}{2} \left( \phi \partial^\mu \phi^*  - \phi^* \partial^\mu \phi \right)
+\ee
+
+}
+
+
+\end{itemize}
+
+
+
+
+\vspace*{0.25in}
+
+\textbf{5) Dark Matter Searches. \hfill \textit{(10 points)}}
+
+\begin{itemize}
+\item[a)]
+
+The earth moves $2\pi R_{ss}$  in a time $T_{period}$, 
+So
+
+\be
+v_{\textrm{earth}}  =  \frac{2\pi \times 2.4\times10^4 c \times (\textrm{years})  }{2.3 \times 10^8 (\textrm{years})} \sim 2\pi\cdot 10^{-4} c
+\ee
+
+\item[b)]
+Initially we have,
+
+\be
+P_{\chi} =(\sqrt{m_\chi^2 + p_z^2}, 0, 0,  p_z) \textrm{ and }\  P_{Xe} = (m_{Xe}, 0, 0, 0)
+\ee
+
+After the collision
+
+\be
+P'_{\chi} =(\sqrt{m_\chi^2 + (p_z - p^{Xe}_z)^2}, 0, 0,  p_z - p^{Xe}_z) \textrm{ and }\  P_{Xe} = ( \sqrt{m^2_{Xe}+ {p^{Xe}_z}^2}, 0, 0, p^{Xe}_z)
+\ee
+
+
+\item[c)]
+
+After squaring, canceling terms, and then squaring again and canceling terms again, we find
+
+\be
+\alpha = \frac{2m_{Xe}\sqrt{p_z^2 + m_\chi^2} + 2m_{Xe}^2}{2m_{Xe}\sqrt{p_z^2 + m_\chi^2} + m_\chi^2 + m_{Xe}^2}
+\ee
+
+The other solution is $\alpha = 0$.  (We divided by $\alpha$ to get the above).
+
+From this we can get $p_z^{Xe}$ by mutltiplying by $p_z$
+
+\item[d)]
+
+\begin{align*}
+K = E - m_{Xe} = \sqrt{m_{Xe}^2 + {p_Z^{Xe}}^2} - m_{Xe}\\
+\sim m_{Xe} \left(1 + \frac{1}{2} \frac{{p_Z^{Xe}}^2}{m_{Xe}^2} \right) - m_{Xe} =  \frac{{p_Z^{Xe}}^2}{2m_{Xe}^2} = \frac{{\alpha^2 p_Z}^2}{2m_{Xe}^2}
+\end{align*}
+
+To first order, 
+
+\be
+\alpha \sim \frac{2m_{Xe}m_\chi + 2m_{Xe}^2}{2m_{Xe}m_\chi + m_\chi^2 + m_{Xe}^2} =  \frac{2m_{Xe}(m_\chi + m_{Xe})}{(m_\chi + m_{Xe})^2} = \frac{2m_{Xe}}{m_\chi + m_{Xe}}
+\ee
+
+so, 
+\be
+P_z^{Xe} \sim  \frac{2m_{Xe}m_{\chi}}{m_\chi + m_{Xe}} v
+\ee
+
+and,
+\be
+K \sim  \frac{2m_{Xe}m_{\chi}^2}{(m_\chi + m_{Xe})^2} v^2
+\ee
+
+\item[e)]
+
+\be
+10^{-6}\ \mathrm{GeV} = 2\times v^2 \frac{m_{Xe}m_{\chi}^2}{(m_\chi + m_{Xe})^2}\ \mathrm{GeV}
+\ee
+
+letting $m_\chi = \alpha m_{Xe}$
+
+\be
+10^{-6}\ \mathrm{GeV} = 8\pi^2\cdot 10^{-8} \frac{\alpha^2 m_{Xe}^3}{(1+\alpha)^2 m_{Xe}^2}\ \mathrm{GeV} 
+\ee
+
+\be
+1 \mathrm{GeV} =  \frac{\alpha^2 m_{Xe}}{(1+\alpha)^2}\ \mathrm{GeV} 
+\ee
+
+$m_{Xe} \sim 123$ GeV so, 
+
+\be
+\alpha^2 123 = (1+\alpha)^2
+\ee
+
+\be
+(1+\alpha) = \alpha \sqrt{123}
+\ee
+
+
+or 
+
+\be
+\alpha = \frac{1}{\sqrt{123} - 1} \sim \frac{1}{10}
+\ee
+
+and so, $m_\chi \sim 10 GeV$
+
+\end{itemize}
+ 
+
+
+
+
+}
+
+
+
+
+
+\end{document}
