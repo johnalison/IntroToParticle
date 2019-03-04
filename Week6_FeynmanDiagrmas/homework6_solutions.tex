@@ -1,0 +1,139 @@
+\input{latexSetup}
+\usepackage{braket}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+%\def\mp{\ensuremath{m_{\textrm{proton}}}}
+\def\rp{\ensuremath{r_{\textrm{proton}}}}
+\def\me{\ensuremath{m_{\textrm{electron}}}}
+\def\aG{\ensuremath{\alpha_G}}
+\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
+
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+
+
+\usepackage{fancyhdr}
+\usepackage{cancel}
+\usepackage{ mathrsfs }
+
+
+
+
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2019\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Homework Set \#6}}
+\large
+
+{\textbf{ Solutions  } }
+\end{center}
+
+{\large
+
+\textbf{1) $e^+ e^- \rightarrow \mu^+ \mu^-$ scattering   \hfill \textit{(10 points)} }
+
+For high-energy scattering, the cross section scales as $\frac{1}{E_{CM}^2}$.
+The constant of proportionality is given by the overlap of the spin wave functions.
+
+
+\be
+\braket{s_3 s_4 | s_1 s_2}
+\ee
+where $s_3$ and $s_4$ represent the final state muons spins and $s_1$ and $s_2$ represent the initial state electron spins.
+
+\be
+\braket{s_3 s_4 | s_1 s_2} = \sum_{\textrm{$\gamma$-spins}} \braket{s_3 s_4 | \epsilon_\gamma}  \braket{\epsilon_\gamma | s_1 s_2} 
+\ee
+
+In the circular polarization basis, there are four possible initial state spin combinations
+
+\be
+\ket{s_1 s_2} = \ket{LL} , \ket{RR},  \ket{LR}, or \ket{RL} 
+\ee
+However only the first two give combine to give spin one, which is needed to project on to the intermidate state photon. 
+There are two photon polarization vectors $\epsilon_L (= \frac{1}{\sqrt{2}} \begin{pmatrix} 0, 1, -i, 0 \end{pmatrix})$ and  $\epsilon_R (= \frac{1}{\sqrt{2}} \begin{pmatrix} 0, 1, i, 0 \end{pmatrix})$.
+By conservation of angular momentum, $\ket{s_1 s_2} = \ket{LL}$ will project onto $\epsilon_L$ and $\ket{s_1 s_2} = \ket{RR}$ will project onto $\epsilon_R$ .
+This gives us the $\braket{\epsilon_\gamma | s_1 s_2}$ term in the sum over spins.
+
+To calculate the other term we need to workout product of the photon polarizations with the muon spins.
+As for the electrons, the combined muons spins must sum to one and be orthognal to the muon direction of motion. 
+We can describe the muon scattering in terms of the scattering angle $\theta$:
+
+\be
+p_3 = E(1,0,sin(\theta),cos(\theta))
+\ee
+
+\be
+p_4 = E(1,0,-sin(\theta),-cos(\theta))
+\ee
+
+The left and right-handed polarization vectors prepindicular to these four vectors is given by
+
+\be
+\begin{pmatrix} 1 & & & \\ & 1 & & \\ & & cos(\theta) & sin(\theta) \\ & & -sin(\theta) & cos(\theta) \end{pmatrix}  \frac{1}{\sqrt{2}} \begin{pmatrix} 0\\ 1 \\ \pm i \\ 0 \end{pmatrix} =  \frac{1}{\sqrt{2}} \begin{pmatrix} 0\\ 1 \\ \pm i cos(\theta) \\ \mp i sin(\theta) \end{pmatrix}
+\ee
+
+Where the upper sign corrisponds to the right-handed muon polarization ($\equiv \epsilon_R'$) and lower sign corrisponds to the left-handed muon polarization ($\equiv \epsilon_L'$).
+There are four possible projections to cosider:
+
+\be
+\braket{LL|\epsilon_L} = {\epsilon_L'}^\mu {\epsilon_L}_\mu = - \frac{1}{2} (1 - cos(\theta))
+\ee
+\be
+\braket{RR|\epsilon_L} = {\epsilon_R'}^\mu {\epsilon_L}_\mu = - \frac{1}{2} (1 + cos(\theta))
+\ee
+\be
+\braket{LL|\epsilon_R} = {\epsilon_L'}^\mu {\epsilon_R}_\mu = - \frac{1}{2} (1 + cos(\theta))
+\ee
+\be
+\braket{RR|\epsilon_R} = {\epsilon_R'}^\mu {\epsilon_R}_\mu = - \frac{1}{2} (1 - cos(\theta))
+\ee
+
+If we dont detect the muon spins and our initial beams are unpolarized we have to sum over initial and final state Matrix elements so in the end
+
+\be
+|\mathscr{M}_{tot}|^2 = 
+\frac{1}{4}( 1 -2cos(\theta) + cos(\theta)^2) + 
+\frac{1}{4}( 1 +2cos(\theta) + cos(\theta)^2) + 
+\frac{1}{4}( 1 +2cos(\theta) + cos(\theta)^2) + 
+\frac{1}{4}( 1 -2cos(\theta) + cos(\theta)^2) 
+\ee
+\be
+= (1 + cos(\theta)^2) 
+\ee
+which agrees with what we found in class using a different basis.
+
+\vspace*{0.25in}
+
+\textbf{2)  $\gamma e \rightarrow \gamma e$ scattering \hfill \textit{(5 points)}}
+
+(See next page...)
+
+
+
+
+}
+
+
+
+
+
+\end{document}
