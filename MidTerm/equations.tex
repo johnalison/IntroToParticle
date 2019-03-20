@@ -1,9 +1,108 @@
-r_nucleas($10^{-15}$ meters). 
 
-The mass of the muon is $10^{-1}$ GeV
-The mass of the electron is $10^{-1}$ GeV
-alpha = $10^-2$
+\input{latexSetup}
+\usepackage{braket}
 
-Gev to meters
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+%\def\mp{\ensuremath{m_{\textrm{proton}}}}
+\def\rp{\ensuremath{r_{\textrm{proton}}}}
+\def\me{\ensuremath{m_{\textrm{electron}}}}
+\def\aG{\ensuremath{\alpha_G}}
+\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
 
-Gev=1e-16m
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+
+
+\usepackage{fancyhdr}
+\usepackage{cancel}
+\usepackage{ mathrsfs }
+
+
+
+
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2019\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Midterm 1 Fun Facts}}
+\large
+
+\end{center}
+
+{\large
+
+Speed of Light: c = 1
+
+Planks constant: $\frac{h}{2\pi} = 1$
+
+$r_\textrm{nucleus} \sim 10^{-15}$ meters.
+
+The mass of the electron is $\sim 10^{-3}$ GeV
+
+The mass of the muon is $\sim 10^{-1}$ GeV
+
+The mass of the tauon is $\sim 1$ GeV
+
+The mass of the W-boson $\sim$ mass Z-boson $\sim 100$ GeV
+
+1 TeV = 1000 GeV
+
+$\alpha = 10^{-2}$  \hspace{1in} $\alpha_W$ $\equiv 0.5 \alpha$ \hspace{1in} $\alpha_G$ $\equiv$ $G_N m_p^2$ = $10^{-39}$
+
+GeV$^{-1}$=$10^{-16}$m  \hspace{1in} GeV = $10^{-27}$kg \hspace{1in}   GeV$^{-1} = 6 \cdot 10^{-25}$ s
+
+$\epsilon_L = \frac{1}{\sqrt{2}} \begin{pmatrix} 0, 1, -i, 0 \end{pmatrix}$ and $\epsilon_R = \frac{1}{\sqrt{2}} \begin{pmatrix} 0, 1, +i, 0 \end{pmatrix}$
+
+Cross section: $\sigma \sim \frac{1}{E_1 E_2}|M|^2 d\Pi_{LIPS}$
+
+Decay rate: $\Gamma \sim \frac{1}{E} |M|^2 d\Pi_{LIPS}$
+
+Life-time: $\tau = \frac{1}{\Gamma}$
+
+$d\Pi_{LIPS} = \delta^4 (\sum p_i - \sum p_f)\prod_{f} \cancel{d^3p_f} $
+
+$\cancel{d^3p} = \frac{d^3p}{(2\pi)^3 2 E_p}$
+
+\be
+\eta_{\mu\nu} = \left\{ \begin{array}{rl} 1 & \mbox{$\mu = \nu=0$}  \\ -1 & \mbox{$\mu=\nu=1,2,3\ (i)$}  \\ 0 & \mbox{otherwise} \end{array} \right.
+\ee
+
+Physical Observables A can be written as $A = \sum_{a} a \ket{a}\bra{a}$
+
+\be
+\mathscr{L}_{scalar} = \frac{1}{2} (\partial_\mu \phi)(\partial^\mu \phi) + \frac{m^2}{2} \phi^2
+\ee
+
+\be
+\mathscr{L}_{spin 1/2} = \bar{\psi}(i\gamma_\mu \partial^\mu - m )\psi
+\ee
+
+\be
+\mathscr{L}_{spin 1} = F_{\mu\nu} F^{\mu\nu}\ \textrm{ where } F_{\mu\nu} = \partial_\mu A_\nu - \partial_\mu A_\nu
+\ee
+
+
+}
+
+
+
+
+
+\end{document}

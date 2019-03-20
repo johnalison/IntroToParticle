@@ -1,0 +1,114 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+\def\mp{\ensuremath{m_{\textrm{proton}}}}
+\def\rp{\ensuremath{r_{\textrm{proton}}}}
+\def\me{\ensuremath{m_{\textrm{electron}}}}
+\def\aG{\ensuremath{\alpha_G}}
+\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
+
+\def\ABCDMatrix{\ensuremath{\begin{pmatrix} A &  B  \\ C  & D \end{pmatrix}}}
+\def\xyprime{\ensuremath{\begin{pmatrix} x' \\ y' \end{pmatrix}}}
+\def\xyprimeT{\ensuremath{\begin{pmatrix} x' &  y' \end{pmatrix}}}
+\def\xy{\ensuremath{\begin{pmatrix} x \\ y \end{pmatrix}}}
+\def\xyT{\ensuremath{\begin{pmatrix} x & y \end{pmatrix}}}
+
+\def\IMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ -1  & 0 \end{pmatrix}}}
+\def\JThree{\ensuremath{\begin{pmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{pmatrix}}} 
+\def\JTwo{\ensuremath{\begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix}}}
+\def\JOne{\ensuremath{\begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix}}}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 21}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+\section*{Collider Physics}
+
+We will start talking  about collider physics. 
+Start with a cartoon of what/how we measure/detect particles.
+This will motivate certian calculations.  
+We will then return and fill in detail later.
+
+
+\underline{To first order}  (we will come back and make this more precise next week)
+Particles (either protons or electrons) collide along the z-axis and a whole bunch of other particles shoot out in all directions.   
+
+We build detectors (which you can think of as large cameras) to take pictures (snapshots) of what came out. 
+These pictures are called ``events''.
+An example of a picture or event from the ATLAS detector at the LHC is shown in Figure~\ref{fig:EventDisplay}.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\textwidth]{./EventDisplayNoLabel.pdf}
+\caption{Event Display}\label{fig:EventDisplay}
+\end{figure}
+
+\clearpage
+
+There are four basic types of images that the detectors capture. 
+You can think of these as the basic outputs of the detectors. 
+(Of course this is not the true output of the detectors which really just measure voltage or charge, but it is a conveient abstraction and its the level at which most experimental HEP physicists think)
+
+This basic outputs are shown in Figure~\ref{fig:BasicInputs}.
+Correlations among these four basic image types, tell us what kind of particles where produced in the collision.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\textwidth]{./BasicInputs.pdf}
+\caption{Basic Outputs}\label{fig:BasicInputs}
+\end{figure}
+
+\clearpage
+
+Of course we are really interested in the particles,  not the different image types. 
+But by correlation these images we can infer which particles were present. 
+
+How this is done for the fermions is shown in Figure~\ref{fig:Fermions}.
+The detector signature of the Bosons is shown in Figure~\ref{fig:Bosons}.
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\textwidth]{./Fermions.pdf}
+\caption{Signature of Fermions}\label{fig:Fermions}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\textwidth]{./Bosons.pdf}
+\caption{Signature of Bosons}\label{fig:Bosons}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\textwidth]{./HiggsBoson.pdf}
+\caption{Signature of the Higgsv Boson}\label{fig:HiggsBosons}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\textwidth]{./EventDisplayLabeled.pdf}
+\end{figure}
+
+}
+\end{document}
+
+
