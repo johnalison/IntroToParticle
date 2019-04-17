@@ -51,52 +51,74 @@
 \textbf{1) Discrete Symmetries } \hfill \textit{(10 points)}\\
 
 \begin{itemize}
-\item[a.]{ Show that Maxwells equations are invariant under parity transformations.}
-\item[b.]{ Show that Maxwells equations are invariant under Charge conjugation.}
-\item[c.]{ Show that Maxwells equations are invariant under Time reversal.}
-\item[d.]{ Show that the Schrodinger equation is invariant under Time reversal if $\mathcal{T}i = -i$.}
+\item[a.]{ Under Parity:
+\be
+ \vec{E} \rightarrow -\vec{E}, \vec{\triangledown} \rightarrow - \vec{\triangledown}, \rho \rightarrow \rho, \vec{B} \rightarrow\vec{B},\vec{J}\rightarrow-\vec{J}, \frac{\partial}{\partial t} \rightarrow \frac{\partial}{\partial t}
+\ee
+
+So 
+\be
+ \vec{\triangledown} \cdot \vec{E} = \rho,  \vec{\triangledown} \cdot \vec{B} = 0,   \vec{\triangledown} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} ,  \vec{\triangledown} \times \vec{B} = \vec{J} + \frac{\partial \vec{E}}{\partial t}
+\ee
+Are invariant
+}
+\item[b.]{ Under Charge Conjugation
+\be
+ \vec{E} \rightarrow -\vec{E}, \vec{\triangledown} \rightarrow \vec{\triangledown}, \rho \rightarrow -\rho, \vec{B} \rightarrow -\vec{B},\vec{J}\rightarrow-\vec{J}, \frac{\partial}{\partial t} \rightarrow \frac{\partial}{\partial t}
+\ee
+So ME are are invariant.
+}
+\item[c.]{ Under Time Reversal
+\be
+ \vec{E} \rightarrow \vec{E}, \vec{\triangledown} \rightarrow \vec{\triangledown}, \rho \rightarrow \rho, \vec{B} \rightarrow -\vec{B},\vec{J}\rightarrow-\vec{J}, \frac{\partial}{\partial t} \rightarrow -\frac{\partial}{\partial t}
+\ee
+So ME are are invariant.
+}
+\item[d.]{ 
+We assume that the Hamiltonian is time independent.  So $\mathcal{T}H = H$
+
+Then
+\be
+i\frac{\partial}{\partial t} \psi = H\psi   \rightarrow \mathcal{T}(i) \mathcal{T}(\frac{\partial}{\partial t})  \psi = \mathcal{T}(H)\psi
+\ee
+or
+\be
+ \mathcal{T}(i) -(\frac{\partial}{\partial t})  \psi = H\psi
+\ee
+
+Which is invariant if $\mathcal{T}(i) = -i$
+}
 \end{itemize}
-\textit{(Hint: First work out what the discrete transformations do to $E, \vec{\nabla}, \rho, \vec{B}, \vec{J}, \mathrm{and} \frac{\partial}{\partial t}$.  )}
+
 \vspace*{0.25in}
 
 
 \textbf{2) Kinematics of the IceCube Experiment. } \hfill \textit{(10 points)}\\
 
-The IceCube experiment is an expansive collection of photomultiplier tubes buried over a mile deep in the ice cap of the South Pole. 
-The goal of IceCube is to observe extremely high energy neutrinos that were produced in supernovae or other astrophysical phenomena. 
-The way it does it is fascinating. 
-The ice buried deep under the South Pole is extremely clear (except for some dust and ash from mass extinction events in the Earth’s history). 
-High energy neutrinos can pass through the ice and hit a proton in the water molecules of the ice. 
-This interaction typically produces a muon and a neutron. 
-The muon, if it is high enough energy, can travel through the ice above the speed of light in ice.
-This admits a type of radiation referred to as Cherenkov radiation. 
-The Cherenkov radiation is then observed in the photomultiplier tubes, and enables a precise measurement of the energy and direction of the produced muon.
-
-A schematic illustration of the IceCube experiment is shown in Figure 1. 
-In this exercise, we will analyze the kinematics of the process $\bar{\nu}_\mu + p \rightarrow \mu^+ n $
-For very high energy observed anti-muons, we will be able to set a bound on the angle from the anti-muon to the initial anti-neutrino.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.8\textwidth]{./Icecube.pdf}
-\caption{}
-\end{figure}
-
-
 \begin{itemize}
 \item[a)]{Read the wikipedia article on Cherenkov radiation:  \href{https://en.wikipedia.org/wiki/Cherenkov_radiation}{https://en.wikipedia.org/wiki/Cherenkov\_radiation}}
 \item[b)]{
-The scattering process $\bar{\nu}_\mu + p \rightarrow \mu^+ n $ at IceCube occurs in the frame in which the proton (in the nucleus of a water molecule) is at rest. 
-Assuming that the anti-neutrino’s momentum is aligned along the +z axis, write the four-momentum of the anti-muon and the neutron in terms of the anti-neutrino energy $E_\nu$ the nucleon mass $m_N$x, and the scattering angle $\theta$. 
-You can safely assume that the anti-neutrino and anti-muon are both massless and the proton and neutron have identical mass equal to mN. 
-The scattering angle is the angle between the original anti-neutrino momentum and the anti-muon’s momentum.
+$E = E_{\nu}$, $m = m_N$ 
+\be
+p_\mu = \frac{E m}{m+E(1-\cos\theta)}(1,0,sin\theta, cos\theta)
+\ee
+
+\be
+p_n = \left( E + m - \frac{Em}{m+E(1-\cos\theta)} , 0, -\frac{Em\sin\theta}{m+E(1-\cos\theta)}, E - \frac{Em\cos\theta}{m+E(1-\cos\theta)} \right)
+\ee
+
+
 }
 \item[c)]{
-Figure 2 is a plot from the IceCube experiment that shows the deposited energy into the experiment versus the declination angle of the anti-muon from high-energy neutrino scattering. 
-This plot shows the 37 highest energy events recorded by IceCube. 
-There are three fantastically high energy events observed above 1000 TeV (= 1 Peta-electron Volt) of deposited energy. 
-The highest energy event is affectionately called “Big Bird,” while the second and third highest energy events are called “Bert” and “Ernie.” 
-(Actually, all of the events on this plot are named after Muppets.)
+
+\be
+|p_\mu| = \frac{E m}{m+E(1-\cos\theta)}
+\be
+
+$E_{smallest} = |p_\mu|$
+
+For a given $|p_\mu|$ the
+
 
 If the Big Bird anti-muon deposited 2 PeV of energy in IceCube, then what is the corresponding largest and smallest energy that the initial anti-neutrino could have had?
 
@@ -117,8 +139,8 @@ You can safely assume that $m_N << E_\mu$, so Taylor expanding would likely help
 \textit{This property of the scattering angle from part is extremely important for determining the astrophysical source of the high energy neutrinos observed in IceCube. 
 In 2016, scientists on the Fermi Gamma Ray Space Telescope found evidence that the neutrino that was responsible for the Big Bird muon was created in a blazar, an enormously energetic radiation source believed to be generated by a supermassive black hole at the center of a galaxy.}
 }
-\item[e)]{Draw the Feynman diagram for $\bar{\nu}_\mu + p \rightarrow \mu^+ n $ assuming a point-like interaction and treating the proton and neutron as fundamental particles.}
-\item[f)]{Use dimensional analysis to estimate the size of the $\bar{\nu}_\mu + p \rightarrow \mu^+ n $ cross section. \textit{Hint: The dependence on $E_\nu$ is very weak so express your answer only in terms of $m_p$ and $m_W$.}
+\item[e)]{Draw the Feynman diagram for $\bar{nu}_\mu + p \rightarrow \mu^+ n $ assuming a point-like interaction and treating the proton and neutron as fundamental particles.}
+\item[f)]{Use dimensional analysis to estimate the size of the $\bar{nu}_\mu + p \rightarrow \mu^+ n $ cross section. \textit{Hint: The dependence on $E_\nu$ is very weak so express your answer only in terms of $m_p$ and $m_W$.}
 }
 \item[g)]{
 IceCube ran for three years to find three events which each deposited more than a PeV of energy into the antarctic ice. 

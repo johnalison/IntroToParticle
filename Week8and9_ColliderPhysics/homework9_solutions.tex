@@ -1,0 +1,261 @@
+\input{latexSetup}
+\usepackage{braket}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+\def\mp{\ensuremath{m_{\textrm{proton}}}}
+\def\rp{\ensuremath{r_{\textrm{proton}}}}
+\def\me{\ensuremath{m_{\textrm{electron}}}}
+\def\aG{\ensuremath{\alpha_G}}
+\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
+
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+
+
+\usepackage{fancyhdr}
+\usepackage{cancel}
+\usepackage{ mathrsfs }
+
+
+
+
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2019\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Homework Set \#9 }}
+\large
+
+{\textbf{ Due Date:} Before class Friday April 5th  } 
+\end{center}
+
+{\large
+
+\textbf{1) Synchrotron Losses } \hfill \textit{(10 points)}\\
+
+\begin{itemize}
+\item[a.]{ 
+In class,  I gave the wrong formula.  The power per turn should be (note the \textbf{$10^{-6}$} !!!)
+
+\be
+P \sim 0.3 \cdot 10^{-6} \left(\frac{E}{m}\right)^4 \left(\frac{km}{R}\right)^2
+\ee
+
+This gives the power lost from synchrotron radiation per proton at the LHC to be about 40 MeV/s. 
+The total number of protons $N_p$ in the LHC ring is the number of bunches times the number of protons per bunch.
+\be
+N_p =2808 \cdot 1.15 \times 10^{11} \sim 3.2 \times 10^{14}
+\ee
+
+Therefore, the total power radiated away in synchrotron radiation is $P_{tot} \sim 3.2 \times 10^{14} \times 40 MeV/s \sim 1.3\times 10^{13} GeV/s$.
+Converting this to J/s, we recall that 1 GeV is $1.6 \times 10^{-10}$ J. Therefore, the power lost in watts is
+\be
+P_{tot} \sim 1.6\times 10^{-10} \cdot 1.3\times 10^{13} W\sim 2\times 10^3 W
+\ee
+
+That is, the power in synchrotron radiation at the LHC is equivalent to about two microwave ovens.
+Everyone who attempted this problem with the old formula will get full credit.
+
+}
+\item[b.]{
+\be
+\frac{P_{LEP}}{P_{LHC}} = \left(\frac{m_p E_{LEP}}{m_e E_{LHC}}\right)^4
+\ee
+Now, 
+
+\be
+\frac{m_p E_{LEP}}{m_e E_{LHC}} \sim \frac{1 \times 200}{10^{-3} 6500} \sim 30
+\ee
+
+or 
+
+\be
+P_{LEP} \sim 30^4 P_{LHC} \sim 8\time10^5 \times 40 MeV/s \sim 3 \times 10^4 GeV/s 
+\ee
+
+}
+\item[c.]{
+\be
+\frac{P_{LEP}}{P_{LHC}} = 1 = \left(\frac{m_p E_{LEP}}{m_e E_{LHC}}\right)^4 
+\ee
+or 
+\be
+\frac{E_{LHC}}{E_{LEP}}  = \left(\frac{m_p}{m_e}\right) \sim 2000
+\ee
+
+}n
+
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{2) Tracking Detectors } \hfill \textit{(10 points)}\\
+\begin{itemize}
+\item[a)]{
+\be
+F = ma \Rightarrow m v^2/r_c = qvB  \Rightarrow r_c = p_T/qB
+\ee
+Now,
+\be
+r_c^2 = \left(\frac{L}{2}\right)^2 + (r_c -s )^2
+\ee
+Or (Ignoring terms 
+\be
+\frac{L^2}{4} = 2 r_c s - s^2
+\ee
+B/c $r_c >> s$, can safely drop $s^2$ relative to $r_c s$.  Thus
+\be
+s = \frac{L^2}{8r_c} = \frac{qBL^2}{8p_T}
+\ee
+
+
+}
+\item[b)]{
+\be
+p_T = \frac{qBL^2}{8s}
+\ee 
+So,
+\be
+\Delta p_T = \frac{qBL^2}{8s^2} \Delta s 
+\ee 
+
+and
+\be
+\frac{\Delta p_T}{p_T} = \frac{\Delta s}{s} = \frac{8p_T}{qBL^2} \Delta s 
+\ee 
+
+}
+\item[c)]{
+For N = 50, $\epsilon$ = 100 $\mu m$, L = 1 m, and B = 1 T, $\Delta s \sim 50 \mu m = 50 10^{-6} m$
+
+Now
+$T = 2 \times 10^{-16} GeV^2$\\
+$e = 0.3$
+\be
+\Delta p_T = \frac{8 (p_T[GeV])^2}{0.3 \times 2 \times 10^{-16} }  \frac{50 \times 10^{-6}}{5\times10 ^{15} GeV^{-1}} \sim 3\times10^{-3} (p_T[GeV])^2 GeV
+\ee
+
+At 1 GeV the uncertainty is $\sim 10^{-3}$ GeV,   At 100 GeV the uncertainty is 10 GeV.
+}
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{3) Limits of the Tracking System.} \hfill \textit{(5 points)}\\
+
+\begin{itemize}
+\item[a)]{
+\be
+r_c \sim 3 \frac{p_T[GeV] }{Q[e] B[T]}
+\ee
+Particles dont make it to the calorimeter when $r_{calo} \sim 2\times r_c$
+
+or 
+\be
+p_T \sim \frac{q B r_{calo}}{6} = \frac{2 \times 1.1}{6} \sim 400 MeV
+\ee
+
+}
+
+\item[b)]{
+Estimate upper limit when $s\sim17 \mu m \sim 20 \times 10^{-6} m$
+
+\be
+p_T \sim \frac{0.3 \times 2\times 10^{-16} GeV^2}{8} \frac{0.5}{20 \times 10^{-6}} 0.5 \times 5 \times 10^{15} GeV^{-1}
+p_T \sim 0.5\times 10^3 GeV
+\ee
+
+}
+\item[c)]{
+At the limit $\Delta s / s \sim 1  \Rightarrow \Delta p_T / p_T \sim 1 $, so $\Delta p_T \sim 500$ GeV
+
+
+}
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{4) Rapidity.} \hfill \textit{(15 points)}\\
+
+\begin{itemize}
+\item[a)]{
+Under a boost along Z
+
+\be
+E \rightarrow E \gamma - \beta \gamma p_z
+\ee
+\be
+p_z \rightarrow p_z \gamma - \beta \gamma E
+\ee
+
+So,
+
+\begin{align*}
+y \rightarrow \frac{1}{2} \log \frac{(E \gamma - \beta \gamma p_z) + (p_z \gamma - \beta \gamma E)}{(E \gamma - \beta \gamma p_z) -(p_z \gamma - \beta \gamma E)} \\ 
+  = \frac{1}{2} \log \frac{\gamma - \beta \gamma}{\gamma + \beta \gamma}\frac{E+p_z}{E - p_z} = \frac{1}{2} \log \frac{E+p_z}{E - p_z} + \frac{1}{2} \log \frac{\gamma - \beta \gamma}{\gamma + \beta \gamma}\\
+  = y + \frac{1}{2} \log \frac{\cosh \eta - \sinh \eta}{\cosh + \sinh \eta} = y + \frac{1}{2} \log \frac{e^{-\eta}} {e^{+\eta}}\\
+  = y + \frac{1}{2} \log e^{-2\eta} = y - \eta
+ \end{align*}
+
+}
+\item[b.]{
+$y = \eta $ for mass-less particles
+}
+\item[c.d.]{
+Green are electrons / Red are muons.
+}
+\item[c.e]{
+I got:
+
+eta1 = -1  /
+phi1 = 70 /
+pt1  = 30 
+
+eta2 = 0  /
+phi2 = 255 /
+pt2  = 30 
+
+eta3 = -0.2 / 
+phi3 = 70  /
+pt3  = 20
+
+eta4 = 0.5 / 
+phi4 = 200 /
+pt4  = 25 
+
+}
+\item[f.]{
+I get: (124.8, -14.2, 9.5, -26.3) GeV (E,vec{P})
+}
+\item[h.]{68. probably Zboson}
+\item[i.]{43 probably off shell z}
+\item[j.]{121 GeV probably a higgs}
+
+
+
+
+
+\end{itemize}
+
+
+
+
+}
+\end{document}
