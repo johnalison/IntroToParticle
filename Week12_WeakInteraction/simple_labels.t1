@@ -1,0 +1,6 @@
+% simple_labels.t1 -- generated from simple_labels.mp
+\fmfL(6.04338,-3.38004,rt){$\bar {\nu }_\mu $}%
+\fmfL(6.04338,63.38004,rb){p}%
+\fmfL(103.95662,63.38004,lb){n}%
+\fmfL(103.95662,-3.38004,lt){$\mu ^+$}%
+\fmfL(61,30,l){ $\sim \frac {1}{m_W^2}$}%
