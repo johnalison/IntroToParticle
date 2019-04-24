@@ -1,0 +1,108 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+
+
+\def\ABCDMatrix{\ensuremath{\begin{pmatrix} A &  B  \\ C  & D \end{pmatrix}}}
+\def\xyprime{\ensuremath{\begin{pmatrix} x' \\ y' \end{pmatrix}}}
+\def\xyprimeT{\ensuremath{\begin{pmatrix} x' &  y' \end{pmatrix}}}
+\def\xy{\ensuremath{\begin{pmatrix} x \\ y \end{pmatrix}}}
+\def\xyT{\ensuremath{\begin{pmatrix} x & y \end{pmatrix}}}
+
+\def\IMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ -1  & 0 \end{pmatrix}}}
+\def\IBoostMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ 1  & 0 \end{pmatrix}}}
+\def\JThree{\ensuremath{\begin{pmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{pmatrix}}} 
+\def\JTwo{\ensuremath{\begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix}}}
+\def\JOne{\ensuremath{\begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix}}}
+\def\etamn{\ensuremath{\eta_{\mu\nu}}}
+\def\Lmn{\ensuremath{\Lambda^\mu_\nu}}
+\def\dmn{\ensuremath{\delta^\mu_\nu}}
+\def\wmn{\ensuremath{\omega^\mu_\nu}}
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\nus{$\nu$s}
+\def\nue{\ensuremath{\nu_e}}
+\def\numu{\ensuremath{\nu_\mu}}
+\def\nutau{\ensuremath{\nu_\tau}}
+\def\nualpha{\ensuremath{\nu_\alpha}}
+\def\nuone{\ensuremath{\nu_1}}
+\def\nutwo{\ensuremath{\nu_2}}
+\def\nuthree{\ensuremath{\nu_3}}
+%\def\xMu{\ensuremath{x^\mu}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 36}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+\textbf{\underline{OK left off discussing how 2-state mixing describes atmospheric \nus}} 
+
+Turns out that two flavour $\nu$ oscillations also explains the solar $\nu$ oscillations very well. 
+(More complicated b/c of matter effects that we are not going to talk about)
+
+$\Delta m^2 \sim 10^{-4} eV^2$ 
+
+This means we have another $\Delta m^2$ that explains how \nue s disappear, with a large mixing angle. 
+Can I do an experiment to test that ?
+
+If,  $\Delta m^2 \sim 10^{-4} eV^2$,  for a 1 GeV $\nu$, oscillation length is $10^4$ km. 
+
+Idea to do an experiment with reactor \nus.
+$E_\nu \sim 5 MeV \Rightarrow $ baselines of 100 km. 
+
+Describe Kamland. 
+
+Confirms the picture that you get out of the solar \nus.
+
+\noindent\rule{\textwidth}{1pt}
+
+Picture that we have constructed is pretty simple
+
+\underline{Atmospheric Oscillations:}
+\be
+\Delta m^2 \sim 10^{-3} eV^2
+\ee
+\be
+\numu \longleftrightarrow \nutau
+\ee
+\bc
+Large Mixing Angle
+\ec
+
+\underline{Solar Oscillations:}
+\be
+\Delta m^2 \sim 10^{-4} eV^2
+\ee
+\be
+\nue \longleftrightarrow \numu,\nutau
+\ee
+\bc
+Large Mixing Angle
+\ec
+
+We know we have three \nus, these results are all with 2 state toy. 
+How do we make this into a coherent picture. 
+Why doesn't this work so well, even though we have 3 \nus?
+
+}
+\end{document}
+
+
