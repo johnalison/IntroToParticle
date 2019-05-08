@@ -46,7 +46,7 @@ midterm_raw = [#20  # Kiran
               ,9, #Yue Xu
               ]
 
-home_work = [ #80
+home_work_raw = [ #80
               68.7, #Joshua
               55.4, #Steven
               92.4,#Joshua 
@@ -59,9 +59,52 @@ home_work = [ #80
               75.7,  # Yue
               ]
 
+home_work_den = [ #80
+              21, #Joshua
+              30, #Steven
+              15,#Joshua 
+              30,#Brandon
+              15,# Ian Harris
+              31,#Max
+              30,# 79.1,#Ruvini
+              15, #Ian Holst
+              35, #Naren
+              30,  # Yue
+              ]
+
+
+home_work_num = [ #80
+              9, #Joshua
+              0, #Steven
+              12,#Joshua 
+              0,#Brandon
+              13,# Ian Harris
+              0,#Max
+              0 ,# ,#Ruvini
+              13, #Ian Holst
+              32, #Naren
+              0,  # Yue
+              ]
+
+
+home_work= []
+hwTotal = 270
+for i in range(len(final_raw)):
+    hwPoints = home_work_raw[i]/100*hwTotal
+    hwPointsCor = hwPoints - home_work_num[i]
+    hwTotalCor = hwTotal - home_work_den[i]
+    home_work_new = hwPointsCor / hwTotalCor*100
+    print(home_work_raw[i],  "--->", home_work_new)
+    home_work.append(home_work_new)
+
+
+
 combined = []
 for i in range(len(final_raw)):
     combined.append(round(  (0.4*final_raw[i]/115*100 + 0.2*midterm_raw[i]/53*100 + 0.4*home_work[i]),2))
+
+
+
 
 average = np.average(combined)
 rms = np.std(combined)
