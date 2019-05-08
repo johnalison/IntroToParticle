@@ -49,7 +49,7 @@ midterm_raw = [#20  # Kiran
 home_work = [ #80
               68.7, #Joshua
               55.4, #Steven
-              86.1,#Joshua 
+              92.4,#Joshua 
               73.0,#Brandon
               92.6,# Ian Harris
               42.4,#Max
