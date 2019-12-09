@@ -1,0 +1,205 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+
+\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+
+
+\def\ABCDMatrix{\ensuremath{\begin{pmatrix} A &  B  \\ C  & D \end{pmatrix}}}
+\def\xyprime{\ensuremath{\begin{pmatrix} x' \\ y' \end{pmatrix}}}
+\def\xyprimeT{\ensuremath{\begin{pmatrix} x' &  y' \end{pmatrix}}}
+\def\xy{\ensuremath{\begin{pmatrix} x \\ y \end{pmatrix}}}
+\def\xyT{\ensuremath{\begin{pmatrix} x & y \end{pmatrix}}}
+
+\def\IMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ -1  & 0 \end{pmatrix}}}
+\def\IBoostMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ 1  & 0 \end{pmatrix}}}
+\def\JThree{\ensuremath{\begin{pmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{pmatrix}}} 
+\def\JTwo{\ensuremath{\begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix}}}
+\def\JOne{\ensuremath{\begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix}}}
+\def\etamn{\ensuremath{\eta_{\mu\nu}}}
+\def\Lmn{\ensuremath{\Lambda^\mu_\nu}}
+\def\dmn{\ensuremath{\delta^\mu_\nu}}
+\def\wmn{\ensuremath{\omega^\mu_\nu}}
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+
+%\def\xMu{\ensuremath{x^\mu}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 6}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+\textbf{\underline{Review Quantum Mechanics}} 
+
+\underline{QM} Linear Algebra in a complex vector space.
+
+State of a system is a vector (ray) in the Complex Vector Space. 
+
+\begin{center}
+$\ket \alpha$  - state vector
+\end{center}
+
+
+\underline{Linear Superpositions} 
+
+\be
+\ket \Psi = c_1 \ket{\alpha_1} + c_2 \ket{\alpha_2}
+\ee
+
+If the $\ket{\alpha's}$ are vectors and the c's are complex numbers, then $\ket \Psi$ is another vector in the space.
+
+
+%\be
+%\vec{v} = \begin{pmatrix} v_x \\ v_y \\ v_z \end{pmatrix}  
+%\ee
+%
+%\begin{align*}
+%\vec{v}\cdot\vec{w} = v_x w_x + v_y w_y + v_z w_z\\
+% = \underbrace{|\vec{v}|}_{|\vec{v}| = \sqrt{\vec{v}\cdot\vec{v}}}|\vec{w}|\cos \Delta \theta(\vec{v},\vec{w})
+%\end{align*}
+%
+%\underline{4-vectors}
+%
+%\be
+%v^\mu = \begin{pmatrix} v_0 \\ v_1 \\ v_2 \\ v_3 \end{pmatrix}   = \begin{pmatrix} v_0 \\ \vec{v} \end{pmatrix}
+%\ee
+%
+%
+%
+%\begin{align*}
+%v^\mu w_\mu = v_0 w_0 - (v_x w_x + v_y w_y + v_z w_z) \\
+%= v_0 w_0 - (\vec{v} \cdot \vec{w})
+%\end{align*}
+%
+%Roman vs Greek indices: 
+%$\mu\nu\rho\sigma$ etc usually means 0,1,2,3 (index full space-time) 
+%$i j k$ etc usually means 1,2,3 (eg: just the spatial components)
+%
+%\underline{Relativity Energy Momentum 4-vectors}  ``Particle'' 4-vectors
+%
+%\be
+%p^\mu =  \begin{pmatrix} E \\ \vec{p} \end{pmatrix}  
+%\ee
+%with the constraint, $E = \sqrt{|\vec{p}|^2 + M^2}$
+%
+%
+%\begin{align*}
+%p^\mu p_\mu =  E^2 - \vec{p}\cdot\vec{p} \\
+%= |\vec{p}|^2 + M^2 - |\vec{p}|^2 = M^2
+%\end{align*}
+%
+%\underline{Massive Particles have a CoM frame:}
+%
+%\be
+%p^\mu =  \begin{pmatrix} M \\ \vec{0} \end{pmatrix}  
+%\ee
+%
+%\underline{Massless Particles do not !}
+%Best you can do is:
+%
+%\be
+%p^\mu =  \begin{pmatrix} E \\ \begin{pmatrix} E \\ 0 \\0  \end{pmatrix}    \end{pmatrix}  
+%\ee
+%Can move (rotate) E to any component.
+%
+%Check 
+%\begin{align*}
+%p^\mu p_\mu =  E^2 - E^2 = 0
+%\end{align*}
+%
+%\noindent\rule{\textwidth}{1pt}
+%A common problem that we want to analyze in particle physics is the decay of an unstable particle. 
+%The vast majority of particles decay to two or more particles. 
+%The only particles for which there is no evidence that they decay are electrons, photons, and protons. 
+%
+%Example: Pion decay
+%The pion is a natural that decays to two photons. 
+%Interesting that natural particle decays to photons, 
+%Now known to be composed of up and down quarks.
+%
+%
+%The pion has a mass of about 135 MeV and in its decay to photons energy and momentum are conserved. 
+%(We will ignore effects of angular momentum conservation for now.)
+% How can we understand this decay using four-vectors?
+%
+%
+%
+%Four-vectors depend on the frame in which they are evaluated, so we need to pick a frame to analyze this decay. 
+%The pion is massive so we can always boost to the frame where the pion is at rest. 
+%In this frame, its momentum four-vector, or four-momentum, is:
+%
+%\be
+%p_\pi = \begin{pmatrix} m_\pi \\ \vec{0} \end{pmatrix}  
+%\ee
+%
+%That is, when the pion is at rest, its energy is just set by the pion mass, $m_\pi$. 
+%Now, we want to determine the four-momentum of the two photons in the pion decay. 
+%We can again perform a rotation (= Lorentz transformation) to have the photons travel along the z-axis. 
+%By momentum conservation, the photons must be traveling back-to-back from the pion decay:
+%
+%gamma <--- pi ---> gamma
+%
+%
+%In this frame, we can express the four-vectors of the two photons as:\\
+%\be
+%p_{\gamma_1} = (E_{\gamma_1},0,0,p^z_{\gamma_1}) \hspace{1in} p_{\gamma_2} = (E_{\gamma_2},0,0,p^z_{\gamma_2})
+%\ee
+%
+%By energy and momentum conservation the sum of the four-vectors of the photons must add up to the pion’s four-momentum:
+%
+%\be
+%p_\pi = p_{\gamma_1} + p_{\gamma_2}
+%\ee
+%
+%This is actually a system of four equations, two of which are just 0 = 0. 
+%
+%The non- trivial equations are conservation of energy and conservation of the z-component of momentum:
+%
+%\be
+%m_\pi =E_{\gamma_1} +E_{\gamma_2} \hspace{1in} 0=p^z_{\gamma_1} +p^z_{\gamma_2} .
+%\ee
+%
+%2nd equation gives: $p^z_{\gamma_1} = -p^z_{\gamma_2} \equiv p^z$
+%
+%\be
+%p_{\gamma_1} = (E_{\gamma_1},0,0,p^z) \hspace{1in} p_{\gamma_2} = (E_{\gamma_2},0,0,-p^z)
+%\ee
+%
+%1st equation gives: $E \equiv E_{\gamma_1}$
+%
+%\be
+%p_{\gamma_1} = (E,0,0,p^z) \hspace{1in} p_{\gamma_2} = (E-m_\pi,0,0,-p^z)
+%\ee
+%
+%Photons are massless: $\Rightarrow p_{\gamma_{1,2}}^2 = 0$
+%
+%
+%
+%\be
+%p_{\gamma_1} = (m_\pi/2,0,0,m_\pi/2) \hspace{1in} p_{\gamma_2} = (m_\pi/2,0,0,-m_\pi/2)
+%\ee
+%
+%
+%Now Review Quatum Mechanics ... 
+%
+%%p2π =(pγ1 +pγ2)2 =p2γ1 +p2γ2 +2pγ1 ·pγ2 =2pγ1 ·pγ2 .
+%
+}
+\end{document}
+
+
