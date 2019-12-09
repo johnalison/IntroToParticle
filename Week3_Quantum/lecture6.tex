@@ -4,7 +4,8 @@
 \usepackage{bbm}
 \usepackage{relsize}
 
-\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\ketX{\ensuremath{\ket{\vec{x}}}}
+%\def\ketY{\ensuremath{\ket {\Psi}}}
 \def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
 
 
@@ -25,6 +26,8 @@
 \def\wmn{\ensuremath{\omega^\mu_\nu}}
 \def\be{\begin{equation*}}
 \def\ee{\end{equation*}}
+\def\bea{\begin{eqnarray*}}
+\def\eea{\end{eqnarray*}}
 
 %\def\xMu{\ensuremath{x^\mu}
 
@@ -55,150 +58,226 @@ $\ket \alpha$  - state vector
 \end{center}
 
 
-\underline{Linear Superpositions} 
+\textbf{\underline{Linear Superpositions} }
 
 \be
-\ket \Psi = c_1 \ket{\alpha_1} + c_2 \ket{\alpha_2}
+\ket \psi = c_1 \ket{\alpha_1} + c_2 \ket{\alpha_2}
 \ee
 
-If the $\ket{\alpha's}$ are vectors and the c's are complex numbers, then $\ket \Psi$ is another vector in the space.
+If the $\ket{\alpha's}$ are vectors and the c's are complex numbers, then $\ket \psi$ is another vector in the space.\\
 
 
-%\be
-%\vec{v} = \begin{pmatrix} v_x \\ v_y \\ v_z \end{pmatrix}  
-%\ee
-%
-%\begin{align*}
-%\vec{v}\cdot\vec{w} = v_x w_x + v_y w_y + v_z w_z\\
-% = \underbrace{|\vec{v}|}_{|\vec{v}| = \sqrt{\vec{v}\cdot\vec{v}}}|\vec{w}|\cos \Delta \theta(\vec{v},\vec{w})
-%\end{align*}
-%
-%\underline{4-vectors}
-%
-%\be
-%v^\mu = \begin{pmatrix} v_0 \\ v_1 \\ v_2 \\ v_3 \end{pmatrix}   = \begin{pmatrix} v_0 \\ \vec{v} \end{pmatrix}
-%\ee
-%
-%
-%
-%\begin{align*}
-%v^\mu w_\mu = v_0 w_0 - (v_x w_x + v_y w_y + v_z w_z) \\
-%= v_0 w_0 - (\vec{v} \cdot \vec{w})
-%\end{align*}
-%
-%Roman vs Greek indices: 
-%$\mu\nu\rho\sigma$ etc usually means 0,1,2,3 (index full space-time) 
-%$i j k$ etc usually means 1,2,3 (eg: just the spatial components)
-%
-%\underline{Relativity Energy Momentum 4-vectors}  ``Particle'' 4-vectors
-%
-%\be
-%p^\mu =  \begin{pmatrix} E \\ \vec{p} \end{pmatrix}  
-%\ee
-%with the constraint, $E = \sqrt{|\vec{p}|^2 + M^2}$
-%
-%
-%\begin{align*}
-%p^\mu p_\mu =  E^2 - \vec{p}\cdot\vec{p} \\
-%= |\vec{p}|^2 + M^2 - |\vec{p}|^2 = M^2
-%\end{align*}
-%
-%\underline{Massive Particles have a CoM frame:}
-%
-%\be
-%p^\mu =  \begin{pmatrix} M \\ \vec{0} \end{pmatrix}  
-%\ee
-%
-%\underline{Massless Particles do not !}
-%Best you can do is:
-%
-%\be
-%p^\mu =  \begin{pmatrix} E \\ \begin{pmatrix} E \\ 0 \\0  \end{pmatrix}    \end{pmatrix}  
-%\ee
-%Can move (rotate) E to any component.
-%
-%Check 
-%\begin{align*}
-%p^\mu p_\mu =  E^2 - E^2 = 0
-%\end{align*}
-%
-%\noindent\rule{\textwidth}{1pt}
-%A common problem that we want to analyze in particle physics is the decay of an unstable particle. 
-%The vast majority of particles decay to two or more particles. 
-%The only particles for which there is no evidence that they decay are electrons, photons, and protons. 
-%
-%Example: Pion decay
-%The pion is a natural that decays to two photons. 
-%Interesting that natural particle decays to photons, 
-%Now known to be composed of up and down quarks.
-%
-%
-%The pion has a mass of about 135 MeV and in its decay to photons energy and momentum are conserved. 
-%(We will ignore effects of angular momentum conservation for now.)
-% How can we understand this decay using four-vectors?
-%
-%
-%
-%Four-vectors depend on the frame in which they are evaluated, so we need to pick a frame to analyze this decay. 
-%The pion is massive so we can always boost to the frame where the pion is at rest. 
-%In this frame, its momentum four-vector, or four-momentum, is:
-%
-%\be
-%p_\pi = \begin{pmatrix} m_\pi \\ \vec{0} \end{pmatrix}  
-%\ee
-%
-%That is, when the pion is at rest, its energy is just set by the pion mass, $m_\pi$. 
-%Now, we want to determine the four-momentum of the two photons in the pion decay. 
-%We can again perform a rotation (= Lorentz transformation) to have the photons travel along the z-axis. 
-%By momentum conservation, the photons must be traveling back-to-back from the pion decay:
-%
-%gamma <--- pi ---> gamma
-%
-%
-%In this frame, we can express the four-vectors of the two photons as:\\
-%\be
-%p_{\gamma_1} = (E_{\gamma_1},0,0,p^z_{\gamma_1}) \hspace{1in} p_{\gamma_2} = (E_{\gamma_2},0,0,p^z_{\gamma_2})
-%\ee
-%
-%By energy and momentum conservation the sum of the four-vectors of the photons must add up to the pion’s four-momentum:
-%
-%\be
-%p_\pi = p_{\gamma_1} + p_{\gamma_2}
-%\ee
-%
-%This is actually a system of four equations, two of which are just 0 = 0. 
-%
-%The non- trivial equations are conservation of energy and conservation of the z-component of momentum:
-%
-%\be
-%m_\pi =E_{\gamma_1} +E_{\gamma_2} \hspace{1in} 0=p^z_{\gamma_1} +p^z_{\gamma_2} .
-%\ee
-%
-%2nd equation gives: $p^z_{\gamma_1} = -p^z_{\gamma_2} \equiv p^z$
-%
-%\be
-%p_{\gamma_1} = (E_{\gamma_1},0,0,p^z) \hspace{1in} p_{\gamma_2} = (E_{\gamma_2},0,0,-p^z)
-%\ee
-%
-%1st equation gives: $E \equiv E_{\gamma_1}$
-%
-%\be
-%p_{\gamma_1} = (E,0,0,p^z) \hspace{1in} p_{\gamma_2} = (E-m_\pi,0,0,-p^z)
-%\ee
-%
-%Photons are massless: $\Rightarrow p_{\gamma_{1,2}}^2 = 0$
-%
-%
-%
-%\be
-%p_{\gamma_1} = (m_\pi/2,0,0,m_\pi/2) \hspace{1in} p_{\gamma_2} = (m_\pi/2,0,0,-m_\pi/2)
-%\ee
-%
-%
-%Now Review Quatum Mechanics ... 
-%
-%%p2π =(pγ1 +pγ2)2 =p2γ1 +p2γ2 +2pγ1 ·pγ2 =2pγ1 ·pγ2 .
-%
+\textbf{\underline{Dual Space:}}
+
+For every vector $\ket \alpha$ (``ket'') there is another vector $\bra \alpha$ (``bra'') in a ``dual'' space.
+
+Dual space is a mirro image  of the ket space.
+
+
+If, $\ket \psi = c_1 \ket{\alpha_1} + c_2 \ket{\alpha_2}$, then $\bra \psi = c_1^* \bra{\alpha_1} + c_2^* \bra{\alpha_2}$
+where the $c^*$ is the complex conjugate.
+
+\noindent\rule{\textwidth}{1pt}
+
+\textbf{\underline{Inner Product:}} Dual space allows us to define an inner product between to vectors. 
+
+Given 2 vectors can get a ``c\#'' 
+
+$\braket{\alpha|\beta}$
+
+\underline{Properties}
+\begin{itemize}
+\item[1.] $\braket{\beta|\alpha} = \braket{\alpha| \beta}^*$
+\item[2.] $\braket{\alpha|\alpha} \geq 0$
+\item[3.] $\bra{\beta} (c_1 \ket{\alpha_1} + c_2 \ket{\alpha_2} ) =  c_1 \braket{\beta|\alpha_1} + c_2 \braket{\beta| \alpha_2}$
+\end{itemize}
+
+$\ket{\alpha}$ and $\ket{\beta}$ are \underline{orthogonal} if $\braket{\alpha|\beta} = 0$.
+
+States can be \underline{normalized} $\braket{\alpha|\alpha} = 1$.
+
+\noindent\rule{\textwidth}{1pt}
+
+\textbf{\underline{Operators:}} Thigs that act on a given state, and return another state
+
+$X\ket{\alpha} = \ket{\alpha'}$
+
+Product:
+
+$(YX)\ket{\alpha} = Y(X\ket{\alpha}$
+
+In general, not commutative:  $XY \neq YX$, but they are associative.
+
+
+$\bra{\alpha} = \bra{\alpha'}X^\dagger$
+
+In general, $X^\dagger \neq X$,  if so $X$ is said to be ``Hermitian''.
+
+\noindent\rule{\textwidth}{1pt}
+
+System characheterized by single observable A
+
+eg: position / Momentum / energy
+
+Measuremnet of A gives possible values
+
+\be
+a_1, a_2, ...
+\ee
+
+$\ket{\alpha} = $  State for which A has a value of a
+
+\be
+\sum\limits_{a'} \ket{\alpha'}\bra{\alpha'} = 1 
+\ee
+
+\be
+\braket{\alpha|\alpha'} = \delta_{aa'}
+\ee
+
+Any physical observable corrisponds to an operator like
+
+\be
+A = \sum\limits_{a'} a' \ket{\alpha'}\bra{\alpha'}  
+\ee
+
+eg: 
+
+
+\be
+A\ket{\alpha} = \left( \sum\limits_{a'} a' \ket{\alpha'}\bra{\alpha'} \right)\ket{\alpha} = a \ket{\alpha}
+\ee
+
+Physical observables are real numbers, therefore physical operators A are \underline{Hermitian}
+
+proof:
+
+\be
+A^\dagger = \sum\limits_{a} a^* \ket{\alpha}\bra{\alpha} = \sum\limits_{a} a \ket{\alpha}\bra{\alpha} = A
+\ee
+
+\noindent\rule{\textwidth}{1pt}
+
+\textbf{\underline{Probabilities:}}
+
+Condsider a filter $M(a) = \ket{a}\bra{a}$ on a general state $\ket{s}$.
+
+\bea
+M(a)\ket{s} =& \ket{a}\braket{a|s}\\
+            =& \braket{a|s}\ket{a}
+\eea
+
+where $\braket{a|s}$ is a c\# that tells you something about what fraction of the time you get through. 
+
+
+$\braket{a|s}$ is related to the pass fraction
+
+*But, a) not real,  b) not normalized
+
+However, we know that $|\braket{a|s}|^2 = \braket{a|s}\braket{s|a} = \braket{s|a}\braket{a|s}$
+is both real and normalized. 
+
+\be
+\sum\limits_{a} \braket{s|a}\braket{a|s} = \braket{s|s} = 1
+\ee
+
+\underline{Interpretation}
+
+$|\braket{a|s}|^2$ = Probability that a system prepared in state $\ket{s}$ will be found in a state $\ket{a}$ with value a for observable A after measurement. 
+
+
+Comments on the measurement problem....
+
+
+\clearpage
+
+\textbf{\underline{Position Operator}}
+
+\be
+\vec{X} \ket{\vec{x}} = \vec{x}\ket{\vec{x}}
+\ee
+
+where, $\vec{X}$ is position operator and $\vec{x}$ is position eigenvalue.
+
+Position of course is a continous observable so ``sums go to intergals'' etc.
+
+eg: (Completnees and Orthogonality)
+
+\be
+\sum\limits_{a'} \ket{\alpha'}\bra{\alpha'} = 1   \Rightarrow \int d^3x \ket{x}\bra{x} = 1
+\ee
+
+\be
+\braket{\alpha'|\alpha'} = \delta_{\alpha,\alpha'}   \Rightarrow \braket{\vec{x}|\vec{x'}} = \delta^3(\vec{x} - \vec{x'})
+\ee
+
+
+\textbf{\underline{Wave function}}
+
+\be
+\ket{\psi} = \int d^3x \ket{x}\braket{x|\psi} = \int d^3x \psi(x)\ket{x}
+\ee
+where $\psi(x) = \braket{x|\psi}$ is called the Position-space wavefunction.
+
+\be
+\braket{\psi|\psi} = 1  \Rightarrow \int d^3x \psi(x)\braket{\psi|x} = \int d^3x \psi^*(x)\psi(x) = 1
+\ee
+
+\underline{Interpretation}
+
+ $|\psi(x)|^2d^3x$ is the probability to find the particle in volume $d^3x$ around $\vec{x}$.
+
+
+\clearpage
+
+\textbf{\underline{Translation Operator}}
+``The operator that moves you over''
+
+\be
+T(\vec{a}) \ketX = \ket{\vec{x} + \vec{a}}
+\ee
+
+
+What is $T^\dagger(\vec{a})$ ???
+
+Well, 
+
+\be
+\bra{\vec{x'}}\left(T(\vec{a})\ketX \right) = \delta^3((\vec{x} + \vec{a}) - \vec{x'})
+\ee
+
+or 
+
+\be
+\left(\bra{\vec{x'}}T(\vec{a}) \right) \ketX  = \delta^3(\vec{x} - (\vec{x'} - \vec{a}))
+\ee
+
+\be
+\Rightarrow \bra{x'}T(a) = \bra{x-a}
+\ee
+which says that $T^\dagger(a)\ketX = \ket{\vec{x}-\vec{a}}$
+
+So, 
+\be
+T^\dagger(\vec{a}) = T(-\vec{a}) = T^{-1}(\vec{a})
+\ee
+
+Properties of T
+\begin{itemize}
+\item[1.] Unitary $T^\dagger T = 1$
+\item[2.] $T(\vec{a})T(\vec{b}) = T(\vec{a} + \vec{b}) = T(\vec{b})T(\vec{a})$,  Translations commute ($[T(\vec{a}),T(\vec{b})] = 0$)
+\item[3.] $T(0) = 1$
+\end{itemize}
+
+
+\noindent\rule{\textwidth}{1pt}
+
+\textbf{\underline{Infintesimal Translations}}
+
+consider $\vec{a} = N\vec{\epsilon}$
+
+
+
 }
 \end{document}
 
