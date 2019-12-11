@@ -3,11 +3,13 @@
 \usepackage{braket}
 \usepackage{bbm}
 \usepackage{relsize}
+\usepackage{tcolorbox}
+
 
 \def\ketX{\ensuremath{\ket{\vec{x}}}}
 %\def\ketY{\ensuremath{\ket {\Psi}}}
 \def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
-
+\def\ve{\ensuremath{\vec{\epsilon}}}
 
 \def\ABCDMatrix{\ensuremath{\begin{pmatrix} A &  B  \\ C  & D \end{pmatrix}}}
 \def\xyprime{\ensuremath{\begin{pmatrix} x' \\ y' \end{pmatrix}}}
@@ -278,7 +280,172 @@ consider $\vec{a} = N\vec{\epsilon}$
 
 
 
-}
-\end{document}
+\be
+T(\ve) = 1 - i \ve \cdot \vec{k}
+\ee 
+where 
+\begin{itemize}
+\item[-]\ve is a three vector
+\item[-]$\vec{k}$ is a vector of operators $\vec{k} = (k_x, k_y, k_z)$
+\end{itemize}
+
+Now, we know $T^\dagger T = 1$, or 
+
+\be
+\left( 1 + i \ve \cdot \vec{k}^\dagger \right)\left( 1 - i \ve \cdot \vec{k} \right) = 1
+\ee
+
+\be
+ 1 + \underbrace{i \ve (\vec{k}^\dagger - \vec{k})}_{=0} + O(\epsilon^2) = 1
+\ee
+
+$\Rightarrow k^\dagger = k$, or k is some hermitian operator.
+
+
+Note: if the i wasnt there $T(\vec{a})$ would not be hermitian. 
+
+Just like with SR, any finite translation can be built out of infintisimal translations
+
+And $\vec{k}$ is the ``generator'' of translations.
+
+
+Lets build a finite translation...
+
+\be
+\underbrace{T(\vec{a})}_{finite} = \lim\limits_{N \to \infty}\left[  1 - i \ve \cdot \vec{k} \right]^N = \underbrace{\lim\limits_{N \to \infty}\left[  1 - i \frac{\vec{a}}{N} \cdot \vec{k} \right]^N}_{e^{-i\vec{k}\cdot\vec{a}}}
+\ee
+
+
+Can see explicity that T is unitary and k is hermitian. 
+
+
+\noindent\rule{\textwidth}{1pt}
+
+Eigenstates of $\vec{k}$ (and of course automatically of T)
+
+\be
+\vec{K}\ket{\vec{k}} = \vec{k}\ket{\vec{k}} 
+\ee
+
+
+\be
+T(\vec{a})\ket{\vec{k}} = e^{-i\vec{k}\cdot\vec{a}}\ket{\vec{k}} 
+\ee
+
+Eigenstates of $\vec{k}$ behave nicely under translations (they pick up a phase).
+
+What is $\psi_{\vec{k}}(x) \equiv \braket{\vec{x}|\vec{k}} $?
+
+\bea
+\braket{\vec{x}|T(\vec{a})|\vec{k}} =& e^{-i\vec{k}\cdot\vec{a}} \braket{\vec{x}|\vec{k}} = e^{-i\vec{k}\cdot\vec{a}} \psi_{\vec{k}}(x)\\
+\textrm{``T on x''}  =& \braket{\vec{x}-\vec{a}|\vec{k}} = \psi_{\vec{k}}(x-a)\\
+\eea
+
+or
+
+\be
+\psi_{\vec{k}}(\vec{x}-\vec{a}) = e^{-i\vec{k}\cdot\vec{a}} \psi_{\vec{k}}(\vec{x})
+\ee
+
+\noindent\rule{\textwidth}{1pt}
+
+Turns out that $\vec{k}$ is just the momentum operator 
+
+%\fbox{\begin{minipage}{\textwidth}
+\begin{tcolorbox}
+\be
+\vec{p} = \hbar \vec{k}  \text{ and }  T(\vec{a}) = e^{-i\vec{p}\vec{a}}
+\ee
+\end{tcolorbox}
+
+%\end{minipage}}
+
+Couple of ways to see this. (One is the De Brojlie wavelength, we will see another shortly)
+
+
+``Momentum is the generator of translations''
+
+\underline{Note} Translations for a group: 
+\begin{itemize}
+\item[1.] Closure
+\item[2.] Identity
+\item[3.] Inverse
+\item[4.] Associative
+\end{itemize}
+(Can show that htis is an abealian group (HW)
+
+\noindent\rule{\textwidth}{1pt}
+
+Another look at the $\vec{p}$ operator...
+
+
+\bea
+\bra{y}T(\epsilon)\ket{\psi} =& \int d^3x \bra{y}\underbrace{T(\epsilon)\ket{x}}_{\ket{x+\epsilon}}\braket{x|\psi}\\
+               =& \int d^3x \braket{y|x}\braket{x-\epsilon|\psi}  \\
+               =& \braket{y-\epsilon|\psi}  \\
+               =& \psi(y-\epsilon)  \\
+               =& \psi(y) - \epsilon \frac{\partial}{\partial y} \psi(y)
+\eea
+(using change of variables $x\rightarrow x - \epsilon$ and Taylor expansion)
+
+Now, on the otherhand...
+
+\bea
+\bra{y}T(\epsilon)\ket{\psi} =& \bra{y} \left(1 - \frac{i \vec{p}\vec{\epsilon}}{\hbar} \right) \ket{\psi}\\
+               =& \int d^3x \braket{y|x} \bra{x}\left(1 - \frac{i \vec{p}\vec{\epsilon}}{\hbar} \right) \ket{\psi}\\
+               =& \int d^3x \braket{y|x} \left( \braket{x|\psi} - \bra{x}\frac{i \vec{p}\vec{\epsilon}}{\hbar} \ket{\psi} \right)\\
+               =&   \braket{y|\psi} - \bra{y}\frac{i \vec{p}\vec{\epsilon}}{\hbar}  \ket{\psi}\\
+               =&   \psi(y) -  \epsilon \bra{y}\frac{i \vec{p}}{\hbar}  \ket{\psi}\\
+\eea
+
+
+$\Rightarrow \vec{p} = i \hbar \frac{\partial}{\partial x}$
+(This will be critical later)
+
+\noindent\rule{\textwidth}{1pt}
+
+Now lets look at how momentum eigenstates behave.
+
+\be
+\vec{P}\ket{\vec{p}} = \vec{p}\ket{\vec{p}}
+\ee
+
+we already saw that $\braket{x|p} \sim e^{i\frac{p\cdot x}{\hbar}}$
+``Momentum Space wave function''
+
+\be
+\phi(p) \equiv \braket{p|\psi} 
+\ee
+
+Can show (HW) that $\phi(p) = \frac{1}{(2\pi \hbar)^{\frac{3}{2}}} e^{i\frac{px}{\hbar}}$
+
+Then, 
+
+\be
+\braket{x|\psi} = \int d^3p \braket{x|p}\braket{p|\psi}
+\ee
+
+or,
+\be
+\psi(x) = \frac{1}{(2\pi \hbar)^{\frac{3}{2}}} \int d^3p e^{i\frac{px}{\hbar}}\phi(p)
+\ee
+
+Similarly,
+
+\be
+\braket{p|\psi} = \int d^3x \braket{p|x}\braket{x|\psi}
+\ee
+
+or,
+
+\be
+\phi(p) = \frac{1}{(2\pi \hbar)^{\frac{3}{2}}} \int d^3x\ e^{-i\frac{px}{\hbar}}\psi(x)
+\ee
+
+
+$\Rightarrow \psi(x)$ and $\phi(p)$ are Fourier transforms of each other...
+
+
+} \end{document}
 
 
