@@ -1,0 +1,148 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+\usepackage{tcolorbox}
+
+
+\def\ketX{\ensuremath{\ket{\vec{x}}}}
+%\def\ketY{\ensuremath{\ket {\Psi}}}
+\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+\def\ve{\ensuremath{\vec{\epsilon}}}
+
+\def\ABCDMatrix{\ensuremath{\begin{pmatrix} A &  B  \\ C  & D \end{pmatrix}}}
+\def\xyprime{\ensuremath{\begin{pmatrix} x' \\ y' \end{pmatrix}}}
+\def\xyprimeT{\ensuremath{\begin{pmatrix} x' &  y' \end{pmatrix}}}
+\def\xy{\ensuremath{\begin{pmatrix} x \\ y \end{pmatrix}}}
+\def\xyT{\ensuremath{\begin{pmatrix} x & y \end{pmatrix}}}
+
+\def\IMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ -1  & 0 \end{pmatrix}}}
+\def\IBoostMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ 1  & 0 \end{pmatrix}}}
+\def\JThree{\ensuremath{\begin{pmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{pmatrix}}} 
+\def\JTwo{\ensuremath{\begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix}}}
+\def\JOne{\ensuremath{\begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix}}}
+\def\etamn{\ensuremath{\eta_{\mu\nu}}}
+\def\Lmn{\ensuremath{\Lambda^\mu_\nu}}
+\def\dmn{\ensuremath{\delta^\mu_\nu}}
+\def\wmn{\ensuremath{\omega^\mu_\nu}}
+\def\be{\begin{equation*}}
+\def\ee{\end{equation*}}
+\def\bea{\begin{eqnarray*}}
+\def\eea{\end{eqnarray*}}
+
+%\def\xMu{\ensuremath{x^\mu}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 7}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+\textbf{\underline{Review Quantum Mechanics (Dynamics)}}
+
+\be
+\ket{\alpha,t_0} \rightarrow \ket{\alpha, t}
+\ee
+
+This is what we mean by time evolution.  
+
+In QM, then there has to be an operator associated with taking the first state to the second. 
+
+Time Evolution Operator:  $U(t,t_0)$
+
+
+\be
+\ket{\alpha,t} = U(t,t_0) \ket{\alpha, t_0}
+\ee
+
+$U(t,t_0)$ Properties
+\begin{itemize}
+\item[1.] $U^\dagger(t,t_0)U(t,t_0) = 1$ Unitary  See this from $\braket{\alpha t_0|\alpha t_0} = \braket{\alpha t|\alpha t}$
+\item[2.] $U(t_2, t_0) = U(t_2,t_1)U(t_1,t_0)$ Composition Rule
+\item[3.] $U(t_0, t_0) = 1$
+\end{itemize}
+
+
+How can we possibly deterine what the time operator is ????
+(Should be getting old by now...)
+
+
+\underline{Start with infintesimal time evolution}
+
+\be
+U(t+\epsilon, t)  = 1 - i\Omega \epsilon
+\ee
+where $\Omega$ is a Hermitian operator (b/c) U is unitary
+
+
+So, 
+
+\be
+\ket{\alpha, t+\epsilon} = (1 - i \epsilon \Omega ) \ket{\alpha, t}
+\ee
+
+OR,
+
+\be
+\Omega \ket{\alpha, t} = i \frac{\ket{\alpha, t+\epsilon} - \ket{\alpha, t}}{\epsilon} = i \frac{\partial}{\partial t} \ket{\alpha, t}
+\ee
+in limit $\epsilon \rightarrow 0$
+
+
+\underline{Physical Meaning of $\Omega$:}
+
+As before to get the generate for the finite movement you have to exponetiate
+
+\be
+U(t) = e^{-i \Omega t}
+\ee
+
+Note that $\Omega$ has units 1/[time].  
+Just like energy.
+
+Identify $\Omega = \frac{1}{\hbar}H$  where H is the Hamiltonian operator.
+
+
+\be
+i \frac{\partial}{\partial t}\ket{\psi} = \Omega \ket{\psi} = \frac{E}{\hbar} \ket{\psi}
+\ee
+
+
+\underline{Schrodinger Equation}
+
+\be
+i \frac{\partial}{\partial t}\ket{\psi} = H(t) \ket{\psi}
+\ee
+
+Non-relativistically:  $H \sim \frac{p^2}{2m} = -\frac{1}{2m} \frac{\partial^2}{\partial^2 x}$
+
+\noindent\rule{\textwidth}{1pt}
+
+\underline{Time Evolution}
+
+\be
+\ket{\alpha,t} = U(t,t_0) \ket{\alpha, t_0}
+\ee
+
+
+\textbf{\underline{Case I:}} H is time independent
+
+\be
+U(t,t_0) = \lim_{N\rightarrow\infty} \prod\limits_{i}^{N} e^{-\frac{i}{\hbar}H\Delta t}  = e^{\frac{-iH(t-t_0)}{\hbar}}
+\ee
+
+
+} \end{document}
+
+
