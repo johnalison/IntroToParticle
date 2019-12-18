@@ -74,11 +74,11 @@ $U(t,t_0)$ Properties
 \end{itemize}
 
 
-How can we possibly deterine what the time operator is ????
+How can we possibly determine what the time operator is ????
 (Should be getting old by now...)
 
 
-\underline{Start with infintesimal time evolution}
+\underline{Start with infinitesimal time evolution}
 
 \be
 U(t+\epsilon, t)  = 1 - i\Omega \epsilon
@@ -141,6 +141,230 @@ Non-relativistically:  $H \sim \frac{p^2}{2m} = -\frac{1}{2m} \frac{\partial^2}{
 \be
 U(t,t_0) = \lim_{N\rightarrow\infty} \prod\limits_{i}^{N} e^{-\frac{i}{\hbar}H\Delta t}  = e^{\frac{-iH(t-t_0)}{\hbar}}
 \ee
+
+
+\textbf{\underline{Case II:}} H is time dependent, but $[H(t), H(t')] = 0$
+
+\be
+U(t,t_0) =  e^{\frac{-i}{\hbar} \int_{t_0}^{t} H(t') dt'}
+\ee
+
+
+\textbf{\underline{Case III:}} H is time dependent, and $[H(t), H(t')] \ne 0$
+
+(Note: in general $e^A e^B \ne e^{A+B}$ if $[A,B] \ne 0$)
+
+\be
+U(t,t_0) =  T \left[ e^{\frac{-i}{\hbar} \int_{t_0}^{t} H(t') dt'} \right]
+\ee
+
+``Time-ordered product'' - Power series expansion with earlier terms on the right
+(Will come back to this later)
+
+
+\noindent\rule{\textwidth}{1pt}
+
+\textbf{\underline{Example}}
+
+For a time \underline{independent} Hamiltonian.
+
+\be
+U(t,0) = e^{-iHt}
+\ee
+
+Choose a basis of eigenstates of H
+
+\be
+H\ket{n} = E_n\ket{n}
+\ee
+
+and 
+
+\be
+H = \sum\limits_{n} E_n \ket{n}\bra{n}
+\ee
+
+Then 
+
+\be
+U(t,0) = \sum\limits_{n} e^{-i E_n t} \ket{n}\bra{n}
+\ee
+
+
+Now some arbitrary state:
+
+\bea
+\ket{\psi(t)} = U(t,0)\ket{\psi(0)} =&  \sum\limits_{n} U(t,0) \ket{n}\braket{n|\psi} \\
+                                    =&  \sum\limits_{n} \ket{n} e^{-i E_n t} \underbrace{\braket{n|\psi}}_{\textrm{time independent}} \\
+\eea
+
+
+\noindent\rule{\textwidth}{1pt}
+
+Now lets talk about the expectation values of an observable and how they change with time....
+
+
+\bea
+\braket{A}(t) = \braket{\psi(t)|A|\psi(t)} =& \braket{\psi(0)|U^\dagger(t,0)A U(t,0)|\psi(0)}\\
+              =& \underbrace{\left(\bra{\psi(0)} U^\dagger(t,0)\right) A \left( U(t,0) \ket{\psi(0)} \right)}_{\textrm{``Schrodinger Picture''}} \\
+              =& \underbrace{\bra{\psi(0)} \left(U^\dagger(t,0) A U(t,0) \right)\ket{\psi(0)} }_{\textrm{``Heisenberg Picture''}} 
+\eea
+
+
+\underline{Schrodinger Picture}
+\begin{itemize}
+\item[-] $\ket{\psi(t)}$s move through Hilbert Space guided by U(t)
+\item[-] Operators are independent of time
+\item[-] Basis kets (eigenstates of observables) eg: $\ket{x}$ and $\ket{p}$ are \underline{independent} of time.
+\end{itemize}
+
+
+
+\underline{Heisenberg Picture}
+\begin{itemize}
+\item[-] $\ket{\psi(t)} = \ket{\psi}_H$ is fixed and independent of time
+\item[-] {Operators in Heisenberg picture \underline{are} time dependent 
+\be
+A_H(t) = U^\dagger(t) A_S U(t) = e^{iHt}A_s e^{-iHt}
+\ee
+}
+\end{itemize}
+
+\noindent\rule{\textwidth}{1pt}
+
+\underline{Time dependent perturbation theory}
+
+\be
+H(t) = H_0 + V(t)
+\ee
+where V(t) is small (this will always be the case for us)
+
+\be
+H_0 \ket{n} = E_n\ket{n}
+\ee
+
+Now, a general state at t=0
+
+\be
+\ket{\psi(0)} = \sum\limits_{n} c_n \ket{n}
+\ee
+
+\underline{For V = 0}
+
+\be
+\ket{\psi(t)} = \sum\limits_{n} c_n e^{-iE_n t} \ket{n}
+\ee
+
+\underline{For V $\ne$ 0}
+
+\be
+\ket{\psi(t)} = \sum\limits_{n} c_n(t) e^{-iE_n t} \ket{n}
+\ee
+
+where time dependence in $c_n(t)$ due to only V.
+
+
+\textbf{\underline{Interaction Picture}}
+
+Define...
+
+\be
+\ket{\psi(t)}_I \equiv e^{+iH_0 t} \ket{\psi(t)}_S
+\ee
+
+\be
+A_I \equiv e^{+iH_0 t}  A_S e^{-iH_0 t}
+\ee
+
+
+From these definitions, its clear that 
+
+\be
+_I\braket{\psi(t) | A_I | \psi(t) }_I = _S\braket{\psi(t) | A_S | \psi(t) }_S
+\ee
+
+When V=0, Heisenberg and Interaction Picture Coincide.
+
+
+Ok, here's why we care about the interaction picture....
+
+
+\bea
+i \frac{d}{dt} \ket{\psi(t)}_I =& i \frac{d}{dt} e^{iH_0 t} \ket{\psi(t)}_S = e^{iH_0 t}\left( -H_0 \ket{\psi(t)}_S + i \frac{d}{dt} \ket{\psi(t)}_S\right)\\
+                               =& e^{iH_0 t}\left( -H_0 + (H_0 + V_S) \right)  \ket{\psi(t)}_S\\
+                               =& e^{iH_0 t} V_S e^{-iH_0 t}e^{iH_0 t}  \ket{\psi(t)}_S\\
+                               =& V_I(t) \ket{\psi(t)}_I
+\eea
+
+The interaction picture is a hybrid of the Schrodinger and Heisenberg pictures.
+
+Time evolution of state kets and operators depend on different parts of H.
+
+
+\be
+\ket{\psi(t)}_S = \sum\limits_{n} c_n(t) e^{-i E_n t} \ket{n} = e^{-i H_0 t} \sum\limits_{n} c_n(t) \ket{n}
+\ee
+
+\be
+\ket{\psi(t)}_I = e^{iH_0 t} \ket{\psi(t)}_S = \sum\limits_{n} c_n(t)  \ket{n} 
+\ee
+
+where,
+\be
+c_n(t) = \braket{n|\psi(t)}_I 
+\ee
+so once we have $\braket{\psi(t)}_I$ we are done.
+
+\noindent\rule{\textwidth}{1pt}
+
+Solve the ``Schrodinger Eq'' iteratively
+
+\be
+i \frac{d}{dt} \ket{\psi(t)}_I = V_I(t) \ket{\psi(t)}_I
+\ee
+
+integrate and get
+
+
+\be
+\ket{\psi(t)}_I = \ket{\psi(t_0)} + \int_{t_0}^t dt'  \underbrace{ \left[ -i V_I(t') \ket{\psi(t')}\right]}_{\frac{d}{dt} \ket{\psi(t')}}    
+\ee
+
+where the second term is of order $V_0$ which is small.
+
+Now we keep iterating
+
+\be
+ = \ket{\psi(t_0)} - i \int_{t_0}^t dt' V_I(t') \left[  \ket{\psi(t_0)} - i \int_{t_0}^{t'} dt'' V_I(t'') \ket{\psi(t'')}   \right]
+\ee
+
+
+at 3rd order (iterate again...)
+
+
+\bea
+  =  \ket{\psi(t_0)} -& i \int_{t_0}^t dt' V_I(t') \ket{\psi(t_0)} + (-i)^2 \int_{t_0}^t dt' \int_{t_0}^{t'} dt''V(t')V(t'') \ket{\psi(t_0)} \\
+                     +& (-i)^3 \int \int \int V(t')V(t'') V(t''') \ket{\psi(t_0)}
+\eea
+
+
+\be
+\ket{\psi(t)} = U_I(t,t_0) \ket{\psi(t_0)}
+\ee
+
+where 
+\be
+U_I(t,t_0) = 1 + (-i)\int V(t')dt' + (-i)^2 \int \int V(t')V(t'') + ....
+\ee
+
+``Dyson Series'', can be written in slick form (by doing the sum)
+
+\be
+U_I(t,t_0) = T \left[ e^{-i \int_{t_0}^{t} V_I(t') dt'} \right]
+\ee
+
+Where the ``T'' stands for a ``time ordered product'' 
+
 
 
 } \end{document}
