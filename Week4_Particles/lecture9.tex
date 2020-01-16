@@ -6,7 +6,7 @@
 
 \def\ketY{\ensuremath{\ket {\Psi}}}
 \def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
-
+\usepackage{cancel}
 
 \def\ABCDMatrix{\ensuremath{\begin{pmatrix} A &  B  \\ C  & D \end{pmatrix}}}
 \def\xyprime{\ensuremath{\begin{pmatrix} x' \\ y' \end{pmatrix}}}
@@ -25,6 +25,8 @@
 \def\wmn{\ensuremath{\omega^\mu_\nu}}
 \def\be{\begin{equation*}}
 \def\ee{\end{equation*}}
+\def\bea{\begin{eqnarray*}}
+\def\eea{\end{eqnarray*}}
 
 \def\adagger{\ensuremath{a_{p\sigma}^\dagger}}
 
@@ -76,8 +78,8 @@ Ultimately interested in the interactions between partilces.
 \begin{itemize}
 \item[-] Defined by some Hamiltonian        
 \item[-] Could specify the Hamiltonian by describing how it acts on all states in the Hilbert space
-\item[-] Instead \underline{for our convience} introduce creation and anhilation operators
-These keep track of teh states in a simple way...
+\item[-] Instead \underline{for our convience} introduce creation and anhilation operators.
+These keep track of the states in a simple way...
 \end{itemize}
 
 First define the vacuum state: $\ket{0}$.
@@ -118,6 +120,188 @@ $[a_{P_1,\sigma_1}, a_{P_2,\sigma_2}] = 0  $  &  $\{a_{P_1,\sigma_1}, a_{P_2,\si
 \end{center}
 
 
+Normalization
+
+\be
+\braket{p',\sigma'|p,\sigma} = \delta_{\sigma',\sigma} \delta^3(\vec{p} - \vec{p'})
+\ee 
+will use compressed notation
+
+\be
+\braket{p',\sigma'|p,\sigma} = \delta_{\sigma',\sigma} \delta_{p,p'}
+\ee 
+
+This implies
+
+For Bosons,
+\be
+[a_{p,\sigma}, a_{p',\sigma'}^\dagger] = \delta_{\sigma',\sigma} \delta_{p,p'}
+\ee
+
+
+For Fermions,
+\be
+\{a_{p,\sigma}, a_{p',\sigma'}^\dagger\} = \delta_{\sigma',\sigma} \delta_{p,p'}
+\ee
+
+\underline{Note}, there are operators that \underline{We} have \underline{defined} four \underline{our} convience.
+Makes it easier to talk about the states.  (Of course what really matters is the states)
+
+\clearpage
+
+Usually you see it presented as: \\
+\begin{itemize}
+\item[-] Start with fields
+\item[-] Quantize them
+\item[-] then find these commutation relation
+\end{itemize}
+
+But really the fields are secondary concepts, what comes first is the particles. \\
+``Not one deep thing going on here''
+
+\noindent\rule{\textwidth}{1pt}
+
+
+OK, What would the free Hamiltonional ?
+
+\be
+H = \sum\limits_{p,\sigma} E_p\ a^\dagger_{p,\sigma} a_{p,\sigma}
+\ee
+
+Were labeling states by 4-momenta, but the energy is constrained ($E^2 = p^2 + m^2$).
+
+Can lebel by the 3-momentum
+
+\be
+\braket{\vec{p}',\sigma'|\vec{p},\sigma} = (2\pi)^3 2 E_p \delta^3(\vec{p}-\vec{p}')
+\ee 
+
+
+\underline{Note}  $d^3p$ is not Lorentz invariant, but $d^3p/2E_p$ is.  (HW).
+
+To make my life easier by defining
+
+\be
+\int \cancel{d}^3p = \int \frac{d^3p}{2E}
+\ee
+
+So can write the free Hamiltonion as:
+
+\bea
+H & = \sum\limits_{p,\sigma} E_p a^\dagger_{p,\sigma} a_{p,\sigma} \\
+  &=  \int \cancel{d}^3p E_p a^\dagger_{p,\sigma} a_{p,\sigma} 
+\eea
+
+Now lets imagine building interactions.  Add interaction hamiltonian.
+
+eg: an interaction where two particles come in and two particles go out:
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth]{./Interaction.pdf}
+\end{figure}
+
+This would correspond to adding an interaction term to the Hamiltonian of the form:
+
+\bea
+& \int \cancel{d}^3p_1 \cancel{d}^3p_2 \cancel{d}^3p_3 \cancel{d}^3p_4\ \delta(\vec{p_1}..\vec{p_4})\ \delta(E_1 + ... E_4) \\
+& \underbrace{a^\dagger_{p_4,\sigma_4} a^\dagger_{p_3,\sigma_3} a_{p_2,\sigma_2} a_{p_1,\sigma_1} }_{\textrm{Acts on the initial state and gives the final state}} V(p's, \sigma's)   + \textrm{Hermitian Conjugate}
+\eea
+
+Interactions are made out of strings of a's and $a^\dagger$'s.
+Also easy in this picture to talk about the creation and destruction of particles (Not just scattering) 
+
+Very convenient to use this to map between particle states.
+
+So far we have not said the work ``Field''. 
+
+Now comes the challenge, 
+\begin{itemize}
+\item[-] These are interactions between momentum eigenstates
+\item[-] Momentum Eigenstates are like big plane waves
+\end{itemize}
+
+A totally generic coefficient eg: ($\delta(\vec{p_1}..\vec{p_4}) \delta(E_1 + ... E_4) V(p's, \sigma's)$) is not going to corrispond to point-like local interactions.
+
+We would like to come up with some engine to allow us to build interaction Hamiltonians where we can just see explictly that the interactions are local. 
+This is where the utility of the field concept comes in. 
+
+
+The states that we have defined act nicely under the translations operator (just pick up a phase) but to get interactions local in space we need x to make an apperance. 
+That is, we want to build operators out of things like $\phi(\vec{x})$, where under T:$\phi(\vec{x}) \rightarrow \phi(\vec{x}+\vec{a})$
+
+
+There is a very nice way of doing this called Fourier Transforms. 
+
+\underline{Define}   
+
+\be
+\phi_+ (\vec{x}) = \int \cancel{d}^3p\ a^{\dagger}_{\vec{p}}\ e^{i \vec{p} \vec{x}}
+\ee
+
+and
+
+\be
+\phi_- (\vec{x}) = \int \cancel{d}^3p\ a_{\vec{p}}\ e^{-i \vec{p} \vec{x}}
+\ee
+
+Note: $\phi_- (\vec{x}) = \phi^\dagger_+ (\vec{x})$
+
+Indeed the $\phi$'s behave as above under translations.
+
+\noindent\rule{\textwidth}{1pt}
+
+Can now go back to the free Hamiltonian and write it very simply using the $\phi$'s.
+
+
+$\textrm{H}^{\textrm{free}}$ (non-relativistic for the moment) $E_p = p^2/2m$
+
+\be
+\textrm{H}^{\textrm{free}} = \int d^3x\ \frac{(\vec{\nabla} \phi_+ )^\dagger (\vec{\nabla} \phi_+ )}{2m}
+\ee
+n
+which is the same as 
+
+\be
+H = \sum\limits_{p,\sigma} E_p\ a^\dagger_{p,\sigma} a_{p,\sigma}
+\ee
+
+
+Now its clear how you could write down interactions that take place locally:
+
+\be
+\textrm{H}^{\textrm{free}} + \int d^3x\ C[\phi_+(x)\phi_+(x)\phi_-(x)\phi_-(x)] + ... 
+\ee
+
+Its totally clear now that this is local is space. 
+
+Taking this an expanding out gives something like we jsut talked about with 2a's and 2 $a^\dagger$'s.
+All the rest comes along for the ride. 
+
+(Note that this is all done non-relativistically for the moment to stress that this has nothing to do w/relativity.
+This is about making interactions local)
+
+Why we use feilds: Makes local interactions of \underline{particles} manifest.
+
+Locality is hardwired into the descriptions of particles.
+
+So, where does relativity come in?  Where is the difficulty ?
+
+\underline{Time Evolution}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{./TimeEvolution.pdf}
+\end{figure}
+
+Only have a hope of Lorentz invariance if we start at -$\infty$ and go to +$\infty$.
+
+Throw particles in from $\infty$ let them scatter \& go back out to $\infty$.
+
+\underline{Define S-Matrix}
+
+\be
+\underbrace{\ket{p_1 \sigma_1,...p_n\sigma_n}}_{t=-\infty} \rightarrow \underbrace{\mathcal{S} \ket{p_1\sigma_1,...p_n\sigma_n}}_{t=+\infty}
+\ee
 
 }
 \end{document}
