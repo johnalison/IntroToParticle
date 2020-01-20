@@ -74,9 +74,9 @@ $\mathcal{S}$ might be (at least a hope) Lorentz Invariant.
 \noindent\rule{\textwidth}{1pt}
 
 Big Picture:
-The plan is to Figure out what $\mathcal{S}$ is in a tottaly generic theory, then see what it would take to make it Lorentz Invariant. 
+The plan is to Figure out what $\mathcal{S}$ is in a totally generic theory, then see what it would take to make it Lorentz Invariant. 
 
-Sure doesnt look like ti will be L.I. 
+Sure doesn't look like ti will be L.I. 
 $\mathcal{S}$ is the only object that you could even have a hope to make L.I.
 
 We will see that for \underline{very special} choices of the interaction it will barely be possible for it to be Lorentz Invariant. 
@@ -105,14 +105,14 @@ i \frac{d \ket{\psi}}{d t} = \left(H_\textrm{free} + H_\textrm{Int} \right) \ket
 \ket{\psi} = e^{-i H_f t} \ket{\psi_{in}}
 \ee
 
-Now, we dont have a free theory, but if the interaction is small going to be pretty close to evolving like this. 
+Now, we don't have a free theory, but if the interaction is small going to be pretty close to evolving like this. 
 
 
 \begin{equation}\label{eq:def}
 \ket{\psi} = e^{-i H_f t} \underbrace{\ket{\psi_{I}}}_{\textrm{definition}}
 \end{equation}
 
-If $H_\textrm{Int} = 0, \ket{\psi_\textrm{Int}}$ doesnt evolve at all.
+If $H_\textrm{Int} = 0, \ket{\psi_\textrm{Int}}$ doesn't evolve at all.
 Bc there is $H_\textrm{Int}$, $\ket{\psi_\textrm{Int}}$ will evolve. 
 
 \bea
@@ -120,7 +120,7 @@ i \frac{d }{d t} \ket{\psi} &=& H_\textrm{f} \ket{\psi} + e^{-i H_f t} i \frac{d
 &=& (H_f + H_\textrm{int}) e^{-i H_f t} \ket{\psi_I}
 \eea
 
-Note: first line from derivitive of~\ref{eq:def}, the second from the Schrodinger Equation.
+Note: first line from derivative of~\ref{eq:def}, the second from the Schrodinger Equation.
 
 The RHSs imply, 
 
@@ -136,9 +136,9 @@ i \frac{d }{d t} \ket{\psi_I} =  H_I  \ket{\psi_I}
 \ee
 where $H_I$ can be time dependent. 
 
-\underline{Lets formally sovle this} 
+\underline{Lets formally solve this} 
 
-Just intergrating gives,
+Just integrating gives,
 
 \be
 \ket{\psi_I (t_2)} = \ket{\psi_I (t_1)} - i \int_{t_1}^{t_2} dt H_I \ket{\psi_I(t)}
@@ -192,7 +192,7 @@ Now, let $t_1$ and $t_2$ go to $\infty$,
 \ket{\psi_I (+\infty)} = \top\left( e^{ (-i) \int_{-\infty}^{+\infty} dt H_I(t)} \right)\ket{\psi_I (-\infty)}
 \ee
 
-OK, Lets go back to feild theory....
+OK, Lets go back to field theory....
 
 \noindent\rule{\textwidth}{1pt}
 
@@ -214,6 +214,122 @@ Need to build $H_I$ out of $\phi_{+/-}$ in the interaction representation.
 this behaves nicely under Lorentz Transforms $\phi(\Lambda x) = \phi(x)$
 
 We seem to be in awesome shape, lets write down an interaction. 
+
+\be
+H_I = \int d^3x\ k \left[  \phi_+^I(x) ... \phi_-^I(x) \right]
+\ee
+
+and now we know how to turn this into the $\mathcal{S}$-matrix 
+
+
+\be
+\top\left( e^{ (-i) \int_{-\infty}^{+\infty} dt\ d^3x\ k \left[ \phi_+(x) ... \phi_-(x) \right]} \right)
+\ee
+
+
+\be
+\top\left( e^{ (-i) \int_{-\infty}^{+\infty} d^4x\ k \left[ \phi_+(x) ... \phi_-(x) \right]} \right)
+\ee
+
+All of this is Lorentz Invariant!
+Seems like we are done.
+
+What is the problem?
+
+Problem is the time ordering.  
+Only think that is not necessarily L.I.
+
+This would be LI if $\top$ was LI. 
+But space-like separated objects are not time-ordered in a LI way. 
+
+Diagram: 
+
+
+Only way to be LI if $H_I(x)$ and $H_I(x')$ commute when x and x' are space-like separated.
+
+Lorentz Invariant $\Rightarrow [H_I(x), H_I(x')] = 0$  if $x-x' < 0$ (space-like). 
+
+Now can ask if the $\phi^\dagger$'s or the $\phi$'s commute outside the light cone.  
+\underline{They do Not}. 
+
+However can find a new combination which does.
+
+\noindent\rule{\textwidth}{1pt}
+
+Not just stating results
+
+\underline{Turns out} 
+
+\be
+[\phi_+(x), \phi_+^\dagger(x')] \ne 0 \textrm{ for } x-x'<0
+\ee
+But we can define 
+
+\be
+\Phi(x) = \phi_+(x) + \phi_-(x) = \int \cancel{d}^3p (a^\dagger e^{-ipx} + a e^{ipx})
+\ee
+
+Can show that,
+\be
+[\Phi(x), \Phi(x')] = 0 \textrm{ for } x-x'<0
+\ee
+Only if $[a,a^\dagger] = 0$, not if ${a,a^\dagger} = 0$
+
+Tells us that Scalars have to be Bosons!
+
+Tells us that we need to build $H_I$ out of $\Phi$ (not $\phi_+$ and $\phi_-$ separately)
+
+eg: 
+
+\bea
+H_I &=& \lambda \Phi^4(x)\\
+    &=& \lambda (\phi_+(x) + \phi_-(x)) ^4\\
+    &=& \lambda \left[\underbrace{\phi_+^2\phi_-^2}_{\textrm{term saw before}}^{\textrm{2 go in 2 come out}} + \underbrace{\phi_+^4 + \phi_+\phi_-^3 ...}_{\textrm{New terms}} \right] 
+\eea
+
+
+No charges associated with this scalar. 
+
+
+Can create it or destroy it at will (eg: $\phi_+\phi_-^3$)
+
+How do we talk about particles with conserved charge?
+This will not work ! 
+Only have one choice, introduce another operator.  a's and b's.
+
+\bea
+\phi^a &=& \int a^\dagger_p\ e^{-ipx} \\
+\phi^b &=& \int b^\dagger_p\ e^{-ipx} \\
+\eea
+
+And construct $\Phi$ as
+
+\bea
+\Phi &=& \phi_+^a + \phi_-^b \\
+     &=&\int \cancel{d}^3p (a e^{ipx} + b^\dagger e^{-ipx})
+\eea
+
+
+Again we have, 
+\be
+[\Phi(x), \Phi(x')] = 0 \textrm{ for } x-x'<0
+\ee
+
+
+(Note: $\Phi$ is \underline{not} Hermitian.)
+But 
+
+\be
+\int d^3x\ \Phi^\dagger(x)^2 \Phi(x)^2 
+\ee
+is Hermitian
+
+Expand this out and find that everything would conserve change provided that particles of type b have opposite charge to a. 
+
+So, if you want to talk about particles that carry some well defined charge, you must have \underline{anti-particles}.
+
+If you put this together with s=1/2, you find that they have to $\{\ \}=0$ for the Hamiltonian to vanish outside the light cone.
+
 
 }
 \end{document}
