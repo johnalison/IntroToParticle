@@ -167,6 +167,54 @@ Pattern is clear,  can keep going...
 
 If $H_I$ is small this is giving us some nice perturbation theory. 
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{./IntegrationLimits.pdf}
+\end{figure}
+
+
+\bea
+\ket{\psi_I (t_2)} = [ &1& + (-i) \int_{t_1}^{t_2} dt \top(H_I(t)) \\
+    &+& \frac{(-i)^2}{2!} \int_{t_1}^{t_2} dt \int_{t_1}^{t} dt' \top(H_I(t)H_I(t')) \\
+    &+&  \frac{(-i)^3}{3!} \int_{t_1}^{t_2} dt \int_{t_1}^{t} dt' \int_{t}^{t'} dt'' \top(H_I(t) H_I(t') H_I(t''')) \\
+    &+& ...  ] \ket{\psi_I (t_1)}
+\eea
+
+
+\be
+\ket{\psi_I (t_2)} = \top\left( e^{ (-i) \int_{t_1}^{t_2} dt H_I(t)} \right)\ket{\psi_I (t_1)}
+\ee
+
+Now, let $t_1$ and $t_2$ go to $\infty$,
+
+
+\be
+\ket{\psi_I (+\infty)} = \top\left( e^{ (-i) \int_{-\infty}^{+\infty} dt H_I(t)} \right)\ket{\psi_I (-\infty)}
+\ee
+
+OK, Lets go back to feild theory....
+
+\noindent\rule{\textwidth}{1pt}
+
+\be
+\phi_+ (\vec{x}) = \int \cancel{d}^3p\ e^{i \vec{p} \vec{x}}\ a^{\dagger}_{\vec{p}}
+\ee
+
+(use scalars for the moment) 
+
+Need to build $H_I$ out of $\phi_{+/-}$ in the interaction representation.
+
+
+\bea
+\phi_+^I (x, t) &= e^{-iH_ft} \phi(x) e^{iH_ft} \\
+                &= \int \cancel{d}^3p\ e^{i \vec{p} \vec{x}}\ e^{-iE_pt}\ a^{\dagger}_{\vec{p}} \\
+                &= \int \cancel{d}^3p\ e^{-i p^\mu x_\mu}\ a^{\dagger}_{\vec{p}}
+\eea
+
+this behaves nicely under Lorentz Transforms $\phi(\Lambda x) = \phi(x)$
+
+We seem to be in awesome shape, lets write down an interaction. 
+
 }
 \end{document}
 
