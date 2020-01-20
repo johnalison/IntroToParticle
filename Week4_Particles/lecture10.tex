@@ -71,6 +71,102 @@ Throw particles in from $\infty$ let them scatter \& go back out to $\infty$.
 $\mathcal{S}$ might be (at least a hope) Lorentz Invariant.
 
 
+\noindent\rule{\textwidth}{1pt}
+
+Big Picture:
+The plan is to Figure out what $\mathcal{S}$ is in a tottaly generic theory, then see what it would take to make it Lorentz Invariant. 
+
+Sure doesnt look like ti will be L.I. 
+$\mathcal{S}$ is the only object that you could even have a hope to make L.I.
+
+We will see that for \underline{very special} choices of the interaction it will barely be possible for it to be Lorentz Invariant. 
+These choices force on us anti-particle and the connection between spin and statistics. 
+
+\noindent\rule{\textwidth}{1pt}
+
+Something annoying that we should get rid of right away. 
+Free evolution, just evolves w/phase. Totally irrelevant part.
+
+
+Standard way of removing the free evolution \underline{``Interaction Representation''}.
+
+\be
+H = H_\textrm{free} + H_\textrm{Int}
+\ee
+
+
+\be
+i \frac{d \ket{\psi}}{d t} = \left(H_\textrm{free} + H_\textrm{Int} \right) \ket{\psi} 
+\ee
+
+\underline{For $H_\textrm{Int}$ = 0}
+
+\be
+\ket{\psi} = e^{-i H_f t} \ket{\psi_{in}}
+\ee
+
+Now, we dont have a free theory, but if the interaction is small going to be pretty close to evolving like this. 
+
+
+\begin{equation}\label{eq:def}
+\ket{\psi} = e^{-i H_f t} \underbrace{\ket{\psi_{I}}}_{\textrm{definition}}
+\end{equation}
+
+If $H_\textrm{Int} = 0, \ket{\psi_\textrm{Int}}$ doesnt evolve at all.
+Bc there is $H_\textrm{Int}$, $\ket{\psi_\textrm{Int}}$ will evolve. 
+
+\bea
+i \frac{d }{d t} \ket{\psi} &=& H_\textrm{f} \ket{\psi} + e^{-i H_f t} i \frac{d }{d t} \ket{\psi_I} \\
+&=& (H_f + H_\textrm{int}) e^{-i H_f t} \ket{\psi_I}
+\eea
+
+Note: first line from derivitive of~\ref{eq:def}, the second from the Schrodinger Equation.
+
+The RHSs imply, 
+
+\be
+i \frac{d }{d t} \ket{\psi_I} =  \underbrace{e^{-i H_f t} H_\textrm{Int} e^{-i H_f t}}_{\textrm{Interaction Hamiltonian in the interaction representation}}  \ket{\psi_I} 
+\ee
+
+
+So, 
+
+\be
+i \frac{d }{d t} \ket{\psi_I} =  H_I  \ket{\psi_I} 
+\ee
+where $H_I$ can be time dependent. 
+
+\underline{Lets formally sovle this} 
+
+Just intergrating gives,
+
+\be
+\ket{\psi_I (t_2)} = \ket{\psi_I (t_1)} - i \int_{t_1}^{t_2} dt H_I \ket{\psi_I(t)}
+\ee
+
+Now we can keep iterating, 
+
+\be
+ = \ket{\psi_I (t_1)} - i \int_{t_1}^{t_2} dt H_I(t) \left( \ket{\psi_I (t_1)} - i \int_{t_1}^{t} dt' H_I(t') \ket{\psi_I(t')}\right)
+\ee
+
+or
+
+\be
+ = \ket{\psi_I (t_1)} - i \int_{t_1}^{t_2} dt H_I \ket{\psi_I (t_1)}  +  (-i)^2 \int_{t_1}^{t_2} dt \int_{t_1}^{t} dt' H_I(t)H_I(t')\ket{\psi_I(t')}
+\ee
+
+Pattern is clear,  can keep going...
+
+\bea
+\ket{\psi_I (t_2)} = [ &1& + (-i) \int_{t_1}^{t_2} dt H_I(t) \\
+    &+& (-i)^2 \int_{t_1}^{t_2} dt \int_{t_1}^{t} dt' H_I(t)H_I(t') \\
+    &+&  (-i)^3 \int_{t_1}^{t_2} dt \int_{t_1}^{t} dt' \int_{t}^{t'} dt'' H_I(t) H_I(t') H_I(t''') \\
+    &+& ...  ] \ket{\psi_I (t_1)}
+\eea
+
+If $H_I$ is small this is giving us some nice perturbation theory. 
+
 }
 \end{document}
 
