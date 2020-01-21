@@ -3,6 +3,7 @@
 \usepackage{braket}
 \usepackage{bbm}
 \usepackage{relsize}
+\usepackage{tcolorbox}
 
 \def\ketY{\ensuremath{\ket {\Psi}}}
 \def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
@@ -50,6 +51,238 @@
 
 \textbf{\underline{Relativistic Wave Equations}} 
 
+Lets look at the Schrodinger Equation
+
+\be
+i \frac{d}{dt}\psi = - \left( \frac{\nabla^2}{2m} + V \right) \psi
+\ee
+
+\underline{Problems} 
+- Conservation of non-relativistic energy.
+
+
+$E \leftrightarrow i \frac{d}{dt}$ 
+and
+$p \leftrightarrow -i \nabla$
+
+
+$\Rightarrow$ Schrodinger Equation $E = \frac{p^2}{2m} + V$
+
+- time/space not on equal footing.
+
+
+\noindent\rule{\textwidth}{1pt}
+
+Start w/relativistic E/p relation.
+
+
+\be
+E^2 - p^2 - m^2 = 0
+\ee
+
+Leads us to the \underline{Klein-Gordon} equation
+
+
+\be
+\left(-\frac{\partial^2}{\partial t^2} + \nabla^2 - m^2 \right)\phi(x,t) = 0
+\ee
+
+
+Solution, 
+
+\be
+\phi(x,t) = e^{ipx}
+\ee
+Called ``On shell-solutions''.
+
+Everything is Lorentz Invariant. 
+
+\underline{Note} Two solutions E>0 and E<0.
+
+\noindent\rule{\textwidth}{1pt}
+
+Alternative Standard Powerful formulation of Physics via Lagrangians.
+
+KG eq
+\be
+\frac{\partial^2}{\partial t^2}\phi  =  \nabla^2\phi - m^2 \phi
+\ee
+
+where $\phi(x,t)$ permeates space and time
+
+\underline{Looks like}
+
+\be
+\frac{d^2}{d t^2}x(t)  =  -\frac{\partial U}{\partial x}
+\ee
+Where U is a potential energy.
+
+\begin{itemize}
+\item[-] $\frac{\partial^2}{\partial t^2}\phi$ - looks like the ``acceleration'' of the field
+\item[-] $- m^2 \phi$ - effective ``Force'' for the mass (harmonic oscillator)
+\item[-] $\nabla^2\phi$ - shear force (shearing fabric takes force)
+\end{itemize}
+
+Now have some intuition about what the KG equation is telling us.
+
+Integrate force to get the potential
+
+\be
+-\frac{\partial U}{\partial \phi} = \nabla^2\phi - m^2 \phi \Rightarrow U = \frac{1}{2}(\nabla \phi)(\nabla \phi) + \frac{m}{2}\phi^2
+\ee
+
+KE form generalization of $1/2 \dot{x}^2$ to fields.
+
+\be
+K = 1/2 (\frac{\partial}{\partial t}\phi)^2
+\ee
+
+so,
+
+\be
+K + U  = \frac{1}{2} (\frac{\partial}{\partial t}\phi)^2 + \frac{1}{2}(\nabla \phi)(\nabla \phi) + \frac{m}{2}\phi^2
+\ee
+
+Get total energy from integrating, 
+
+\be
+H(t) = \int d\vec{x} \left[  \frac{1}{2} (\frac{\partial}{\partial t}\phi)^2 + \frac{1}{2}(\nabla \phi)(\nabla \phi) + \frac{m}{2}\phi^2  \right]
+\ee
+with this you could go back to three lectures ago and replace $\frac{\nabla\phi^\dagger\nabla\phi}{2m}$ and do everything again (we wont bother here...)
+
+
+However we can use this to formulate the field eq in a totally different, ultimately more useful way...
+
+
+Think of classical mechanics of point partilces.
+Can all be formulated with Lagrangians and the principle of least action. 
+
+
+\be
+L = \frac{1}{2}\dot{x}^2 - U(x)
+\ee 
+difference in KE and potential
+
+The action
+\be
+S[x(t)] = \int dt L
+\ee
+you could take this as the starting point and derive Newton's 2nd law by minimizing the action.
+
+We will do the same for relativistic fields.
+
+\be
+L = K - U = \int d^3x \left[  \frac{1}{2} (\frac{\partial}{\partial t}\phi)^2 - \frac{1}{2}(\nabla \phi)(\nabla \phi) - \frac{m}{2}\phi^2  \right]
+\ee
+
+
+
+\be
+S[\phi(t)] = \int d^4x \left[ \textrm{(Above)} \right]
+\ee
+KG can be found from minimizing the action wrt $\phi$.
+
+
+\be
+\partial_\mu = (\frac{\partial}{\partial t}, -\vec{\nabla})
+\ee
+
+\be
+S[\phi(t)] = \int d^4x \left[ \frac{1}{2} (\partial_\mu\phi)(\partial^\mu\phi) - \frac{m^2}{2}\phi^2      \right]
+\ee
+manifestly L.I
+
+
+This tells us how to construct general LI descriptions of relativistic QM systems.
+Need a LI Lagrangian and we are ``done'' (meaning $\sim$ all of physics follows from this) 
+
+KG 2nd order in $x^\mu$.  
+Contains no info about intrinsic angular momentum. (No free Lorentz indices)
+$\phi$ from KG is Spin-0 field.
+
+\begin{tcolorbox}
+Two more relativistic systems important for SM
+\begin{itemize}
+\item[-] Spin-1 ``EM''
+\item[-] Spin-1/2 ``Dirac Equation''
+\end{itemize}
+\end{tcolorbox}
+
+
+\noindent\rule{\textwidth}{1pt}
+Start with the the ``Dirac Equation''.
+
+Can we find a 1st order relativistic eq of motion?
+
+Assume there exists a wave eq. linear in x and t.
+
+\be
+\left(\alpha \frac{\partial}{\partial t} + \vec{\beta}\vec{\nabla}   \right)\psi = m\psi
+\ee
+for some $\alpha, \vec{\beta}$, and m. 
+
+If relativistic invariant, must imply the KG. 
+
+Assume that it is the square root
+
+\be
+\left(\alpha \frac{\partial}{\partial t} + \vec{\beta}\vec{\nabla}   \right) \left(\alpha \frac{\partial}{\partial t} + \vec{\beta}\vec{\nabla}   \right)\psi = m^2\psi
+\ee
+
+$\Rightarrow$
+
+\be
+\left[\alpha^2 \frac{\partial^2}{\partial t^2} + \alpha \vec{\beta} \vec{\nabla} \frac{\partial}{\partial t} + \vec{\beta}\vec{\nabla}\alpha \frac{\partial}{\partial t} + (\beta\cdot\nabla)^2 \right] \psi = m^2 \psi
+\ee
+to get $(-\frac{\partial^2}{\partial t^2} + \nabla^2)\psi = m^2 \psi$
+
+$\Rightarrow$
+
+\begin{itemize}        
+\item[-] $\alpha^2 = -1$ - can be a complex number 
+\item[-] $\beta_i\beta_j = \delta_{ij}$ - cannot be numbers
+\item[-] $\alpha\beta_i + \beta_i\alpha = 0$
+\end{itemize}        
+
+Lets keep going...  
+
+\underline{Define}
+
+
+$\alpha = i \gamma_0 $ \hspace*{1in} $\beta_i = i \gamma_i $
+
+$\gamma_0\gamma_0 = 1$ \hspace*{1in} $\gamma_i\gamma_j = - \delta_{ij}$ \hspace*{1in} $\gamma_0\gamma_i + \gamma_i\gamma_0 = 0$
+
+\be
+\underbrace{\gamma_\mu\gamma_\nu + \gamma_\nu\gamma_\mu}_{\{ \gamma_\nu, \gamma_\mu \}} = \begin{pmatrix} 2 & 0 & 0 & 0 \\ 0 & -2 & 1 & 0 \\ 0 & 0 & -2 & 0 \\ 0 & 0 & 0 & -2 \end{pmatrix} = 2 \eta_{\mu\nu}
+\ee
+
+\be
+(i\gamma_\mu\partial^\mu -m )\psi = 0
+\ee
+``Dirac Equation''     
+
+
+$\gamma$ matrices are 4x4.
+
+Can use (``Weyl basis'') 
+
+\be
+\gamma_\mu = \begin{pmatrix} 0 & \sigma_\mu \\ \bar{\sigma}_\mu & 0 \end{pmatrix}
+\ee
+where 
+
+$\sigma = (1,\vec{\sigma})$ \hspace*{1in} $\bar{\sigma} = (1,-\vec{\sigma})$
+
+There are other choices you can work out...
+
+Dirac equation describes spin 1/2 partilces (e)
+
+B/c $\gamma_\mu$ are matrices, the $\psi$ solution will be a  4-component vector ``spinor''.
+
+
+\underline{Solution to DE}
+work out in homework ...
 
 
 
@@ -57,3 +290,5 @@
 \end{document}
 
 
+
+% LocalWords:  partilces
