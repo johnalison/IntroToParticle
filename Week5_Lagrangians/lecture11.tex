@@ -52,7 +52,6 @@
 \textbf{\underline{Relativistic Wave Equations}} 
 
 Lets look at the Schrodinger Equation
-
 \be
 i \frac{d}{dt}\psi = - \left( \frac{\nabla^2}{2m} + V \right) \psi
 \ee
@@ -74,15 +73,11 @@ $\Rightarrow$ Schrodinger Equation $E = \frac{p^2}{2m} + V$
 \noindent\rule{\textwidth}{1pt}
 
 Start w/relativistic E/p relation.
-
-
 \be
 E^2 - p^2 - m^2 = 0
 \ee
 
 Leads us to the \underline{Klein-Gordon} equation
-
-
 \be
 \left(-\frac{\partial^2}{\partial t^2} + \nabla^2 - m^2 \right)\phi(x,t) = 0
 \ee
@@ -261,12 +256,9 @@ $\gamma_0\gamma_0 = 1$ \hspace*{1in} $\gamma_i\gamma_j = - \delta_{ij}$ \hspace*
 (i\gamma_\mu\partial^\mu -m )\psi = 0
 \ee
 ``Dirac Equation''     
-
-
 $\gamma$ matrices are 4x4.
 
 Can use (``Weyl basis'') 
-
 \be
 \gamma_\mu = \begin{pmatrix} 0 & \sigma_\mu \\ \bar{\sigma}_\mu & 0 \end{pmatrix}
 \ee
@@ -284,7 +276,18 @@ B/c $\gamma_\mu$ are matrices, the $\psi$ solution will be a  4-component vector
 \underline{Solution to DE}
 work out in homework ...
 
+\noindent\rule{\textwidth}{1pt}
 
+Solutions are four component objeccts spinors $\psi$ (complex) 
+
+Use $\bar{\psi}$ to denote the complex conjugate of the spinor.
+
+The dirac equation can be formulated from Lagrangian principle via
+\be
+S[\psi,\bar{\psi}] = \int d^4x\ \bar{\psi}[i\gamma_\mu\partial^\mu - m]\psi
+\ee
+
+Varrying the action with respect to $\bar{\psi}$ gives the dirac equation.
 
 }
 \end{document}

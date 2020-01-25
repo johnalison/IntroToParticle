@@ -25,6 +25,8 @@
 \def\wmn{\ensuremath{\omega^\mu_\nu}}
 \def\be{\begin{equation*}}
 \def\ee{\end{equation*}}
+\def\bea{\begin{eqnarray*}}
+\def\eea{\end{eqnarray*}}
 
 %\def\xMu{\ensuremath{x^\mu}
 
@@ -69,13 +71,15 @@ Where we have an invariant notion of length of $\vec{p}$
 x^2 + y^2 = x'^2 + y'^2
 \ee
 
-Started in 2D, looking at the infinitesimal rotation
-This lead to what is called ``generator'' \\
+Started in 2D, looking at the infinitesimal rotation.
+This lead to what is called ``generator'':
 
-\IMatrix\\
+\begin{center}
+\IMatrix
+\end{center}
 
 \underline{Form a group:}
-A group is a set of actions (in our case rotations) that multiply (or compose) with operation denoted by $\cdot$.
+A group is a set of actions (in our case rotations) that multiply (or compose) with operation denoted by ``$\cdot$''.
 
 Four criteria for group:
 \begin{itemize}
@@ -89,12 +93,15 @@ If commute: $a\cdot b= b\cdot a$ say that the group is ``Abelian''.
 If they do not commute say that the group is ``non-Abelian''.
 We have already seen examples of both of these, both types are also critical for the structure of the SM.
 
-Last lecture studied 2D rotations and their group ``SO(2)'' refers to matrices studied  (S = Special (det =1) / O = Orthogonal (preserves length) / 2 = 2x2)\\
+Last lecture studied 2D rotations and their group ``SO(2)'' refers to matrices studied  (S = Special (det =1) / O = Orthogonal (preserves length) / 2 = 2x2)
 
+\begin{center}
 $\begin{pmatrix} \cos(\theta) &  \sin(\theta)  \\ -\sin(\theta)  & \cos(\theta) \end{pmatrix}$\\
+\end{center}
 
 We also looked at 3D rotations, their group was ``SO(3)'', what do you think this stands for ???\\
 We saw at the end of the lecture that  $SO(3) \simeq SU(2)$   
+
 SU(2) = (Special / Unitary / 2x2 matrices.
 
 \textit{(You will show in for homework that this is equivalent to another group U(1).)}
@@ -111,7 +118,6 @@ Lets deal with this minus sign...
 4-vectors:  $x^\mu = (t,\vec{x})$  
 
 Encode the minus sign in matrix:
-
 \be
 \eta_{\mu\nu} = \left\{ \begin{array}{rl} 1 & \mbox{$\mu = \nu=0$}  \\ -1 & \mbox{$\mu=\nu=1,2,3\ (i)$}  \\ 0 & \mbox{otherwise} \end{array} \right.
 \ee
@@ -140,11 +146,10 @@ x'^\mu  = x^\mu + \epsilon \wmn x^\nu
 \ee
 
 Require $x'^\mu x'_\mu = x^\mu x_\mu$ or 
-
-\begin{align*}
-\etamn x'^\mu x'^\nu = \etamn x^\mu x^\nu \\
-= \etamn x^\mu x^\nu + 2 \epsilon \etamn x^\nu \omega^\mu_\rho x^\rho
-\end{align*}
+\bea
+\etamn x'^\mu x'^\nu &=& \etamn x^\mu x^\nu \\
+                     &=& \etamn x^\mu x^\nu + 2 \epsilon \etamn x^\nu \omega^\mu_\rho x^\rho
+\eea
 
 
 So, $\underbrace{\etamn \omega^\mu_\rho}_{\equiv \omega_{\mu\rho} } x^\nu  x^\rho = 0$ 
@@ -159,8 +164,8 @@ Lets just be damn explicit
 
 However, the think that enters the transformation is $\omega^\mu_\nu$.\\
 
-Now raising a 0-component is free,  $\omega_{0i} = \omega^0_i$\\
-raising a i-component costs a -1,  $\omega_{i0} = -\omega^i_0$\\
+Now raising a 0-component is free,  $\omega_{0i} = {\omega^0}_i$\\
+raising a i-component costs a -1,  $\omega_{i0} = -{\omega^i}_0$\\
 But also know $\omega_{0i} = -\omega_{i0}$
 $\Rightarrow {\omega^0}_i = + {\omega^i}_0$
 
