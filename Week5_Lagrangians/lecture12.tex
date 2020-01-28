@@ -28,6 +28,8 @@
 \def\ee{\end{equation*}}
 \def\bea{\begin{eqnarray*}}
 \def\eea{\end{eqnarray*}}
+\def\fmn{\ensuremath{F_{\mu\nu}}}
+\def\fMN{\ensuremath{F^{\mu\nu}}}
 
 \def\adagger{\ensuremath{a_{p\sigma}^\dagger}}
 
@@ -51,22 +53,182 @@
 
 \textbf{\underline{Relativistic Wave Equations continued}} 
 
-Lets look at the Schrodinger Equation
+Now lets do the Spin-1 case.
+
+EM is a thoery of Spin-1 interactions.
+
+EM was the first lorentz invariant theory.
+
+Maxwells Equations
+\bea
+\vec{\nabla} \cdot \vec{E} = \rho \hspace{1in} \vec{\nabla} \times \vec{B} - \frac{\partial\vec{E}}{\partial t} = \vec{J} \\
+\vec{\nabla} \cdot \vec{B} = 0 \hspace{1in}  \vec{\nabla} \times \vec{E} - \frac{\partial\vec{B}}{\partial t} = 0
+\eea
+Not manifestly Lorentz Invariant.
+
+However can put them in a LI form. 
+
+Define $J^\mu = (\rho,\vec{J})$
+
+Now, $\vec{E}$ and $\vec{B}$ have 6-components total.
+
+Same number as an anti-symmetric rank two tensor: $\fmn = - F_{\nu\mu}$ :  
+
+16 - 4 (diagonal) - 6 (lower triangle)
+
 
 \be
-i \frac{d}{dt}\psi = - \left( \frac{\nabla^2}{2m} + V \right) \psi
+F_{\mu\nu} = \begin{pmatrix} 0  & E_x & E_y & E_z  \\ -E_x  & 0 & -B_z & B_y \\ -E_y  & B_z & 0 & -B_x \\  -E_z  & -B_y & B_x & 0 \end{pmatrix}
 \ee
 
-\underline{Problems} 
-- Conservation of non-relativistic energy.
+This transforms under a Lorentz transformation as
+
+\be
+F_{\mu\nu} \rightarrow {\Lambda_\mu}^\rho {\Lambda_\nu}^\sigma F_{\rho\sigma}
+\ee
+
+\be
+\partial_\mu \fMN = J^\nu
+\ee
+Is the Lorentz Invariant ``equation of Motion'' gives 2 of Maxwells equations. 
+The ``Bianchi Identity'' 
+\be
+\partial_\mu F_{\nu\rho} + \partial_\rho F_{\mu\nu} + \partial_\nu F_{\rho\mu}  = 0 
+\ee
+gives the others.
+
+\noindent\rule{\textwidth}{1pt}
+
+Interestingly, can also express this more simply using potentials.
+
+eg: express E and B in terms of potentials
+
+\be
+\vec{E} = \vec{\nabla}V - \frac{\partial \vec{A}}{\partial t} \hspace{1in}  \vec{B} = \vec{\nabla} \times \vec{A}
+\ee
 
 
-$E \leftrightarrow i \frac{d}{dt}$ 
-and
-$p \leftrightarrow -i \nabla$
+Can use potentials defined up to ``gauge transformation''.\\
+(Horrible name. Just means redifinition.) 
+\be
+V \rightarrow V + \frac{\partial \vec{\lambda}}{\partial t} \hspace{1in}  \vec{A} = \vec{A} + \vec{\nabla} \lambda
+\ee
+these give same physics for any choice of $\lambda$.
+
+Note here there is an enourmour redudancy in our description of the physics. 
+
+OK, now lets Introduce
+
+\be
+A_\mu = (V, \vec{A}) \hspace{1in} A_\mu \rightarrow A_\mu + \partial_\mu \lambda
+\ee
+
+which allows us to write 
+
+\be
+\fmn = \partial_\mu A_\nu - \partial_\nu A_\mu
+\ee
+(Note that \fmn is invariant under gauge transformations.)
+
+Gauge transformation are \underline{\underline{NOT}} deep.  
+More of redundancy, not really saying anything. 
+
+Stress that $A_\mu$ and $A_\mu + \partial_\mu \lambda$ represent the same physics state. 
+
+Can formulate EM from Lagrangian point if using 
+
+\be
+L_{EM} = -\frac{1}{4} \fmn\fMN - J^\mu A_\mu
+\ee
+
+If the Lagrangian is both Lorentz Invariant and Gauge Invariant, the physics that follows from it will also be. 
+HW: Check the gauge invariance.
+
+\noindent\rule{\textwidth}{1pt}
+
+Spin-1 particles that this Langriang describes are the photons.  
+Force carriers of the electro-magnetic interaction. 
+
+\underline{Photon equation of motion.}
+Almost always most useful to think in terms of $A_\mu$ directly. 
+
+$A_\mu$ ``photon field'' (boson) directly describes photon DoF.
+
+Assume no sources $J_\mu$ = 0\\
+Photon equation of motion is then:
+\be
+\partial_\mu \fMN  = 0  \Rightarrow  \partial^2 A_\mu - \partial_\mu \partial \cdot A = (\eta_{\mu\nu} \partial^2 - \partial_\mu  \partial_\nu ) A^\nu = 0
+\ee
 
 
-$\Rightarrow$ Schrodinger Equation $E = \frac{p^2}{2m} + V$
+\underline{Ansatz}:
+\be
+A_\mu = \epsilon_\mu(p) e^{-ip\cdot x}
+\ee
+where $\epsilon(p)$ is  polarization vector.
+
+eq motion $\rightarrow$ 
+
+\bea
+(\eta_{\mu\nu} \underbrace{p^2}_{=0} - p_\mu  p_\nu ) \epsilon^\nu = 0\\
+\eea
+or $p\cdot \epsilon = 0$
+
+OK, with out loss of generality, can assume
+\be
+P = (E,0,0,E)
+\ee 
+
+Most general form of $\epsilon(p) = (a, b, c, a)$. 
+
+
+Convenient to express b \& c as
+
+\be
+\epsilon_R(p) = \frac{1}{\sqrt{2}}(0,1, i,0)  \hspace{1in} \epsilon_L(p) = \frac{1}{\sqrt{2}}(0,1, -i,0)
+\ee
+
+
+\be
+\epsilon_R \cdot \epsilon_L = -1 \hspace{1in}  {\epsilon_R}^2 = {\epsilon_L}^2 = 0
+\ee
+
+\bea
+\longrightarrow P \hspace{1in} \longrightarrow P\\
+\underbrace{\rightarrow}_{Spin} \hspace{1in}  \underbrace{\leftarrow}_{Spin}
+\eea
+
+
+What about a ? 
+(Note: only expect 2 DoF form Little group) 
+
+Gauge invariance $\Rightarrow$ a is non-physical. 
+
+
+$A_\mu = 0 $ is \underline{\underline{the same}} as $A_\mu = \partial_\mu \lambda$ for any $\lambda$
+(this is in the directtion along $p_\mu$)
+
+Thats all for spin-1. 
+
+\noindent\rule{\textwidth}{1pt}
+
+Ok lets back up and talk more generally now about Lagrangians. 
+
+Unlike classically, usually dont talk about KE and PE. 
+
+\underline{Kinetic Terms} (bilinear - exactly two feilds) \\
+$\partial_\mu \phi \partial^\mu \phi$,  $\bar{\psi} \slash{\partial} \psi$, $\frac{1}{4} \fmn^2$,  ... 
+
+\underline{Interaction Terms} (3 or more feilds)\\
+$\lambda \phi^3$, $g\bar{\psi}\gamma_\mu A^\mu\psi$, $g\partial_\mu\phi A^\mu\phi$,  $gA_\mu^2A_\nu^2$, ...
+
+\noindent\rule{\textwidth}{1pt}
+
+Will start off doing a little dimensional analysis that wil lturn out to have shockingly large remifications. 
+
+We will do something very simple that is true, and turns out will skip over 40 years of massive confusion in the field (30s - 60s). 
+
+The infinities that emerge when you actually do calculations clouded these results, turns out to all be a red herring
 
 
 
