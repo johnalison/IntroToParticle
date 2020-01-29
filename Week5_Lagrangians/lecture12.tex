@@ -55,11 +55,11 @@
 
 Now lets do the Spin-1 case.
 
-EM is a thoery of Spin-1 interactions.
+EM is a theory of Spin-1 interactions.
 
-EM was the first lorentz invariant theory.
+EM was the first Lorentz invariant theory.
 
-Maxwells Equations
+Maxwell's Equations
 \bea
 \vec{\nabla} \cdot \vec{E} = \rho \hspace{1in} \vec{\nabla} \times \vec{B} - \frac{\partial\vec{E}}{\partial t} = \vec{J} \\
 \vec{\nabla} \cdot \vec{B} = 0 \hspace{1in}  \vec{\nabla} \times \vec{E} - \frac{\partial\vec{B}}{\partial t} = 0
@@ -90,7 +90,7 @@ F_{\mu\nu} \rightarrow {\Lambda_\mu}^\rho {\Lambda_\nu}^\sigma F_{\rho\sigma}
 \be
 \partial_\mu \fMN = J^\nu
 \ee
-Is the Lorentz Invariant ``equation of Motion'' gives 2 of Maxwells equations. 
+Is the Lorentz Invariant ``equation of Motion'' gives 2 of Maxwell's equations. 
 The ``Bianchi Identity'' 
 \be
 \partial_\mu F_{\nu\rho} + \partial_\rho F_{\mu\nu} + \partial_\nu F_{\rho\mu}  = 0 
@@ -109,13 +109,13 @@ eg: express E and B in terms of potentials
 
 
 Can use potentials defined up to ``gauge transformation''.\\
-(Horrible name. Just means redifinition.) 
+(Horrible name. Just means redefinition.) 
 \be
 V \rightarrow V + \frac{\partial \vec{\lambda}}{\partial t} \hspace{1in}  \vec{A} = \vec{A} + \vec{\nabla} \lambda
 \ee
 these give same physics for any choice of $\lambda$.
 
-Note here there is an enourmour redudancy in our description of the physics. 
+Note here there is an enormous redundancy in our description of the physics. 
 
 OK, now lets Introduce
 
@@ -206,29 +206,153 @@ Gauge invariance $\Rightarrow$ a is non-physical.
 
 
 $A_\mu = 0 $ is \underline{\underline{the same}} as $A_\mu = \partial_\mu \lambda$ for any $\lambda$
-(this is in the directtion along $p_\mu$)
+(this is in the direction along $p_\mu$)
 
-Thats all for spin-1. 
+That's all for spin-1. 
 
 \noindent\rule{\textwidth}{1pt}
 
-Ok lets back up and talk more generally now about Lagrangians. 
+OK lets back up and talk more generally now about Lagrangians. 
 
-Unlike classically, usually dont talk about KE and PE. 
+Unlike classically, usually don't talk about KE and PE. 
 
-\underline{Kinetic Terms} (bilinear - exactly two feilds) \\
+\underline{Kinetic Terms} (bi-linear - exactly two fields) \\
 $\partial_\mu \phi \partial^\mu \phi$,  $\bar{\psi} \slash{\partial} \psi$, $\frac{1}{4} \fmn^2$,  ... 
 
-\underline{Interaction Terms} (3 or more feilds)\\
+\underline{Interaction Terms} (3 or more Fields)\\
 $\lambda \phi^3$, $g\bar{\psi}\gamma_\mu A^\mu\psi$, $g\partial_\mu\phi A^\mu\phi$,  $gA_\mu^2A_\nu^2$, ...
 
 \noindent\rule{\textwidth}{1pt}
 
-Will start off doing a little dimensional analysis that wil lturn out to have shockingly large remifications. 
+Will start off doing a little dimensional analysis that will turn out to have shockingly large ramifications. 
 
 We will do something very simple that is true, and turns out will skip over 40 years of massive confusion in the field (30s - 60s). 
 
 The infinities that emerge when you actually do calculations clouded these results, turns out to all be a red herring
+
+Correct way of thinking about it is the ``Wilsonian Way'' something called EFTs (Effective Field Theories).
+
+There is something deep underneath that legitimises the naive answer, but it turns out the simple answer is correct. 
+
+One of the most important things thats happened in physics in the last 50 years is understanding this deeper way of thinking about QFT.
+``Will go through this, but you wont really appreciate it until you suffer the normal bad way of talking about it''
+
+
+So, What are the units of the fields that we have been talking about?
+
+\underline{Bosons}:
+\be
+S[\phi(t)] = \int d^4x \left[ \frac{1}{2} (\partial_\mu\phi)(\partial^\mu\phi) - \frac{m^2}{2}\phi^2      \right]
+\ee
+The action is dimensionless.  $e^{\textrm{iS}}$ and $d^4x$ has mass dimension = -1. $\Rightarrow \phi$ has mass dimension = 1.
+
+
+So in the Lagrangian 
+
+\bea
+\int d^4x\ && \underbrace{\lambda}_{\substack{\textrm{units of $\lambda$ }\\\textrm{dimensionless}}} \Phi^4(x)         \\
+         +  && \underbrace{\mu}_{\substack{\textrm{mass}\\\textrm{dimension 1}}} \Phi^3(x)         \\
+         + && \underbrace{\frac{1}{M^2} \Phi^6(x) + \frac{1}{M^4} \Phi^8(x) + \frac{1}{M^2} \Phi^2(x)\partial\Phi\partial\Phi}_{\substack{\textrm{tons of things you could write down, but the}\\\textrm{vast majority of the interactions have a strength }\\\textrm{that is an inverse power of mass}}}          \\
+\eea
+
+
+Only a few interactions are dimensionless, or have positive mass dimension. 
+
+\begin{itemize}
+\item[]dimensionless - marginal 
+\item[]positive mass dim - relevant
+\item[]negative mass dim - \underline{irrelevant}
+\end{itemize}
+
+
+Gravity is example of Irrel interaction.  
+No invariant sense of whether strong or weak: 
+At low energy scale so weak that it is unimportant
+At high energy scale so important that we need to change the theory (as we will see later...)
+
+Any irrelevant theory comes equipped with a scale at which it breaks down.
+
+In any given theory, if you want to describe physics around some fixed energy scale, all you need to know are
+
+\begin{itemize}
+\item[-] What are the particles around (fields associated with them)
+\item[-] What are the possible marginal or relevant interactions between them?  Write them all down
+\end{itemize}
+
+Only a few parameters, whatever is going on at those energy scale can be accurately described by those few parameters and nothing else.
+
+If you want to predict things very accurately them maybe you need to include the next few terms. 
+
+Relevant terms only important at very low energies. 
+Always like to think of approximation where the partilces are moving fast compared to their masses. 
+In this approximation the only tings that matter are the marginal interactions. 
+
+In all cases in physics their is some \underline{physical} scale M in which your description of the physics is wrong.
+(often called UV cut-off)  eg: Plank scale the whole picture is wrong. 
+But if we are at energies much lower than $M_{P}$ we dont care.
+
+Whats happening at the higher scales is encoded in the higher dim. operators.
+
+The way to organize your thinking is scale-by-scale.
+
+All the thinking goes into determining the interactions. 
+Guaranteed to be finite number of parameters at any given scale to describe the physics accurately. 
+
+Any theory that we write down is an effective theory. 
+That is only accurate to order powers of $\frac{E}{M_\textrm{New}}$
+
+(For us, there is something always to $\frac{E}{M_\textrm{P}}$ that we dont know, even if we understand 1 TeV, 10 - 100 TeV ... ect)
+
+SO really we have a big tower of effective field theories each accompanied by its own cut off. 
+
+This is the bottom-line to Wilson's  way of thinking. 
+
+Massive restriction to the kinds of interactions that we can have and that are relevant. 
+
+\underline{Note} incredibly different from non-relativistic QM! 
+\begin{itemize}
+\item[-]any crappy potential you write down (1/r ... 1/$r^{2.3}$, random linear combination ect). 
+\item[-]framework itself incredibly unconstrained.
+\end{itemize}
+
+The second we put in SR+QM, 
+\begin{itemize}
+\item[-] dramatic kinematic things (Anti-particles / Spin-Stats) 
+\item[-] the number of interactions that we are talking about are numbers we can count on our hands
+\end{itemize}
+
+In SM $\sim 19$ marginal interactions. 
+Not 1, but not a continuous $\infty$, which is what you got in a NR picture of the world.
+
+Now for a little more...
+
+\noindent\rule{\textwidth}{1pt}
+
+Again, think about the limit in which we can neglect the mass of all the particles, imagining high energy processes relative to the mass of the partilces
+
+\be
+= \int d^4x\ \underbrace{(\partial_\mu\phi)(\partial^\mu\phi)}_{\substack{\textrm{free theory of scalars}\\\textrm{ mass dim(Bosons) = 1}}} + \underbrace{\bar{\psi}[i\gamma_\mu\partial^\mu]\psi}_{\substack{\textrm{free theory of fermions }\\\textrm{mass dim(Fermions) = 3/2}}}
+\ee
+
+Can now write down possible interactions of dimension four. 
+
+\be
+\Phi^4 \hspace{1in} \Phi^2\partial\Phi \hspace{1in} \psi\psi\Phi
+\ee 
+thats it for the marginal operators.
+
+
+Basic interactions in nature
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{./Interactions.pdf}
+\end{figure}
+
+At sufficiently low energies compared to $M_{Pl}$, SR+QM says we need a theory of Fermions \& Bosons and these are the only interactions that are important. 
+
+Dimension counting tells us there can only be a few types of interactions, 
+
+Next last bit of logic for why the world is such a damn constrained place...
 
 
 
