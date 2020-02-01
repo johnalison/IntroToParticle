@@ -51,9 +51,81 @@
 
 {\fontsize{14}{16}\selectfont
 
-\textbf{\underline{Relativistic Wave Equations continued}} 
+\textbf{\underline{Noether's Theorm}} 
 
-Now lets do the Spin-1 case.
+Lagrangian may be invariant under some type of transformation (variation) 
+
+eg: $\phi \rightarrow \phi + \delta$
+
+This transformation is a symmerty of the Lagrangian
+
+Say $\phi$ is complex:  2 DoF  $\phi$ and $\phi^*$.
+
+And you have a Lagrangian given by
+
+
+\be
+\mathcal{L} = (\partial_\mu \phi)(\partial^\mu \phi^*) - m^2 \phi \phi^*
+\ee
+
+\underline{symmetry}
+\be
+\phi \rightarrow e^{-i\alpha} \phi \hspace{1in} \phi^* \rightarrow e^{i\alpha} \phi^*
+\ee
+
+
+Whenever we have a continous symmetry (meaning there is a continious limit)
+
+\bea
+\frac{\delta \mathcal{L}}{\delta \alpha} = 0 &=& \sum_n \left[ \frac{\partial \mathcal{L}}{\partial \phi_n} \frac{\delta \phi_n}{\delta \alpha}  +  \frac{\partial \mathcal{L}}{\partial (\partial_\mu \phi_n)} \frac{\delta (\partial_\mu \phi_n)}{\delta \alpha} \right]  \\ 
+&=& \sum_n \left[ \underbrace{\left[ \frac{\partial \mathcal{L}}{\partial \phi_n} - \partial_\mu \frac{\partial \mathcal{L}}{\partial (\partial_\mu \phi_n)} \right]}_{=0\ \textrm{Euler Lagrange}} \frac{\delta \phi_n}{\delta \alpha}  +  \partial_\mu \left[ \frac{\partial \mathcal{L}}{\partial (\partial_\mu \phi_n)} \frac{\delta \phi_n}{\delta \alpha} \right] \right]
+\eea
+
+\be
+\phi_n = \{\phi, \phi^*\}
+\ee
+
+$\Rightarrow$
+
+\be
+\partial_\mu J^\mu = 0
+\ee
+
+with 
+
+\be
+J^\mu = \sum_n \left[ \frac{\partial \mathcal{L}}{\partial (\partial_\mu \phi_n)} \frac{\delta \phi_n}{\delta \alpha} \right]
+\ee
+
+$J^\mu$ is a conserved current.  ``Noethers Current''
+
+
+\underline{total ``charge''}
+\be
+Q \equiv \int d^3x\ J_0 
+\ee
+
+
+\be
+\partial_t Q = \int d^3x\ \partial_t J_0 = \underbrace{\int d^3x\ \vec{\nabla} \cdot \vec{J}}_{\textrm{Vanishes on the Boundary}} = 0
+\ee
+ 
+Q does not change with time! 
+
+Very gerneral and important theorm \underline{``Noethers Theorem''}
+
+If $\mathcal{L}$ has (``enjoys'') a continous symmetry, there exists an associated current that is conserved. 
+
+\be
+\phi(x) \rightarrow \phi(x + \epsilon) = \phi(x) + \epsilon^\mu \partial_\mu \phi(x)
+\ee
+
+This leaves $\mathcal{L}$ and $\mathcal{S}$ invariant and gives a four vector of noether currents. 
+
+$\Rightarrow$ Noether's theorm tells us why energy and momentum are conserved. 
+
+
+
 
 
 
