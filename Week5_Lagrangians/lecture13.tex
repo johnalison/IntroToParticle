@@ -5,35 +5,9 @@
 \usepackage{relsize}
 \usepackage{tcolorbox}
 
-\def\ketY{\ensuremath{\ket {\Psi}}}
-\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+
+\input{../defs}
 \usepackage{cancel}
-
-\def\ABCDMatrix{\ensuremath{\begin{pmatrix} A &  B  \\ C  & D \end{pmatrix}}}
-\def\xyprime{\ensuremath{\begin{pmatrix} x' \\ y' \end{pmatrix}}}
-\def\xyprimeT{\ensuremath{\begin{pmatrix} x' &  y' \end{pmatrix}}}
-\def\xy{\ensuremath{\begin{pmatrix} x \\ y \end{pmatrix}}}
-\def\xyT{\ensuremath{\begin{pmatrix} x & y \end{pmatrix}}}
-
-\def\IMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ -1  & 0 \end{pmatrix}}}
-\def\IBoostMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ 1  & 0 \end{pmatrix}}}
-\def\JThree{\ensuremath{\begin{pmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{pmatrix}}} 
-\def\JTwo{\ensuremath{\begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix}}}
-\def\JOne{\ensuremath{\begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix}}}
-\def\etamn{\ensuremath{\eta_{\mu\nu}}}
-\def\Lmn{\ensuremath{\Lambda^\mu_\nu}}
-\def\dmn{\ensuremath{\delta^\mu_\nu}}
-\def\wmn{\ensuremath{\omega^\mu_\nu}}
-\def\be{\begin{equation*}}
-\def\ee{\end{equation*}}
-\def\bea{\begin{eqnarray*}}
-\def\eea{\end{eqnarray*}}
-\def\fmn{\ensuremath{F_{\mu\nu}}}
-\def\fMN{\ensuremath{F^{\mu\nu}}}
-
-\def\adagger{\ensuremath{a_{p\sigma}^\dagger}}
-
-%\def\xMu{\ensuremath{x^\mu}
 
 \usepackage{fancyhdr}
 
@@ -125,13 +99,143 @@ This leaves $\mathcal{L}$ and $\mathcal{S}$ invariant and gives a four vector of
 $\Rightarrow$ Noether's theorm tells us why energy and momentum are conserved. 
 
 
+\noindent\rule{\textwidth}{1pt}
+
+\clearpage
+
+\underline{\Large Cross Sections And Decay Rates}
+
+20th century witnessed the development of collider physics. 
+Effective means to determine which particles exist and thier properties and interactions.
+
+\begin{itemize}
+\item[-] Rutherford discovery of the nucleas using $\alpha$ 1911 
+\item[-] Andersons discovery of anti-electrons 1932
+\end{itemize}
+
+These were made with ``Natural accelerators'' $\alpha$'s or cosmic rays
+
+Around 1930 man mande collisions started winning. 
+
+eg: 1 MeV 
+
+Now 13 TeV at the LHC.
+
+Collisions map free fixed momenta initial states $\rightarrow$ final fixed momentum states. \\
+
+QFT predicts \underline{probability} for projections to occur. 
+
+Probabilities typically dependant on paramaters (angles, momenta, etc) 
+
+\begin{center}
+$P(v_1, ... v_n)$ - differential probabilities
+\end{center}
+
+Given by 
+\be
+|\braket{\psi_{final}, +\infty|\psi_{initial}, -\infty}|^2
+\ee
 
 
+\be
+\braket{f|S|i} \hspace{1in} \textrm{S-matrix}
+\ee
+QFT tell us how to calculate S given some Lagrangian (next week)
 
+S-matrix elemets are the primary object of interest for particle physics. 
+
+In this lecture we will relate S-matrix elements to scattering 
+\lineTwo{cross sections}{decay rates}
+which we can measure experimentally
+
+\clearpage
+
+\underline{\underline{Cross Sections}}
+
+\fbox{\begin{minipage}{\textwidth}
+\underline{Aside:}
+
+Probabilities are dimensionless and [0-1] absolute $\Rightarrow$ extremely subtle
+
+to calculate P need to know all possible outcomes a priori!
+
+QM$\Rightarrow$ need complete basis.
+
+Usually impossible in QCD 
+\lineTwo{\# final states $\infty$}{final states not fully known }
+
+(Particle decays is an exception)
+
+\end{minipage}}
+
+Natrual quantity to measure. 
+
+eg: Rutherford was interested in teh size of the nucleas. 
+
+By colliding $\alpha$-particles w/gold foil and measuring how many partilces are scatterd, can determine $\sigma = \pi r^2$
+
+\underline{Single nucleus}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth]{./Scattering}
+\end{figure}
+
+\be
+\sigma = \frac{\# \textrm{- scattered}}{\textrm{time} \times \textrm{(Number density in beam)} \times \textrm{velocity of beam}} = \frac{1}{T}\frac{1}{\Phi} N
+\ee
+
+\underline{Real Experiment}
+other factors: \lineTwo{number density of nuclei in foil}{cross secional area of the beam (if smaller than foil)}
+
+This stuff and T and $\Phi$ depend on details of the experiment. 
+
+In contrast, $\sigma$ is a property of particles being scattered. 
+
+\underline{In QM} generalize notion of cross sectional area to ``cross section'' \multiline{-units of area \\ -abstract measure of\\ interaction strength}
+
+eg: Calssically the $\alpha$ will either scatter or not. 
+
+Quantum Mechanically,  there is some probablity for scattering.
+
+\be
+d\sigma = \frac{1}{T}\underbrace{\frac{1}{\Phi}}_{\substack{\textrm{Normalized}\\ \textrm{to one particle}}} \underbrace{dP}_{\textrm{QM probability of scattering}}
+\ee
+
+\multiline{d$\sigma$ \\ dP } - differential in kinematic variables $\theta$'s and Ps
+
+
+\be
+\underbrace{dN}_{\# \textrm{of scatters}} = \underbrace{L}_{\textrm{``integrated luminosity}} \times d\sigma 
+\ee
+(take eq as definition of L)
+
+So number of observed events is direct measuremnt of cross section (See in presentation and papers)
+
+
+\underline{Relate to S-matrix}
+
+practically impossible to collide more than two particles at a time.
+
+$\ket{i}$ will always be a 2 particle state
+
+\be
+P_1 + P_2 \rightarrow \{P_j\}
+\ee
+
+\underline{Rest frame} of one partilce $\Phi = \frac{|\vec{v}|}{V}$
+
+\underline{Center of mass frame}  $\Phi = \frac{|\vec{v_1} - \vec{v_2}|}{V}$
+
+
+So, 
+\be
+d\sigma = \frac{V}{T}\frac{1}{|\vec{v_1} - \vec{v_2}|} dP
+\ee
+
+\be
+dP = \frac{|\braket{f|S|i}|^2}{\braket{f|f}\braket{i|i}} \underbrace{d\Pi}_{\substack{\textrm{Region of final state momenta} \\ \textrm{ we are considering}}}
+\ee
 
 }
 \end{document}
 
-
-
-% LocalWords:  partilces

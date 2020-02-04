@@ -3,32 +3,9 @@
 \usepackage{braket}
 \usepackage{bbm}
 \usepackage{relsize}
-
-\def\ketY{\ensuremath{\ket {\Psi}}}
-\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
 \usepackage{cancel}
 
-\def\ABCDMatrix{\ensuremath{\begin{pmatrix} A &  B  \\ C  & D \end{pmatrix}}}
-\def\xyprime{\ensuremath{\begin{pmatrix} x' \\ y' \end{pmatrix}}}
-\def\xyprimeT{\ensuremath{\begin{pmatrix} x' &  y' \end{pmatrix}}}
-\def\xy{\ensuremath{\begin{pmatrix} x \\ y \end{pmatrix}}}
-\def\xyT{\ensuremath{\begin{pmatrix} x & y \end{pmatrix}}}
-
-\def\IMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ -1  & 0 \end{pmatrix}}}
-\def\IBoostMatrix{\ensuremath{\begin{pmatrix} 0 &  1  \\ 1  & 0 \end{pmatrix}}}
-\def\JThree{\ensuremath{\begin{pmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{pmatrix}}} 
-\def\JTwo{\ensuremath{\begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix}}}
-\def\JOne{\ensuremath{\begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix}}}
-\def\etamn{\ensuremath{\eta_{\mu\nu}}}
-\def\Lmn{\ensuremath{\Lambda^\mu_\nu}}
-\def\dmn{\ensuremath{\delta^\mu_\nu}}
-\def\wmn{\ensuremath{\omega^\mu_\nu}}
-\def\be{\begin{equation*}}
-\def\ee{\end{equation*}}
-\def\bea{\begin{eqnarray*}}
-\def\eea{\end{eqnarray*}}
-
-\def\adagger{\ensuremath{a_{p\sigma}^\dagger}}
+\input{../defs}
 
 %\def\xMu{\ensuremath{x^\mu}
 
@@ -79,12 +56,13 @@ Ultimately interested in the interactions between particles.
 \item[-] Defined by some Hamiltonian        
 \item[-] Could specify the Hamiltonian by describing how it acts on all states in the Hilbert space
 \item[-] Instead \underline{for our convenience} introduce creation and annihilation operators.
-These keep track of the states in a simple way...
+\begin{itemize}
+\item[] These keep track of the states in a simple way...
+\end{itemize}
 \end{itemize}
 
 First define the vacuum state: $\ket{0}$.
 Then define single particle states as:
-
 \be
 \underbrace{\ket{P \sigma}}_{\textrm{These are primary}} \equiv \adagger \ket{0}
 \ee
@@ -144,12 +122,12 @@ For Fermions,
 \{a_{p,\sigma}, a_{p',\sigma'}^\dagger\} = \delta_{\sigma',\sigma} \delta_{p,p'}
 \ee
 
-\underline{Note}, there are operators that \underline{We} have \underline{defined} four \underline{our} convenience.
+\underline{Note}, these are operators that \underline{We} have \underline{defined} four \underline{our} convenience.
 Makes it easier to talk about the states.  (Of course what really matters is the states)
 
 \clearpage
 
-Usually you see it presented as: \\
+Usually you see it presented as:
 \begin{itemize}
 \item[-] Start with fields
 \item[-] Quantize them
@@ -162,7 +140,7 @@ But really the fields are secondary concepts, what comes first is the particles.
 \noindent\rule{\textwidth}{1pt}
 
 
-OK, What would the free Hamiltonional ?
+OK, What would be the free Hamiltonian ?
 
 \be
 H = \sum\limits_{p,\sigma} E_p\ a^\dagger_{p,\sigma} a_{p,\sigma}
@@ -220,11 +198,12 @@ Now comes the challenge,
 \item[-] Momentum Eigenstates are like big plane waves
 \end{itemize}
 
-A totally generic coefficient eg: ($\delta(\vec{p_1}..\vec{p_4}) \delta(E_1 + ... E_4) V(p's, \sigma's)$) is not going to correspond to point-like local interactions.
+A totally generic coefficient eg: ($\delta(\vec{p_1}..\vec{p_4}) \delta(E_1 + ... E_4) V(p's, \sigma's)$) is not going to correspond to point-like local interactions.\\
 
 We would like to come up with some engine to allow us to build interaction Hamiltonians where we can just see explicitly that the interactions are local. 
-This is where the utility of the field concept comes in. 
-
+\bi
+\item[-]This is where the utility of the field concept comes in. \\
+\ei
 
 The states that we have defined act nicely under the translations operator (just pick up a phase) but to get interactions local in space we need x to make an appearance. 
 That is, we want to build operators out of things like $\phi(\vec{x})$, where under T:$\phi(\vec{x}) \rightarrow \phi(\vec{x}+\vec{a})$
