@@ -1,0 +1,132 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+\usepackage{tcolorbox}
+
+
+\input{../defs}
+\usepackage{cancel}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2020}
+\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 13}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+\textbf{\underline{From Last time...}} 
+
+\be
+d\sigma = \frac{V}{T}\frac{1}{|\vec{v_1} - \vec{v_2}|} dP
+\ee
+
+\be
+dP = \frac{|\braket{f|S|i}|^2}{\braket{f|f}\braket{i|i}} \underbrace{d\Pi}_{\substack{\textrm{Region of final state momenta} \\ \textrm{ we are considering}}}
+\ee
+
+On interval of size L, the momenta of available states are $P_n = \frac{2\pi n}{L}$ (from particle in a box).
+
+$\Rightarrow$ throughout a volume V
+\be
+N = \int \frac{V}{(2\pi)^3} d^3p
+\ee
+
+
+\be
+d\Pi = \prod_j \frac{V}{(2\pi)^3} d^3p_j
+\ee
+where j runs over final state partilces.
+
+OK, lets deal with the normalization factors. 
+
+Note, $\braket{f|f}$ and $\braket{i|i} \ne 1$ (The inner products are not Lorentz invariant...) 
+
+
+\bea
+\braket{p'|p} &=& (2\pi)^3\ 2E\ \delta^3(p'-p) \\
+\braket{p|p}  &=& (2\pi)^3\ 2E_p\ \delta^3(0) \\
+  &=& 2 E_p V
+\eea
+
+
+$\Rightarrow$
+\be
+\braket{i|i} = \braket{p_1 p_2 |p_1 p_2} = 2 E_1 V\ 2 E_2 V
+\ee
+
+
+\be
+\braket{f|f} = \prod_j (2 E_j V)
+\ee
+
+Now have to deal with $\braket{f|S|i}$
+
+
+S elements always calculated pertubatively
+
+\be
+S = \underbrace{1}_{\textrm{free theory}} +  \underbrace{iT}_{\textrm{perturbatively small}}
+\ee
+
+Know that S matrix should vanish if momentum not conserved
+
+
+\be
+\braket{f|T|i} = (2\pi)^4\delta^4(\sum p) \underbrace{M}_{``Matrix Element''}
+\ee
+
+Now, might worry that we have to square the $\delta$ function
+
+\bea
+|\braket{f|T|i}|^2 &=& (2\pi)^8\ \delta^4\left(\sum p\right)\ \delta^4(0)\ |M|^2\\
+ &=& (2\pi)^4\ \delta^4\left(\sum p\right)\ TV |M|^2
+\eea
+
+
+So, 
+
+\bea
+dP &=& \frac{(2\pi)^4\ \delta^4\left(\sum p\right)\ TV}{(2E_1V)(2E_2V)} \frac{1}{\prod_j (2 E_j V)} |M|^2  \prod_j \frac{V}{(2\pi)^3} d^3p_j \\ 
+   &=& \frac{T}{V} \frac{1}{(2E_1)(2E_2)} |M|^2 \underbrace{d\Pi_{\textrm{LIPS}}}_{\substack{\textrm{L.I. Phase space} \\ = (2\pi)^4\ \delta^4\left(\sum p\right)\ \prod_j \frac{d^3p}{(2\pi)^3 2 E_p}  }}
+\eea
+
+
+\be
+d\sigma = \frac{1}{(2E_1)(2E_2)|\vec{v_1} - \vec{v_2}|} |M|^2 d\Pi_{\textrm{LIPS}}
+\ee
+where $\vec{v} = \vec{p}/p_0$  
+
+known as ``Fermis Golden Rule''
+
+\clearpage
+
+
+\underline{Decay rate} probability that a one-particle state turns into a multi-particle state over time T.
+
+\be
+p_1 \rightarrow \{ P_j \}
+\ee
+thing of it as $1 \rightarrow N$ scattering.
+
+
+follow same steps as above
+
+\be
+d\Gamma = \frac{1}{2E_1} |M|^2 d\Pi_{\textrm{LIPS}}
+\ee
+
+
+}
+\end{document}
+
