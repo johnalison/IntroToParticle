@@ -46,7 +46,7 @@ N = \int \frac{V}{(2\pi)^3} d^3p
 \be
 d\Pi = \prod_j \frac{V}{(2\pi)^3} d^3p_j
 \ee
-where j runs over final state partilces.
+where j runs over final state particles.
 
 OK, lets deal with the normalization factors. 
 
@@ -125,6 +125,123 @@ follow same steps as above
 \be
 d\Gamma = \frac{1}{2E_1} |M|^2 d\Pi_{\textrm{LIPS}}
 \ee
+
+
+\clearpage
+
+\underline{\Large ``Feynman Diagrams''} 
+
+Last piece we need is the LI matrix element
+
+\be
+M(1+2 \rightarrow 3 + 4 + ... n) = \braket{\{p_j\}_{\textrm{out}}|p_1 p_2}_{\textrm{in}}
+\ee
+This represents an element of the S-matrix.
+
+
+\underline{QFT + Lagrangian} gives a procedure (recipe) for calculating M\\
+\hspace*{0.3in} Very nice interpretation in terms of picture ``Feynman diagrams''
+
+
+\underline{\underline{QM Perturbation Theory}}
+
+$H = H_0 + V$ 
+
+Remember we are interested in how some free state at early times ($-\infty$) evolve to some (potentially) other free state at late times. 
+
+At early times have a state with a given energy E, which is an eigenstate of $H_0$
+
+\be
+H_0\ket{\phi} = E\ket{\phi}
+\ee
+
+Including the interaction piece, will also be eigenstate of the full Hamiltonian with the same energy.
+
+\be
+H\ket{\psi} = E\ket{\psi}
+\ee
+
+Now we can formally write,
+\be
+\ket{\psi} = \ket{\phi} + \frac{1}{E-H_0}V\ket{\psi}
+\ee
+which can be verified by multiplying through by $(E-H_0)$.
+
+Whats happening here is that the interaction at intermediate times is inducing transitions among the states $\ket{\phi}$, which are non-interacting at early (and late) times. 
+
+So the full state $\ket{\psi}$ is given by the free state $\ket{\phi}$ plus a scattering term. 
+
+
+
+Really want to express the full state $\ket{\psi}$ entirely in terms of $\ket{\phi}$.\\
+\hspace*{0.3in} We do this by defining operator T:  $V\ket{\psi} = T\ket{\phi}$.
+
+This gives us
+\be
+\ket{\psi} = \ket{\phi} + \frac{1}{E-H_0}T\ket{\phi}
+\ee
+or
+\bea
+V\ket{\psi} &=& V\ket{\phi} + V\frac{1}{E-H_0}T\ket{\phi} \\
+&=& T\ket{\phi}
+\eea
+
+So we get a nice iterate equation for T
+\be
+T = V + V\frac{1}{E-H_0}T
+\ee
+which we can solve perturbatively in V.
+
+eg
+\be
+T = V + V\frac{1}{E-H_0}V + V\frac{1}{E-H_0}V \frac{1}{E-H_0}V + ...
+\ee
+
+Of course, we are interested in inner products of these with the initial/final states
+
+\be
+\underbrace{\braket{\phi_f|T|\phi_i}}_{T_{fi}} = \underbrace{\braket{\phi_f|V|\phi_i}}_{V_{fi}} + \sum_j \frac{\braket{\phi_f|V|\phi_j}\braket{\phi_j|V|\phi_i}}{E-H_0} + ...
+\ee
+ 
+\underline{Example of scattering of 2 electrons}
+
+\be
+\ket{i} = \ket{e_1, e_2} \hspace*{1in}  \ket{f} = \ket{e_3, e_4}
+\ee
+
+
+\be
+T_{fi} = V_{fi} + \sum_n V_{fn} \frac{1}{E_i-E_n} V_{ni} + ...
+\ee
+
+\bi
+\item[-] $E_i$- is the initial (= final) energy
+\item[-] $E_f$ - is the energy of the intermediate state
+\ei
+
+Now, the $\sum_n$ runs over energy thing in the Hilbert (Fock) space, however only certain states will be non-0.
+
+In relativistic theory, the action-at-a-distance of EM is replaced by a process where 2 electrons interact with a $\gamma$ which travels at c. 
+(This tells us there should be $\gamma$ in the intermediate state)
+
+
+\be
+V \sim e \int d^3x \psi \phi \psi  \hspace*{0.3in} \textrm{(Ignoring spin)}
+\ee
+this operator will have terms that go like ($\sim a_{e_3}^\dagger\ a_{\gamma}^\dagger\ a_{e_1}$)
+
+
+However, here all terms involve $a_{\gamma}^\dagger$.\\
+Because $\ket{i}$ and $\ket{f}$ do not contain a $\gamma$, $  V_{fi} = 0$
+
+to get a non-zero term, we need $\ket{n}$ with a photon. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{./eeScattering.pdf}
+\end{figure}
+
+
+
 
 
 }
