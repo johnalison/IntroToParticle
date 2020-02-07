@@ -53,7 +53,7 @@ $\mathcal{S}$ might be (at least a hope) Lorentz Invariant.
 \textbf{Big Picture:}
 The plan is to Figure out what $\mathcal{S}$ is in a totally generic theory, then see what it would take to make it Lorentz Invariant. 
 
-Sure doesn't look like ti will be L.I. 
+Sure doesn't look like it will be L.I. 
 $\mathcal{S}$ is the only object that you could even have a hope to make L.I.
 
 We will see that for \underline{very special} choices of the interaction it will barely be possible for it to be Lorentz Invariant. 
@@ -102,7 +102,7 @@ Note: first line from derivative of~\ref{eq:def}, the second from the Schrodinge
 The RHSs imply, 
 
 \be
-i \frac{d }{d t} \ket{\psi_I} =  \underbrace{e^{-i H_f t} H_\textrm{Int} e^{-i H_f t}}_{\textrm{Interaction Hamiltonian in the interaction representation}}  \ket{\psi_I} 
+i \frac{d }{d t} \ket{\psi_I} =  \underbrace{e^{+i H_f t} H_\textrm{Int} e^{-i H_f t}}_{\textrm{Interaction Hamiltonian in the interaction representation}}  \ket{\psi_I} 
 \ee
 
 
@@ -181,11 +181,21 @@ OK, Lets go back to field theory....
 
 Need to build $H_I$ out of $\phi_{+/-}$ in the interaction representation.
 
+\fbox{\begin{minipage}{\textwidth}
+Note: 
+\be
+\phi_+^I (x, t) = e^{-iH_ft} \phi(x) e^{iH_ft} \rightarrow e^{iE_p t} \phi(x) \\
+\ee
+
+
+The $e^{iHt}$ will go to $e^{iEt}$, then $\phi(x)$ will create a new particle with energy $E_p$, and then the $e^{+iHt}$ will give $e^{i(E+E_p) t}$
+
+\end{minipage}}
 
 \bea
-\phi_+^I (x, t) &= e^{-iH_ft} \phi(x) e^{iH_ft} \\
-                &= \int \cancel{d}^3p\ e^{i \vec{p} \vec{x}}\ e^{-iE_pt}\ a^{\dagger}_{\vec{p}} \\
-                &= \int \cancel{d}^3p\ e^{-i p^\mu x_\mu}\ a^{\dagger}_{\vec{p}}
+\phi_+^I (x, t) &=& e^{-iH_ft} \phi(x) e^{iH_ft} \\
+                &=& \int \cancel{d}^3p\ e^{i \vec{p} \vec{x}}\ e^{-iE_pt}\ a^{\dagger}_{\vec{p}} \\
+                &=& \int \cancel{d}^3p\ e^{-i p^\mu x_\mu}\ a^{\dagger}_{\vec{p}}
 \eea
 
 this behaves nicely under Lorentz Transforms $\phi(\Lambda x) = \phi(x)$
