@@ -32,21 +32,111 @@
 \includegraphics[width=0.99\textwidth]{./generalScattering.pdf}
 \end{figure}
 
+Consider what happens if we attach a ``photon'' to an incoming leg
 
 \begin{figure}[h]
 \includegraphics[width=0.99\textwidth]{./incomingPhoton.pdf}
 \end{figure}
 
+\clearpage
+
+Can also attach photon to outgoing leg
 
 \begin{figure}[h]
 \includegraphics[width=0.99\textwidth]{./outgoingPhoton.pdf}
 \end{figure}
+
+Total Amplitude is then given by
+
+\be
+M  = \sum_{\rmt{incoming}} Q_i \frac{(p\cdot\epsilon)}{(p\cdot q)}\ i M_0(p-q) + \sum_{\rmt{outgoing}} - Q_i \frac{(p\cdot\epsilon)}{(p\cdot q)}\ i M_0(p+q)
+\ee
+
+Take soft limit: $M_0(p\pm q) \rightarrow M_0(p)$
+
+\be
+M  = iM_0 \left( \sum_{\rmt{incoming}} Q_i \frac{(p\cdot\epsilon)}{(p\cdot q)}\  + \sum_{\rmt{outgoing}} - Q_i \frac{(p\cdot\epsilon)}{(p\cdot q)}\   \right)
+\ee
+
+Now as before $\epsilon_\mu \rightarrow \epsilon'_\mu + q_\mu$ means that M must vanish when $\epsilon_\mu \rightarrow q_\mu$.
+
+OR under a Lorentz Transform
+
+\be
+\epsilon_\mu \cdot M \rightarrow \epsilon'_\mu \cdot M' + i M_0 \underbrace{\left( \sum_{\rmt{incoming}} Q_i  + \sum_{\rmt{outgoing}} - Q_i    \right)}_{\substack{= 0\ \rmt{only if} \\ \sum_{\rmt{incoming}} Q_i = \sum_{\rmt{outgoing}} Q_i }}
+\ee
+
+\underline{\underline{Charge has to be conserved! }}
+
+\lineacross
+
+Now same logic for Spin-2  (describes interaction w/Gravitons)
+
+Same as above except 2-component polarization vector.
+
+
+\be
+\epsilon_{\mu\nu} \underbrace{\rightarrow}_{\rmt{under little group}} \epsilon_{\mu\nu} + \underbrace{A_\mu q_\nu + B_\mu q_\mu + C q_\mu q_\nu}_{\rmt{effect from all of these need to be 0 as before}}
+\ee
+
+where A, B C's are non-zero and depend on the particular little group transformation done.
 
 
 \begin{figure}[h]
 \includegraphics[width=0.3\textwidth]{./gravitonVertex.pdf}
 \end{figure}
 
+\be
+= i (iK_i) \epsilon_{\mu\nu} \frac{(2p^\mu p^\nu)}{-p\cdot q}
+\ee
+
+(Same idea with the outgoing leg)
+
+
+Now, (lets focus on piece that goes like $\epsilon_{\mu\nu} \rightarrow  \epsilon_{\mu\nu}  + q_\mu B_\nu$
+
+\bea
+\epsilon_{\mu\nu} \rightarrow  \epsilon'_{\mu\nu} M'^{\mu\nu} &+& M \left( \sum_{\rmt{incoming}} K_i B_\nu p^\nu - \sum_{\rmt{outgoing}} K_i B_\nu p^\nu \right)\\
+&+& M B_\nu \left( \sum_{\rmt{incoming}} K_i  p^\nu - \sum_{\rmt{outgoing}} K_i  p^\nu \right)
+\eea
+
+$\Rightarrow  K_i p_i^\nu$  is \underline{\underline{conserved}}
+
+
+We know that $p_i^\nu$ is conserved by E and momentum conservation. 
+
+Only way can have nontrivial solutions is if $k_i = k$ for all i
+
+All particles interact with gravity with the same strength. 
+
+\underline{Gravitational interaction is Universal !}
+
+Discovered the ``Principle of Equivalence'' that is the starting point of General Relativity!
+
+\lineacross
+
+Can keep going...
+
+For a massless spin-3 particle we would do the same exercise. 
+
+We would find we need
+
+\be
+ \sum_{\rmt{incoming}} \beta_i  p_i^\mu p_i^\nu = \sum_{\rmt{outgoing}} \beta_i  p_i^\mu  p_i^\nu 
+\ee
+
+eg: $\mu\nu = 0$
+
+\be
+ \sum_{\rmt{incoming}} \beta_i  E_i^2 = \sum_{\rmt{outgoing}} \beta_i  E_i^2
+\ee
+
+
+Way too constraining.  
+
+Only way if $\beta_i = 0$
+
+\underline{\underline{There can be no interacting theories of massless particles of Spin greater than 2 !}}
 
 
 }
