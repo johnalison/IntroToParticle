@@ -1,0 +1,142 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+\usepackage{tcolorbox}
+
+
+\input{../defs}
+\usepackage{cancel}
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2020}
+\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 19}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+\underline{Standard Model}
+
+The version of QFT that our universe is characterized by.
+
+As weve seen much of the world is fixed by the basic principles of Quantum Mechanics and Lorentz Invariance.
+
+\begin{center}
+0, 1/2, 1, 3/2, 2  
+\end{center}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{../Week5_Lagrangians/Interactions.pdf}
+\end{figure}
+
+Spin-1 must be Yang-Mills (ect)
+
+SM attempts to explain all phenomena of particle physics in terms of small number of particles. 
+
+Actually 4 different types
+
+\underline{Leptons} Spin-1/2 (Left and Right handend fields) Experience Weak and EM interactions
+\be
+\begin{pmatrix} \nu_e \\ e \end{pmatrix} \hspace*{0.1in} \begin{pmatrix} \nu_\mu \\ \mu \end{pmatrix} \hspace*{0.1in}  \begin{pmatrix} \nu_\tau \\ \tau \end{pmatrix}  
+\ee
+
+\underline{Quarks} Spin-1/2 Strong, Weak and EM interactions
+\be
+ \begin{pmatrix} u \\ d \end{pmatrix} \hspace*{0.1in}   \begin{pmatrix} c \\ s \end{pmatrix} \hspace*{0.1in}   \begin{pmatrix} t \\ b \end{pmatrix}
+\ee
+
+\underline{Gauge Bosons} Spin-1  Force Carriers
+\be
+ \gamma \hspace*{0.2in}   g (\times 8) \hspace*{0.2in} W^{\pm}  \hspace*{0.2in} Z
+\ee
+
+\underline{Higgs Boson} Spin-0  
+\be
+  H
+\ee
+
+All are assumed to be elementary.  No internal structure.
+
+\underline{Leptons}
+
+Quantum Number associated with each generation. 
+
+eg: 
+
+\be
+L_e \equiv N(e^-) - N(e^+) + N(\nu_e) - N(\bar{\nu_e})
+\ee
+
+All other particles has $L_e = 0$.
+
+Electron number is a conserved quantity.
+
+$\Rightarrow$ electrons ($\nu_e$) must be created/destroyed in pairs.
+
+
+Corrisponding conserved lepton numbers for $\mu$s and $\tau$s.
+
+\be
+L_\mu  \hspace*{1in} L_\tau
+\ee
+
+
+Leptons masses (GeV):
+  
+\be
+\begin{pmatrix} m_\nu \\ 10^{-3} \end{pmatrix} \hspace*{0.1in} \begin{pmatrix} m_\nu \\ 10^{-1} \end{pmatrix} \hspace*{0.1in}  \begin{pmatrix} m_\nu \\ 1.7 \end{pmatrix}  
+\ee
+
+Note: $\sum m_\nu < 10^{-9} GeV$
+
+Once thought to be 0.  Now known that at least 2 (maybe all) have $m_\nu > 0$.
+
+\clearpage
+
+\underline{W/Z Exchange}
+
+EM mediated by the exchange of a photon.
+
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth]{./PhotonExchange.pdf}
+\end{figure}
+
+
+Similarly for the weak interaction, force mediated by $W^{\pm}$ or Z.
+
+When drawing diagrams, must remember to conserve Lepton numbers and EM charge.
+
+eg: 
+
+\includegraphics[width=0.3\textwidth]{./ZVertex.pdf}   
+\includegraphics[width=0.6\textwidth]{./WVertex.pdf}   
+
+\includegraphics[width=0.6\textwidth]{./NuScattering.pdf}   
+
+\underline{Lepton Universality}
+All data consistent with hypothesis that interaction of all generations are the same.
+(Modulo mass differences)
+
+\be
+m_z = 90 GeV \hspace*{0.5in} m_W = 80 GeV  \rmt{which} \ne 0 !
+\ee
+
+This has a major implication for the range, or effective strength of the interaction.
+
+
+\includegraphics[width=0.6\textwidth]{./GFermi.pdf}   
+
+}
+\end{document}
+

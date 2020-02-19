@@ -41,7 +41,7 @@ T_{fi} = V_{fi} + \sum_n V_{fn} \frac{1}{E_i-E_n} V_{ni} + ...
 
 \bi
 \item[-] $E_i$- is the initial (= final) energy
-\item[-] $E_f$ - is the energy of the intermediate state
+\item[-] $E_n$ - is the energy of the intermediate state
 \ei
 
 Now, the $\sum_n$ runs over energy thing in the Hilbert (Fock) space, however only certain states will be non-0.
@@ -73,9 +73,9 @@ Note: $E_n \ne E_i$ which is allowed by uncertainty principle.
 
 Look at 
 \be
-\braket{e_3 e_4|V|e_3 \gamma e_2} = \braket{e_4|V|\gamma e_2}
+\braket{e_3 \gamma e_2|V|e_1 e_2} = \braket{\gamma e_3 |V|e_1}
 \ee
-(up to overall normalization from $\braket{e_3|e_3}$.
+(up to overall normalization from $\braket{e_2|e_2}$.
 
 \fbox{\begin{minipage}{0.4\textwidth}
 \be
@@ -85,14 +85,14 @@ Look at
 
 
 \bea
-\braket{e_4|V|\gamma e_2} &=& \frac{e}{2}\int d^3x \braket{e_2 \gamma|\psi_e \phi_\gamma \psi_e|e_4}\\
-&=& e \int d^3x e^{-(p_4- p_2 - p_\gamma)x} = e (2\pi)^3 \delta(p_4- p_2 - p_\gamma)
+\braket{\gamma e_3|V|e_1} &=& e \int d^3x \braket{\gamma e_3|\psi_e \phi_\gamma \psi_e|e_1 }\\
+&=& e \int d^3x e^{-i(p_3 + p_\gamma - p_1)x} = e (2\pi)^3 \delta(p_3 + p_\gamma - p_1)
 \eea
 
 Other product
 
 \be
-\braket{e_3\gamma|V|e_1} = e (2\pi)^3 \delta(p_4- p_2 - p_\gamma)
+\braket{e_4|V|\gamma e_2} = e (2\pi)^3 \delta(p_4 -  p_\gamma - p_2)
 \ee
 
 Combining this gives
@@ -159,62 +159,62 @@ Modern way to interpret same thing ``Feynam rules''
 \item[-] Integrate over all undetermined 4-momenta
 \ei
 
-\lineacross
-
-Example: 
-
-\be
-L = -\frac{1}{2} (\partial_\mu \phi \partial^\mu \phi)^2 - \frac{1}{2}m^2 \phi^2 + \frac{g}{3!}\phi^3
-\ee
-
-Consider cross-section for $\phi\phi\rightarrow\phi\phi$ scattering.
-
-\be
-d\sigma = \frac{1}{(2E_1)(2E_2)|v_1-v_2|} |M|^2 d\Pi_{LIPS}
-\ee
-
-$p_1 + p_2 \rightarrow p_3 + p_4$
-
-
-In COM frame,  $\vec{p}_1 = -\vec{p}_2$ and $\vec{p}_3 = -\vec{p}_4$\\
-Also, $E_1 + E_2 = E_3+E_4 = E_{CM}$
-
-\be
-d\Pi_{LIPS} = (2\pi)^4 \delta^4(\sum p) \frac{d^3p_3}{(2\pi)^3} \frac{1}{2E_3} \frac{d^3p_4}{(2\pi)^3} \frac{1}{2E_4}
-\ee
-(integrating over $\vec{p}_4$)
-
-\be
-= \frac{1}{16\pi^2} d\Omega \int dp_f \frac{p_f^2}{E_3} \frac{1}{E_4} \delta(E_3+E_4-E_{CM})
-\ee
-where $p_f = |\vec{p}_3| = |\vec{p}_4|$ , $E_3 = \sqrt{m^2 + p_f^2}$, and $\int d^3p_f = \int dp_f p_f^2 d\Omega$
-
-Now change variables, 
-
-$p_f \rightarrow x = E_3 + E_4 - E_{CM}$
-
-\be
-dx = \frac{d}{dp_f}(E_3 + E_4 - E_{CM}) dp_f = \frac{p_f}{E_3} + \frac{p_f}{E_4}  = \frac{E_3 + E_4}{E_3E_4} p_f dp_f
-\ee
-
-$\Rightarrow$
-\be
-\frac{dp_f p_f^2}{E_3E_4} = \frac{dx p_f}{ E_{CM}}
-\ee
-
-
-\bea
-d\Pi_{LIPS} &=& \frac{1}{16\pi^2} d\Omega \int_{m_3+m_4-E_{CM}}^{\infty} dx \frac{p_f}{ E_{CM}} \delta(x) \\ 
-&=& \frac{1}{16\pi^2} d\Omega \frac{p_f}{ E_{CM}} \textrm{if $E_{CM} > m_3 + m_4$ else 0 }
-\eea
-
-\be
-d\sigma = \frac{1}{(2E_1)(2E_2)|v_1 - v_2|} \frac{1}{16\pi^2}d\Omega \frac{p_f}{ E_{CM}} |M|^2
-\ee
-
-\be
-|v_1 - v_2| = \left| \frac{|\vec{p}_1|}{E_1}  + \frac{|\vec{p}_2|}{E_2} \right| = p_i \frac{E_{CM}}{E_1 E_2}
-\ee
+%\lineacross
+%
+%Example: 
+%
+%\be
+%L = -\frac{1}{2} (\partial_\mu \phi \partial^\mu \phi)^2 - \frac{1}{2}m^2 \phi^2 + \frac{g}{3!}\phi^3
+%\ee
+%
+%Consider cross-section for $\phi\phi\rightarrow\phi\phi$ scattering.
+%
+%\be
+%d\sigma = \frac{1}{(2E_1)(2E_2)|v_1-v_2|} |M|^2 d\Pi_{LIPS}
+%\ee
+%
+%$p_1 + p_2 \rightarrow p_3 + p_4$
+%
+%
+%In COM frame,  $\vec{p}_1 = -\vec{p}_2$ and $\vec{p}_3 = -\vec{p}_4$\\
+%Also, $E_1 + E_2 = E_3+E_4 = E_{CM}$
+%
+%\be
+%d\Pi_{LIPS} = (2\pi)^4 \delta^4(\sum p) \frac{d^3p_3}{(2\pi)^3} \frac{1}{2E_3} \frac{d^3p_4}{(2\pi)^3} \frac{1}{2E_4}
+%\ee
+%(integrating over $\vec{p}_4$)
+%
+%\be
+%= \frac{1}{16\pi^2} d\Omega \int dp_f \frac{p_f^2}{E_3} \frac{1}{E_4} \delta(E_3+E_4-E_{CM})
+%\ee
+%where $p_f = |\vec{p}_3| = |\vec{p}_4|$ , $E_3 = \sqrt{m^2 + p_f^2}$, and $\int d^3p_f = \int dp_f p_f^2 d\Omega$
+%
+%Now change variables, 
+%
+%$p_f \rightarrow x = E_3 + E_4 - E_{CM}$
+%
+%\be
+%dx = \frac{d}{dp_f}(E_3 + E_4 - E_{CM}) dp_f = \frac{p_f}{E_3} + \frac{p_f}{E_4}  = \frac{E_3 + E_4}{E_3E_4} p_f dp_f
+%\ee
+%
+%$\Rightarrow$
+%\be
+%\frac{dp_f p_f^2}{E_3E_4} = \frac{dx p_f}{ E_{CM}}
+%\ee
+%
+%
+%\bea
+%d\Pi_{LIPS} &=& \frac{1}{16\pi^2} d\Omega \int_{m_3+m_4-E_{CM}}^{\infty} dx \frac{p_f}{ E_{CM}} \delta(x) \\ 
+%&=& \frac{1}{16\pi^2} d\Omega \frac{p_f}{ E_{CM}} \textrm{if $E_{CM} > m_3 + m_4$ else 0 }
+%\eea
+%
+%\be
+%d\sigma = \frac{1}{(2E_1)(2E_2)|v_1 - v_2|} \frac{1}{16\pi^2}d\Omega \frac{p_f}{ E_{CM}} |M|^2
+%\ee
+%
+%\be
+%|v_1 - v_2| = \left| \frac{|\vec{p}_1|}{E_1}  + \frac{|\vec{p}_2|}{E_2} \right| = p_i \frac{E_{CM}}{E_1 E_2}
+%\ee
 }
 \end{document}
 
