@@ -122,7 +122,7 @@ eg:
 \includegraphics[width=0.3\textwidth]{./ZVertex.pdf}   
 \includegraphics[width=0.6\textwidth]{./WVertex.pdf}   
 
-\includegraphics[width=0.6\textwidth]{./NuScattering.pdf}   
+\includegraphics[width=0.3\textwidth]{./NuScattering.pdf}   
 
 \underline{Lepton Universality}
 All data consistent with hypothesis that interaction of all generations are the same.
@@ -134,8 +134,61 @@ m_z = 90 GeV \hspace*{0.5in} m_W = 80 GeV  \rmt{which} \ne 0 !
 
 This has a major implication for the range, or effective strength of the interaction.
 
+\includegraphics[width=0.3\textwidth]{./eeGamma.pdf}   
+By uncertianty principle 
+\bea
+E \times t \sim 1 \\
+E \times x \sim 1 \\
+x \sim \frac{1}{E} \\ 
+x \sim \frac{1}{p_\gamma}
+\eea
 
+$\frac{1}{p_\gamma}$ can be arbitrarily large for small $p_\gamma$.
+
+However, for the weak interaction. 
+\includegraphics[width=0.1\textwidth]{./eeZScattering.pdf}   
+\bea
+x \sim \frac{1}{E_z} \sim \frac{1}{\sqrt{p_z^2 + m_z^2}} 
+\eea
+At max can be of range $\frac{1}{m_z}$
+
+
+\clearpage
+
+At low energies the wavelengths of all particles are large compared  to the range of the wak force ($\frac{1}{m_Z}$)
+
+Can be approximated by a \multiline{0-range \\ ``point''} interaction, whose strength is characterized by the ``Fermi constant'' 
+
+\begin{center}
 \includegraphics[width=0.6\textwidth]{./GFermi.pdf}   
+\end{center}
+
+\bea
+G_F &\sim& 10^{-5}\ \GeV^{-2}\\
+    &=& \frac{g_W^2}{m_W^2}\\
+    &=& \frac{4\pi\alpha_W^2}{m_W^2}
+\eea
+
+where $\alpha_W = 4.26 \times 10^{-3} \sim 0.5 \alpha_{EM}$
+
+Weak and EM interactions of similar strength. 
+
+The apparent difference between Weak and EM interaction is a long distance \underline{illusion}.       
+
+\underline{\underline{Branching Ratios}}
+
+\be
+\rmt{Br}(Z\rightarrow ll) = \frac{\Gamma(Z\rightarrow ll)}{\Gamma_{\rmt{total}}}
+\ee
+
+where $\Gamma(Z\rightarrow ll)$ is the decay rate $\Gamma = \frac{1}{2E}|M|^2d\Pi_{LIPS}$
+
+and $\Gamma_{\rmt{total}} = \sum_i \Gamma(Z\rightarrow XX)$ 
+
+\bea
+\frac{\rmt{Br}(Z\rightarrow ee)}{\rmt{Br}(Z\rightarrow \mu\mu)} = \frac{\Gamma(Z\rightarrow ee)}{\Gamma(Z\rightarrow \mu\mu)} = \frac{\frac{1}{2E}|M(Z\rightarrow ee)|^2d\Pi_{LIPS}}{\frac{1}{2E}|M(Z\rightarrow \mu\mu)|^2d\Pi_{LIPS}} &=&  \frac{|M(Z\rightarrow ee)|^2}{|M(Z\rightarrow \mu\mu)|^2} \\
+&=& \underbrace{1}_{\rmt{by lepton universality}}
+\eea
 
 }
 \end{document}
