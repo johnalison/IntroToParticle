@@ -66,14 +66,15 @@ We will see, this has enourmous implications !!!
 
 Will be considering diagrams with external ``$\gamma$''s (massless spin 1 particles)
 
-\begin{figure}[h]
-\includegraphics[width=0.5\textwidth]{./gammaVertex.pdf}
-\end{figure}
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=0.9\textwidth]{./gammaVertex.pdf}
+\end{minipage} %\hfill
+\begin{minipage}{0.45\textwidth}
 \bea
 &=& iQ(p^\mu + (p^\mu + q^\mu)) \epsilon_\mu    \hspace*{1in} (q^\mu\epsilon_\mu = 0) \\
 &=& iQ 2 p^\mu \epsilon_\mu
 \eea
-
+\end{minipage}
 
 This is the most general form in the ``soft limit''  $q\rightarrow0$
 
@@ -86,21 +87,21 @@ By dimensional analyiss $F(q^2, p^2, p\cdot q) \rightarrow F(\frac{p\cdot q}{m^2
 
 \lineacross
 
-\clearpage
-
 Consider ``Compton Scattering''
-
 
 Start with one type of spin-1 boson and one type of matter particle.
 
 The diagram: 
-\begin{figure}[h]
-\includegraphics[width=0.5\textwidth]{./comptonScattering.pdf}
-\end{figure}
+
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=0.9\textwidth]{./comptonScattering.pdf}
+\end{minipage} %\hfill
+\begin{minipage}{0.45\textwidth}
 \bea
 &=& (iQ)\epsilon^1_\mu(2 p_1^\mu) \frac{i}{(p_1+q_1)^2 - m^2} (iQ)\epsilon^2_\nu (2p_2^\nu)\\
 &=& (-iQ^2) 4 \frac{(p_1\cdot\epsilon^1) (p_2\cdot\epsilon^2)}{m^2 + 2 p_1\cdot q_1 -m^2 }  = \epsilon_1^\mu \epsilon_2^\nu \underbrace{\left( \frac{(-iQ^2) 2 {p_1}_\mu {p_2}_\nu}{p_1\cdot q_1} \right)}_{M_{\mu\nu}}
 \eea
+\end{minipage}
 
 As we said above, Lorentz Invariant $\Rightarrow q_1^\mu q_2^\nu M_{\mu\nu} = 0$\\
 
@@ -108,52 +109,57 @@ But here, $ q_1^\mu q_2^\nu M_{\mu\nu} = (-iQ^2) 2 (p_2\cdot q_2) \ne 0$ !
 
 Looks like we're dead...
 
-\lineacross
 
 \clearpage
 
 However we are forgetting a diagram.
 
-\begin{figure}[h]
-\includegraphics[width=0.5\textwidth]{./comptonScattering2.pdf}
-\end{figure}
-
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=0.9\textwidth]{./comptonScattering2.pdf}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
 \bea
 &=& (iQ)\epsilon^1_\mu(2 p_2^\mu) \frac{i}{(p_2-q_1)^2 - m^2} (iQ)\epsilon^2_\nu (2p_1^\nu)\\
-&=&  \epsilon_1^\mu \epsilon_2^\nu \left( \frac{(-iQ^2) 4 {p_2}_\mu {p_1}_\nu}{-2 p_2\cdot q_1} \right) \underbrace{\sim}_{\textrm{Soft limit $p_1 = p_2$}} \epsilon_1^\mu \epsilon_2^\nu \left( \frac{-(-iQ^2) 2 {p_1}_\mu {p_2}_\nu}{ p_1\cdot q_1} \right) 
+&=&  \epsilon_1^\mu \epsilon_2^\nu \left( \frac{(-iQ^2) 4 {p_2}_\mu {p_1}_\nu}{-2 p_2\cdot q_1} \right) \\ 
+&\underbrace{\sim}_{\textrm{Soft limit $p_1 = p_2$}}& \epsilon_1^\mu \epsilon_2^\nu \left( \frac{-(-iQ^2) 2 {p_1}_\mu {p_2}_\nu}{ p_1\cdot q_1} \right) 
 \eea
+\end{minipage}
 
 and for this diagram, $ q_1^\mu q_2^\nu M_{\mu\nu} = -(-iQ^2) 2 (p_2\cdot q_2)$
 
 So the sum $M_{\mu\nu}^A + M_{\mu\nu}^B$ is Lorentz Invariant. (Residual non Lorentz Invariant pieces of each diagram cancel)
 
-Very good.
+Very good!
 
 \lineacross 
 
-\clearpage
 
 Now lets do the same thing as before, but with many different possible matter particles. 
 
 $i = 1, ... N_{\textrm{matter}}$
 
-\begin{figure}[h]
-\includegraphics[width=0.5\textwidth]{./comptonScattering3.pdf}
-\end{figure}
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=0.9\textwidth]{./comptonScattering3.pdf}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
 \bea
 &=& (iT_{ab})\epsilon^1_\mu(2 p_1^\mu) \frac{i}{\underbrace{(p_1+q_1)^2 - m^2}_{ m_a^2 +2p_1\cdot q_1 - m_b^2}} (iT_{bc})\epsilon^2_\nu (2p_2^\nu)\\
 &=&  \epsilon_1^\mu \epsilon_2^\nu \left( \frac{(-iT_{ab}T_{bc}) 4 {p_1}_\mu {p_2}_\nu}{m_a^2 +2p_1\cdot q_1 - m_b^2} \right) \equiv M^{\mu\nu}_A
 \eea
+\end{minipage}
 
 \clearpage
 
-Other diagram
-\begin{figure}[h]
-\includegraphics[width=0.5\textwidth]{./comptonScattering4.pdf}
-\end{figure}
+Other diagram:
+
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=0.9\textwidth]{./comptonScattering4.pdf}
+\end{minipage} %\hfill
+\begin{minipage}{0.45\textwidth}
 \bea
 &=&  \epsilon_1^\mu \epsilon_2^\nu \left( \frac{(-iT_{ab}T_{bc}) 4 {p_2}_\mu {p_1}_\nu}{m_a^2 - 2p_2\cdot q_1 - m_b^2} \right) \equiv M^{\mu\nu}_B 
 \eea
+\end{minipage} 
 
 Now, if $m_a = m_b = m_c$ then, $ {q_1}_\mu {q_2}_\nu (M^{\mu\nu}_A + M^{\mu\nu}_B) = 0 $ as above \multiline{$m_a^2 - m_b^2 = 0$ \\ relative - size}
 
@@ -165,7 +171,6 @@ $ {q_1}_\mu {q_2}_\nu (M^{\mu\nu}_A + M^{\mu\nu}_B) = -\left[ \frac{(-iT_{ab}T_{
 
 \lineacross
 
-\clearpage
 
 Now allow many differnt \multiline{matter fields \\ (but same mass!)} and many force carriers ``gluons'' 
 
@@ -173,21 +178,26 @@ $i = 1, ... N_{\textrm{matter}}$
 
 $I = 1, ... N_{\textrm{gluons}}$
 
-\begin{figure}[h]
-\includegraphics[width=0.3\textwidth]{./comptonScattering5.pdf}
-\end{figure}
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=0.9\textwidth]{./comptonScattering5.pdf}
+\end{minipage} %\hfill
+\begin{minipage}{0.45\textwidth}
 \bea
 &=&  \epsilon_1^\mu \epsilon_2^\nu \left( \frac{(-iT_{ab}^AT_{bc}^B) 4 {p_1}_\mu {p_2}_\nu}{2p_1\cdot q_1 } \right) \equiv M^{\mu\nu}_A
 \eea
+\end{minipage} %\hfill
 
 and 
 
-\begin{figure}[h]
-\includegraphics[width=0.3\textwidth]{./comptonScattering6.pdf}
-\end{figure}
+
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=0.9\textwidth]{./comptonScattering6.pdf}
+\end{minipage} %\hfill
+\begin{minipage}{0.45\textwidth}
 \bea
 &\underbrace{=}_{\textrm{``soft limit''}}&  \epsilon_1^\mu \epsilon_2^\nu \left( \frac{(-iT_{ab}^BT_{bc}^A) 4 {p_1}_\mu {p_2}_\nu}{- 2p_1\cdot q_1 } \right) \equiv M^{\mu\nu}_B
 \eea
+\end{minipage} %\hfill
 
 Now, 
 
@@ -197,14 +207,16 @@ Now,
 \eea
 $[T^A, T^B]$ not 0 for random Ts. 
 
-In fact 
+In fact, another diagram we are missing:
 
-\begin{figure}[h]
-\includegraphics[width=0.3\textwidth]{./comptonScattering7.pdf}
-\end{figure}
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=0.9\textwidth]{./comptonScattering7.pdf}
+\end{minipage} %\hfill
+\begin{minipage}{0.45\textwidth}
 \be
 = + 2i (q\cdot q) i f^{ABC} T_{ac}^C 
 \ee
+\end{minipage} %\hfill
 
 Sum of all three only lorentz invariant if 
 
