@@ -2,18 +2,19 @@
 \input{latexSetup}
 \usepackage{braket}
 
-\def\ketY{\ensuremath{\ket {\Psi}}}
-\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
-\def\mp{\ensuremath{m_{\textrm{proton}}}}
-\def\rp{\ensuremath{r_{\textrm{proton}}}}
-\def\me{\ensuremath{m_{\textrm{electron}}}}
-\def\aG{\ensuremath{\alpha_G}}
-\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
-\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
-\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
-
-\def\be{\begin{equation*}}
-\def\ee{\end{equation*}}
+\input{../defs.tex}
+%\def\ketY{\ensuremath{\ket {\Psi}}}
+%\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+%\def\mp{\ensuremath{m_{\textrm{proton}}}}
+%\def\rp{\ensuremath{r_{\textrm{proton}}}}
+%\def\me{\ensuremath{m_{\textrm{electron}}}}
+%\def\aG{\ensuremath{\alpha_G}}
+%\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+%\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+%\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
+%
+%\def\be{\begin{equation*}}
+%\def\ee{\end{equation*}}
 
 
 \usepackage{fancyhdr}
@@ -27,7 +28,7 @@
 \fancyhf{}
 \lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
 \chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
-\rhead{\Large Spring 2019} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2019}
 \begin{document}
 \thispagestyle{fancy}
 
@@ -58,83 +59,71 @@
 \vspace{3in}
 
 \clearpage
-\textbf{3)  GZK cutoff energy} \hfill \textit{(5 points)}\\
-High-energy cosmic rays (high energy protons), lose energy by interacting with CMB photons by producing a neutral pion:
-\be
-p+\gamma_{\mathrm{CMB}} \rightarrow p+\pi_0.
-\ee
-The proton energy at which this process can occur is called the GZK cutoff. 
-Estimate the GZK cutoff energy.
-The energy of CMB photons is $10^{-13}$ GeV (which follows from the measurement of CMB temperature of about 2.7 K).
-Use 0.1 GeV for the mass of the pion and 1 GeV for the mass of the proton
-
-\vspace{4in}
-
-
-\textbf{4) Neutrino masses. The seesaw mechanism is a proposed source for neutrino masses. In this scenario the neutrino would get a mass from the following diagram.} \hfill \textit{(2 points)}\\
-Describing the interaction of a neutrino($\nu$) with a Higgs boson ($h$).
-What is the dimension of the coupling constant associated with this diagram ?
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.3\textwidth]{./NuMassDiagram.pdf}
-\end{figure}
-
-
-\clearpage
-
-
-\textbf{5) Why do we label particle states by momentum? } \hfill \textit{(2 points)}\\
-
-\vspace{2in}
-
-
-\textbf{6) Why is the weak interaction so much weaker than the electromagnetic interaction at low energies?}\hfill \textit{(2 points)}\\
-
-\vspace{2in}
-
-
-\textbf{7) What are three restrictions to particle interactions that are a consequence gauge invariance ? }\hfill \textit{(3 points)}\\
-
-
-\vspace{2in}
-
-\clearpage
-
-\textbf{8) Lorentz Transforms } \hfill \textit{(5 points)}\\
+%\textbf{3)  GZK cutoff energy} \hfill \textit{(5 points)}\\
+%High-energy cosmic rays (high energy protons), lose energy by interacting with CMB photons by producing a neutral pion:
+%\be
+%p+\gamma_{\mathrm{CMB}} \rightarrow p+\pi_0.
+%\ee
+%The proton energy at which this process can occur is called the GZK cutoff. 
+%Estimate the GZK cutoff energy.
+%The energy of CMB photons is $10^{-13}$ GeV (which follows from the measurement of CMB temperature of about 2.7 K).
+%Use 0.1 GeV for the mass of the pion and 1 GeV for the mass of the proton
+\textbf{3) Muonic Atoms } \hfill \textit{(7 points)}\\
 \begin{itemize}
-\item[a)] How does a massive particle $\ket{p^\mu,\sigma}$ transform under a general Lorentz transformation ($\Lambda_\mu^\nu$)  ?
-\vspace*{1in}
-\item[b)] How does a massive particle $\ket{p^\mu,\sigma}$ transform under a little group transformation ($W_\mu^\nu$)  ?
-\vspace*{1in}
-\item[c)] How does a mass-less particle $\ket{p^\mu,\sigma}$ transform under a general Lorentz transformation ($\Lambda_\mu^\nu$)  ?
-\vspace*{1in}
-\item[d)] How does a mass-less particle $\ket{p^\mu,\sigma}$ transform under a little group transformation ($W_\mu^\nu$)  ?
-\vspace*{1in}
+\item[a)] The muon was the first elementary particle discovered that does not appear in ordinary atoms.  Negative muons can, however, form muonic atoms by replacing an electron in an ordinary atom. 
+Estimate the size and binding energy of muonic hydrogen in GeV.
+\vspace*{3in}
+\item[b)] What is the ratio of the muonic hydrogen binding energy to that of regular hydrogen?
+\vspace*{3in}
 \end{itemize}
 
 
 
+\textbf{4) Why do we label particle states by momentum? } \hfill \textit{(2 points)}\\
+
+\vspace{2in}
+
 
 \clearpage
 
-\textbf{9) $ee\rightarrow\tau\tau$ scattering } \hfill \textit{(5 points)}\\
-\begin{itemize}
-\item[a)]{
-At high energy ($E_{CM} >> m_\tau$), what is the dependence of the $ee\rightarrow\tau\tau$ cross section on $E_{CM}$ ?
-\vspace*{1in}
-}
+\textbf{5) What are two restrictions to particle interactions that are a consequence gauge invariance ? }\hfill \textit{(2 points)}\\
 
-%\item[b)]{
-%At high energy ($E_{CM} >> m_\tau$), derive the dependence of the cross section on scattering angle $\theta$.
-%\vspace*{4in}
+
+\vspace{2in}
+
+
+\textbf{6) Lorentz Transforms } \hfill \textit{(4 points)}\\
+\begin{itemize}
+\item[a)] How does a \textbf{massive} particle $\ket{p^\mu,\sigma}$ transform under a little group transformation ($W_\mu^\nu$)  ?
+\vspace*{1in}
+\item[b)] How does a \textbf{massless} particle $\ket{p^\mu,\sigma}$ transform under a little group transformation ($W_\mu^\nu$)  ?
+\vspace*{1in}
+\item[c)] How does a \textbf{massive} particle $\ket{p^\mu,\sigma}$ transform under a general Lorentz transformation ($\Lambda_\mu^\nu$) ?
+\vspace*{1in}
+\item[d)] How does a \textbf{massless} particle $\ket{p^\mu,\sigma}$ transform under a general Lorentz transformation ($\Lambda_\mu^\nu$)?
+\end{itemize}
+
+
+\clearpage
+
+%
+%\textbf{9) $ee\rightarrow\tau\tau$ scattering } \hfill \textit{(5 points)}\\
+%\begin{itemize}
+%\item[a)]{
+%At high energy ($E_{CM} >> m_\tau$), what is the dependence of the $ee\rightarrow\tau\tau$ cross section on $E_{CM}$ ?
+%\vspace*{1in}
 %}
-
-\item[b)]{
-Sketch a graph of $\frac{\sigma(ee\rightarrow\tau\tau)}{\sigma(ee\rightarrow\mu\mu)}$ as a function of $E_{CM}$ from $2\times m_{\mu}$ to 1 TeV (= 1000 GeV).
-\vspace*{1in}
-}
-\end{itemize}
+%
+%%\item[b)]{
+%%At high energy ($E_{CM} >> m_\tau$), derive the dependence of the cross section on scattering angle $\theta$.
+%%\vspace*{4in}
+%%}
+%
+%\item[b)]{
+%Sketch a graph of $\frac{\sigma(ee\rightarrow\tau\tau)}{\sigma(ee\rightarrow\mu\mu)}$ as a function of $E_{CM}$ from $2\times m_{\mu}$ to 1 TeV (= 1000 GeV).
+%\vspace*{1in}
+%}
+%\end{itemize}
 
 %scalar QED. treat electron as scalar, photon as massless spin 1 particle
 %  ee->ee scattering: Draw diagrmas, what are the associated matrix elements.
@@ -144,33 +133,33 @@ Sketch a graph of $\frac{\sigma(ee\rightarrow\tau\tau)}{\sigma(ee\rightarrow\mu\
 
 % work out the differential cross section ee->tautau in the massless limit.
 
-\clearpage
+%\clearpage
+%
+%\textbf{10) Muon decays: } \hfill \textit{(10 points)}\\
+%\begin{itemize}
+%  \item[a)]{ The muon decays via the weak interaction,  At low energy ($E << m_W$), this can be approximated as a point-like interaction. 
+%  Draw the diagram describing muon decay to an electron assuming a point-like weak interaction.
+%\vspace*{1.5in}
+%}
+%  \item[b)]{ What are the dimensions of the coupling constant, associated to this diagram  ?
+%\vspace*{1.0in}
+%  }
+%  \item[c)] How does the decay rate $\Gamma$ (decays/unit time)  depend on the muon mass ? 
+%\vspace*{1.0in}
+%  \item[d)]{ The muon has a mass of $\sim$0.1 GeV and a lifetime of $\sim 1 \mu s$. The tau lepton has a mass of {$\sim$1 GeV}. Estimate the lifetime of the tau lepton in $\mu s$.
+%\vspace*{2.4in}
+%}
+%  \item[e)] {Suppose that the photon could couple at the same vertex to the muon and the electron. Then the muon could decay as $\mu\rightarrow e \gamma$. 
+%  Estimate the ratio of the $\mu$ lifetime in this world to that in our world without this interaction.
+%  \vspace*{3.0in}
+%  }
+%\end{itemize}
 
-\textbf{10) Muon decays: } \hfill \textit{(10 points)}\\
-\begin{itemize}
-  \item[a)]{ The muon decays via the weak interaction,  At low energy ($E << m_W$), this can be approximated as a point-like interaction. 
-  Draw the diagram describing muon decay to an electron assuming a point-like weak interaction.
+\textbf{7) Can the SM have interactions between fermions and massless particles with Spin 2 ? If not, why not.  What about interactions between mass-less Spin 3 particles and fermions ? If not, why not. }\hfill \textit{(2 points)}\\
+
 \vspace*{1.5in}
-}
-  \item[b)]{ What are the dimensions of the coupling constant, associated to this diagram  ?
-\vspace*{1.0in}
-  }
-  \item[c)] How does the decay rate $\Gamma$ (decays/unit time)  depend on the muon mass ? 
-\vspace*{1.0in}
-  \item[d)]{ The muon has a mass of $\sim$0.1 GeV and a lifetime of $\sim 1 \mu s$. The tau lepton has a mass of {$\sim$1 GeV}. Estimate the lifetime of the tau lepton in $\mu s$.
-\vspace*{2.4in}
-}
-  \item[e)] {Suppose that the photon could couple at the same vertex to the muon and the electron. Then the muon could decay as $\mu\rightarrow e \gamma$. 
-  Estimate the ratio of the $\mu$ lifetime in this world to that in our world without this interaction.
-  \vspace*{3.0in}
-  }
-\end{itemize}
 
-\textbf{11) Can the SM have interactions between fermions and massive particles with Spin 3 ? If not, why not.  What about interactions between mass-less Spin 3 particles and fermions ? If not, why not. }\hfill \textit{(2 points)}\\
-
-\vspace*{1.5in}
-
-\textbf{12) Yukawa’s Theory.}\hfill \textit{(2 points)}
+\textbf{8) Yukawa’s Theory.}\hfill \textit{(2 points)}
 In the 1930s, Hideki Yukawa predicted the existence of a new particle, now called the pion, which is responsible for binding protons and neutrons together in atomic nuclei. 
 Estimate the mass of the pion from the assumed range of the force. ($10^{-15}$ meters). 
 Express the mass in GeV.
@@ -179,36 +168,81 @@ Express the mass in GeV.
 
 
 
-\textbf{13) List or draw a diagram of the particles in the Standard model. } \hfill \textit{(3 points)}\\
-What is the spin of each particle ?
+%\textbf{13) List or draw a diagram of the particles in the Standard model. } \hfill \textit{(3 points)}\\
+%What is the spin of each particle ?
 
-\vspace*{3in}
+%\vspace*{3in}
 
-\textbf{14)  How many generators does the Lorentz group have ? }\hfill \textit{(2 points)}\\
+\textbf{9)  How many generators does the Lorentz group have ? }\hfill \textit{(3 points)}\\
 What transformations do they correspond to ?
 
 \vspace*{2in}
 
-\textbf{15) Neutrino interactions } \hfill \textit{(2 points)}\\
-Assuming lepton universality, would you expect a difference between the way $\nu_e$ and $\nu_\mu$ interact with matter ?
-Justify your answer by drawing the leading order diagrams for $\nu_e + e \rightarrow \nu_e + e$  and $\nu_\mu + e \rightarrow \nu_\mu + e$.
+\textbf{10) Fields } \hfill \textit{(2 points)}\\
+In QFT why do we write interactions in terms of fields (Fourier transforms of creation and annihilation operators)  instead  of the creation and annihilation operators directly?
 
-\vspace*{0.25in}
+\vspace*{2in}
 
+\textbf{11) Why is the weak interaction so much weaker than then electromagnetic interactions at low energies? } \hfill \textit{(2 points)}\\
 
 \clearpage
 
-\textbf{16) A new force. } \hfill \textit{(5 points)}\\
-Assume there is another force of nature felt by electrons associated with the exchange of a new X boson of mass 1 TeV (= 1000 GeV).
-\begin{itemize}
-\item[a)]{ Estimate an upper limit on the range of this new force in meters.
-\vspace{2in}
-}
-%\item[b)]{ Assume muons also interact with this new boson. How could you determine the spin of X ?}
-\item[b)]{ Assume that this new X boson could also decay to spin-1/2 dark matter particles $\psi_{DM}$. At low energies (<< 1 TeV) the X interaction can be described by a point-like interaction. Estimate the coupling constant associated to dark matter scattering $e \psi_{DM} \rightarrow e \psi_{DM}$.   (Assume the X coupling at high energies is the same as for EM)  }
-\vspace*{2in}
-\item[c)]{ Assume there was a direct $X\rightarrow e\mu$ interaction. This would allow the muon to decay via $\mu^- \rightarrow e^-e^+e^-$. Draw the corresponding diagram and estimate the impact of the muon lifetime from this process.  How does it compare to the lifetime in the standard model?     }
-\end{itemize}
+
+\textbf{12) Lagrangians } \hfill \textit{(3 points)}\\
+Consider the following Lagrangian:
+\be
+L = \frac{1}{2} (\partial_\mu\phi)(\partial^\mu\phi) - \frac{m^2}{2}\phi^2 + \bar{\psi}[i\gamma_\mu\partial^\mu]\psi + g_1 \phi \psi \psi + g_2 \psi \psi \psi \psi + g_3 \phi \phi \phi \phi
+\ee
+
+\bi
+\item[a)] What is the dimension of $g_1$ ? 
+\vspace*{1in}
+\item[b)] What is the dimension of $g_2$ ? 
+\vspace*{1in}
+\item[c)] What is the dimension of $g_3$ ? 
+\vspace*{1in}
+\ei
+
+\clearpage
+
+\textbf{13) Feynman Diagrams }\hfill \textit{(15 points)}\\
+Fermions of type $x$ scatter into fermions of type $y$ through the diagram shown below, where $S$ is a massive scalar. 
+At low energies ($P_x P_y << m_S$) the cross section for this process is given by $\sigma_0$.
+Assume $m_x$ and $m_y$ are both negligible. 
+\bc
+\includegraphics[width=0.2\textwidth]{./xxToyy.pdf}
+\ec
+\bi
+\item[a)] How does this cross section change if the ``S-charge'' of the $x$ particle is doubled ? \\ (S-charge being the $x\bar{x} \rightarrow S$ coupling) 
+\vspace*{1.5in}
+\item[b)] How does the cross section change if the mass of the $S$-particle is doubled ?
+\vspace*{1.5in}
+\item[c)] At low energies, how does the cross section depend on the center of mass energy of the scattering $E_{CM}$ ? 
+\textit{(Hint: At low energies you can think of the $xx \rightarrow yy$ scattering as described by an effective 4-point $xxyy$ interaction, as Fermi did for neutrino scattering.)}
+\ei
+
+
+
+
+%Assuming lepton universality, would you expect a difference between the way $\nu_e$ and $\nu_\mu$ interact with matter ?
+%Justify your answer by drawing the leading order diagrams for $\nu_e + e \rightarrow \nu_e + e$  and $\nu_\mu + e \rightarrow \nu_\mu + e$.
+%
+%\vspace*{0.25in}
+
+
+%\clearpage
+%
+%\textbf{16) A new force. } \hfill \textit{(5 points)}\\
+%Assume there is another force of nature felt by electrons associated with the exchange of a new X boson of mass 1 TeV (= 1000 GeV).
+%\begin{itemize}
+%\item[a)]{ Estimate an upper limit on the range of this new force in meters.
+%\vspace{2in}
+%}
+%%\item[b)]{ Assume muons also interact with this new boson. How could you determine the spin of X ?}
+%\item[b)]{ Assume that this new X boson could also decay to spin-1/2 dark matter particles $\psi_{DM}$. At low energies (<< 1 TeV) the X interaction can be described by a point-like interaction. Estimate the coupling constant associated to dark matter scattering $e \psi_{DM} \rightarrow e \psi_{DM}$.   (Assume the X coupling at high energies is the same as for EM)  }
+%\vspace*{2in}
+%\item[c)]{ Assume there was a direct $X\rightarrow e\mu$ interaction. This would allow the muon to decay via $\mu^- \rightarrow e^-e^+e^-$. Draw the corresponding diagram and estimate the impact of the muon lifetime from this process.  How does it compare to the lifetime in the standard model?     }
+%\end{itemize}
 
 
 
