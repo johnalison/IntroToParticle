@@ -199,7 +199,7 @@ where $m_T = \sqrt{p_T^2 + m^2}$ is called the ``transverse mass'', invariant to
 
 \lineacross
 
-In order to be detected, a partilce must undergo an interaction with detector material.
+In order to be detected, a particle must undergo an interaction with detector material.
 (Again this is an enormous subject, we will only scratch surface)
 
 
@@ -207,12 +207,138 @@ Typically talk abou thow partilces loose energy to the detectors.
 
 Three key mechanisms:
 
+{\Large
 \bi
 \item[-] Ionisation Energy loss 
 \item[-] Radiation Energy loss 
 \item[-] Nuclear Interactions
 \ei
+}
 
+-) Ionisation and Radiation energy loss are long range interactions from the EM force
+
+-) Nuclear Interactions are from the strong or weak force, both short range
+
+-) Ionisation Energy Loss is interaction with electrons in atoms.
+
+-) Radiation Energy Loss and Nuclear Interactions Energy Loss is interaction with atomic nucleus.
+
+
+\underline{Two Basic Types of Detectors}
+
+\textbf{\underline{Trackers} }
+\bi
+\item[-] Sensitive to ionization loss
+\item[-] Non desctructive $\vec{p}_{in} \sim \vec{p}_{out}$
+\item[-] Small fraction of energy deposited indicates particle position
+\ei
+
+
+\textbf{\underline{Calorimeters} }
+\bi
+\item[-] Extract potential energy from Radiation or Nuclear Interactions 
+\item[-] Destructive $p_{out}$ = 0
+\item[-] Use ionization loss to measure energy of radiation / nuclear interactions 
+\ei
+
+
+\lineacross
+
+\underline{Ionization}
+
+Fast moving particle that interacts electromagnetically with  an electron in an atom.
+Partilce kicks out electrons, looses energy.
+
+\bc
+\includegraphics[width=\textwidth]{./DeDx.pdf}
+\ec
+
+Ionization dominates as long as particles are not too relativistic: $\beta\gamma \lesssim 1000 $
+
+Above this a new effect takes over ... 
+
+\clearpage
+
+\lineacross
+
+\underline{Radiation Loss}
+
+At very high energy.
+\bc
+\includegraphics[width=0.6\textwidth]{./Brem.pdf}
+\ec
+The photon carries a large fraction of the initial energy.
+
+``Bremsstrahlung'' Radiation (German for breaking)
+
+
+Same effect works for photons
+\bc
+\includegraphics[width=0.8\textwidth]{./PairProduction.pdf}
+\ec
+
+Involve interactions with nuclei to conserve four-momentum.
+
+
+These processes occur infrequently, but are very significant events when they occur.
+(Contrasted to Ionization Energy Loss which is $\sim$ continuous and minor)
+
+So here makes sense to talk about the probability for energy loss, not the average along path.
+
+We will skip the details, 
+
+Bottom line:
+
+\be
+\frac{dE}{dx} \sim - \frac{E}{x_0}
+\ee
+
+$x_0$ - lenth scale (``radiation length'') distance over which electron looses $e^{-1}$ of its energy. O(cm)
+
+
+\bc
+\includegraphics[width=0.8\textwidth]{./DeDxRadiation.pdf}
+\ec
+
+Similar story for photons. 
+
+$E_c$ - critical energy O($10^{-2} - 10^{-1}$ GeV)
+
+\begin{minipage}{0.5\textwidth}
+\bc
+\includegraphics[width=0.8\textwidth]{./EMShower.pdf}
+\ec
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\bc
+\textbf{``Electromagnetic Shower''}
+\ec
+
+-) For each e (or $\gamma$) with $E > E_c$ travels $\sim 1 x_0$ then gives up 1/2 energy to $\gamma$ (or ee).\\
+
+-) e's, $\gamma$'s with energy $< E_c$ get absorbed via ionization\\
+
+If initial energy $E_0 >> E_c$ then after t-radiation lengths there will be $2^t$ partilces. 
+Approximately equal e's and $\gamma$'s each with energy $E(t) \sim \frac{E_0 }{2^t}$.
+
+\end{minipage} 
+
+Shower will stop growing when 
+
+\be
+E(t) \simeq E_c \equiv E(t_{max})
+\ee
+
+$t_{max}$ is point in shower with max particles
+
+
+\be
+t_{max} = \frac{\ln \frac{E_0}{E_c}}{\ln 2}
+\ee
+
+$\Rightarrow$ shower depth grows as $\ln$
+
+$N_{max}$ given by $E_0/E_c$
 
 }
 \end{document}
