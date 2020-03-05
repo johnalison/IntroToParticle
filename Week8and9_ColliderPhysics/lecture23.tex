@@ -1,0 +1,220 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+\usepackage{tcolorbox}
+
+\input{../defs}
+
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2020}
+\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 23}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+
+\fbox{\begin{minipage}{\textwidth}
+\textbf{Q: What is the flux factor at the LHC ?}\\
+
+Flux Factor also called $L$ ``instantaneous luminosity''  or just ``luminosity''
+
+\be
+L = n_A n_B A l |v_A - v_B| = \frac{N_A N_B |v_A - v_B|}{\underbrace{Vol}_{\rmt{Vol. of bunch $= A_B \times l$}}}
+\ee
+
+Now $\sigma$ is fixed, so to maximize number of events collected, need to maximize $L$
+
+\bi
+\item[-] $N_A = N_B = N = 10^{11}$ (fixed)
+\item[-] $|v_A - v_B| = 2c$ can get much higher!
+\item[-] Vol $\sim A_B \cdot l$ 
+\ei
+
+At the LHC, acceleration is done with radio-frequency EM feild that fixes $l$ (Protons ride in the troughs of this feild)
+The wavelength of this feild sets $l \sim \frac{c}{2 \times 400\ \rmt{MHz}} \sim \frac{3}{4} m$ 
+
+The one handle we have is $A_B$, focusing magnets (quadruples) act like a lens near the collision points to squeeze the beam.
+So far focusing magnets have achieved squeezing down to the radii of 10 $\mu m$! 
+Width of a human hair. 
+
+\be
+A_B \sim 10^{-10}\ m^2
+\ee
+
+$\Rightarrow$  
+
+\be
+L = 2c \frac{N^2}{lA} \sim 10^{-36} cm^{-2}s^{-1}
+\ee
+
+\end{minipage}}
+
+\clearpage
+
+\underline{Talk a bit about Accelerators}
+
+Particles moving in a circle are accelerating.
+
+Accelerating charged partilces ratiate. (synchrotron radiation)
+
+Turns out, power lost to synchrotron radiation given by: 
+
+\be
+P \sim 0.3 \left(\frac{1\ \rmt{km}}{R} \right)^2  \left(\frac{E}{m} \right)^4  \frac{\rmt{eV}}{s} 
+\ee
+
+For LHC:
+\bi
+\item[-] $\frac{E}{m} \sim 7000$
+\item[-] $R_{LHC} \sim \frac{27 \rmt{km}}{2\pi}$
+\ei
+
+\be
+P \sim 10^{5} \frac{\rmt{GeV}}{\rmt{s}}
+\ee
+
+This is a major drawback of a circular collider. 
+
+To keep  protins in circle need thosands of superconducting  bending magnets. 
+
+
+\be
+|\vec{B}| = \frac{|\vec{p}|}{e R_{curv}} \sim 3 \frac{E(\rmt{TeV})}{R (\rmt{km})} \rmt{Tesla}
+\ee
+
+
+$\Rightarrow$
+
+\be
+E(\rmt{TeV}) \sim \frac{1}{3} B(T) R(km)
+\ee
+
+Most restrictive constraint on increasing the energy at the LHC.
+
+Modern superconducting magnets have max strength of $\sim$ 20 T. 
+
+With current technologies need larger ring to go to significantly higher energy. 
+
+Efforts now underway for $\sim 100$ TeV collider (100 km in Geneva)
+
+China also planning something similar.
+
+\lineacross
+
+\clearpage
+
+\underline{Bunches}
+
+Lets try to build some intuition around the bunches.  
+
+Say earlier that they have the diminsions of a long strand of human hair.
+
+\bi
+\item[-] $l \sim 0.40\ \m$
+\item[-] $A_B \sim (10^{-3}\ \m)^2$
+\item[-] $\rmt{vol}_{\rmt{bunch}} \sim 10^{-6}\ \m^3$
+\item[-] $\rmt{vol}_{\rmt{protons}} \sim 10^{11} r_p^3 \sim 10^{-34}\ \m^3$
+\item[-] $\frac{vol_{proton}}{vol_{bunch}} \sim 10^{-28} $
+\ei
+Proton beams are mostly empty
+
+$\Rightarrow$ Hard to get them to collide.
+
+
+\underline{Focusing Magnets squeeze beam size}
+
+$A_B \sim (10^{-5}\ \m)^2 \Rightarrow v_{bunch} \sim 10^{-10} \m^3$
+
+Decrease in $Vol_{bunch}$ by $10^4$ critical for physics program at LHC.
+
+\lineacross
+
+\underline{Detectors}
+
+Once bunches are accelerated they are made to collide (Every 25ns at LHC)
+
+When protons collide and exchange large amount of momentum, create shower of partilces from collision point.
+
+\be
+\underbrace{\ket{p_1 p_2}_{I}}_{t = -\infty} \rightarrow \underbrace{\ket{ \{p_f^i ... p_f^n\}}}_{t = +\infty}
+\ee
+
+Dynamics of the collision is imprinted on the final state particles.
+
+eg:
+\bi
+\item[-] Energy Conservation
+\item[-] Momentum Conservation
+\item[-] Charge Conservation 
+\item[-] etc
+\ei
+
+We want to measure as many particles and properties as possible.
+
+``Easy'' to measure \multiline{$E$ and $\vec{p}\ (\Rightarrow m = \sqrt{E^2 - p^2})$ \\ charge of leptons and hadrons}
+
+``Hard'' to measure \multiline{Angular $\vec{p}$ or Spin \\ Charge of quarks}
+
+Detectors not built to be sensitive to spins.
+
+
+\underline{Coordinates}
+
+\bc
+\includegraphics[width=\textwidth]{./Coordinates.pdf}
+\ec
+
+``pseudo-rapidity''  (Explore this in HW)
+\be
+\eta = -\ln \tan \frac{\theta}{2}
+\ee
+
+``rapidity''  
+\be
+y  = \frac{1}{2} \ln \frac{E+p_z}{E-p_z}
+\ee
+
+$\eta = y$ for massless particles.
+
+
+We know $p_T^I$ = 0, we dont know $p_Z^I$, so we are often interested in variables (like $p_T$) that are independent of Boosts along z.
+
+
+Massless particle:  $p^\mu = p_T(\cosh \eta, \cos \phi, \sin \phi, \sinh \eta)$\\
+
+Massive particle:  $p^\mu = (m_T \cosh y, p_T \cos \phi, p_T sin \phi, m_T \sinh y)$\\
+where $m_T = \sqrt{p_T^2 + m^2}$ is called the ``transverse mass'', invariant to boosts along z
+
+\lineacross
+
+In order to be detected, a partilce must undergo an interaction with detector material.
+(Again this is an enormous subject, we will only scratch surface)
+
+
+Typically talk abou thow partilces loose energy to the detectors. 
+
+Three key mechanisms:
+
+\bi
+\item[-] Ionisation Energy loss 
+\item[-] Radiation Energy loss 
+\item[-] Nuclear Interactions
+\ei
+
+
+}
+\end{document}
+
+
