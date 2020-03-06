@@ -1,0 +1,216 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+\usepackage{tcolorbox}
+
+\input{../defs}
+
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2020}
+\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 24}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+\bc
+\includegraphics[width=0.8\textwidth]{./DeDxRadiation.pdf}
+\ec
+
+Similar story for photons. 
+
+$E_c$ - critical energy O($10^{-2} - 10^{-1}$ GeV)
+
+\begin{minipage}{0.5\textwidth}
+\bc
+\includegraphics[width=0.8\textwidth]{./EMShower.pdf}
+\ec
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\bc
+\textbf{``Electromagnetic Shower''}
+\ec
+
+-) For each e (or $\gamma$) with $E > E_c$ travels $\sim 1 x_0$ then gives up 1/2 energy to $\gamma$ (or ee).\\
+
+-) e's, $\gamma$'s with energy $< E_c$ get absorbed via ionization\\
+
+If initial energy $E_0 >> E_c$ then after t-radiation lengths there will be $2^t$ particles. 
+Approximately equal e's and $\gamma$'s each with energy $E(t) \sim \frac{E_0 }{2^t}$.
+
+\end{minipage} 
+
+Shower will stop growing when 
+
+\be
+E(t) \simeq E_c \equiv E(t_{max})
+\ee
+
+$t_{max}$ is point in shower with max particles
+
+
+\be
+t_{max} = \frac{\ln \frac{E_0}{E_c}}{\ln 2}
+\ee
+
+$\Rightarrow$ shower depth grows as $\ln$
+
+$N_{max}$ given by $E_0/E_c$
+
+\clearpage
+
+For heavier particles, Brem does not kick in until much higher energies.
+
+eg: $E_c \sim 3000$ GeV for a muon in lead.
+
+\lineacross
+
+\underline{\textbf{Nuclear Interactions} }
+
+If the particle traversing the medium is a hadron, can interact via the strong interaction.
+
+eg: $\pi^\pm$ moving through detector material will suffer an inelastic collision in distance $\lambda_i$
+
+This collision takes energy from $\pi$ and converts it to additional hadrons (charged and neutral)
+
+Leads to what is called ``Hadronic Shower'' - same basic idea as an EM shower, but much more complex.
+Involves a variety of processes at different length scales
+
+\bc
+\includegraphics[width=0.8\textwidth]{./HadronicShower.pdf}
+\ec
+
+At the inelastic collision, typically produce 
+\bi
+\item[$\pi^+$] $\sim 1/3$ of the time. Travels like a MIP w/scale $\lambda_i$
+\item[$\pi^0$] $\sim 1/3 \leftarrow Br(\gamma\gamma) \sim 100\%\ \rmt{travels 10nm} \Rightarrow $ EM shower w/ scale $X_0$
+\item[$\pi^-$] $\sim 1/3$ 
+\ei
+
+Both $\pi^\pm$ travel like MIPs of order $\lambda_i$.
+$\Rightarrow$ Hadronic showers develop over larger distances and contain much more fluctuations.
+
+\lineacross
+
+\textbf{\underline{Trackers}}
+
+Ionization detectors in a magnetic field.
+
+Charged particles traveling in a magnetic field move in circles. 
+
+\be
+\frac{1}{R[\m]} = Q \cdot B[T] \cdot \frac{0.3}{p_T[\GeV]}
+\ee
+
+Particle positions are measured by finely etched silicon sensors.\\
+$\sim10 \mu\m$ resolution
+
+We measure the curvature $\sim \frac{1}{R} \sim \frac{1}{\pt}$
+
+\begin{minipage}{0.3\textwidth}
+\bc
+\includegraphics[width=0.9\textwidth]{./Sagitta.pdf}
+\ec
+\end{minipage}\hfill
+\begin{minipage}{0.7\textwidth}
+\be
+s  = \frac{qBL^2}{8\pt}
+\ee
+(More important to have bigger length than larger B)
+
+\be
+\Rightarrow \Delta \frac{1}{\pt} = \frac{\Delta \pt }{\pt^2}
+\ee
+
+So the relative uncertianty in \pt\ degrades with \pt.
+\end{minipage}
+
+\underline{LHC} typical performance
+
+\be
+\frac{\Delta \pt}{\pt} \sim (\rmt{few \%}) \frac{\pt}{100\ \GeV}
+\ee
+
+\clearpage
+\textbf{\underline{EM Calorimeter}}
+
+Contains and measures e's $\gamma$'s and $\pi^0\rightarrow\gamma\gamma$.
+\bc
+\includegraphics[width=0.5\textwidth]{./EMCalorimeter.pdf}
+\ec
+
+Total depth $\sim 20 X_0$ (Enough to contain high \pt\ showers)
+
+\begin{minipage}{0.3\textwidth}
+\bc
+\includegraphics[width=0.9\textwidth]{./SamplingCalo.pdf}
+\ec
+\end{minipage}\hfill
+\begin{minipage}{0.7\textwidth}
+Only energy deposited in Si/LAr  is measured. 
+
+Rest is lost in uninstrumented lead.
+\end{minipage}
+
+So only a small fraction of the total EM shower energy is collected (measured).
+
+$E \sim N_c$ amount collected scales like the number of electrons produced
+
+\be
+\frac{\Delta E}{E} \sim \frac{\Delta N_c}{N_c} \sim \frac{1}{\sqrt{N_c}} \sim \frac{1}{\sqrt{E}}
+\ee
+
+At the LHC typical performance
+
+\be
+\frac{\Delta E}{E} \sim  \frac{10\ \%}{\sqrt{E}}
+\ee
+
+Unlike trackers the relative energy measurement improves with E.
+
+\clearpage
+\textbf{\underline{Hadronic Calorimeter}}
+
+Compare shooting a $\pi^\pm$ in the detector instead of an electron.
+
+\bi
+\item[-]$\pi$ will travel further because it has to interact via the strong force (shorted range than EM)
+\item[-]$\pi$ will make other $\pi^\pm$ and $\pi^0$
+\item[-]Compared to electrons, make less particles (fewer at fixed E) b/c $\pi$ mass is bigger.
+\item[-]More varied showers depending on what particles are produced $\pi^\pm$ vs $\pi^0$.
+\ei
+
+$\Rightarrow$ hadronic calorimeters need to be bigger, and will measure showers that have more fluctations.
+
+At the LHC typical performance worse than for EM calorimeters
+
+\be
+\frac{\Delta E}{E} \sim  \frac{50\ \%}{\sqrt{E}}
+\ee
+
+Relative energy measurement also improves with E.
+
+
+\textbf{\underline{Muon Detectors}}
+
+Put tracking detectors outside of the calorimeters. 
+
+If any charged particle makes it through $\sim3\m$ of lead it has to be a muon. 
+
+$\mu$ \multiline{no strong interaction \\ only rarely radiate $\gamma$s (below $\sim 3$ TeV)
+
+}
+\end{document}
+
+
