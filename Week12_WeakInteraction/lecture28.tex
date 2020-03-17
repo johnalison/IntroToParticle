@@ -9,6 +9,8 @@
 
 
 \usepackage{fancyhdr}
+\usepackage{ dsfont }
+
 
 \fancyhf{}
 \lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2020}
@@ -39,7 +41,7 @@ Put this into L and got
 L' = \frac{1}{2}(\partial \epsilon)^2 + \frac{1}{2}(\partial \eta)^2 - v^2\lambda\eta^2 + \frac{1}{2}e^2v^2A^2 - evA_\mu\partial^\mu\epsilon - \frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \rmt{(interactions)}
 \ee
 
-then we said that this looked like there was unphysical Dof and we starter over with 
+then we said that this looked like there was nonphysical DoF and we starter over with 
 \be
 \phi = (v+h) e^{i\theta/v}
 \ee
@@ -66,11 +68,11 @@ $\Rightarrow$ I only have the $\frac{1}{2}e^2v^2A^2$ term.
 
 Now that we have seen how we can use the Higgs Mechanism to generate masses for gauge bosons, we will see it works in the SM.
 
-We will take the $L_{SM}$ with 3 massless spin-1 bosons and add a scalar (Higgs) w/the ``Mexican hat'' potential $\mu^2 < 0 $.
+We will take the $L_{SM}$ with 3 mass-less spin-1 bosons and add a scalar (Higgs) w/the ``Mexican hat'' potential $\mu^2 < 0 $.
 
 So we first need to talk about the initial $L_{SM}$ w/o the Higgs. 
 
-This will lead us to talk about the Weak interaction group and ``Electroweak'' unification. 
+This will lead us to talk about the Weak interaction group and ``Electro-weak'' unification. 
 (Major step forward in physics) 
 
 \textbf{\underline{\underline{QED}} (EM)}
@@ -80,7 +82,7 @@ Gauge invariance led us to the $L_{QED}$
 \be
 \psi_e(x) \rightarrow e^{iq\alpha(x)} \psi_e(x)
 \ee
-for arbitrary $\alpha(x)$ which is function of spacetime.
+for arbitrary $\alpha(x)$ which is function of space-time.
 
 We say that this is a ``local U(1) phase transformation'' (a number is a generator of U(1))
 
@@ -88,7 +90,7 @@ What will it take to make physics invariant under this transformation ?
 
 Couple way to think about this.
 
-Lets see what to the equations of motion (here the dirac equation)
+Lets see what to the equations of motion (here the Dirac equation)
 
 \be
 (i\gamma^\mu \partial_\mu - m) \psi_e = 0 \rightarrow (i\gamma^\mu \partial_\mu - m) e^{iq\alpha(x)} \psi_e = (i\gamma^\mu \partial_\mu - q\gamma^\mu \partial_\mu \alpha - m) e^{iq\alpha(x)} \psi_e = 0
@@ -121,9 +123,9 @@ So the new ``Dirac Eq'' (really the D.E. with an interaction to a gauge boson) i
 i\gamma^\mu \left[ (\partial_\mu + iq A_\mu ) - m \right] \psi_e = 0
 \ee
 This is invariant under $\psi \rightarrow e^{iq\alpha(x)} \psi$. 
-The derivitive term brings down a piece that is exactly canceled by the $A_\mu$ transformation.
+The derivative term brings down a piece that is exactly canceled by the $A_\mu$ transformation.
 
-This of $(\partial_\mu + iq A_\mu )$ as a ``fancy'' derivitive $D_\mu = (\partial_\mu + iq A_\mu )$ then goet back the same for as the Dirac Eq with $\partial_\mu \rightarrow D_\mu$
+This of $(\partial_\mu + iq A_\mu )$ as a ``fancy'' derivative $D_\mu = (\partial_\mu + iq A_\mu )$ then get back the same for as the Dirac Eq with $\partial_\mu \rightarrow D_\mu$
 
 
 \be
@@ -139,7 +141,95 @@ In a world with out the weak interaction this would be quantum electrodynamics (
 
 \underline{Now to the weak interaction ...} (GSW)
 
+Will not cover it in detail here, but suffice it to say that QED is fantastically successful, by far the quantitatively most successful theory in human history.
 
+So would like to follow QED as closely as possible (also what else could we possible do?) 
+
+So lets do the same thing, but pick a different group.
+
+SU(2) is a group we looked at before
+
+Reminder:
+\bi
+\item[-] Can use it to described rotations in 3D with complex spinors. 
+\item[-] Generators of SU(2) are the Pauli matrices.
+\ei
+ 
+So now postulate
+
+\be
+\phi \rightarrow e^{i\rmt{(generators)}} \phi  \hspace*{0.3in} \rmt{for SU(2)} \hspace*{0.3in} \phi \rightarrow e^{ig\vec{\alpha}\cdot\vec{\sigma}} \phi 
+\ee
+where these are finite transformations.
+
+Lets unpack this
+
+\underline{Consider infinitesimal case first}
+
+\bea
+\phi \rightarrow e^{i\epsilon \vec{\alpha} \cdot \vec{\sigma}} \phi &=& \left(1 + \epsilon(\alpha_i \sigma_i)\right)\phi \\
+&=& \left[1 + \epsilon \left( a_1(x) \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} + a_2(x) \begin{pmatrix} 0 & i \\ -i & 0 \end{pmatrix} + a_3(x) \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \right) \right]\phi 
+\eea
+so $\phi$ is not a number, its a vector.
+
+\be
+\phi = \begin{pmatrix} \nu_e(x) \\ e(x)  \end{pmatrix} 
+\ee
+
+The Dirac Equation would be 
+
+\be
+(i\gamma^\mu \partial_\mu \mathds{1} - m \mathds{1}) \phi = 0
+\ee
+where $\mathds{1}$ is a 2$\times$2 is unit matrix.
+
+
+Now when we do $\phi \rightarrow e^{ig\vec{\alpha}\cdot\vec{\sigma}} \phi $ the derivative brings down three factors:
+
+\be
+\sim \partial_\mu \alpha_1(x) \hspace*{0.5in} \sim \partial_\mu \alpha_2(x) \hspace*{0.5in} \sim \partial_\mu \alpha_3(x) 
+\ee
+
+under local SU(2) transformation.
+
+\be
+(i\gamma^\mu \partial_\mu \mathds{1} - m \mathds{1}) \phi = 0 \rightarrow  (i\gamma^\mu \partial_\mu  - m ) \underbrace{e^{ig\vec{\alpha}\cdot\vec{\sigma}}}_{e^{ig(\alpha_1 \sigma_1 + \alpha_2 \sigma_2 + \alpha_3 \sigma_3)}} \phi = 0
+\ee
+
+OR
+
+\be
+\left[i\gamma^\mu \left(\underbrace{\partial_\mu}_{\times\mathds{1}} + ig(\partial_\mu \alpha_1(x)) \underbrace{\sigma_1}_{2\times2} + ig(\partial_\mu \alpha_2(x))\underbrace{\sigma_2}_{2\times2} + ig(\partial_\mu \alpha_3(x))\underbrace{\sigma_3}_{2\times2} \right) - \underbrace{m}_{\times\mathds{1}} \right] \phi = 0
+\ee
+
+Clear that the only way to make this invariant under the local transformation is to add 3 new particles.
+
+
+\bea
+W_\mu^1 \rightarrow W_\mu^1 - \partial_\mu \alpha_1 \\
+W_\mu^2 \rightarrow W_\mu^2 - \partial_\mu \alpha_2 \\
+W_\mu^3 \rightarrow W_\mu^3 - \partial_\mu \alpha_3 
+\eea
+
+\be
+\partial_\mu \rightarrow D_\mu = \partial_\mu \mathds{1} + i g \vec{W}_\mu \cdot \vec{\sigma}
+\ee
+
+The the ``D.E''  $(i\gamma_\mu D^\mu - m) \phi = 0$ is invariant.\\
+
+{\Huge Questions ? ... ? }\\
+
+B/c here is where it is going to get weird...
+
+\bc
+\fbox{\begin{minipage}{0.9\textwidth}
+Want to stress the direct connection between the number of generators and the number of gauge bosons.
+\end{minipage}
+}
+\ec
+
+
+\textbf{The local gauge symmetry is dictating the particle content.}
 
 }
 \end{document}
