@@ -1,0 +1,147 @@
+\input{latexSetup}
+%\documentclass[margin,line]{res}
+\usepackage{braket}
+\usepackage{bbm}
+\usepackage{relsize}
+\usepackage{tcolorbox}
+
+\input{../defs}
+
+
+\usepackage{fancyhdr}
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2020}
+\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 28}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+\underline{\underline{Bonus}}  
+
+Clarification from last time ... 
+
+used ``obvious'' expansion about $\phi_1 = v$ and $\phi_2 = 0$
+
+\be
+\phi = (v + \eta + i \epsilon)
+\ee
+
+Put this into L and got 
+\be
+L' = \frac{1}{2}(\partial \epsilon)^2 + \frac{1}{2}(\partial \eta)^2 - v^2\lambda\eta^2 + \frac{1}{2}e^2v^2A^2 - evA_\mu\partial^\mu\epsilon - \frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \rmt{(interactions)}
+\ee
+
+then we said that this looked like there was unphysical Dof and we starter over with 
+\be
+\phi = (v+h) e^{i\theta/v}
+\ee
+
+A (potentially) cleaner way to see whats happening is to notice 
+
+\be
+\frac{1}{2} (\partial \epsilon)^2 + ev A_\mu \partial^\mu \epsilon + \frac{1}{2}e v^2 A^2 = \frac{1}{2}\left[ A_\mu + \frac{1}{ev} \partial_\mu \epsilon \right]^2
+\ee
+
+Now I can pick a gauge where 
+
+\be
+A_\mu \rightarrow A_\mu = \frac{1}{ev} \partial_\mu \epsilon
+\ee
+
+$\Rightarrow$ I only have the $\frac{1}{2}e^2v^2A^2$ term.
+
+(of course this is all equivalent as above)
+
+\clearpage
+
+\textbf{\underline{\underline{Electroweak Unification}}}
+
+Now that we have seen how we can use the Higgs Mechanism to generate masses for gauge bosons, we will see it works in the SM.
+
+We will take the $L_{SM}$ with 3 massless spin-1 bosons and add a scalar (Higgs) w/the ``Mexican hat'' potential $\mu^2 < 0 $.
+
+So we first need to talk about the initial $L_{SM}$ w/o the Higgs. 
+
+This will lead us to talk about the Weak interaction group and ``Electroweak'' unification. 
+(Major step forward in physics) 
+
+\textbf{\underline{\underline{QED}} (EM)}
+
+Gauge invariance led us to the $L_{QED}$
+
+\be
+\psi_e(x) \rightarrow e^{iq\alpha(x)} \psi_e(x)
+\ee
+for arbitrary $\alpha(x)$ which is function of spacetime.
+
+We say that this is a ``local U(1) phase transformation'' (a number is a generator of U(1))
+
+What will it take to make physics invariant under this transformation ?
+
+Couple way to think about this.
+
+Lets see what to the equations of motion (here the dirac equation)
+
+\be
+(i\gamma^\mu \partial_\mu - m) \psi_e = 0 \rightarrow (i\gamma^\mu \partial_\mu - m) e^{iq\alpha(x)} \psi_e = (i\gamma^\mu \partial_\mu - q\gamma^\mu \partial_\mu \alpha - m) e^{iq\alpha(x)} \psi_e = 0
+\ee
+
+or 
+\be
+i\gamma^\mu \left[ (\partial_\mu + iq \partial_\mu \alpha) - m \right] \psi_e = 0
+\ee
+Which is not the Dirac Eq!
+
+$\Rightarrow$ the free particle Dirac Equation does not posess local U(1) invariance. 
+We have shown h that its not possible for a free theory (one with out interactions).
+
+We need something to cancel the $iq\partial_\mu\alpha$ term.
+
+So lets add a term
+
+\be
+iqA_\mu \rightarrow iqA_\mu - iq\partial_\mu\alpha
+\ee
+
+or 
+\be
+A_\mu \rightarrow A_\mu - \partial_\mu\alpha
+\ee
+
+So the new ``Dirac Eq'' (really the D.E. with an interaction to a gauge boson) is 
+\be
+i\gamma^\mu \left[ (\partial_\mu + iq A_\mu ) - m \right] \psi_e = 0
+\ee
+This is invariant under $\psi \rightarrow e^{iq\alpha(x)} \psi$. 
+The derivitive term brings down a piece that is exactly canceled by the $A_\mu$ transformation.
+
+This of $(\partial_\mu + iq A_\mu )$ as a ``fancy'' derivitive $D_\mu = (\partial_\mu + iq A_\mu )$ then goet back the same for as the Dirac Eq with $\partial_\mu \rightarrow D_\mu$
+
+
+\be
+(i\gamma^\mu D_\mu  - m ) \psi = 0
+\ee
+Similarly the L that gives the Dirac equation is modified by $\partial_\mu \rightarrow D_\mu$.
+
+This was all for a U(1) symmetry (phase symmetry).
+
+This describes EM.  
+
+In a world with out the weak interaction this would be quantum electrodynamics (QED).
+
+\underline{Now to the weak interaction ...} (GSW)
+
+
+
+}
+\end{document}
+
+
