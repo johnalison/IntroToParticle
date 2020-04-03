@@ -26,6 +26,9 @@
 26:
 	cd Week12_WeakInteraction/  && pdflatex lecture26.tex  && cd ..
 
+h10:
+	cd Week12_WeakInteraction//  && pdflatex homework10.tex  && cd ..
+
 h8s:
 	cd Week8and9_ColliderPhysics/  && pdflatex homework8_solutions.tex  && cd ..
 
