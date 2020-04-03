@@ -210,18 +210,28 @@ m_A &=& ev\ \rmt{dynamically generated mass for gauge feild}
 
 This however cant be the spectrum because there are only 4 DoF before the expansion (2 scalar + 2 massless spin-1), but now seems like 5 = 2 (scalars) + 3 (massive spin-1).
 
-So some of these apparent Dof are nonphysical\\
-(Similar to picking a gauge in QED)
+So some of these apparent DoF are nonphysical.
 
-Try different expansion
-\bea
-\phi \rightarrow \frac{1}{\sqrt{2}}(v+h(x))e^{i\theta(x)/v}\\
-A_\mu \rightarrow A_\mu + \frac{1}{ev} \partial \theta
-\eea
-this is a particular choice of gauge that give h-real.
+Can see this explicity by noticing that: 
+\be
+\frac{1}{2} (\partial \epsilon)^2 + ev A_\mu \partial^\mu \epsilon + \frac{1}{2}e v^2 A^2 = \frac{1}{2}\left[ A_\mu + \frac{1}{ev} \partial_\mu \epsilon \right]^2
+\ee
+
+Now I can pick a gauge where 
+\be
+A_\mu \rightarrow A_\mu - \frac{1}{ev} \partial_\mu \epsilon
+\ee
+
+%=============
+%Try different expansion
+%\bea
+%\phi \rightarrow \frac{1}{\sqrt{2}}(v+h(x))e^{i\theta(x)/v}\\
+%A_\mu \rightarrow A_\mu + \frac{1}{ev} \partial \theta
+%\eea
+%this is a particular choice of gauge that give h-real.
 
 \be
-L'' = \frac{1}{2}(\partial h)^2  - \lambda v^2 h^2 + \frac{1}{2}e^2v^2A^2 - \lambda v h^3 - \frac{1}{4} \lambda h^4 + \frac{1}{2}e^2A^2 h^2  + v e^2 A^2h - \frac{1}{4} F^2
+L'' = \frac{1}{2}(\partial \eta)^2  - \lambda v^2 \eta^2 + \frac{1}{2}e^2v^2A^2 - \lambda v \eta^3 - \frac{1}{4} \lambda \eta^4 + \frac{1}{2}e^2A^2 \eta^2  + v e^2 A^2\eta - \frac{1}{4} F^2
 \ee
 Now Goldstone boson does not appear in the theory! 
 
@@ -233,9 +243,9 @@ The apparent extra DoF was spurious
 2 massive interacting particles 
 \bi
 \item[$A_\mu$] - 3 DoF massive Spin-1
-\item[$h$] - 1 DoF massive Spin-0
+\item[$eta$] - 1 DoF massive Spin-0
 \ei
-h-''Higgs boson''
+$\eta$-''Higgs boson''
 
 
 Massless Goldstone Boson ``eaten'' by the $A_\mu$ to become the extra DoF needed for the longitudinal polarization.  
