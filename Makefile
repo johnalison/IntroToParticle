@@ -1,3 +1,6 @@
+m2:
+	cd MidTerm2/  && pdflatex Midterm2.tex  && cd ..
+
 36:
 	cd Week14_Neutrinos/  && pdflatex lecture36.tex  && cd ..
 
@@ -26,8 +29,14 @@
 26:
 	cd Week12_WeakInteraction/  && pdflatex lecture26.tex  && cd ..
 
+h10s:
+	cd Week12_WeakInteraction//  && pdflatex homework10_solutions.tex  && cd ..
+
 h10:
 	cd Week12_WeakInteraction//  && pdflatex homework10.tex  && cd ..
+
+h9s:
+	cd Week8and9_ColliderPhysics/  && pdflatex homework9_solutions.tex  && cd ..
 
 h8s:
 	cd Week8and9_ColliderPhysics/  && pdflatex homework8_solutions.tex  && cd ..
