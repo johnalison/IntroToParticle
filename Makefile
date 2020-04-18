@@ -1,3 +1,6 @@
+m2s:
+	cd MidTerm2/  && pdflatex Midterm2_solutions.tex  && cd ..
+
 m2:
 	cd MidTerm2/  && pdflatex Midterm2.tex  && cd ..
 
@@ -42,7 +45,8 @@ h8s:
 	cd Week8and9_ColliderPhysics/  && pdflatex homework8_solutions.tex  && cd ..
 
 
-
+syllabus: 
+	pdflatex Syllabus.tex
 
 clean:
 	rm -rf Week*/lecture*.log

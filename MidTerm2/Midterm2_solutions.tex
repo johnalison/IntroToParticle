@@ -1,0 +1,296 @@
+
+\input{latexSetup}
+\usepackage{braket}
+
+\input{../defs.tex}
+%\def\ketY{\ensuremath{\ket {\Psi}}}
+%\def\iGeV{\ensuremath{\textrm{GeV}^{-1}}}
+%\def\mp{\ensuremath{m_{\textrm{proton}}}}
+%\def\rp{\ensuremath{r_{\textrm{proton}}}}
+%\def\me{\ensuremath{m_{\textrm{electron}}}}
+%\def\aG{\ensuremath{\alpha_G}}
+%\def\rAtom{\ensuremath{r_{\textrm{atom}}}}
+%\def\rNucl{\ensuremath{r_{\textrm{nucleus}}}}
+%\def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
+%
+%\def\be{\begin{equation*}}
+%\def\ee{\end{equation*}}
+
+
+\usepackage{fancyhdr}
+\usepackage{cancel}
+\usepackage{ mathrsfs }
+
+
+
+
+
+\fancyhf{}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2019\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Midterm 2}}
+\large
+
+\end{center}
+
+{\large
+
+\textbf{1) List or draw a diagram of the particles in the Standard model. } \hfill \textit{(4 points)}\\
+What is the spin of each particle ?
+
+
+\underline{Fermions:}, All spin 1/2
+\be
+\begin{pmatrix} \nu_e \\ e \end{pmatrix} \hspace*{0.1in} \begin{pmatrix} \nu_\mu \\ \mu \end{pmatrix} \hspace*{0.1in}  \begin{pmatrix} \nu_\tau \\ \tau \end{pmatrix}  \hspace*{1in}  \begin{pmatrix} u \\ d \end{pmatrix} \hspace*{0.1in}   \begin{pmatrix} c \\ s \end{pmatrix} \hspace*{0.1in}   \begin{pmatrix} t \\ b \end{pmatrix}  \times \rmt{3 colors}
+\ee
+
+\underline{Gauge Bosons:} All spin-1
+\be
+g \times \rmt{8 colors}  \hspace*{0.2in} W^\pm  \hspace*{0.2in} Z  \hspace*{0.2in} \gamma 
+\ee
+
+
+\underline{Higgs Boson:} spin-0
+\be
+H
+\ee
+
+\vspace*{0.5in}
+
+
+\textbf{2) Why do the electromagnetic, weak and strong interactions look so different despite the fact that at short distances they are all described by similar Feynman diagrams with similar coupling constants?} \hfill \textit{(2 points)}\\
+
+\bc
+Weak force has massive force carriers.\\
+Strong force has a coupling the gets stronger at large distances
+\ec
+
+\vspace{0.5in}
+
+\textbf{3) Di-boson physics:  } \hfill \textit{(6 points)}\\
+Processes in which pairs of gauge bosons are produced are a sensitive probe of the electro-weak theory. These are typically studied at the LHC by looking for signatures involving electrons or muons.  
+Estimate how often a $WZ$ event decays into an electron or muon and three neutrinos.\\ ie: $e\nu\nu\nu$ or $\mu\nu\nu\nu$
+
+\bc
+$W \rightarrow \ell\nu$ (where $\ell$ is $\mu$ or $e$) is $\frac{2}{3+3\times 2} = \frac{2}{9}$ \\
+$Z \rightarrow \nu\nu$  is $\frac{3}{3+3+3\times 5} = \frac{3}{21}$ \\
+So, $WZ \rightarrow \ell\nu\nu\nu$ (where $\ell$ is $\mu$ or $e$) is $\frac{2}{9} \times \frac{3}{21} = \frac{2}{63} \sim 3\%$
+\ec
+
+\vspace{0.5in}
+
+\textbf{4) Higgs Boson discovery: } \hfill \textit{(5 points)}\\
+The Higgs boson was discovered in its decays to $WW (Br\sim20\%)$, $ZZ\ (Br\sim3\%)$ and $\gamma\gamma\ (Br\sim0.2\%)$.
+However for the $WW$ and $ZZ$ decays, only the ``fully-leptonic'' channels -- where each boson decays leptonicically to $e$ or $\mu$ -- were used. \\
+
+Estimate how often $WW \rightarrow \ell\nu\ell'\nu'$ and $ZZ\rightarrow\ell\ell\ell'\ell'$, where $\ell$ is e or $\mu$. (ignore decays through taus)\\
+
+\bc
+$W \rightarrow \ell\nu$ (where $\ell$ is $\mu$ or $e$) is $\frac{2}{3+3\times 2} = \frac{2}{9}$ \\
+$Z \rightarrow \ell\ell$  (where $\ell$ is $\mu$ or $e$) is $\frac{2}{3+3+3\times 5} = \frac{2}{21}$ \\
+So $WW\rightarrow \ell\nu\ell'\nu' = \frac{2}{9}\times\frac{2}{9} = \frac{4}{81} \sim 5\%$ \\
+And $ZZ\rightarrow \ell\ell\ell'\ell = \frac{2}{21}\times\frac{2}{21} = \frac{4}{441} \sim 1\%$
+\ec
+
+Including these factors, rank the Higgs boson discovery channels by how many signal events they are expected to have.
+
+\bc
+$H\rightarrow WW \rightarrow \ell\nu\ell'\nu' = 0.2(H\rightarrow WW) \times 0.05 (WW\rightarrow\ell\nu\ell'\nu') \sim 1\%$\\
+$H\rightarrow \gamma\gamma = 0.2\% $\\
+$H\rightarrow ZZ\rightarrow\ell\ell\ell'\ell' = 0.03 (H\rightarrow ZZ) \times 0.01 (ZZ\rightarrow\ell\ell\ell'\ell') \sim 0.03\%  $
+\ec
+
+\vspace{0.5in}
+
+\textbf{5) Accelerators: } \hfill \textit{(4 points)}\\
+\begin{itemize}
+\item[a)]{What limits the energy of circular proton accelerators ?
+\bc
+Strength of bending magnets.
+\ec
+}
+\item[b)]{What limits the energy of circular electron accelerators ?
+\bc
+Losses due to Bremstralung radiation loss.
+\ec
+
+}
+\end{itemize}
+
+\clearpage
+
+\textbf{6) Electron-positron Collisions } \hfill \textit{(6 points)}\\
+\begin{itemize}
+\item[a)]{
+How does the value of $R(E_{CM}) \equiv \sigma(ee\rightarrow \rmt{jets})/\sigma(ee\rightarrow \mu\mu)$ change as $E_{CM}$ is increased beyond twice the mass of the charm quark? 
+What values of $R(< 2 m_{\rmt{charm}})$ and $R(> 2 m_{\rmt{charm}})$ do you expect?
+\bc
+Before charm production,  the allowed ``jets'' are  $uu$ (with charge +2/3), dd and ss with charge (-1/3) all have a factor of 3 for color\\
+So $R(< 2 m_{\rmt{charm}}) = 3\times \sum Q^2 = 3 \times \left( (\frac{2}{3})^2 + (\frac{-1}{3})^2  + (\frac{-1}{3})^2  \right) = 3 \times \frac{6}{9} = 2 $ \\
+With charm production,  there is an additional allowed ``jets'' with  $cc$ (with charge +2/3) and a factor of 3 for color\\
+So $R(> 2 m_{\rmt{charm}}) = 3\times \sum Q^2 = 3 \times \left( (\frac{2}{3})^2 + (\frac{-1}{3})^2  + (\frac{-1}{3})^2 + ( \frac{2}{3})^2 \right) = 3 \times \frac{10}{9} \sim 3 $ 
+
+\ec
+}
+
+\item[b)]{Sketch a graph of the total cross section of $ee\rightarrow\mu\mu$ as a function of $E_{CM}$ from 40 GeV to 200. 
+Also sketch the component of the cross section due to the electro-magnetic interaction.
+\bc
+\includegraphics[width=0.4\textwidth]{./ZPeak.pdf}
+\ec
+}
+\end{itemize}
+
+\vspace*{0.5in}
+
+\textbf{7) Collider Detectors  } \hfill \textit{(4 points)}\\
+\begin{itemize}
+\item[a)]{ In what ways do the detector signatures of electrons and muons look a-like, in what ways are they different ?
+
+\bi
+\item[-]Both have tracks in the inner tracking detector. 
+\item[-]Electrons shower in the EM calorimeter and stop, $\mu$s make it through the calorimeter to the muon detector.
+\ei
+
+}
+\item[b)]{ In what ways do the detector signatures of electrons and photons look a-like, in what ways are they different ?
+
+\bi
+\item[-]Both shower in the EM calorimeter and stop.
+\item[-]Electrons have a track in the inner tracking detector, photons do not.
+\ei
+
+
+}
+\end{itemize}
+
+\vspace*{0.5in}
+        
+
+\textbf{8) Calorimeters } \hfill \textit{(4 points)}\\
+Which are more challenging to accurately measure and why : Hadronic showers or electro-magnetic showers? 
+
+Hadronic showers
+\bi
+\item[-] More complicated:  Multiple lengths scales interaction and radiation lengths important
+\item[-] Less particles:  hadrons are heavier so you get less per unit input energy
+\item[-] Longer: require more material to contain. 
+\ei
+
+\vspace*{0.5in}
+
+
+\textbf{9) For a new particle X with mass $\sim$ 2 TeV,  would you expect to measure the X mass more precisely from $X\rightarrow ee$ or $X \rightarrow \mu\mu$ ? Justify your answer.} \hfill \textit{(3 points)}\\
+
+X$\rightarrow$ ee
+\bi
+\item[-] Electrons energies are measured in the calorimeter, which gets more accurate at high energies
+\item[-] Muons energies are measured in the trackers (inner and muon), which gets less accurate at high energies
+\ei
+
+\vspace*{0.5in}
+
+
+\textbf{10) How are \nus\ detected at the LHC ?} \hfill \textit{(2 points)}\\
+
+\bc
+By looking for momentum imbalance in the transverse plane.
+\ec
+
+\vspace*{0.5in}
+
+\clearpage
+
+\textbf{11) Higgs Boson Production : } \hfill \textit{(4 points)}\\
+\begin{itemize}
+\item[a)]{ Draw one possible Feynman diagram for production and decay of the Higgs boson at the LHC.}
+\bc
+\includegraphics[width=0.3\textwidth]{./ggHgamgam.pdf}
+\ec
+
+\item[b)]{ Why is Higgs boson production so much rarer then W or Z production despite the fact that their masses are similar?   
+\bc
+Small couplings to stuff inside the proton (which is light), need 2nd order diagrams with large coupling to top, Ws and Z.
+\ec
+ }
+\end{itemize}
+
+\vspace*{0.5in}
+
+
+\textbf{12) Higgs-Lepton interactions } \hfill \textit{(4 points)}\\
+The coupling of the Higgs field to leptons can be studied by looking for detector signals where the Higgs boson decays to pairs leptons.
+Which of the possible decay modes would be the best way to do this.  Justify your answer.
+
+\bc
+Higgs to $\tau\tau$ as it has the largest mass and the Higgs coupling scales with mass. 
+Will also give credit for Higgs to $\mu\mu$ if you comment that $\tau$ are hard to detector/measure/
+\ec
+
+\clearpage
+
+\textbf{13) Interaction Symmetries } \hfill \textit{(6 points)} \\ 
+In the first part of the course we learned that the interactions of mass-less spin-1 particles must be described by group symmetries. 
+\begin{itemize}
+\item[a)]{How is the group symmetry of an underlying interaction related to the particle content ?
+
+\bc
+There is a gauge boson associated to each generator of the underlying symmetry.
+\ec
+
+}
+\item[b)]{What are the symmetry groups of the electro-weak interaction in the SM ? 
+\be
+  SU(2)_L \times U(1)
+\ee
+}
+\item[c)]{How does the observed physical particle content reflect this ? (Qualitatively, no formulas required.) 
+\bc
+The $W^\pm$ are two of the three generators of $SU(2)_L$.\\
+The $Z$ and $\gamma$ are mixtures of the last $SU(2)_L$ generator and the U(1) generator
+\ec
+}
+
+\end{itemize}
+
+\vspace*{0.5in}
+
+\textbf{14) Spontaneous Symmetry Breaking} \hfill \textit{(6 points)} \\ 
+\begin{itemize}
+\item[a)]{What is Spontaneous Symmetry Breaking  ? 
+
+\bc
+Case when the underlying potential or laws of physics respect a symmetry but the ground state of the system does not.
+\ec
+
+ }
+\item[b)]{What properties of the fundamental particles is it responsible for describing ?
+\bc
+The masses of fundamental particles: the massive fermions and W and Z.
+\ec
+}
+\item[c)]{What experimental evidence do we have that spontaneous symmetry breaking is actually responsible for these properties?
+\bc
+Discovery of the Higgs boson.
+\ec
+}
+\end{itemize}
+
+
+
+} % Begning Large
+\end{document}
