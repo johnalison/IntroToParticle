@@ -173,8 +173,20 @@ h1:
 1:
 	cd Week1_IntroUnits/ && pdflatex lecture1.tex && cd ../
 
+m1:
+	cd MidTerm/ && pdflatex Midterm1.tex && cd ../
 
+m1s:
+	cd MidTerm/ && pdflatex Midterm1_solutions.tex && cd ../
 
+m2:
+	cd MidTerm2/ && pdflatex Midterm2.tex && cd ../
+
+m2s:
+	cd MidTerm2/ && pdflatex Midterm2_solutions.tex && cd ../
+
+f:
+	cd Final/ && pdflatex Final.tex && cd ../
 
 syllabus: 
 	pdflatex Syllabus.tex
