@@ -22,9 +22,11 @@ m2:
 32:
 	cd Week14_Neutrinos/  && pdflatex lecture32.tex  && cd ..
 
-
 31:
 	cd Week12_WeakInteraction/  && pdflatex lecture31.tex  && cd ..
+
+30:
+	cd Week12_WeakInteraction/  && pdflatex lecture30.tex  && cd ..
 
 29:
 	cd Week12_WeakInteraction//  && pdflatex lecture29.tex  && cd ..
@@ -37,6 +39,9 @@ m2:
 
 26:
 	cd Week12_WeakInteraction/  && pdflatex lecture26.tex  && cd ..
+
+h11:
+	cd Week12_WeakInteraction//  && pdflatex homework11.tex  && cd ..
 
 h10s:
 	cd Week12_WeakInteraction//  && pdflatex homework10_solutions.tex  && cd ..
