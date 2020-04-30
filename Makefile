@@ -1,3 +1,6 @@
+f:
+	cd Final/ && pdflatex Final.tex && cd ..
+
 h12:
 	cd Week14_Neutrinos//  && pdflatex homework12.tex  && cd ..
 
