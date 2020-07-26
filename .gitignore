@@ -1,3 +1,4 @@
+.DS_Store
 Videos2020
 Syllabus.log
 */*.log
@@ -5,3 +6,5 @@ Syllabus.log
 */*.bcf
 */*.aux
 */*.run.xml
+Final_exams
+MidTerm2_examsUngraded
