@@ -6,229 +6,208 @@ import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib
 
-names = [      " Josh Freud."
-              ," Steven Hall"
-              ," Josh Kim "
-              ," Brandon N"
-              ," Ian Harris"
-              ," Max Perry"
-              ," Ruvini"
-              ," Ian Holst"
-              ," Naren"
-              ," Yue Xu"
+final_raw = [42.,#Grayson 
+             34. ,#Katherine
+             45. ,#Kevin
+             51. ,#Nick
+             43. ,#Aileen
+             30. ,#Dez 
+             45. ,#Trevor
+             ]
+
+
+midterm2_raw = [49.,#Grayson 
+                19. ,#Katherine
+                42. ,#Kevin
+                51. ,#Nick
+                31. ,#Aileen
+                21. ,#Dez 
+                53. ,#Trevor
+                ]
+
+
+midterm1_raw = [40.5,#Grayson 
+              15.  ,#Katherine
+              35.  ,#Kevin
+              44.  ,#Nick
+              26.  ,#Aileen
+              25.  ,#Dez 
+              30.  ,#Trevor
               ]
 
 
-final_raw = [#64  # Kiran
-              55 # Josh Freudenhammer
-              ,50 # Steven HAll
-              ,62 # Josh Kim 
-              ,56 # Brandon N
-              ,81 # Ian Harris
-              ,45 # Max Perry
-              ,68 # Ruvini
-              ,78 # Ian Holst
-              ,96 # Naren
-              ,68 #Yue Xu
-              ]
+# in %
+home_work = [92.92,#Grayson 
+             63.75,#Katherine
+             78.75,#Kevin
+             90.42,#Nick
+             84.58,#Aileen
+             38.96,#Dez 
+             92.29,#Trevor
+             ]
 
 
-midterm_raw = [#20  # Kiran
-              24 # Josh Freudenhammer
-              ,16.5 # Steven HAll
-              ,19 # Josh Kim 
-              ,16.25 # Brandon N
-              ,21 # Ian Harris
-              ,17.5 # Max Perry
-              ,24.5 # Ruvini
-              ,22.75 # Ian Holst
-              ,28.5 # Naren
-              ,9, #Yue Xu
-              ]
-
-home_work_raw = [ #80
-              68.7, #Joshua
-              55.4, #Steven
-              92.4,#Joshua 
-              73.0,#Brandon
-              92.6,# Ian Harris
-              42.4,#Max
-              79.1,#Ruvini
-              95.6, #Ian Holst
-              98.0, #Naren
-              75.7,  # Yue
-              ]
-
-home_work_den = [ #80
-              21, #Joshua
-              30, #Steven
-              15,#Joshua 
-              30,#Brandon
-              15,# Ian Harris
-              31,#Max
-              30,# 79.1,#Ruvini
-              15, #Ian Holst
-              35, #Naren
-              30,  # Yue
-              ]
-
-
-home_work_num = [ #80
-              9, #Joshua
-              0, #Steven
-              12,#Joshua 
-              0,#Brandon
-              13,# Ian Harris
-              0,#Max
-              0 ,# ,#Ruvini
-              13, #Ian Holst
-              32, #Naren
-              0,  # Yue
-              ]
-
-
-home_work= []
-hwTotal = 270
-for i in range(len(final_raw)):
-    hwPoints = home_work_raw[i]/100*hwTotal
-    hwPointsCor = hwPoints - home_work_num[i]
-    hwTotalCor = hwTotal - home_work_den[i]
-    home_work_new = hwPointsCor / hwTotalCor*100
-    print(home_work_raw[i],  "--->", home_work_new)
-    home_work.append(home_work_new)
+# 2019
+#grades_raw = [#20  # Kiran
+#              24 # Josh Freudenhammer
+#              ,16.5 # Steven HAll
+#              ,19 # Josh Kim 
+#              ,16.25 # Brandon N
+#              ,21 # Ian Harris
+#              ,17.5 # Max Perry
+#              ,24.5 # Ruvini
+#              ,22.75 # Ian Holst
+#              ,28.5 # Naren
+#              ,9, #Yue Xu
+#              ]
+## in %
+#home_work = [ #80
+#              62.5 #Joshua
+#              ,42.4 #Steven
+#              ,90.7 #Joshua 
+#              ,54.8 #Brandon
+#              ,92.7 # Ian Harris
+#              ,24,#Max
+#              62.5,#Ruvini
+#              80, #Ian Holst
+#              100, #Naren
+#              59,  # Yue
+#              ]
 
 
 
-combined = []
-for i in range(len(final_raw)):
-    combined.append(round(  (0.4*final_raw[i]/115*100 + 0.2*midterm_raw[i]/53*100 + 0.4*home_work[i]),2))
-
-
-
-
-average = np.average(combined)
-rms = np.std(combined)
-zScores = (combined - average)/rms
-
-
-for i, name in enumerate(names):
-    print(name,"...",round(zScores[i],2),"\t",combined[i])
-
-final = np.array(final_raw)
-midterm = np.array(midterm_raw)
+final    = np.array(final_raw)
+midTerm2 = np.array(midterm2_raw)
+midTerm1 = np.array(midterm1_raw)
 homework = np.array(home_work)
-#average = sum(grades)/len(grades_raw)
-#average = round(np.average(final),1)
+
+average = round(np.average(final),1)
+rms = round(np.std(final),1)
+print(average,"+/-",rms)
 
 
-
-finalAve = np.average(final)
-finalRMS = np.std(final)
-zScoresFinal = (final - finalAve)/finalRMS
+bins = np.linspace(0,65,15)
+print( bins)
 
 
-bins = np.linspace(0,100,20)
 
 plt.hist(final, bins=bins,color='b', alpha=0.65, histtype='stepfilled', label='stepfilled hist')
-plt.plot([finalAve,finalAve],[0,3],'r--')
-plt.annotate("Mean = "+str(round(finalAve,1)), xy=(20, 2.5), xytext=(0,2.5),
+plt.plot([average,average],[0,3],'r--')
+plt.annotate("Mean = "+str(average), xy=(20, 2.5), xytext=(3,2.5),
              color="red", weight="light", fontsize=14,
              #arrowprops={"facecolor": "red"}
              )
 
-plt.annotate("RMS ="+str(round(finalRMS,1)), xy=(20, 2.5), xytext=(0,2.2),
+plt.annotate("RMS ="+str(rms), xy=(20, 2.5), xytext=(3,2.2),
              color="red", weight="light", fontsize=14,
              #arrowprops={"facecolor": "red"}
              )
-
-plt.xlabel("Final (out of 115)")
-plt.savefig("FinalScores.pdf")
-plt.savefig("FinalScores.png")
+plt.xlim(0, 65)
+plt.xlabel("Grades (out of 65)")
+plt.savefig("Grades.pdf")
+plt.savefig("Grades.png")
 plt.close()
+
+zScores = (final - average)/rms
+#print(zScores)
+#print(np.average(zScores),np.std(zScores))
 
 
 binsZ = np.linspace(-3,3,25)
 
-plt.hist(zScoresFinal, bins=binsZ,color='b', alpha=0.65, histtype='stepfilled', label='stepfilled hist')
-plt.xlabel("Normalized")
-plt.savefig("FinalScoresNorm.pdf")
-plt.savefig("FinalScoresNorm.png")
-plt.close()
-
-
-
-
-
-
 plt.hist(zScores, bins=binsZ,color='b', alpha=0.65, histtype='stepfilled', label='stepfilled hist')
-
-plt.xlabel("Combined Normed")
+plt.xlabel("Grades Curved")
 
 plt.savefig("NormalizedGrades.pdf")
 plt.savefig("NormalizedGrades.png")
 plt.close()
 
 
-plt.plot(home_work,final,"ko")
-plt.ylabel("Final")
-plt.xlabel("Homework")
+
+
+plt.plot(final,home_work,"ko")
+plt.xlim(0, 65)
+plt.ylim(0, 100)
+
+plt.xlabel("Final (XX/65)")
+plt.ylabel("Homework (%)")
 #plt.plot(,"ko")
 plt.savefig("CorrelationHW.pdf")
 plt.savefig("CorrelationHW.png")
 plt.close()
 
 
-plt.plot(midterm,final,"ko")
-plt.ylabel("Final")
-plt.xlabel("MidTerm")
+plt.plot(final,midTerm1,"ko")
+plt.xlim(0, 65)
+plt.ylim(0, 50)
+
+plt.xlabel("Final (XX/65)")
+plt.ylabel("MidTerm1 (XX/50)")
 #plt.plot(,"ko")
-plt.savefig("CorrelationMidTerm.pdf")
-plt.savefig("CorrelationMidTerm.png")
+plt.savefig("CorrelationMidTerm1.pdf")
+plt.savefig("CorrelationMidTerm1.png")
 plt.close()
 
 
-binsCombined = np.linspace(20,90,20)
-plt.hist(combined, bins=binsCombined,color='b', alpha=0.65, histtype='stepfilled', label='stepfilled hist')
-#plt.plot([21,21],[0,3],'r--')
+plt.plot(final,midTerm2,"ko")
+plt.xlim(0, 65)
+plt.ylim(0, 60)
 
-plt.plot([average,average],[0,3],'r--')
-plt.annotate("Mean = "+str(round(average,1)), xy=(20, 2.5), xytext=(20,2.5),
-             color="red", weight="light", fontsize=14,
-             #arrowprops={"facecolor": "red"}
-             )
-
-plt.annotate("RMS ="+str(round(rms,1)), xy=(20, 2.5), xytext=(20,2.2),
-             color="red", weight="light", fontsize=14,
-             #arrowprops={"facecolor": "red"}
-             )
-
-plt.savefig("Combined.pdf")
-plt.close()
-
-
-
-
-plt.plot(final,combined,"ko")
-plt.xlabel("Final")
-plt.ylabel("Combined")
+plt.xlabel("Final (XX/65)")
+plt.ylabel("MidTerm2 (XX/60)")
 #plt.plot(,"ko")
-plt.savefig("CombinedVsFinal.pdf")
-plt.savefig("CombinedVsFinal.png")
+plt.savefig("CorrelationMidTerm2.pdf")
+plt.savefig("CorrelationMidTerm2.png")
 plt.close()
 
-plt.plot(home_work,combined,"ko")
-plt.xlabel("Homework")
-plt.ylabel("Combined")
-#plt.plot(,"ko")
-plt.savefig("CombinedVsHW.pdf")
-plt.savefig("CombinedVsHW.png")
+
+
+
+#
+#binsCombined = np.linspace(0,100,50)
+#plt.hist(combined, bins=binsCombined,color='b', alpha=0.65, histtype='stepfilled', label='stepfilled hist')
+##plt.plot([21,21],[0,3],'r--')
+#plt.savefig("Combined.pdf")
+#
+#for i in range(len(midTerm2)):
+#    print( midTerm2[i],round(zScores[i],2), combined[i])
+#    # print( zScores)
+#    # print( combined)
+
+
+combinedGrades = []
+for i in range(len(midterm2_raw)):
+    midTerm1 = midterm1_raw[i]/50*100
+    midTerm2 = midterm2_raw[i]/60*100
+    final    = final_raw[i]/65*100
+    homework  = home_work[i]
+    combined = 0.4*homework + 0.2 * midTerm1+ 0.2*midTerm2 + 0.2*final
+    print(str(i),"==> ",homework,midTerm1,midTerm2,final,"==",combined)
+
+    combinedGrades.append(combined)
+print(midterm2_raw)
+print(home_work)
+print(combinedGrades)
+combinedGrades=np.array(combinedGrades)
+
+bins = np.linspace(0,100,30)
+plt.hist(combinedGrades, bins=bins,color='b', alpha=0.65, histtype='stepfilled', label='stepfilled hist')
+plt.xlabel("Grades %")
+plt.savefig("CombinedGrades.pdf")
+plt.savefig("CombinedGrades.png")
+
 plt.close()
 
-plt.plot(midterm,combined,"ko")
-plt.xlabel("MidTerm")
-plt.ylabel("Combined")
-#plt.plot(,"ko")
-plt.savefig("CombinedVsMidTerm.pdf")
-plt.savefig("CombinedVsMidTerm.png")
-plt.close()
+averageCombined = round(np.average(combinedGrades),1)
+rmsCombined = round(np.std(combinedGrades),1)
+print(averageCombined,"+/-",rmsCombined)
 
+zScoresCombined = (combinedGrades - averageCombined)/rmsCombined
+
+bins = np.linspace(-3,3,30)
+plt.hist(zScoresCombined, bins=bins,color='b', alpha=0.65, histtype='stepfilled', label='stepfilled hist')
+plt.xlabel("Normalized Scores")
+plt.savefig("CombinedGradesNorm.pdf")
+plt.savefig("CombinedGradesNorm.png")
+
+plt.close()

@@ -1,3 +1,6 @@
+fs:
+	cd Final/ && pdflatex FinalSolutions.tex && cd ..
+
 f:
 	cd Final/ && pdflatex Final.tex && cd ..
 
