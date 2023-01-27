@@ -1,0 +1,186 @@
+\input{../latexSetup}
+
+
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2022}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 9}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+\textbf{\underline{Particles Interactions}} 
+
+``Quantum Field Theory in a week''
+
+{\Large \underline{\textbf{Summary From Last Time}}}
+
+\begin{tabular}{l}
+\underline{Massive:}\\
+\\
+\hspace{0.5in}$\ket{P, \sigma}$ and $U[\Lambda] \ket{P, \sigma} = \sum_{\sigma'} R_{\sigma,\sigma'} \ket{\Lambda P, \sigma'}$, where the R is a rotation matrix.\\
+\\
+\underline{Mass-less:}\\
+\\
+\hspace{0.5in}$\ket{P, h}$ and $U[\Lambda] \ket{P, h} = e^{ih\Theta(W)}\ket{\Lambda P, h}$, where the coefficient is just a phase.\\
+\end{tabular}\\
+
+\noindent\rule{\textwidth}{1pt}
+Now talk about all these particles states in a more convenient way.  
+
+For every given momenta we have stacks of Hilbert space
+\begin{itemize}
+\item[-] infinitely many possibilities for Bosons $0\rightarrow N$
+\item[-] fixed number (depending on the spin) for fermions
+\end{itemize}
+
+\vspace{0.5in}
+Ultimately interested in the interactions between particles. 
+\begin{itemize}
+\item[-] Defined by some Hamiltonian        
+\item[-] Could specify the Hamiltonian by describing how it acts on all states in the Hilbert space
+\item[-] Instead \underline{for our convenience} introduce creation and annihilation operators.
+\begin{itemize}
+\item[] These keep track of the states in a simple way...
+\end{itemize}
+\end{itemize}
+
+First define the vacuum state: $\ket{0}$.
+Then define single particle states as:
+\be
+\underbrace{\ket{P \sigma}}_{\textrm{These are primary}} \equiv \adagger \ket{0}
+\ee
+This \underline{defines} \adagger.
+
+
+
+\be
+\ket{P_1 \sigma_1, P_2, \sigma_2 } = a_{p_1\sigma_1}^\dagger a_{p_2\sigma_2}^\dagger \ket{0}
+\ee
+
+etc. etc. etc.
+
+
+Similarly,  can define annihilation operators
+
+
+\begin{align*}
+a_{P,\sigma} \ket{0} = 0\\
+a_{P,\sigma} \ket{P,\sigma} = \ket{0}
+\end{align*}
+a - removes states. 
+
+
+Can encode boson/fermion statistics in $a$ and $a^\dagger$.
+
+\begin{center}
+\begin{tabular}{c|c}
+Bosons & Fermions \\
+$[a_{P_1,\sigma_1}^\dagger, a_{P_2,\sigma_2}^\dagger] = 0 $  &  $\{a_{P_1,\sigma_1}^\dagger, a_{P_2,\sigma_2}^\dagger\} = 0 $\\  
+$[a_{P_1,\sigma_1}, a_{P_2,\sigma_2}] = 0  $  &  $\{a_{P_1,\sigma_1}, a_{P_2,\sigma_2}\} = 0  $\\  
+\end{tabular}
+\end{center}
+
+
+Normalization
+
+\be
+\braket{p',\sigma'|p,\sigma} = \delta_{\sigma',\sigma} \delta^3(\vec{p} - \vec{p'})
+\ee 
+will use compressed notation
+
+\be
+\braket{p',\sigma'|p,\sigma} = \delta_{\sigma',\sigma} \delta_{p,p'}
+\ee 
+
+This implies
+
+For Bosons,
+\be
+[a_{p,\sigma}, a_{p',\sigma'}^\dagger] = \delta_{\sigma',\sigma} \delta_{p,p'}
+\ee
+
+
+For Fermions,
+\be
+\{a_{p,\sigma}, a_{p',\sigma'}^\dagger\} = \delta_{\sigma',\sigma} \delta_{p,p'}
+\ee
+
+\underline{Note}, these are operators that \underline{We} have \underline{defined} four \underline{our} convenience.
+Makes it easier to talk about the states.  (Of course what really matters is the states)
+
+\clearpage
+
+Usually you see it presented as:
+\begin{itemize}
+\item[-] Start with fields
+\item[-] Quantize them
+\item[-] then find these commutation relation
+\end{itemize}
+
+But really the fields are secondary concepts, what comes first is the particles. \\
+``Not one deep thing going on here''
+
+\noindent\rule{\textwidth}{1pt}
+
+
+OK, What would be the free Hamiltonian ?
+
+\be
+H = \sum\limits_{p,\sigma} E_p\ a^\dagger_{p,\sigma} a_{p,\sigma}
+\ee
+
+Were labeling states by 4-momenta, but the energy is constrained ($E^2 = p^2 + m^2$).
+
+Can label by the 3-momentum
+
+\be
+\braket{\vec{p}',\sigma'|\vec{p},\sigma} = (2\pi)^3 2 E_p \delta^3(\vec{p}-\vec{p}')
+\ee 
+
+
+\underline{Note}  $d^3p$ is not Lorentz invariant, but $d^3p/2E_p$ is.  (HW).
+
+To make my life easier by defining
+
+\be
+\int \cancel{d}^3p = \int \frac{d^3p}{2E}
+\ee
+
+So can write the free Hamiltonion as:
+
+\bea
+H & = \sum\limits_{p,\sigma} E_p a^\dagger_{p,\sigma} a_{p,\sigma} \\
+  &=  \int \cancel{d}^3p E_p a^\dagger_{p,\sigma} a_{p,\sigma} 
+\eea
+
+Now lets imagine building interactions.  Add interaction hamiltonian.
+
+eg: an interaction where two particles come in and two particles go out:
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\textwidth]{./Interaction.pdf}
+\end{figure}
+
+This would correspond to adding an interaction term to the Hamiltonian of the form:
+
+\bea
+& \int \cancel{d}^3p_1 \cancel{d}^3p_2 \cancel{d}^3p_3 \cancel{d}^3p_4\ \delta(\vec{p_1}..\vec{p_4})\ \delta(E_1 + ... E_4) \\
+& \underbrace{a^\dagger_{p_4,\sigma_4} a^\dagger_{p_3,\sigma_3} a_{p_2,\sigma_2} a_{p_1,\sigma_1} }_{\textrm{Acts on the initial state and gives the final state}} V(p's, \sigma's)   + \textrm{Hermitian Conjugate}
+\eea
+
+Interactions are made out of strings of a's and $a^\dagger$'s.
+Also easy in this picture to talk about the creation and destruction of particles (Not just scattering) 
+
+Very convenient to use this to map between particle states.
+
+So far we have not said the word ``Field''. 
+
+\end{document}
+
+

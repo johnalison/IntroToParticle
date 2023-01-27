@@ -1,0 +1,169 @@
+\input{../latexSetup}
+
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2022}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 10}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+\textbf{\underline{QFT Continued...}} 
+
+{\Large \underline{\textbf{Summary From Last Time}}}
+
+
+\be
+\phi_+ (\vec{x}) = \int \cancel{d}^3p\ e^{-i \vec{p} \vec{x}}\ a^{\dagger}_{\vec{p}}
+\ee
+
+(use scalars for the moment) 
+
+Need to build $H_I$ out of $\phi_{+/-}$ in the interaction representation.
+
+\fbox{\begin{minipage}{\textwidth}
+Note: 
+\be
+\phi_+^I (x, t) = e^{+iH_ft} \phi(x) e^{-iH_ft} \rightarrow e^{iE_p t} \phi(x) \\
+\ee
+
+
+The $e^{iHt}$ will go to $e^{-iEt}$, then $\phi(x)$ will create a new particle with energy $E_p$, and then the $e^{+iHt}$ will give $e^{+i(E+E_p) t}$
+
+\end{minipage}}
+
+\bea
+\phi_+^I (x, t) &=& e^{+iH_ft} \phi(x) e^{-iH_ft} \\
+                &=& \int \cancel{d}^3p\ e^{-i \vec{p} \vec{x}}\ e^{+iE_pt}\ a^{\dagger}_{\vec{p}} \\
+                &=& \int \cancel{d}^3p\ e^{i p^\mu x_\mu}\ a^{\dagger}_{\vec{p}}
+\eea
+
+this behaves nicely under Lorentz Transforms $\phi(\Lambda x) = \phi(x)$
+
+We seem to be in awesome shape, lets write down an interaction. 
+
+\be
+H_I = \int d^3x\ k \left[  \phi_+^I(x) ... \phi_-^I(x) \right]
+\ee
+
+and now we know how to turn this into the $\mathcal{S}$-matrix 
+
+
+\be
+\top\left( e^{ (-i) \int_{-\infty}^{+\infty} dt\ d^3x\ k \left[ \phi_+(x) ... \phi_-(x) \right]} \right)
+\ee
+
+
+\be
+\top\left( e^{ (-i) \int_{-\infty}^{+\infty} d^4x\ k \left[ \phi_+(x) ... \phi_-(x) \right]} \right)
+\ee
+
+All of this is Lorentz Invariant!
+Seems like we are done.
+
+What is the problem?
+
+Problem is the time ordering.  
+Only thing that is not necessarily L.I.
+
+This would be LI if $\top$ was LI. 
+But space-like separated objects are not time-ordered in a LI way. 
+
+Diagram:  (see lecture for space time diagram)
+
+
+Only way to be LI if $H_I(x)$ and $H_I(x')$ commute when x and x' are space-like separated.
+
+Lorentz Invariant $\Rightarrow [H_I(x), H_I(x')] = 0$  if $x-x' < 0$ (space-like). 
+
+Now can ask if the $\phi^\dagger$'s or the $\phi$'s commute outside the light cone.  
+\underline{They do Not}. 
+
+However can find a new combination which does.
+
+\noindent\rule{\textwidth}{1pt}
+
+Now just state some results...
+
+\underline{Turns out} 
+
+\be
+[\phi_+(x), \phi_+^\dagger(x')] \ne 0 \textrm{ for } x-x'<0
+\ee
+But we can define 
+
+\be
+\Phi(x) = \phi_+(x) + \phi_-(x) = \int \cancel{d}^3p (a^\dagger e^{-ipx} + a e^{ipx})
+\ee
+
+Can show that,
+\be
+[\Phi(x), \Phi(x')] = 0 \textrm{ for } x-x'<0
+\ee
+Only if $[a,a^\dagger] = 0$, not if $\{a,a^\dagger\} = 0$
+
+Tells us that Scalars have to be Bosons!
+
+Tells us that we need to build $H_I$ out of $\Phi$ (not $\phi_+$ and $\phi_-$ separately)
+
+eg: 
+
+\bea
+H_I &=& \lambda \Phi^4(x)\\
+    &=& \lambda (\phi_+(x) + \phi_-(x)) ^4\\
+    &=& \lambda \left[\underbrace{\phi_+^2\phi_-^2}_{\textrm{term saw before}}^{\textrm{2 go in 2 come out}} + \underbrace{\phi_+^4 + \phi_+\phi_-^3 ...}_{\textrm{New terms}} \right] 
+\eea
+
+
+No charges associated with this scalar. 
+
+
+Can create it or destroy it at will (eg: $\phi_+\phi_-^3$)
+
+How do we talk about particles with conserved charge?
+This will not work ! 
+Only have one choice, introduce another operator.  a's and b's.
+
+\bea
+\phi^a &=& \int a^\dagger_p\ e^{-ipx} \\
+\phi^b &=& \int b^\dagger_p\ e^{-ipx} \\
+\eea
+
+And construct $\Phi$ as
+
+\bea
+\Phi &=& \phi_+^a + \phi_-^b \\
+     &=&\int \cancel{d}^3p (a e^{ipx} + b^\dagger e^{-ipx})
+\eea
+
+
+Again we have, 
+\be
+[\Phi(x), \Phi(x')] = 0 \textrm{ for } x-x'<0
+\ee
+
+
+(Note: $\Phi$ is \underline{not} Hermitian.)
+But 
+
+\be
+\int d^3x\ \Phi^\dagger(x)^2 \Phi(x)^2 
+\ee
+is Hermitian
+
+Expand this out and find that everything would conserve change provided that particles of type b have opposite charge to a. 
+
+So, if you want to talk about particles that carry some well defined charge, you must have \underline{anti-particles}.
+
+If you put this together with s=1/2, you find that they have to $\{\ \}=0$ for the Hamiltonian to vanish outside the light cone.
+
+
+}
+\end{document}
+
+

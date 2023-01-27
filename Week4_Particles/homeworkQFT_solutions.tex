@@ -1,0 +1,124 @@
+\input{../latexSetup}
+
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2022}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2022\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Homework Set QFT}}
+\large
+
+{\textbf{ Solutions  }} 
+\end{center}
+
+{\large
+\textbf{1) Find the generators of the ``Little Group'' for Massive particles \hfill \textit{(5 points)}}
+
+The little group equation is:
+\be
+W\cdot k = k \Rightarrow \omega \cdot k = 0
+\ee
+
+where
+\be
+\omega_{\mu\nu} = \begin{bmatrix} 0 & a & b & c \\ -a & 0 & A & B \\ -b & -A & 0 & C \\ -c & -B & -C & 0 \end{bmatrix}
+\ee
+
+
+For a massive particle we can take k to be k = (m,0,0,0).
+
+So $\omega \cdot k = (0,-ma,-mb,-mc) $. So the little group generators for massive particles are 
+\be
+\omega_{\mu\nu} = \begin{bmatrix} 0 & 0 & 0 & 0 \\ 0 & 0 & A & B \\ 0 & -A & 0 & C \\ 0 & -B & -C & 0 \end{bmatrix}
+\ee
+which are the rotation matrices.
+
+\vspace*{0.25in}
+
+\textbf{2) Find the generators of the ``Little Group'' for Massless particles \hfill \textit{(5 points)}}
+
+Same as above but now, for a massless particle, we can take k to be k = (E,E,0,0).
+
+So $\omega \cdot k = E(a,-a,-b-A,-c-B) $. So the little group generators for massless particles must have a=0,  b=A, and c=B
+
+\be
+\omega_{\mu\nu} = \begin{bmatrix} 0 & 0 & A & B \\ 0 & 0 & A & B \\ -A & -A & 0 & C \\ -B & -B & -C & 0 \end{bmatrix}
+\ee
+
+which are the results we had in class.
+
+\vspace*{0.25in}
+
+\textbf{3) Show that $\int \cancel{d^3p} \equiv \int \frac{d^3\vec{p}}{2E_p}$ is Lorentz invariant. \hfill \textit{(2 points)}}
+We will start with a manifestly Lorentz invariant integral and show that it is the same as $\int \cancel{d^3p}$.
+\begin{eqnarray*}
+\int d^4p\ \delta(E^2 - (|\vec{p}|^2 + m^2)) = \int dEd^3p \delta(E^2 - (|\vec{p}|^2 + m^2))
+\end{eqnarray*}
+
+Now, $dE^2 = 2E dE$ or $dE = dE^2/2E$, so
+
+\begin{eqnarray*}
+ = \int \frac{dE^2}{2E}d^3p \delta(E^2 - (|\vec{p}|^2 + m^2))
+\end{eqnarray*}
+
+Can now do the integral over $dE^2$
+\begin{eqnarray*}
+ = \int \frac{d^3p}{2\sqrt{|\vec{p}|^2 + m^2}}  = \int \cancel{d^3p}
+\end{eqnarray*}
+
+
+
+
+
+\newpage
+\textbf{4) Anti-Particles  \hfill \textit{(5 points)}}
+\begin{itemize}
+\item[a)] {Expand ${\Phi^\dagger}^2 \Phi^2$  in terms of $a$, $a^\dagger$, $b$, and $b^\dagger$  (Ignore the exponentials and integrals)\\
+
+\begin{align*}
+{\Phi^\dagger}^2 \Phi^2 = \left(\phi_-^a + \phi_+^b\right)^2 \left(\phi_+^a + \phi_-^b\right)^2 \sim \left(a + b^\dagger \right)^2 \left(a^\dagger + b \right)^2\\
+                        =  \left(aa + 2ab^\dagger + b^\dagger b^\dagger \right) \left(a^\dagger a^\dagger + 2 a^\dagger b + bb \right)\\
+                        =  \left(aa a^\dagger a^\dagger  + 2 aa a^\dagger b + aabb +  2ab^\dagger a^\dagger a^\dagger + 4 ab^\dagger a^\dagger b + 2ab^\dagger bb  + b^\dagger b^\dagger a^\dagger a^\dagger + 2 b^\dagger b^\dagger a^\dagger b + b^\dagger b^\dagger bb \right) 
+\end{align*}
+}
+
+
+\item[b)] {
+See figure.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{./AntiParticlesSolutionb.pdf}
+%\caption{A plot of the WIMP mass and interaction strength limits from the LUX experiment. From D. S. Akerib et al. [LUX Collaboration], “Results from a search for dark matter in the complete LUX exposure,” Phys. Rev. Lett. 118, no. 2, 021303 (2017) arXiv:1608.07648].}
+\end{figure}
+
+}
+\item[c)] {Let the charge ($Q$) of particle $a$ be $q_a$ and the charge of particle $b$ be $q_b$.  Calculate $\Delta Q$ for each process.
+
+See figure each term goes like $(q_a+q_b)$ 
+ }
+\item[d)] {What happens if you take $q_a = -q_b$ ?
+When $q_a = -q_b$, all processes conserve charge.
+}
+\end{itemize}
+
+%Sketch diagrams of the partile content of |psi(-inf)> to |psi(+inf)> for each term. like we did in class for a^\dagger a^\dagger a a = 
+
+%LEt the charge of a be +q and the charge of b be -q, what is Delta(Q) in each of the interactions in b) ?
+
+
+
+}
+
+\end{document}

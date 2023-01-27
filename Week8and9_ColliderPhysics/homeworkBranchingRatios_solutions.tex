@@ -1,0 +1,181 @@
+\input{../latexSetup}
+
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2022}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2022\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Homework Set Branching Ratios }}
+\large
+
+
+\end{center}
+
+{\large
+
+\textbf{0) Chapter 4 } \hfill \textit{(3 points)}\\
+
+
+The cross section is used to characterize the probability of particles interacting.
+The cross section has dimensions of area or of $GeV^{-2}$.
+The cross section scales as the matrix element squared. ie: $\sigma \sim |M|^2$.
+
+
+
+\textbf{1) Z boson decays: } \hfill \textit{(5 points)}\\
+
+We assumed that the Z-couplings were universal, that the constants of proportionality (called the phase space integrals) were the same for all decay products, and that no higher-order diagrams were relevant. 
+(The phase space intergrals will be the same if we can neglect the decay products masses.)
+
+\be
+Br(Z\rightarrow ee) \sim \frac{1}{21} = 0.048 \rmt{ vs } 0.034  \rmt{ in PDG }
+\ee
+
+\be
+Br(Z\rightarrow bb) \sim \frac{3}{21} = 0.143 \rmt{ vs } 0.156  \rmt{ in PDG }
+\ee
+
+
+\textbf{2) Muon decays: } \hfill \textit{(10 points)}\\
+\begin{itemize}
+\item[a)]{ ${ }$\\
+\bc
+\includegraphics[width=0.3\textwidth]{./4pointInteraction.pdf}
+\ec
+}
+
+\item[b)]{ We have 4-bosons (each of dim 3/2)  and the coupling constant.  The total dimensions have to add up to 4. 
+
+\be
+4 \times \frac{3}{2} + \rmt{[coupling constant]} = 4
+\ee
+
+$\Rightarrow$
+\be
+ \rmt{[coupling constant]} \sim  -2\ \rmt{or}\ \GeV^{-2}
+\ee
+
+}
+
+\item[c)]{ 
+
+\be
+\Gamma \sim |M|^2 \sim  \rmt{[coupling constant]}^2 = \GeV^{-4}
+\ee
+}
+But we also know that $\Gamma$ has to come out to have overall dimensions of $\frac{1}{\rmt{time}}$ or \GeV.
+
+$\Rightarrow$  
+\be
+\Gamma \sim m_\mu^5
+\ee
+
+\item[d)]{
+$m_\mu \sim 0.1 \GeV$, $m_\tau \sim 1 \GeV$, $\tau_\mu \sim 1\mu s$
+
+Now from c) 
+\be
+\Gamma_\tau \sim m_\tau^5
+\ee
+
+and we know
+\bea
+\tau_\mu = \Gamma_\mu^{-1}\\
+\tau_\tau = \Gamma_\tau^{-1}
+\eea
+
+so, 
+
+\be
+\frac{\tau_\tau}{\tau_\mu} = \frac{\Gamma_\mu}{\Gamma_\tau}
+\ee
+
+$\Rightarrow$
+\be
+\tau_\tau = \tau_\mu \frac{\Gamma_\mu}{\Gamma_\tau} = \tau_\mu \frac{m_\mu^5}{m_\tau^5} = \tau_\mu \left(\frac{m_\mu}{m_\tau}\right)^5  = 1\mu s (10^{-1})^5 = 10^{-6} s \times 10^{-5} = 10^{-11} s
+\ee
+}
+
+\item[e)]{
+with a direct three-point $\mu \rightarrow e \gamma$ vertex, the only mass scale is $m_\mu$. (b/c the ($\mu e \gamma$)- coupling  is dimensionless)
+
+So, $\Gamma_{\mu\rightarrow e \gamma} \sim m_\mu$ (to get the dimensions on $\Gamma$ right)
+
+We know from above that with the four-point interaction in Fermi theory $\Gamma_{SM} \sim m_\mu^5 m_W^{-4}$
+
+So,
+
+\be
+\frac{\tau_{new}}{\tau_{SM}} \sim \frac{m_\mu^5 m_W^{-4}}{m_\mu} \sim \left(\frac{m_\mu}{m_W}\right)^4 \sim \left(\frac{0.1\ \GeV}{100\ \GeV}\right)^4  \sim 10^{12}
+\ee
+
+The direct $\mu \rightarrow e \gamma$ would dominate (by a factor  $10^{12}$!)\\
+The weak interaction is damned weak.
+
+}
+\end{itemize}
+
+\clearpage
+
+%
+%  New Force
+%
+\textbf{3) A new force. } \hfill \textit{(5 points)}\\
+
+\begin{itemize}
+\item[a)]{ ${ }$\\
+\bc
+\includegraphics[width=0.3\textwidth]{./eeXee.pdf}
+\ec
+Range $\sim \frac{1}{m_X} \sim \frac{1}{1000 \GeV} \sim 10^{-3}\ \GeV^{-1} \sim 10^{-19}\ m$
+}
+
+\item[b)]{ ${ }$\\
+\bc
+\includegraphics[width=0.2\textwidth]{./eeDmDm.pdf}
+\ec
+
+Four fermion interaction $\Rightarrow$ Units of coupliing $\GeV^{-2} \sim \frac{1}{m_X^2}$ 
+
+}
+
+
+\item[c)]{ ${ }$\\
+\bc
+\includegraphics[width=0.3\textwidth]{./muDecayX.pdf}
+\ec
+
+\be
+\Gamma_{\rmt{New}} \sim \frac{m_\mu^5}{m_X^4} \hspace*{0.5in} \rmt{(see problem 2 for login on why $m_\mu^5$)}
+\ee
+
+
+\be
+\Gamma_{\rmt{SM}} \sim \frac{m_\mu^5}{m_W^4}  \hspace*{0.5in} \rmt{(from problem 2)}
+\ee
+
+So,
+\be
+\frac{\tau_{\rmt{New}}}{\tau_{\rmt{SM}}} \sim \left(\frac{m_X}{m_w} \right)^4 \sim 10^4
+\ee
+$\Rightarrow$ SM decays dominate!
+}
+
+\end{itemize}
+
+
+
+
+}
+\end{document}

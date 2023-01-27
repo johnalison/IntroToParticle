@@ -1,0 +1,102 @@
+\input{../latexSetup}
+
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2022}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2022\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Homework Set Relativistic QM}}
+\large
+
+{\textbf{ Due Date:} Friday February 25th   } 
+\end{center}
+
+{\large
+
+\textbf{1) Read Section 2.2 }
+
+\vspace*{0.5in}
+
+\textbf{2) Use the Weyl basis of the $\gamma$ matricies to solve the Dirac equation for a spinor $\psi$ \hfill \textit{(5 points)} }
+
+Assume a solution to the Dirac equation of the form
+\be
+\psi = u(p) e^{-i p\cdot x}
+\ee
+where $u(p)$ is a for competent spinor that only depends on p.
+Note the $e^{-i p\cdot x}$ is the expected dependence implied by relativistic energy-momentum relation (via the Klien Gordon equation).
+Derive a matrix equation for $u(p)$.
+How many solutions are there ?
+Show that the solution(s) can be written in terms concatenation of a two-component sponor.
+
+\vspace*{0.5in}
+
+\textbf{3) Clifford Algebra \hfill \textit{(10 points)} }
+
+In writing the Dirac equation, we chose a particular representation of the $\gamma$ matrices that satisfied $\{\gamma_\mu,\gamma_\nu\} = 2\eta_{\mu\nu}$, which is called the Clifford algebra. 
+The choice we used in class (and in the problem above) is called the Weyl basis.
+In this problem, we will study the Clifford algebra and the Weyl basis.
+\begin{itemize}
+\item[a)]
+By explicit multiplication, show that the $\gamma$ matrices in the Weyl basis satisfy the Clifford algebra.
+\item[b)]
+The Weyl basis isn’t the unique choice of matrices that satisfy the Clifford algebra. 
+Another set of matrices that does is
+\begin{equation*}
+\gamma_0 = \begin{pmatrix} I &  0 \\ 0 & -I \end{pmatrix} \hspace{0.5in} \gamma_i = \begin{pmatrix} 0 & \sigma_i \\  -\sigma_i & 0 \end{pmatrix}
+\end{equation*}
+This choice of $\gamma$ matrices is related to the Weyl basis by a similarity transformation:
+\begin{equation*}
+\gamma_\mu = S\gamma_\mu^{\mathrm{Weyl}}S^\dagger, 
+\end{equation*}
+where S is a unitary matrix such that $SS^\dagger = I$.
+A similarity transformation of the $\gamma$ matrices respects the Clifford algebra. 
+Determine the matrix S that relates the Weyl basis to this new basis of $\gamma$ matrices.
+
+\item[c)]
+ Applying the similarity transformation to the Dirac equation, gives 
+\begin{equation*}
+(i S \gamma_\mu S^\dagger \partial^{\mu} - m)\psi = S(i\gamma \cdot \partial - m)S^\dagger\psi = 0.
+\end{equation*}
+Given the solution to the Dirac equation that you found in problem 2), use the similarity transformation S you found above to find the solutions to the Dirac equation using the $\gamma$ matrix in the new basis.
+\end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{4) Show that  $\mathscr{L}_{EM} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} - J^{\mu}A_{\mu}$ is gauge invariant \hfill \textit{(3 points)}}
+
+
+\vspace*{0.25in}
+
+
+%\begin{itemize}
+%\item[] { }
+%\end{itemize}
+
+
+\textbf{5) Maxwell’s Equations.\hfill \textit{(5 points)}}
+
+In class,  I claimed that Maxwell’s equations follow from the equations of motion:  $\partial_\mu F^{\mu\nu} = J^\nu$ and the Bianchi identity: ($\partial_\mu F_{\nu\rho} +\partial_\rho F_{\mu\nu} +\partial_\nu F_{\rho\mu} =0$.
+Show this explicitly.
+\textit{Hint: take individual components and identify the corresponding Maxwell’s equation.
+}
+
+
+}
+
+
+
+
+
+\end{document}

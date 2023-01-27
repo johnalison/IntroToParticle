@@ -1,0 +1,186 @@
+\input{../latexSetup}
+
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2022}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center}
+{\huge \textbf{Lecture 13}}
+\end{center}
+
+{\fontsize{14}{16}\selectfont
+
+
+\underline{\Large Cross Sections And Decay Rates}
+
+20th century witnessed the development of collider physics. 
+Effective means to determine which particles exist and their properties and interactions.
+
+\begin{itemize}
+\item[-] Rutherford discovery of the nucleus using $\alpha$ 1911 
+\item[-] Andersen's discovery of anti-electrons 1932
+\end{itemize}
+
+These were made with ``Natural accelerators'' $\alpha$'s or cosmic rays
+
+Around 1930 man made collisions started winning. 
+
+eg: 1 MeV 
+
+Now 13 TeV at the LHC.
+
+Collisions map free fixed momenta initial states $\rightarrow$ final fixed momentum states. \\
+
+QFT predicts \underline{probability} for projections to occur. 
+
+Probabilities typically dependant on parameters (angles, momenta, etc) 
+
+\begin{center}
+$P(v_1, ... v_n)$ - differential probabilities
+\end{center}
+
+Given by 
+\be
+|\braket{\psi_{final}, +\infty|\psi_{initial}, -\infty}|^2
+\ee
+
+
+\be
+\braket{f|S|i} \hspace{1in} \textrm{S-matrix}
+\ee
+QFT tell us how to calculate S given some Lagrangian (next week)
+
+S-matrix elements are the primary object of interest for particle physics. 
+
+S-matrix elements always calculated pertubatively
+
+\be
+S = \underbrace{1}_{\textrm{free theory}} +  \underbrace{iT}_{\textrm{perturbatively small}}
+\ee
+
+
+
+\underline{QFT + Lagrangian} gives a procedure (recipe) for calculating S\\
+\hspace*{0.3in} Very nice interpretation in terms of picture ``Feynman diagrams''
+
+
+\underline{\underline{QM Perturbation Theory}}
+
+$H = H_0 + V$ 
+
+Remember we are interested in how some free state at early times ($-\infty$) evolve to some (potentially) other free state at late times. 
+
+At early times have a state with a given energy E, which is an eigenstate of $H_0$
+
+\be
+H_0\ket{\phi} = E\ket{\phi}
+\ee
+
+Including the interaction piece, will also be eigenstate of the full Hamiltonian with the same energy.
+
+\be
+H\ket{\psi} = E\ket{\psi}
+\ee
+
+Now we can formally write,
+\be
+\ket{\psi} = \ket{\phi} + \frac{1}{E-H_0}V\ket{\psi}
+\ee
+which can be verified by multiplying through by $(E-H_0)$.
+
+Whats happening here is that the interaction at intermediate times is inducing transitions among the states $\ket{\phi}$, which are non-interacting at early (and late) times. 
+
+So the full state $\ket{\psi}$ is given by the free state $\ket{\phi}$ plus a scattering term. 
+
+
+
+Really want to express the full state $\ket{\psi}$ entirely in terms of $\ket{\phi}$.\\
+\hspace*{0.3in} We do this by defining operator T:  $V\ket{\psi} = T\ket{\phi}$.
+
+This gives us
+\be
+\ket{\psi} = \ket{\phi} + \frac{1}{E-H_0}T\ket{\phi}
+\ee
+or
+\bea
+V\ket{\psi} &=& V\ket{\phi} + V\frac{1}{E-H_0}T\ket{\phi} \\
+&=& T\ket{\phi}
+\eea
+
+So we get a nice iterate equation for T
+\be
+T = V + V\frac{1}{E-H_0}T
+\ee
+which we can solve perturbatively in V.
+
+eg
+\be
+T = V + V\frac{1}{E-H_0}V + V\frac{1}{E-H_0}V \frac{1}{E-H_0}V + ...
+\ee
+
+Of course, we are interested in inner products of these with the initial/final states
+
+\be
+\underbrace{\braket{\phi_f|T|\phi_i}}_{T_{fi}} = \underbrace{\braket{\phi_f|V|\phi_i}}_{V_{fi}} + \sum_j \frac{\braket{\phi_f|V|\phi_j}\braket{\phi_j|V|\phi_i}}{E-H_0} + ...
+\ee
+ 
+\underline{Example of scattering of 2 electrons}
+
+\be
+\ket{i} = \ket{e_1, e_2} \hspace*{1in}  \ket{f} = \ket{e_3, e_4}
+\ee
+
+
+\be
+T_{fi} = V_{fi} + \sum_n V_{fn} \frac{1}{E_i-E_n} V_{ni} + ...
+\ee
+
+\bi
+\item[-] $E_i$- is the initial (= final) energy
+\item[-] $E_f$ - is the energy of the intermediate state
+\ei
+
+Now, the $\sum_n$ runs over energy thing in the Hilbert (Fock) space, however only certain states will be non-0.
+
+In relativistic theory, the action-at-a-distance of EM is replaced by a process where 2 electrons interact with a $\gamma$ which travels at c. 
+(This tells us there should be $\gamma$ in the intermediate state)
+
+
+\be
+V \sim e \int d^3x \psi \phi \psi  \hspace*{0.3in} \textrm{(Ignoring spin)}
+\ee
+this operator will have terms that go like ($\sim a_{e_3}^\dagger\ a_{\gamma}^\dagger\ a_{e_1}$)
+
+
+However, here all terms involve $a_{\gamma}^\dagger$.\\
+Because $\ket{i}$ and $\ket{f}$ do not contain a $\gamma$, $  V_{fi} = 0$
+
+to get a non-zero term, we need $\ket{n}$ with a photon. 
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.99\textwidth]{./eeScattering.pdf}
+\end{figure}
+
+
+
+\be
+T_{fi} = \frac{\braket{e_3 e_4|V|e_3 \gamma e_2}\braket{e_3 \gamma e_2|V|e_1 e_2 }}{(E_1+E_2) - (E_3 + E_4 + E_\gamma)} + \textrm{(2nd term)}
+\ee
+Note: $E_n \ne E_i$ which is allowed by uncertainty principle.
+
+
+Look at 
+\be
+\braket{e_3 \gamma e_2|V|e_1 e_2} = \braket{\gamma e_3 |V|e_1}
+\ee
+(up to overall normalization from $\braket{e_2|e_2}$.
+
+
+
+
+}
+\end{document}
+

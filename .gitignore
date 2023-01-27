@@ -1,6 +1,8 @@
 .DS_Store
 Videos2020
 Syllabus.log
+*/#*
+*/.#*
 */*.log
 */*.out
 */*.bcf
@@ -8,3 +10,9 @@ Syllabus.log
 */*.run.xml
 Final_exams
 MidTerm2_examsUngraded
+*sed.bkg
+printNameIDs
+emailAddresses
+Grades/
+CourseRoster_S22_33444_A_01.13.2022.csv
+Week2_SpaceTime/LorentzTransformation.pdf

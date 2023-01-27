@@ -1,0 +1,296 @@
+\input{../latexSetup}
+
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2019}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2019}
+\begin{document}
+\thispagestyle{fancy}
+
+
+
+
+
+%\begin{tabular}{c}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2019\\}
+%\hline 
+%\end{tabular}
+
+\begin{center}
+{\huge \textbf{Midterm}}
+\large
+
+\end{center}
+
+{\large
+
+
+
+
+\textbf{1) Units/Dimensional Analysis:  Muonic Atoms}\hfill \textit{(6 points)}\\  
+
+\begin{itemize}
+\item[a)] The muon was the first elementary particle discovered that does not appear in ordinary atoms.  Negative muons can, however, form muonic atoms by replacing an electron in an ordinary atom. 
+Estimate the size and binding energy of muonic hydrogen in GeV. A muon is 200 times heavier than an electron. 
+
+$m_\mu << m_p \Rightarrow $ to first order all motion in muon. 
+
+
+\be
+E\sim \frac{p^2}{m} - \frac{\alpha}{r} 
+\ee
+
+
+QM $\Rightarrow  p \sim \frac{1}{r}$ 
+
+
+\be
+E\sim \frac{1}{m_\mu r^2} - \frac{\alpha}{r} 
+\ee
+
+Equilibrium when terms are $\sim$ equal.
+
+\be
+\frac{1}{m_\mu r^2} = \frac{\alpha}{r} \Rightarrow r \sim \frac{1}{\alpha m_\mu} = 10^2\ 10^1\ GeV^{-1} = 10^3\ GeV^{-1}
+\ee
+
+Can get E from plugging this back into either of the two terms.
+
+\be
+E \sim \frac{\alpha}{r} \sim \alpha^2 m_\mu \sim 10^{-4}\ 10^{-1}\ GeV = 10^{-5}\ GeV
+\ee
+
+For regular hydrogen, same arguments as above with $m_\mu \rightarrow m_e$
+
+$\Rightarrow$
+
+\be
+\frac{E^\mu}{E^e} = \frac{\alpha^2 m_\mu}{\alpha^2 m_e} =  \frac{m_\mu}{m_e}
+\ee
+
+
+\item[b)] How much bigger/smaller would matter be in a world made out of muonic atoms ?
+
+From above,
+
+\be
+\frac{r_{muonic}}{r_{normal}} \sim \frac{1}{\alpha m_\mu} \times \frac{\alpha m_e}{1} \sim \frac{m_e}{m_\mu} \sim \frac{1}{200}
+\ee
+
+Distances would be 200 times smaller.
+
+\end{itemize}
+
+\clearpage 
+\textbf{2)  Relativity: How many generators does the Lorentz group have ? What transformations do they correspond to ?}\hfill \textit{(3 points)}
+
+\bc
+6:  3-rotations about x,y,z  and 3 boosts along x,y,and z
+\ec
+
+
+\textbf{3)  Quantum Mechanics:  }\hfill \textit{(4 points)}
+
+How do position eigenstates transform under  Translations ?
+
+ $T(\vec{a}) \ket{\vec{x}} = \ket{\vec{x} + \vec{a}} $
+
+
+How do momentum eigenstates transform under Translations ?
+
+ $T(\vec{a}) \ket{\vec{p}} = e^{ip\cdot a}\ket{\vec{p}} $
+
+\vspace*{0.3in}
+
+\textbf{4) Why does combining QM and Relativity require the existence of anti-particles?}\hfill \textit{(5 points)}
+
+
+Causality or , more precisely,  the need for the Hamiltonitan to commute outside the light cone
+
+\vspace*{0.3in}
+\textbf{5) What is the little group? Why is it useful ?}\hfill \textit{(2 points)}\\
+
+Subgroup of Lorentz transformations that leave the momentum invariant.
+They are useful b/c they simplify the problem of finding the other labels (spin and helicity) that the lorentz group acts on.
+
+\vspace*{0.3in}
+
+\textbf{6) Lorentz Transforms } \hfill \textit{(6 points)}\\
+\begin{itemize}
+\item[a)] How does a \textbf{massive} particle transform under a general Lorentz transformation ($\Lambda_\mu^\nu$) ?
+
+$\Lambda_\mu^\nu \ket{p^\mu,\sigma} = \sum_{\sigma'} R_{\sigma \sigma'} \ket{\Lambda p,\sigma'}$, where R is a rotation matrix.
+
+\item[b)] How does a \textbf{mass-less} particle $\ket{p^\mu,h}$ transform under a general Lorentz transformation ($\Lambda_\mu^\nu$)?
+
+$\Lambda_\mu^\nu \ket{p^\mu,\sigma} = e^{ih\theta} \ket{\Lambda p,\sigma'}$, where h is the particles helicity.xo
+  
+\end{itemize}
+
+
+%\textbf{3)  GZK cutoff energy} \hfill \textit{(5 points)}\\
+%High-energy cosmic rays (high energy protons), lose energy by interacting with CMB photons by producing a neutral pion:
+%\be
+%p+\gamma_{\mathrm{CMB}} \rightarrow p+\pi_0.
+%\ee
+%The proton energy at which this process can occur is called the GZK cutoff. 
+%Estimate the GZK cutoff energy.
+%The energy of CMB photons is $10^{-13}$ GeV (which follows from the measurement of CMB temperature of about 2.7 K).
+%Use 0.1 GeV for the mass of the pion and 1 GeV for the mass of the proton
+
+\vspace*{0.3in}
+\textbf{7) Relativistic Wave Equations } \hfill \textit{(4 points)}\\
+
+\begin{itemize}
+\item[a)] What modifications where required to the Schrodinger equation to make it relativistic?
+
+Need to use the same number of space and time derivatives; eg: klien gordon equation or the dirac equation.
+
+\item[b)] What modifications to Maxwell's equations where required to make them relativistic?
+
+None. The Maxwell's equations are already relativistic.
+
+\end{itemize}
+
+\vspace*{0.3in}
+\textbf{8) Fields } \hfill \textit{(3 points)}
+In QFT why do we write interactions in terms of fields (Fourier transforms of creation and annihilation operators)  instead  of the creation and annihilation operators directly?
+
+In order to make the interactions local in space-time. 
+
+\vspace*{0.3in}
+
+\textbf{9) Lagrangians } \hfill \textit{(4 points)}\\
+Consider the following Lagrangian:
+\be
+L = \frac{1}{2} (\partial_\mu\phi)(\partial^\mu\phi) - \frac{m^2}{2}\phi^2 + \bar{\psi}[i\gamma_\mu\partial^\mu]\psi + g_1 \phi \psi \psi + g_2 \psi \psi \psi \psi + g_3 \phi \phi \phi \phi
+\ee
+
+\bi
+\item[a)] What is the dimension of $g_1$ ? 
+
+dimension-less
+
+\item[b)] What is the dimension of $g_2$ ? 
+
+[GeV]$^{-2}$
+
+\item[c)] What is the dimension of $g_3$ ? 
+
+dimension-less
+
+\ei
+
+\vspace*{0.3in}
+
+\textbf{10) Feynman Diagrams }\hfill \textit{(6 points)}
+\bi
+\item[a)]What is the S-matrix ?
+
+Operator that takes asymptotic states in the far past to asymptotic states in the far future. 
+
+\item[b)]What is a Feynman diagram ? and what is its relationship to the s-matrix?
+
+A feynman diagram is a term in the expansion of the s-matrix.  It (roughly) describes one possible way an interaction could have occured.
+
+\ei
+
+\vspace*{0.3in}
+\textbf{11) What are \underline{two} constraints on the interactions of mass-less Spin-1 particles, apart form coming from a Lorentz-invariant Lagrangian?}\hfill \textit{(6 points)}
+
+- they have to couple to particles of the same mass
+
+- Charge must be conserved
+
+- Interaction must obey a lie group
+
+
+\vspace*{0.3in}
+\textbf{12) Can the SM have interactions between fermions and mass-less particles with Spin 2 ? If not, why not.  What about interactions between mass-less Spin 3 particles and fermions ? If not, why not. }\hfill \textit{(4 points)}
+
+- Spin-2: yes, althought the couplingsa are unique.
+
+- Spin-3 No, would violate $p\cdot M$ = 0 as required by Lorentz invariance. 
+
+
+%
+%\textbf{9) $ee\rightarrow\tau\tau$ scattering } \hfill \textit{(5 points)}\\
+%\begin{itemize}
+%\item[a)]{
+%At high energy ($E_{CM} >> m_\tau$), what is the dependence of the $ee\rightarrow\tau\tau$ cross section on $E_{CM}$ ?
+%\vspace*{1in}
+%}
+%
+%%\item[b)]{
+%%At high energy ($E_{CM} >> m_\tau$), derive the dependence of the cross section on scattering angle $\theta$.
+%%\vspace*{4in}
+%%}
+%
+%\item[b)]{
+%Sketch a graph of $\frac{\sigma(ee\rightarrow\tau\tau)}{\sigma(ee\rightarrow\mu\mu)}$ as a function of $E_{CM}$ from $2\times m_{\mu}$ to 1 TeV (= 1000 GeV).
+%\vspace*{1in}
+%}
+%\end{itemize}
+
+%scalar QED. treat electron as scalar, photon as massless spin 1 particle
+%  ee->ee scattering: Draw diagrmas, what are the associated matrix elements.
+
+
+%what about ee->tau tau? again at high energy where $E_{CM}$ >> tau tau.
+
+% work out the differential cross section ee->tautau in the massless limit.
+%\clearpage
+%
+%\textbf{10) Muon decays: } \hfill \textit{(10 points)}\\
+%\begin{itemize}
+%  \item[a)]{ The muon decays via the weak interaction,  At low energy ($E << m_W$), this can be approximated as a point-like interaction. 
+%  Draw the diagram describing muon decay to an electron assuming a point-like weak interaction.
+%\vspace*{1.5in}
+%}
+%  \item[b)]{ What are the dimensions of the coupling constant, associated to this diagram  ?
+%\vspace*{1.0in}
+%  }
+%  \item[c)] How does the decay rate $\Gamma$ (decays/unit time)  depend on the muon mass ? 
+%\vspace*{1.0in}
+%  \item[d)]{ The muon has a mass of $\sim$0.1 GeV and a lifetime of $\sim 1 \mu s$. The tau lepton has a mass of {$\sim$1 GeV}. Estimate the lifetime of the tau lepton in $\mu s$.
+%\vspace*{2.4in}
+%}
+%  \item[e)] {Suppose that the photon could couple at the same vertex to the muon and the electron. Then the muon could decay as $\mu\rightarrow e \gamma$. 
+%  Estimate the ratio of the $\mu$ lifetime in this world to that in our world without this interaction.
+%  \vspace*{3.0in}
+%  }
+%\end{itemize}
+
+
+%\textbf{11) Why is the weak interaction so much weaker than then electromagnetic interactions at low energies? } \hfill \textit{(2 points)}\\
+
+
+
+
+
+%Assuming lepton universality, would you expect a difference between the way $\nu_e$ and $\nu_\mu$ interact with matter ?
+%Justify your answer by drawing the leading order diagrams for $\nu_e + e \rightarrow \nu_e + e$  and $\nu_\mu + e \rightarrow \nu_\mu + e$.
+%
+%\vspace*{0.25in}
+
+
+%\clearpage
+%
+%\textbf{16) A new force. } \hfill \textit{(5 points)}\\
+%Assume there is another force of nature felt by electrons associated with the exchange of a new X boson of mass 1 TeV (= 1000 GeV).
+%\begin{itemize}
+%\item[a)]{ Estimate an upper limit on the range of this new force in meters.
+%\vspace{2in}
+%}
+%%\item[b)]{ Assume muons also interact with this new boson. How could you determine the spin of X ?}
+%\item[b)]{ Assume that this new X boson could also decay to spin-1/2 dark matter particles $\psi_{DM}$. At low energies (<< 1 TeV) the X interaction can be described by a point-like interaction. Estimate the coupling constant associated to dark matter scattering $e \psi_{DM} \rightarrow e \psi_{DM}$.   (Assume the X coupling at high energies is the same as for EM)  }
+%\vspace*{2in}
+%\item[c)]{ Assume there was a direct $X\rightarrow e\mu$ interaction. This would allow the muon to decay via $\mu^- \rightarrow e^-e^+e^-$. Draw the corresponding diagram and estimate the impact of the muon lifetime from this process.  How does it compare to the lifetime in the standard model?     }
+%\end{itemize}
+
+
+
+
+
+
+} % Begning Large
+\end{document}
