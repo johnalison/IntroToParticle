@@ -1,8 +1,8 @@
 \input{../latexSetup}
 
-\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2020}
-\chead{\Large Introduction to Particle Physics} % \hfill Spring 2020}
-\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2022}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2022}
 
 \begin{document}
 \thispagestyle{fancy}
@@ -162,7 +162,7 @@ OK, Lets go back to field theory....
 \noindent\rule{\textwidth}{1pt}
 
 \be
-\phi_+ (\vec{x}) = \int \cancel{d}^3p\ e^{i \vec{p} \vec{x}}\ a^{\dagger}_{\vec{p}}
+\phi_+ (\vec{x}) = \int \cancel{d}^3p\ e^{-i \vec{p} \vec{x}}\ a^{\dagger}_{\vec{p}}
 \ee
 
 (use scalars for the moment) 
@@ -172,18 +172,18 @@ Need to build $H_I$ out of $\phi_{+/-}$ in the interaction representation.
 \fbox{\begin{minipage}{\textwidth}
 Note: 
 \be
-\phi_+^I (x, t) = e^{-iH_ft} \phi(x) e^{iH_ft} \rightarrow e^{iE_p t} \phi(x) \\
+\phi_+^I (x, t) = e^{+iH_ft} \phi(x) e^{-iH_ft} \rightarrow e^{iE_p t} \phi(x) \\
 \ee
 
 
-The $e^{iHt}$ will go to $e^{iEt}$, then $\phi(x)$ will create a new particle with energy $E_p$, and then the $e^{+iHt}$ will give $e^{i(E+E_p) t}$
+The $e^{iHt}$ will go to $e^{-iEt}$, then $\phi(x)$ will create a new particle with energy $E_p$, and then the $e^{+iHt}$ will give $e^{+i(E+E_p) t}$
 
 \end{minipage}}
 
 \bea
-\phi_+^I (x, t) &=& e^{-iH_ft} \phi(x) e^{iH_ft} \\
-                &=& \int \cancel{d}^3p\ e^{i \vec{p} \vec{x}}\ e^{-iE_pt}\ a^{\dagger}_{\vec{p}} \\
-                &=& \int \cancel{d}^3p\ e^{-i p^\mu x_\mu}\ a^{\dagger}_{\vec{p}}
+\phi_+^I (x, t) &=& e^{+iH_ft} \phi(x) e^{-iH_ft} \\
+                &=& \int \cancel{d}^3p\ e^{-i \vec{p} \vec{x}}\ e^{+iE_pt}\ a^{\dagger}_{\vec{p}} \\
+                &=& \int \cancel{d}^3p\ e^{i p^\mu x_\mu}\ a^{\dagger}_{\vec{p}}
 \eea
 
 this behaves nicely under Lorentz Transforms $\phi(\Lambda x) = \phi(x)$
@@ -212,7 +212,7 @@ Seems like we are done.
 What is the problem?
 
 Problem is the time ordering.  
-Only think that is not necessarily L.I.
+Only thing that is not necessarily L.I.
 
 This would be LI if $\top$ was LI. 
 But space-like separated objects are not time-ordered in a LI way. 
@@ -248,7 +248,7 @@ Can show that,
 \be
 [\Phi(x), \Phi(x')] = 0 \textrm{ for } x-x'<0
 \ee
-Only if $[a,a^\dagger] = 0$, not if ${a,a^\dagger} = 0$
+Only if $[a,a^\dagger] = 0$, not if $\{a,a^\dagger\} = 0$
 
 Tells us that Scalars have to be Bosons!
 

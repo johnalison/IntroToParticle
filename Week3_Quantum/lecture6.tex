@@ -1,8 +1,8 @@
 \input{../latexSetup}
 
-\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2020}
-\chead{\Large Introduction to Particle Physics} % \hfill Spring 2020}
-\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2022}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2022}
 
 \begin{document}
 \thispagestyle{fancy}
@@ -24,7 +24,7 @@ $\ket \alpha$  - state vector
 \end{center}
 
 
-\textbf{\underline{Linear Superpositions} }
+\textbf{\underline{Linear Super-positions} }
 
 \be
 \ket \psi = c_1 \ket{\alpha_1} + c_2 \ket{\alpha_2}
@@ -344,13 +344,13 @@ Another look at the $\vec{p}$ operator...
 
 
 \bea
-\bra{y}T(\epsilon)\ket{\psi} =& \int d^3x \bra{y}\underbrace{T(\epsilon)\ket{x}}_{\ket{x+\epsilon}}\braket{x|\psi}\\
-               =& \int d^3x \braket{y|x}\braket{x-\epsilon|\psi}  \\
-               =& \braket{y-\epsilon|\psi}  \\
+%\bra{y}T(\epsilon)\ket{\psi} =& \int d^3x \bra{y}\underbrace{T(\epsilon)\ket{x}}_{\ket{x+\epsilon}}\braket{x|\psi}\\
+%               =& \int d^3x \braket{y|x}\braket{x-\epsilon|\psi}  \\
+\bra{y}T(\epsilon)\ket{\psi}               =& \braket{y-\epsilon|\psi}  \\
                =& \psi(y-\epsilon)  \\
                =& \psi(y) - \epsilon \frac{\partial}{\partial y} \psi(y)
 \eea
-(using change of variables $x\rightarrow x - \epsilon$ and Taylor expansion)
+(using Taylor expansion)
 
 Now, on the other-hand...
 
@@ -381,7 +381,7 @@ we already saw that $\braket{x|p} \sim e^{i\frac{p\cdot x}{\hbar}}$
 \phi(p) \equiv \braket{p|\psi} 
 \ee
 
-Can show (HW) that $\phi(p) = \frac{1}{(2\pi \hbar)^{\frac{3}{2}}} e^{i\frac{px}{\hbar}}$
+Can show (HW) that $\braket{x|p} = \frac{1}{(2\pi \hbar)^{\frac{3}{2}}} e^{i\frac{px}{\hbar}}$
 
 Then, 
 

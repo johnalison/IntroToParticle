@@ -11,9 +11,9 @@
 \def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
 
 
-\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2020}
-\chead{\Large Introduction to Particle Physics} % \hfill Spring 2020}
-\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2022}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2022}
 \begin{document}
 \thispagestyle{fancy}
 
@@ -22,7 +22,7 @@
 
 
 %\begin{tabular}{c}
-%{\large 33-444 \hfill Intro To Particle \hfill Spring 2020\\}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2022\\}
 %\hline 
 %\end{tabular}
 
@@ -34,7 +34,65 @@
 \end{center}
 
 {\large
-\textbf{2) Solid State Physics} \hfill \textit{(5 points)}
+\textbf{2) Radius of Planets } \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)] {
+A planet is an object whose internal pressure coming from it being a solid made up of atoms is balanced by the gravitational pressure it feels.
+
+Lets work out the internal pressure of a solid first:
+
+In class we worked out that $\rAtom \sim \frac{1}{Z\alpha m_e}$. (using $E\sim - \frac{Z\alpha}{r} + \frac{p^2}{m_e}$ and $p\times r \sim 1$)
+
+It follows from this that $E_{atom} \sim Z^2\alpha^2 m_e$ and $V_{atom} \sim \rAtom^3$. 
+
+The atomic pressure (Units F/area or (better!) E/volume) is then $P_{solid} \sim E_{atom} / V_{atom} \sim \frac{Z^2\alpha^2 m_e}{(Z\alpha m_e)^{-3}} \sim \sim Z^5\alpha^5 m_e^{4} \sim Z\alpha \rAtom^{-4} $
+
+
+Now lets do $P_{Grav}$. Here we need $E_{Grav}$ and $V_{Grav}$, the energy of the planet from the gravitational force and the volume over which it acts.
+
+$V_{Grav}$ is the volume of the planet $\sim R_{Planet}^3$
+
+The gravitational energy of a sphere is given by $E_{Grav} \sim G_N \frac{M_{Planet}^2}{R_{Planet}}$
+
+So, $P_{Grav} \sim G_N \frac{M_{Planet}^2}{R_{Planet}^4}$. 
+
+Assuming the planet is a solid made of atoms, we can write $M_{Planet} \sim \rho_{solid} R_{Planet}^3$, where $\rho_{solid} \sim \frac{Z m_p}{\rAtom^3}$ 
+
+Then, $P_{Grav} \sim G_N \frac{Z^2 m_p^2 R_{Planet}^6}{\rAtom^6 R_{Planet}^4} \sim (G_N m_p^2) Z^2 \left(\frac{R_{Planet}}{\rAtom}\right)^2 \frac{1}{\rAtom^4} \sim \alpha_G Z^2 \left(\frac{R_{Planet}}{\rAtom}\right)^2 \rAtom^{-4} $. 
+
+Setting $P_{Grav} \sim P_{Solid}$ gives
+
+\be
+\alpha_G Z^2 \left(\frac{R_{Planet}}{\rAtom}\right)^2 \rAtom^{-4} \sim Z\alpha \rAtom^{-4}
+\ee
+
+or
+
+\be
+\left(\frac{R_{Planet}}{\rAtom}\right)^2 \sim Z^{-1} \frac{\alpha}{\alpha_G}  \Rightarrow R_{Planet} \sim  \sqrt{\frac{\alpha}{Z\alpha_G}} \frac{1}{Z\alpha m_e}
+\ee
+
+
+}
+\item[(b)] {
+\be
+R_{Planet} \sim   \sqrt{\frac{\alpha}{Z\alpha_G}} \rAtom
+\ee
+}
+\item[(c)] {
+Lets take $\rAtom \sim 10^{-10}$ m, $Z\sim10^2$, $\alpha \sim 10^{-2} $, and $\alpha_G \sim 10^{-38}$ 
+
+\be
+R_{Planet} \sim   \sqrt{\frac{10^{-2}}{10^2 10^{-38}}} 10^{-10} m \sim 10^{17} 10^{-10} m \sim 10^7 m 
+\ee
+vs actual $6.37 \times 10^6 m$ (Pretty Good!)
+}
+\end{itemize}
+
+\vspace*{0.25in}
+
+{\large
+\textbf{3) Solid State Physics} \hfill \textit{(5 points)}
 \begin{itemize}
 \item[(a)] {
 We worked out in class $\rAtom \sim \frac{1}{Z\alpha m_e}$. (using $E\sim - \frac{Z\alpha}{r} + \frac{p^2}{m_e}$ and $p\times r \sim 1$)
@@ -49,103 +107,7 @@ Assuming $Z\sim 10$, \\Energy $\sim 10 \cdot 10^{-2} \cdot 10^{-3}\ \GeV \sim 10
 
 \vspace*{0.25in}
 
-\textbf{3) Strength of Gravity on Earth} \hfill \textit{(5 points)}
-\begin{itemize}
-\item[(a)]{
-From class, $R_{\textrm{Planet}} \sim  \sqrt{\frac{\alpha}{\aG}} \times \rAtom$,   $\rho_{\textrm{solid}} \sim \frac{Z\mp}{\rAtom^3}$, and $M_{\textrm{Planet}} \sim \rho_{\textrm{Solid}} \times R_{\textrm{Planet}}^3$
-
-\begin{equation*}
-g_{\textrm{local}} \sim G_N \frac{M_{\textrm{Planet}}}{R_{Planet}^2} \sim \frac{G_N Z \mp R_{\textrm{Planet}}}{\rAtom^3}\sim \sqrt{\alpha_G \alpha} \frac{Z}{\mp \rAtom^2}
-\end{equation*}
-}
-\item[(b)]{
-\begin{align*}
-g_{\textrm{local}}  \sim & (\alpha_G \alpha)^{1/2} \cdot Z \cdot \rAtom^{-2} \cdot \mp^{-1}\\
-                    \sim & (10^{-39}10^{-2})^{1/2} \cdot 10 \cdot 10^{-8}\ \GeV^{-2} \cdot \GeV\\
-                    \sim & 10^{-27.5} \GeV
-\end{align*}
-
-Need to convert \GeV\ to $\frac{m}{s^2}$ which has units of [distance]$\times$[time]$^{-2}$.
-c has units of [distance]$\times$[time]$^{-1}$, h has units of [energy]$\times$[time].
-So, can convert from [energy] to [distance]$\times$[time]$^{-2}$ by multiplying by c/h.
-c = $10^8$ m/s, h = $10^{-15}$ eV$\cdot$s = $10^{-24}$ \GeV $\cdot$ s. 
-So, $c/h = 10^8 \cdot 10^{24} = 10^{32} \frac{m}{\GeV s^2}$  
-\begin{align*}
-g_{\textrm{local}}  \sim & 10^{-27.5} \GeV  \times (1)\\
-  \sim & 10^{-27.5} \GeV  \times \frac{c}{h} \\
-  \sim & 10^{-27.5} \GeV  \times 10^{32}  \frac{m}{\GeV s^2} \\
-  \sim & 10^{4} \frac{m}{s^2}
-\end{align*}
-
-
-}
-\item[(c)]{
-Not so close to $10 \frac{m}{s^2}$, If we has used $\rAtom \sim10^{-10} m$ instead of $10^{-12}$ which accounts for the screening of multple electrons in the atom. 
-Would have calculated factor of $10^{-4}$ smaller or $g_\textrm{local}$ ~ 1, which is pretty close.
-}
-
-\end{itemize}
-%Estimate the size of life forms on earth in terms of $\alpha$, \aG, \mp, and \me.
-%Assume life is a solid. 
-
-\vspace*{0.25in}
-
-\textbf{4) Neutron Stars } \hfill \textit{(5 points)}
-\begin{itemize}
-\item[(a)]{
-Neutron star will be stable when $P_{Neutron} \sim P_{Grav}$.
-$P_{Neutron} \sim \frac{E_{Neutron}}{R_{Neutron}^3} \sim \mp^4$
-\begin{equation*}
-P_\textrm{Grav} \sim \frac{G_N \frac{M_{NS}^2}{R_{NS}}}{R_{NS}^3} \sim \frac{G_N M_{NS}^2}{R_{NS}^4}
-\end{equation*}
-
-\begin{equation*}
-M_\textrm{NS} \sim \rho_{Neutron}\times R_{NS}^3
-\end{equation*}
-
-\begin{equation*}
-\rho_{Neutron} \sim \mp^4
-\end{equation*}
-
-
-\begin{equation*}
-P_\textrm{Grav} \sim P_{Neutron} \Rightarrow  G_N \mp^8 R_{NS}^2 \sim \mp^4
-\end{equation*}
-
-\begin{equation*}
-R_{NS} \sim \sqrt{\frac{1}{\aG}} \frac{1}{\mp} \sim \sqrt{\frac{1}{\aG}} \rp
-\end{equation*}
-
-\begin{equation*}
-\Rightarrow M_{NS} \sim \left(\frac{1}{\aG}\right)^{3/2} \mp 
-\end{equation*}
-
-Speed of sound $v_{NS} \sim \sqrt{\frac{P_{NS}}{\rho_{NS}}} \sim 1$
-
-}
-
-
-\item[(b)]{
-$R_{NS} \sim 10^{19} 10^{-15} \text{m} \sim 10^4 \text{m} \sim 10\ \text{km} $  \\
-$M_{NS} \sim 10^{58} 10^{-27} \text{kg} \sim 10^{31} \text{kg} \sim 10\ M_\odot $  \\
-$v_{NS} \sim c$
-}
-\item[(c)]{
-``Neutron stars have a radius of the order of 10 kilometres and a mass lower than a 2.16 solar masses.'' -wikipedia
-}
-
-\item[(d)]{
-$\mp = 938.27$ MeV\\
-$m_{\text{neutron}} = 939.56$ MeV $ \sim 1.001 \mp $
-
-}
-\end{itemize}
-
-\vspace*{0.25in}
-
-\newpage
-
-\textbf{5) 2D Rotations } \hfill \textit{(3 points)}
+\textbf{4) 2D Rotations } \hfill \textit{(5 points)}
 \begin{itemize}
 \item[(a)]{
 
@@ -192,32 +154,111 @@ cos(\theta_1 + \theta_2)  & sin(\theta_1 + \theta_2) \\
 which is clearly symmetric $\theta_1 \leftrightarrow \theta_2$
 
 }
+
+\item[(c)]{
+\be
+zz^* = (x+iy)(x-iy) = x^2 + y^2
+\ee
+So, given a vector in the complex plain specified by (x,y), $zz^*$ gives the length of the vector.
+}
+
+Under the action of: $z\rightarrow e^{i\theta}z$,$z^*\rightarrow e^{-i\theta}z^*$
+\begin{align*}
+M(\theta_1): z\rightarrow e^{i\theta_1}z\ \textrm{(+ complex conjugate)}\\
+M(\theta_2): z\rightarrow e^{i\theta_2}z\ \textrm{(+ complex conjugate)}\\
+M(\theta_1)M(\theta_2): z\rightarrow e^{i\theta_1}e^{i\theta_2}z = e^{i(\theta_1+\theta_2)}z = M(\theta_1 + \theta_2)
+\end{align*}
+
+And $M(\theta_1)M(\theta_2) = M(\theta_1 + \theta_2) = M(\theta_2 + \theta_1) = M(\theta_2)M(\theta_1)$, because addition commutes.
+
 \end{itemize}
 
 \vspace*{0.25in}
 
-\textbf{6) 3D Rotations } \hfill \textit{(5 points)}
+\textbf{5) 3D Rotations } \hfill \textit{(5 points)}
 \begin{itemize}
 \item[(a)]{
 
-\begin{equation*}
-J_1 J_2 - J_2 J_1 = \begin{bmatrix}    0 & 0 & 0  \\ 1 & 0  & 0 \\ 0 & 0 & 0 \end{bmatrix} - \begin{bmatrix}    0 & 1 & 0  \\ 0 & 0  & 0 \\ 0 & 0 & 0 \end{bmatrix}  = \begin{bmatrix}    0 & -1 & 0  \\ 1 & 0  & 0 \\ 0 & 0 & 0 \end{bmatrix} = -i J_3
-\end{equation*}
-etc.
+${ [{\boldsymbol {J}}_{23},{\boldsymbol {J}}_{13}]={\boldsymbol {J}}_{12},\quad [{\boldsymbol {J}}_{12},{\boldsymbol {J}}_{23}]={\boldsymbol {J}}_{13},\quad [{\boldsymbol {J}}_{13},{\boldsymbol {J}}_{12}]={\boldsymbol {J}}_{23}}$
+
 
 }
 \item[(b)]{
 %Show that $M' = $ is also traceless and hermitian and that is has the same determinant as M.
 
-$tr(M') = tr(U^{\dagger}MU) = tr(UU^{\dagger}M) = tr(M)$\\
+The most general 2x2 trace-less and hermitian matrix can be written as
+\begin{equation*}
+M = \begin{pmatrix} z &  x+iy  \\ x-iy  & -z \end{pmatrix} \equiv \vec{\sigma} \cdot \vec{r}
+\end{equation*}
 
-$(M')^\dagger = (U^{\dagger}MU)^\dagger = (U M^{\dagger} U^{\dagger}) = (U^\dagger M U) = M'$\\
+The determinant is given by $-z^2 - x^2 -y^2 = -r^2$. 
 
+Consider $M'=U^{\dagger}MU$, where U is unitary.
 
-$det(M') = det(U^{\dagger})det(M)det(U) = 1 \times det(M) \times 1$
+Now, $tr(M') = tr(U^{\dagger}MU) = tr(UU^{\dagger}M) = tr(M)$\\
+
+And $(M')^\dagger = (U^{\dagger}MU)^\dagger = (U M^{\dagger} U^{\dagger}) = (U^\dagger M U) = M'$\\
+
+So $M'$ is also a 2x2 trace-less and hermitian matrix which can be written as $M = \vec{\sigma} \cdot \vec{r'}$\\
+
+The determinant of M' is given by $det(M') = det(U^{\dagger})det(M)det(U) = 1 \times det(M) \times 1 = -r^2 $ . 
+
+This implies that the Unitary transform performs a transformation that preserves the length of the vector $r$ defined by $\vec{\sigma} \cdot \vec{r}$.
+The action of U preforms a rotation on the vector defined by M.
+
 }
 
 \end{itemize}
+
+\vspace*{0.25in}
+
+\textbf{6) Lorentz Transformations } \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)]{
+
+
+\begin{equation*}
+e^{I\eta} = 1 + I\eta + \frac{I^2\eta^2}{2!} + \frac{I^3\eta^3}{3!} + \frac{I^4\eta^4}{4!} + \dots
+\end{equation*}
+
+$I_B^2 = \begin{bmatrix} 1 & 0  \\ 0 & 1 \end{bmatrix} $
+
+\begin{equation*}
+e^{I\eta} = I\left(\eta + \frac{I^2\eta^3}{3!} + \frac{I^4\eta^5}{5!} + \dots \right) + \left(1 + \frac{I^2\eta^2}{2!} + \frac{I^4\eta^4}{4!}  + \dots \right)
+\end{equation*}
+
+\begin{equation*}
+e^{I\eta} = I\left(\eta + \frac{\eta^3}{3!} + \frac{\eta^5}{5!} + \dots \right) + \left(1 + \frac{\eta^2}{2!} + \frac{\eta^4}{4!}  + \dots \right) \\
+= I \sinh(\eta) + \cosh(\eta)
+\end{equation*}
+
+
+}
+\item[(b)]{
+
+The origin of the primed frame is at $x'=0$ in the prime frame and at $x=vt$ in the unprimed frame (assuming the origins coincided at t=0)
+
+\be
+x = t'\sinh(\eta) \textrm{ and } t = t'\cosh(\eta)
+\ee
+
+\be
+v=\frac{x}{t} = \tanh(\eta)  \textrm{ and } \cosh^{-2} = 1 - \tanh^2 
+\ee
+
+\be
+\Rightarrow \cosh(\eta) = \frac{1}{\sqrt{1-v^2}} \equiv \gamma 
+\ee
+
+\be
+\sinh(\eta) = \frac{v}{\sqrt{1-v^2}} = \beta\gamma 
+\ee
+
+
+}
+
+\end{itemize}
+
 
 
 

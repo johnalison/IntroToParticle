@@ -11,9 +11,9 @@
 \def\GN{\ensuremath{\textrm{G}_\textrm{N}}}
 
 
-\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2020}
-\chead{\Large Introduction to Particle Physics} % \hfill Spring 2020}
-\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2022}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2022}
 \begin{document}
 \thispagestyle{fancy}
 
@@ -22,7 +22,7 @@
 
 
 %\begin{tabular}{c}
-%{\large 33-444 \hfill Intro To Particle \hfill Spring 2020\\}
+%{\large 33-444 \hfill Intro To Particle \hfill Spring 2022\\}
 %\hline 
 %\end{tabular}
 
@@ -30,7 +30,7 @@
 {\huge \textbf{Homework Set \#1}}
 \large
 
-{\textbf{ Due Date:} Before class Friday January 24th  }
+{\textbf{ Due Date:} Before class Friday February 4th  }
 \end{center}
 
 {\large
@@ -44,7 +44,26 @@
 
 \vspace*{0.25in}
 
-\textbf{2) Solid State Physics} \hfill \textit{(5 points)}
+\textbf{2) Radius of Planets} \hfill \textit{(5 points)}
+\begin{itemize}
+\item[(a)] Calculate $r_{\textrm{planet}}$ in terms of $\alpha$, \aG, \mp, and \me. 
+\item[(b)] Express your answer in terms of $r_{\textrm{atom}}$.
+\item[(c)] How does this estimate compare with the radius of the earth ? 
+\end{itemize}
+
+\vspace*{0.25in}
+
+%\textbf{3) Strength of Gravity on Earth} \hfill \textit{(5 points)}
+%\begin{itemize}
+%\item[(a)]Calculate the local strength of gravity $g_{\textrm{local}}$ in terms of $\alpha$, \aG, \mp, and \me.
+%\item[(b)] Express your answer in terms of $r_{\textrm{atom}}$.
+%\item[(b)]What is your estimated value in mks units Use $r_{\textrm{atom}} ~ 10^{-10} m$ ?
+%\item[(c)]How does this compare with the well-known value of 9.8 m/s$^2$ ?
+%\end{itemize}
+%
+%\vspace*{0.25in}
+
+\textbf{3) Solid State Physics} \hfill \textit{(5 points)}
 \begin{itemize}
 \item[(a)] Assume a solid is composed of closely packed atoms. What is the spacing between atoms?  Express your result in terms of  $\alpha$, \aG, \mp, and \me.
 \item[(b)] If you wanted to study the crystal structure of a solid material with $Z\sim10$ using light, what wavelength of photons would you need ?
@@ -54,30 +73,18 @@ Express your result in terms of  $\alpha$, \aG, \mp, and \me.
 
 \vspace*{0.25in}
 
-\textbf{3) Strength of Gravity on Earth} \hfill \textit{(5 points)}
-\begin{itemize}
-\item[(a)]Calculate the local strength of gravity $g_{\textrm{local}}$ in terms of $\alpha$, \aG, \mp, and \me.
-\item[(b)]What is your estimated value in mks units ?
-\item[(c)]How does this compare with the well-known value of 9.8 m/s$^2$ ?
-\end{itemize}
-%Estimate the size of life forms on earth in terms of $\alpha$, \aG, \mp, and \me.
-%Assume life is a solid. 
 
-\vspace*{0.25in}
+%\textbf{4) Neutron Stars } \hfill \textit{(5 points)}
+%\begin{itemize}
+%\item[(a)]Estimate the radius, mass, and speed of sound for neutron stars in terms of $\alpha$, \aG, \mp, and \me.
+%Assume that a neutron star is a solid made of neutrons and $\mp \sim m_{\textrm{neutron}}$. \\
+%(Hint: the speed of sound is given by the square-root of the pressure over the mass density)
+%\item[(b)]What are you estimated values in mks units ?
+%\item[(c)]Compare your estimates to actual values for Neutron Stars quoted online.
+%\item[(d)]Look up $m_{\textrm{neutron}}$. How does this compare with the assumption of $\mp \sim m_{\textrm{neutron}}$?
+%\end{itemize}
 
-\textbf{4) Neutron Stars } \hfill \textit{(5 points)}
-\begin{itemize}
-\item[(a)]Estimate the radius, mass, and speed of sound for neutron stars in terms of $\alpha$, \aG, \mp, and \me.
-Assume that a neutron star is a solid made of neutrons and $\mp \sim m_{\textrm{neutron}}$. \\
-(Hint: the speed of sound is given by the square-root of the pressure over the mass density)
-\item[(b)]What are you estimated values in mks units ?
-\item[(c)]Compare your estimates to actual values for Neutron Stars quoted online.
-\item[(d)]Look up $m_{\textrm{neutron}}$. How does this compare with the assumption of $\mp \sim m_{\textrm{neutron}}$?
-\end{itemize}
-
-\newpage
-
-\textbf{5) 2D Rotations } \hfill \textit{(3 points)}
+\textbf{4) 2D Rotations } \hfill \textit{(5 points)}
 \begin{itemize}
 \item[(a)]Show that $R(\Theta) = e^{I\Theta} = cos(\Theta)+ I sin(\Theta)$
 where, $I =  \begin{bmatrix}
@@ -85,29 +92,56 @@ where, $I =  \begin{bmatrix}
     -1 & 0
   \end{bmatrix} $
 
-\item[(b)]Show that 2D rotations commute.  (ie: $R(\Theta_{1})R(\Theta_{2}) = R(\Theta_{2})R(\Theta_{1})$)
+\item[(b)]Show that 2D rotations commute and that the multiplciation law is given by $R(\Theta_{1})R(\Theta_{2}) = R(\Theta_{1} + \Theta_{2})$
+\item[(c)]\textbf{Show that SO(2) $\simeq$ U(1)}. Consider the complex plane and independent variables $z$ and $z^*$ where $z = x+iy$ and $z^*$ is the complex conjugate.
+What is $zz^*$ in terms of $x$ and $y$ ?
+Consider the action of the operation: $z\rightarrow e^{i\theta}z$,$z^*\rightarrow e^{-i\theta}z^*$
+Show that this action commutes and satisfies same multiplication law as we found for SO(2).
+The group of transformations $e^{i\theta}$ is referred to as $U(1)$,  for Unitary and 1 dimensional.
+
 \end{itemize}
 }
 
 \vspace*{0.25in}
 
-\textbf{6) 3D Rotations } \hfill \textit{(5 points)}
+\textbf{5) 3D Rotations } \hfill \textit{(5 points)}
 \begin{itemize}
-\item[(a)]Work the ``algebra'' of the generators of 3D rotations $J_i$. \\
+\item[(a)]Work out the ``algebra'' of the generators of 3D rotations $J_i$. \\
 Where $
-J_3 =  \begin{bmatrix}    0 & -i & 0  \\ i & 0  & 0 \\ 0 & 0 & 0 \end{bmatrix}, 
+J_{12} =  \begin{bmatrix}    0 & -1 & 0  \\ 1 & 0  & 0 \\ 0 & 0 & 0 \end{bmatrix}, 
 \hfill
- J_2 =  \begin{bmatrix}    0 & 0 & -i  \\ 0 & 0  & 0 \\ i & 0 & 0 \end{bmatrix} 
+ J_{13} =  \begin{bmatrix}    0 & 0 & 1  \\ 0 & 0  & 0 \\ -1 & 0 & 0 \end{bmatrix} 
 \hfill
- J_1 =  \begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -i \\ 0 & i & 0 \end{bmatrix} 
+ J_{23} =  \begin{bmatrix}    0 & 0 & 0  \\ 0 & 0  & -1 \\ 0 & 1 & 0 \end{bmatrix} 
 $\\
-(These generators different from the T's derived in class by a factor of $i$)\\
 Working out the algebra means calculating the commutation relations $[J_i,J_j]$.
-You dont need to do all of them, but convince yourself that what I said in class is true. 
-\item[(b)]Let M be a traceless $2\times2$ hermitian matrix and U be a $2\times2$  unitary matrix with determinant = 1.  
-Show that $M' = U^{\dagger}MU$ is also traceless and hermitian and that is has the same determinant as M.
+\item[(b)]\textbf{Show that SO(3) $\simeq$ SU(2)}
+Let M be a traceless $2\times2$ hermitian matrix and U be a $2\times2$  unitary matrix.  
+Write down the most general form of this matrix.
+Show that it can be written in the form $\vec{\sigma}\cdot\vec{r}$, where $\vec{\sigma}$ is a vector of the 2x2 pauli matrices ie $(\sigma_x,\sigma_y,\sigma_z)$.
+What is the determinant of M ?
+Now consider performing a unitary transformation $M' = U^{\dagger}MU$, where U is a unitrary 2x2 matrix.
+Show that $M'$ is also traceless and hermitian and therefore can be also written as $\vec{\sigma}\cdot\vec{r'}$
+What is the determinant of M'?
+Comment.
 \end{itemize}
 
+\vspace*{0.25in}
+
+\textbf{6) Lorentz Transformations} \hfill \textit{(5 points)}
+
+In class we showed the generator for boosts (in 1D is given by) $I_\mathrm{B} =  \begin{bmatrix}    0 & 1  \\    1 & 0  \end{bmatrix} $.
+\begin{itemize}
+\item[(a)]{Show that $B(\eta) = e^{\eta I_{\mathrm{B}}} = \cosh(\eta)+ I_\mathrm{B} \sinh(\eta)$}
+\item[(b)]{
+This implies
+\be
+\begin{pmatrix} x'^0 \\ x'^1\end{pmatrix} = \begin{pmatrix} \cosh\eta & \sinh\eta \\ \sinh\eta & \cosh\eta  \end{pmatrix} \begin{pmatrix} x^0 \\ x^1\end{pmatrix}
+\ee
+Derive the relationship  between $\cosh(\eta)$ and $\sinh(\eta)$ to $\beta = v$ and $\gamma = \frac{1}{\sqrt{1-v^2}} $\\
+(Hint: consider the primed reference frame moving at velocity v with respect to the unprimed reference frame)
+}
+\end{itemize}
 
 
 \end{document}

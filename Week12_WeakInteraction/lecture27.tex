@@ -1,8 +1,8 @@
 \input{../latexSetup}
 
-\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2020}
-\chead{\Large Introduction to Particle Physics} % \hfill Spring 2020}
-\rhead{\Large Spring 2020} % \hfill Introduction to Particle Physics \hfill Spring 2020}
+\lhead{\Large 33-444} % \hfill Introduction to Particle Physics \hfill Spring 2022}
+\chead{\Large Introduction to Particle Physics} % \hfill Spring 2022}
+\rhead{\Large Spring 2022} % \hfill Introduction to Particle Physics \hfill Spring 2022}
 
 \begin{document}
 \thispagestyle{fancy}
@@ -132,7 +132,7 @@ Again, need to expand about min. \\
 \underline{With out loss of generality} expand around $\phi_1 = v$ and $\phi_2 = 0$.\\
 (like picking +v before) 
 \be
-\phi(x) = \sqrt{\frac{1}{2}}(v + \eta(x) + i\epsilon(x)
+\phi(x) = \sqrt{\frac{1}{2}}\left(v + \eta(x) + i\epsilon(x)\right)
 \ee
 \end{minipage}
 
@@ -150,7 +150,7 @@ Problem, tried to give mass to a gauge boson and created a mass-less boson as we
 
 Intuitively, direction along $\epsilon$ is flat $\Rightarrow$ no resistance to excitations along that direction.   \underline{\underline{Crisis}}
 
-Have not observed these massless gauge bosons. 
+Have not observed these mass-less gauge bosons. 
 
 Lets try a local gauge theory (A miracle is about to happen...)
 
@@ -183,7 +183,7 @@ L = (D_\mu \phi)^*  (D^\mu \phi) - \mu^2 \phi^* \phi - \lambda(\phi^* \phi)^2 - 
 
 (if $\mu^2 > 0$ QED w/massive charged scalar of mass $\mu$ and a 4-$\phi$ interaction term)
 
-Now for $\mu^2 <0$, Again we do $\phi(x) \rightarrow \sqrt{\frac{1}{2}}(v + \eta(x) + i\epsilon(x)$
+Now for $\mu^2 <0$, Again we do $\phi(x) \rightarrow \sqrt{\frac{1}{2}}\left(v + \eta(x) + i\epsilon(x)\right)$
 
 \be
 L' = \frac{1}{2}(\partial \epsilon)^2 + \frac{1}{2}(\partial \eta)^2 - v^2\lambda\eta^2 + \frac{1}{2}e^2v^2A^2 - evA_\mu\partial^\mu\epsilon - \frac{1}{4}F_{\mu\nu}F^{\mu\nu} + \rmt{(interactions)}
@@ -194,16 +194,16 @@ L' = \frac{1}{2}(\partial \epsilon)^2 + \frac{1}{2}(\partial \eta)^2 - v^2\lambd
 \bea
 m_\epsilon &=& 0\ \rmt{(still problem)}\\
 m_\eta &=& \sqrt{2\lambda v^2} \\
-m_A &=& ev\ \rmt{dynamically generated mass for gauge feild}
+m_A &=& ev\ \rmt{dynamically generated mass for gauge field}
 \eea
 
-This however cant be the spectrum because there are only 4 DoF before the expansion (2 scalar + 2 massless spin-1), but now seems like 5 = 2 (scalars) + 3 (massive spin-1).
+This however cant be the spectrum because there are only 4 DoF before the expansion (2 scalar + 2 mass-less spin-1), but now seems like 5 = 2 (scalars) + 3 (massive spin-1).
 
 So some of these apparent DoF are nonphysical.
 
-Can see this explicity by noticing that: 
+Can see this explicitly by noticing that: 
 \be
-\frac{1}{2} (\partial \epsilon)^2 + ev A_\mu \partial^\mu \epsilon + \frac{1}{2}e v^2 A^2 = \frac{1}{2}\left[ A_\mu + \frac{1}{ev} \partial_\mu \epsilon \right]^2
+\frac{1}{2} (\partial \epsilon)^2 + ev A_\mu \partial^\mu \epsilon + \frac{1}{2}e^2 v^2 A^2 = \frac{e^2 v^2}{2}\left[ A_\mu + \frac{1}{ev} \partial_\mu \epsilon \right]^2
 \ee
 
 Now I can pick a gauge where 
@@ -232,12 +232,12 @@ The apparent extra DoF was spurious
 2 massive interacting particles 
 \bi
 \item[$A_\mu$] - 3 DoF massive Spin-1
-\item[$eta$] - 1 DoF massive Spin-0
+\item[$\eta$] - 1 DoF massive Spin-0
 \ei
 $\eta$-''Higgs boson''
 
 
-Massless Goldstone Boson ``eaten'' by the $A_\mu$ to become the extra DoF needed for the longitudinal polarization.  
+Mass-less Goldstone Boson ``eaten'' by the $A_\mu$ to become the extra DoF needed for the longitudinal polarization.  
 
 This is called the ``Higgs Mechanism''.
 
